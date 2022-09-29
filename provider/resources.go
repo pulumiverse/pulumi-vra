@@ -19,9 +19,7 @@ import (
 	"path/filepath"
 
 	"github.com/pulumi/pulumi-terraform-bridge/v3/pkg/tfbridge"
-	shim "github.com/pulumi/pulumi-terraform-bridge/v3/pkg/tfshim"
 	shimv2 "github.com/pulumi/pulumi-terraform-bridge/v3/pkg/tfshim/sdk-v2"
-	"github.com/pulumi/pulumi/sdk/go/common/resource"
 	"github.com/schmidtw/pulumi-vra/provider/pkg/version"
 	"github.com/vmware/terraform-provider-vra/vra"
 )
@@ -34,14 +32,6 @@ const (
 	// modules:
 	mainMod = "index" // the vra module
 )
-
-// preConfigureCallback is called before the providerConfigure function of the underlying provider.
-// It should validate that the provider can be configured, and provide actionable errors in the case
-// it cannot be. Configuration variables can be read from `vars` using the `stringValue` function -
-// for example `stringValue(vars, "accessKey")`.
-func preConfigureCallback(vars resource.PropertyMap, c shim.ResourceConfig) error {
-	return nil
-}
 
 // Provider returns additional overlaid schema and metadata associated with the provider..
 func Provider() tfbridge.ProviderInfo {
@@ -91,7 +81,6 @@ func Provider() tfbridge.ProviderInfo {
 			// 	},
 			// },
 		},
-		PreConfigureCallback: preConfigureCallback,
 		Resources: map[string]*tfbridge.ResourceInfo{
 			"vra_block_device":               {Tok: tfbridge.MakeResource(mainPkg, mainMod, "BlockDevice")},
 			"vra_block_device_snapshot":      {Tok: tfbridge.MakeResource(mainPkg, mainMod, "BlockDeviceSnapshot")},
