@@ -1,6 +1,6 @@
 {
     "name": "vra",
-    "displayName": "VMWare vRA",
+    "displayName": "VMWare vra",
     "description": "A Pulumi package for creating and managing vmware vra cloud resources.",
     "keywords": [
         "pulumi",
@@ -58,7 +58,8 @@
         "variables": {
             "accessToken": {
                 "type": "string",
-                "description": "The access token for API operations.\n"
+                "description": "The access token for API operations.\n",
+                "secret": true
             },
             "insecure": {
                 "type": "boolean",
@@ -78,6 +79,7 @@
             }
         },
         "defaults": [
+            "accessToken",
             "url"
         ]
     },
@@ -6542,7 +6544,8 @@
         "properties": {
             "accessToken": {
                 "type": "string",
-                "description": "The access token for API operations.\n"
+                "description": "The access token for API operations.\n",
+                "secret": true
             },
             "insecure": {
                 "type": "boolean",
@@ -6562,12 +6565,14 @@
             }
         },
         "required": [
+            "accessToken",
             "url"
         ],
         "inputProperties": {
             "accessToken": {
                 "type": "string",
-                "description": "The access token for API operations.\n"
+                "description": "The access token for API operations.\n",
+                "secret": true
             },
             "insecure": {
                 "type": "boolean",
@@ -6587,6 +6592,7 @@
             }
         },
         "requiredInputs": [
+            "accessToken",
             "url"
         ]
     },

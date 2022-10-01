@@ -44,7 +44,7 @@ func Provider() tfbridge.ProviderInfo {
 		Name: "vra",
 		// DisplayName is a way to be able to change the casing of the provider
 		// name when being displayed on the Pulumi registry
-		DisplayName: "VMWare vRA",
+		DisplayName: "VMWare vra",
 		// The default publisher for all packages is Pulumi.
 		// Change this to your personal name (or a company name) that you
 		// would like to be shown in the Pulumi Registry if this package is published
@@ -71,7 +71,17 @@ func Provider() tfbridge.ProviderInfo {
 		// The GitHub Org for the provider - defaults to `terraform-providers`. Note that this
 		// should match the TF provider module's require directive, not any replace directives.
 		GitHubOrg: "vmware",
-		Config:    map[string]*tfbridge.SchemaInfo{
+		Config: map[string]*tfbridge.SchemaInfo{
+			"access_token": {
+				Secret:         tfbridge.True(),
+				MarkAsOptional: tfbridge.False(),
+			},
+			// TODO - I can't figure out how to make this generate as an optional
+			// secret.
+			//"refresh_token": {
+			//	Secret:         tfbridge.True(),
+			//	MarkAsOptional: tfbridge.True(),
+			//},
 			// Add any required configuration here, or remove the example below if
 			// no additional points are required.
 			// "region": {
