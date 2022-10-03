@@ -19,7 +19,7 @@ type Provider struct {
 	pulumi.ProviderResourceState
 
 	// The access token for API operations.
-	AccessToken pulumi.StringOutput `pulumi:"accessToken"`
+	AccessToken pulumi.StringPtrOutput `pulumi:"accessToken"`
 	// Specify timeout for how often to reauthorize the access token
 	ReauthorizeTimeout pulumi.StringPtrOutput `pulumi:"reauthorizeTimeout"`
 	// The refresh token for API operations.
@@ -35,19 +35,9 @@ func NewProvider(ctx *pulumi.Context,
 		return nil, errors.New("missing one or more required arguments")
 	}
 
-	if args.AccessToken == nil {
-		return nil, errors.New("invalid value for required argument 'AccessToken'")
-	}
 	if args.Url == nil {
 		return nil, errors.New("invalid value for required argument 'Url'")
 	}
-	if args.AccessToken != nil {
-		args.AccessToken = pulumi.ToSecret(args.AccessToken).(pulumi.StringOutput)
-	}
-	secrets := pulumi.AdditionalSecretOutputs([]string{
-		"accessToken",
-	})
-	opts = append(opts, secrets)
 	opts = pkgResourceDefaultOpts(opts)
 	var resource Provider
 	err := ctx.RegisterResource("pulumi:providers:vra", name, args, &resource, opts...)
@@ -59,7 +49,7 @@ func NewProvider(ctx *pulumi.Context,
 
 type providerArgs struct {
 	// The access token for API operations.
-	AccessToken string `pulumi:"accessToken"`
+	AccessToken *string `pulumi:"accessToken"`
 	// Specify whether to validate TLS certificates.
 	Insecure *bool `pulumi:"insecure"`
 	// Specify timeout for how often to reauthorize the access token
@@ -73,7 +63,7 @@ type providerArgs struct {
 // The set of arguments for constructing a Provider resource.
 type ProviderArgs struct {
 	// The access token for API operations.
-	AccessToken pulumi.StringInput
+	AccessToken pulumi.StringPtrInput
 	// Specify whether to validate TLS certificates.
 	Insecure pulumi.BoolPtrInput
 	// Specify timeout for how often to reauthorize the access token
@@ -122,8 +112,8 @@ func (o ProviderOutput) ToProviderOutputWithContext(ctx context.Context) Provide
 }
 
 // The access token for API operations.
-func (o ProviderOutput) AccessToken() pulumi.StringOutput {
-	return o.ApplyT(func(v *Provider) pulumi.StringOutput { return v.AccessToken }).(pulumi.StringOutput)
+func (o ProviderOutput) AccessToken() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v *Provider) pulumi.StringPtrOutput { return v.AccessToken }).(pulumi.StringPtrOutput)
 }
 
 // Specify timeout for how often to reauthorize the access token

@@ -1,6 +1,6 @@
-# Foo Resource Provider
+# VRA Resource Provider
 
-The Foo Resource Provider lets you manage [Foo](http://example.com) resources.
+The VRA Resource Provider lets you manage [VRA](https://www.vmware.com/products/vrealize-automation.html) resources.
 
 ## Installing
 
@@ -11,13 +11,13 @@ This package is available for several languages/platforms:
 To use from JavaScript or TypeScript in Node.js, install using either `npm`:
 
 ```bash
-npm install @pulumi/foo
+npm install @pulumiverse/vra
 ```
 
 or `yarn`:
 
 ```bash
-yarn add @pulumi/foo
+yarn add @pulumiverse/vra
 ```
 
 ### Python
@@ -25,7 +25,7 @@ yarn add @pulumi/foo
 To use from Python, install using `pip`:
 
 ```bash
-pip install pulumi_foo
+pip install pulumi_vra
 ```
 
 ### Go
@@ -33,7 +33,7 @@ pip install pulumi_foo
 To use from Go, use `go get` to grab the latest version of the library:
 
 ```bash
-go get github.com/pulumi/pulumi-foo/sdk/go/...
+go get github.com/pulumiverse/pulumi-vra/sdk/go/...
 ```
 
 ### .NET
@@ -41,15 +41,19 @@ go get github.com/pulumi/pulumi-foo/sdk/go/...
 To use from .NET, install using `dotnet add package`:
 
 ```bash
-dotnet add package Pulumi.Foo
+dotnet add package Pulumi.Vra
 ```
 
 ## Configuration
 
-The following configuration points are available for the `foo` provider:
+The following configuration points are available for the `vra` provider:
 
-- `foo:apiKey` (environment: `FOO_API_KEY`) - the API key for `foo`
-- `foo:region` (environment: `FOO_REGION`) - the region in which to deploy resources
+- none
+- `vra:accessToken` (environment: `n/a`) - the access token for `vra`
+- `vra:refreshToken` (environment: `n/a`) - the refresh token for `vra`
+- `vra:url` (environment: `n/a`) - the url of the `vra` instance
+- `vra:insecure` (environment: `n/a`) - the option to ignore the `vra` instance certificate
+- `vra:reauthorizeTimeout` (environment: `n/a`) - how often to reauthorize against the `vra` instance
 
 ## Reference
 

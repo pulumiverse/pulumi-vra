@@ -58,8 +58,7 @@
         "variables": {
             "accessToken": {
                 "type": "string",
-                "description": "The access token for API operations.\n",
-                "secret": true
+                "description": "The access token for API operations.\n"
             },
             "insecure": {
                 "type": "boolean",
@@ -79,7 +78,6 @@
             }
         },
         "defaults": [
-            "accessToken",
             "url"
         ]
     },
@@ -6544,8 +6542,7 @@
         "properties": {
             "accessToken": {
                 "type": "string",
-                "description": "The access token for API operations.\n",
-                "secret": true
+                "description": "The access token for API operations.\n"
             },
             "insecure": {
                 "type": "boolean",
@@ -6565,14 +6562,12 @@
             }
         },
         "required": [
-            "accessToken",
             "url"
         ],
         "inputProperties": {
             "accessToken": {
                 "type": "string",
-                "description": "The access token for API operations.\n",
-                "secret": true
+                "description": "The access token for API operations.\n"
             },
             "insecure": {
                 "type": "boolean",
@@ -6592,7 +6587,6 @@
             }
         },
         "requiredInputs": [
-            "accessToken",
             "url"
         ]
     },

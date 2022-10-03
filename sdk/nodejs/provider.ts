@@ -28,7 +28,7 @@ export class Provider extends pulumi.ProviderResource {
     /**
      * The access token for API operations.
      */
-    public readonly accessToken!: pulumi.Output<string>;
+    public readonly accessToken!: pulumi.Output<string | undefined>;
     /**
      * Specify timeout for how often to reauthorize the access token
      */
@@ -53,21 +53,16 @@ export class Provider extends pulumi.ProviderResource {
         let resourceInputs: pulumi.Inputs = {};
         opts = opts || {};
         {
-            if ((!args || args.accessToken === undefined) && !opts.urn) {
-                throw new Error("Missing required property 'accessToken'");
-            }
             if ((!args || args.url === undefined) && !opts.urn) {
                 throw new Error("Missing required property 'url'");
             }
-            resourceInputs["accessToken"] = args?.accessToken ? pulumi.secret(args.accessToken) : undefined;
+            resourceInputs["accessToken"] = args ? args.accessToken : undefined;
             resourceInputs["insecure"] = pulumi.output(args ? args.insecure : undefined).apply(JSON.stringify);
             resourceInputs["reauthorizeTimeout"] = args ? args.reauthorizeTimeout : undefined;
             resourceInputs["refreshToken"] = args ? args.refreshToken : undefined;
             resourceInputs["url"] = args ? args.url : undefined;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-        const secretOpts = { additionalSecretOutputs: ["accessToken"] };
-        opts = pulumi.mergeOptions(opts, secretOpts);
         super(Provider.__pulumiType, name, resourceInputs, opts);
     }
 }
@@ -79,7 +74,7 @@ export interface ProviderArgs {
     /**
      * The access token for API operations.
      */
-    accessToken: pulumi.Input<string>;
+    accessToken?: pulumi.Input<string>;
     /**
      * Specify whether to validate TLS certificates.
      */

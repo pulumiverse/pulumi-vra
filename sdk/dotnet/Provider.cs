@@ -23,7 +23,7 @@ namespace schmidtw.Vra
         /// The access token for API operations.
         /// </summary>
         [Output("accessToken")]
-        public Output<string> AccessToken { get; private set; } = null!;
+        public Output<string?> AccessToken { get; private set; } = null!;
 
         /// <summary>
         /// Specify timeout for how often to reauthorize the access token
@@ -62,10 +62,6 @@ namespace schmidtw.Vra
             {
                 Version = Utilities.Version,
                 PluginDownloadURL = "https://github.com/schmidtw/pulumi-vra/releases/download/v${VERSION}",
-                AdditionalSecretOutputs =
-                {
-                    "accessToken",
-                },
             };
             var merged = CustomResourceOptions.Merge(defaultOptions, options);
             // Override the ID if one was specified for consistency with other language SDKs.
@@ -76,21 +72,11 @@ namespace schmidtw.Vra
 
     public sealed class ProviderArgs : global::Pulumi.ResourceArgs
     {
-        [Input("accessToken", required: true)]
-        private Input<string>? _accessToken;
-
         /// <summary>
         /// The access token for API operations.
         /// </summary>
-        public Input<string>? AccessToken
-        {
-            get => _accessToken;
-            set
-            {
-                var emptySecret = Output.CreateSecret(0);
-                _accessToken = Output.Tuple<Input<string>?, int>(value, emptySecret).Apply(t => t.Item1);
-            }
-        }
+        [Input("accessToken")]
+        public Input<string>? AccessToken { get; set; }
 
         /// <summary>
         /// Specify whether to validate TLS certificates.
