@@ -13,7 +13,7 @@ import * as utilities from "./utilities";
  *
  * ```typescript
  * import * as pulumi from "@pulumi/pulumi";
- * import * as vra from "@schmidtw/vra";
+ * import * as vra from "@pulumiverse/vra";
  *
  * const _this = new vra.ContentSource("this", {
  *     projectId: _var.project_id,

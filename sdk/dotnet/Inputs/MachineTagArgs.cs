@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 using Pulumi.Serialization;
 using Pulumi;
 
-namespace schmidtw.Vra.Inputs
+namespace pulumiverse.Vra.Inputs
 {
 
     public sealed class MachineTagArgs : global::Pulumi.ResourceArgs

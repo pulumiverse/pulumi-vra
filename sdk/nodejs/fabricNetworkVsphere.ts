@@ -16,7 +16,7 @@ import * as utilities from "./utilities";
  *
  * ```typescript
  * import * as pulumi from "@pulumi/pulumi";
- * import * as vra from "@schmidtw/vra";
+ * import * as vra from "@pulumiverse/vra";
  *
  * const simple = new vra.FabricNetworkVsphere("simple", {
  *     cidr: _var.cidr,

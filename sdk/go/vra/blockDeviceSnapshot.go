@@ -24,7 +24,7 @@ import (
 // import (
 //
 //	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//	"github.com/schmidtw/pulumi-vra/sdk/go/vra"
+//	"github.com/pulumiverse/pulumi-vra/sdk/go/vra"
 //
 // )
 //

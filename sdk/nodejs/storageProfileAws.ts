@@ -14,7 +14,7 @@ import * as utilities from "./utilities";
  *
  * ```typescript
  * import * as pulumi from "@pulumi/pulumi";
- * import * as vra from "@schmidtw/vra";
+ * import * as vra from "@pulumiverse/vra";
  *
  * // AWS storage profile using vra_storage_profile_aws resource and EBS disk type.
  * const thisStorageProfileAws = new vra.StorageProfileAws("thisStorageProfileAws", {

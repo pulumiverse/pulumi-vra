@@ -14,7 +14,7 @@ import * as utilities from "./utilities";
  *
  * ```typescript
  * import * as pulumi from "@pulumi/pulumi";
- * import * as vra from "@schmidtw/vra";
+ * import * as vra from "@pulumiverse/vra";
  *
  * const _this = new vra.BlueprintVersion("this", {
  *     blueprintId: _var.vra_blueprint_id,

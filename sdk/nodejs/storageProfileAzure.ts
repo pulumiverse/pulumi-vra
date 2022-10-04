@@ -14,7 +14,7 @@ import * as utilities from "./utilities";
  *
  * ```typescript
  * import * as pulumi from "@pulumi/pulumi";
- * import * as vra from "@schmidtw/vra";
+ * import * as vra from "@pulumiverse/vra";
  *
  * // Azure storage profile using vra_storage_profile_azure resource with managed disk.
  * const thisStorageProfileAzure = new vra.StorageProfileAzure("thisStorageProfileAzure", {

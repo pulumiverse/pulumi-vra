@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 using Pulumi.Serialization;
 using Pulumi;
 
-namespace schmidtw.Vra
+namespace pulumiverse.Vra
 {
     /// <summary>
     /// ## Example Usage
@@ -20,7 +20,7 @@ namespace schmidtw.Vra
     /// ```csharp
     /// using System.Collections.Generic;
     /// using Pulumi;
-    /// using Vra = schmidtw.Vra;
+    /// using Vra = pulumiverse.Vra;
     /// 
     /// return await Deployment.RunAsync(() =&gt; 
     /// {
@@ -183,7 +183,7 @@ namespace schmidtw.Vra
             var defaultOptions = new CustomResourceOptions
             {
                 Version = Utilities.Version,
-                PluginDownloadURL = "https://github.com/schmidtw/pulumi-vra/releases/download/v${VERSION}",
+                PluginDownloadURL = "github://api.github.com/pulumiverse",
             };
             var merged = CustomResourceOptions.Merge(defaultOptions, options);
             // Override the ID if one was specified for consistency with other language SDKs.

@@ -1,1 +1,1 @@
-A Pulumi package for creating and managing vmware vra cloud resources.
+A Pulumi package for creating and managing VMware VRA cloud resources.

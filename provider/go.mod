@@ -1,4 +1,4 @@
-module github.com/schmidtw/pulumi-vra/provider
+module github.com/pulumiverse/pulumi-vra/provider
 
 go 1.18
 

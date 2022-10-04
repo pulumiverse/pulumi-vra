@@ -15,7 +15,7 @@ class InstallPluginCommand(install):
     def run(self):
         install.run(self)
         try:
-            check_call(['pulumi', 'plugin', 'install', 'resource', 'vra', PLUGIN_VERSION, '--server', 'https://github.com/schmidtw/pulumi-vra/releases/download/v${VERSION}'])
+            check_call(['pulumi', 'plugin', 'install', 'resource', 'vra', PLUGIN_VERSION, '--server', 'github://api.github.com/pulumiverse'])
         except OSError as error:
             if error.errno == errno.ENOENT:
                 print(f"""
@@ -37,9 +37,9 @@ def readme():
         return "vra Pulumi Package - Development Version"
 
 
-setup(name='schmidtw_vra',
+setup(name='pulumiverse_vra',
       version=VERSION,
-      description="A Pulumi package for creating and managing vmware vra cloud resources.",
+      description="A Pulumi package for creating and managing VMware VRA cloud resources.",
       long_description=readme(),
       long_description_content_type='text/markdown',
       cmdclass={
@@ -48,12 +48,12 @@ setup(name='schmidtw_vra',
       keywords='pulumi vra category/cloud',
       url='https://www.pulumi.com',
       project_urls={
-          'Repository': 'https://github.com/schmidtw/pulumi-vra'
+          'Repository': 'https://github.com/pulumiverse/pulumi-vra'
       },
       license='Apache-2.0',
       packages=find_packages(),
       package_data={
-          'schmidtw_vra': [
+          'pulumiverse_vra': [
               'py.typed',
               'pulumi-plugin.json',
           ]

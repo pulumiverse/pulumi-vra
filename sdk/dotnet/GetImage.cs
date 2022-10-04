@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 using Pulumi.Serialization;
 using Pulumi;
 
-namespace schmidtw.Vra
+namespace pulumiverse.Vra
 {
     public static class GetImage
     {
@@ -25,7 +25,7 @@ namespace schmidtw.Vra
         /// using System.Collections.Generic;
         /// using Pulumi;
         /// using Vra = Pulumi.Vra;
-        /// using Vra = schmidtw.Vra;
+        /// using Vra = pulumiverse.Vra;
         /// 
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
@@ -90,7 +90,7 @@ namespace schmidtw.Vra
         /// using System.Collections.Generic;
         /// using Pulumi;
         /// using Vra = Pulumi.Vra;
-        /// using Vra = schmidtw.Vra;
+        /// using Vra = pulumiverse.Vra;
         /// 
         /// return await Deployment.RunAsync(() =&gt; 
         /// {

@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 using Pulumi.Serialization;
 using Pulumi;
 
-namespace schmidtw.Vra.Outputs
+namespace pulumiverse.Vra.Outputs
 {
 
     [OutputType]

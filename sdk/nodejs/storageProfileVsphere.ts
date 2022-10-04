@@ -14,7 +14,7 @@ import * as utilities from "./utilities";
  *
  * ```typescript
  * import * as pulumi from "@pulumi/pulumi";
- * import * as vra from "@schmidtw/vra";
+ * import * as vra from "@pulumiverse/vra";
  *
  * // vSphere storage profile using generic vra_storage_profile resource.
  * const _this = new vra.StorageProfileVsphere("this", {

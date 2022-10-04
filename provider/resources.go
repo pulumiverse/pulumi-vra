@@ -20,7 +20,7 @@ import (
 
 	"github.com/pulumi/pulumi-terraform-bridge/v3/pkg/tfbridge"
 	shimv2 "github.com/pulumi/pulumi-terraform-bridge/v3/pkg/tfshim/sdk-v2"
-	"github.com/schmidtw/pulumi-vra/provider/pkg/version"
+	"github.com/pulumiverse/pulumi-vra/provider/pkg/version"
 	"github.com/vmware/terraform-provider-vra/vra"
 )
 
@@ -49,7 +49,7 @@ func Provider() tfbridge.ProviderInfo {
 		// Change this to your personal name (or a company name) that you
 		// would like to be shown in the Pulumi Registry if this package is published
 		// there.
-		Publisher: "schmidtw",
+		Publisher: "pulumiverse",
 		// LogoURL is optional but useful to help identify your package in the Pulumi Registry
 		// if this package is published there.
 		//
@@ -59,15 +59,15 @@ func Provider() tfbridge.ProviderInfo {
 		// PluginDownloadURL is an optional URL used to download the Provider
 		// for use in Pulumi programs
 		// e.g https://github.com/org/pulumi-provider-name/releases/
-		PluginDownloadURL: "https://github.com/schmidtw/pulumi-vra/releases/download/v${VERSION}",
-		Description:       "A Pulumi package for creating and managing vmware vra cloud resources.",
+		PluginDownloadURL: "github://api.github.com/pulumiverse",
+		Description:       "A Pulumi package for creating and managing VMware VRA cloud resources.",
 		// category/cloud tag helps with categorizing the package in the Pulumi Registry.
 		// For all available categories, see `Keywords` in
 		// https://www.pulumi.com/docs/guides/pulumi-packages/schema/#package.
 		Keywords:   []string{"pulumi", "vra", "category/cloud"},
 		License:    "Apache-2.0",
 		Homepage:   "https://www.pulumi.com",
-		Repository: "https://github.com/schmidtw/pulumi-vra",
+		Repository: "https://github.com/pulumiverse/pulumi-vra",
 		// The GitHub Org for the provider - defaults to `terraform-providers`. Note that this
 		// should match the TF provider module's require directive, not any replace directives.
 		GitHubOrg: "vmware",
@@ -215,7 +215,7 @@ func Provider() tfbridge.ProviderInfo {
 			"vra_zone":                          {Tok: tfbridge.MakeDataSource(mainPkg, mainMod, "getZone")},
 		},
 		JavaScript: &tfbridge.JavaScriptInfo{
-			PackageName: "@schmidtw/vra",
+			PackageName: "@pulumiverse/vra",
 			// List any npm dependencies and their versions
 			Dependencies: map[string]string{
 				"@pulumi/pulumi": "^3.0.0",
@@ -230,7 +230,7 @@ func Provider() tfbridge.ProviderInfo {
 			//Overlay: &tfbridge.OverlayInfo{},
 		},
 		Python: &tfbridge.PythonInfo{
-			PackageName: "schmidtw_vra",
+			PackageName: "pulumiverse_vra",
 			// List any Python dependencies and their version ranges
 			Requires: map[string]string{
 				"pulumi": ">=3.0.0,<4.0.0",
@@ -238,7 +238,7 @@ func Provider() tfbridge.ProviderInfo {
 		},
 		Golang: &tfbridge.GolangInfo{
 			ImportBasePath: filepath.Join(
-				fmt.Sprintf("github.com/schmidtw/pulumi-%[1]s/sdk/", mainPkg),
+				fmt.Sprintf("github.com/pulumiverse/pulumi-%[1]s/sdk/", mainPkg),
 				tfbridge.GetModuleMajorVersion(version.Version),
 				"go",
 				mainPkg,
@@ -246,7 +246,7 @@ func Provider() tfbridge.ProviderInfo {
 			GenerateResourceContainerTypes: true,
 		},
 		CSharp: &tfbridge.CSharpInfo{
-			RootNamespace: "schmidtw",
+			RootNamespace: "pulumiverse",
 			PackageReferences: map[string]string{
 				"Pulumi": "3.*",
 			},

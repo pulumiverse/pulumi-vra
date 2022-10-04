@@ -1,5 +1,0 @@
-{
-  "resource": true,
-  "name": "vra",
-  "server": "https://github.com/schmidtw/pulumi-vra/releases/download/v${VERSION}"
-}
