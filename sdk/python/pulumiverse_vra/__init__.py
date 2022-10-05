@@ -5,348 +5,326 @@
 from . import _utilities
 import typing
 # Export this package's modules as members:
-from .block_device import *
-from .block_device_snapshot import *
-from .blueprint import *
-from .blueprint_version import *
-from .catalog_item_entitlement import *
-from .catalog_source_blueprint import *
-from .catalog_source_entitlement import *
-from .cloud_account_aws import *
-from .cloud_account_azure import *
-from .cloud_account_gcp import *
-from .cloud_account_nsxt import *
-from .cloud_account_nsxv import *
-from .cloud_account_vmc import *
-from .cloud_account_vsphere import *
-from .content_source import *
-from .deployment import *
-from .fabric_compute import *
-from .fabric_datastore_vsphere import *
-from .fabric_network_vsphere import *
-from .flavor_profile import *
-from .get_block_device import *
-from .get_block_device_snapshots import *
-from .get_blueprint import *
-from .get_blueprint_version import *
-from .get_catalog_item import *
-from .get_catalog_item_entitlement import *
-from .get_catalog_source_blueprint import *
-from .get_catalog_source_entitlement import *
-from .get_cloud_account_aws import *
-from .get_cloud_account_azure import *
-from .get_cloud_account_gcp import *
-from .get_cloud_account_nsxt import *
-from .get_cloud_account_nsxv import *
-from .get_cloud_account_vmc import *
-from .get_cloud_account_vsphere import *
-from .get_data_collector import *
-from .get_deployment import *
-from .get_fabric_compute import *
-from .get_fabric_datastore_vsphere import *
-from .get_fabric_network import *
-from .get_fabric_storage_account_azure import *
-from .get_fabric_storage_policy_vsphere import *
-from .get_image import *
-from .get_image_profile import *
-from .get_machine import *
-from .get_network import *
-from .get_network_domain import *
-from .get_network_profile import *
-from .get_project import *
-from .get_region import *
-from .get_region_enumeration import *
-from .get_region_enumeration_aws import *
-from .get_region_enumeration_azure import *
-from .get_region_enumeration_gcp import *
-from .get_region_enumeration_vmc import *
-from .get_region_enumeration_vsphere import *
-from .get_security_group import *
-from .get_storage_profile import *
-from .get_storage_profile_aws import *
-from .get_storage_profile_azure import *
-from .get_storage_profile_vsphere import *
-from .get_zone import *
-from .image_profile import *
-from .load_balancer import *
-from .machine import *
-from .network import *
-from .network_ip_range import *
-from .network_profile import *
-from .project import *
 from .provider import *
-from .storage_profile import *
-from .storage_profile_aws import *
-from .storage_profile_azure import *
-from .storage_profile_vsphere import *
-from .zone import *
-from ._inputs import *
-from . import outputs
 
 # Make subpackages available:
 if typing.TYPE_CHECKING:
+    import pulumiverse_vra.blockdevice as __blockdevice
+    blockdevice = __blockdevice
+    import pulumiverse_vra.blueprint as __blueprint
+    blueprint = __blueprint
+    import pulumiverse_vra.catalog as __catalog
+    catalog = __catalog
+    import pulumiverse_vra.cloudaccount as __cloudaccount
+    cloudaccount = __cloudaccount
     import pulumiverse_vra.config as __config
     config = __config
+    import pulumiverse_vra.contentsource as __contentsource
+    contentsource = __contentsource
+    import pulumiverse_vra.datacollector as __datacollector
+    datacollector = __datacollector
+    import pulumiverse_vra.deployment as __deployment
+    deployment = __deployment
+    import pulumiverse_vra.fabric as __fabric
+    fabric = __fabric
+    import pulumiverse_vra.flavor as __flavor
+    flavor = __flavor
+    import pulumiverse_vra.image as __image
+    image = __image
+    import pulumiverse_vra.loadbalancer as __loadbalancer
+    loadbalancer = __loadbalancer
+    import pulumiverse_vra.machine as __machine
+    machine = __machine
+    import pulumiverse_vra.network as __network
+    network = __network
+    import pulumiverse_vra.project as __project
+    project = __project
+    import pulumiverse_vra.region as __region
+    region = __region
+    import pulumiverse_vra.securitygroup as __securitygroup
+    securitygroup = __securitygroup
+    import pulumiverse_vra.storageprofile as __storageprofile
+    storageprofile = __storageprofile
+    import pulumiverse_vra.zone as __zone
+    zone = __zone
 else:
+    blockdevice = _utilities.lazy_import('pulumiverse_vra.blockdevice')
+    blueprint = _utilities.lazy_import('pulumiverse_vra.blueprint')
+    catalog = _utilities.lazy_import('pulumiverse_vra.catalog')
+    cloudaccount = _utilities.lazy_import('pulumiverse_vra.cloudaccount')
     config = _utilities.lazy_import('pulumiverse_vra.config')
+    contentsource = _utilities.lazy_import('pulumiverse_vra.contentsource')
+    datacollector = _utilities.lazy_import('pulumiverse_vra.datacollector')
+    deployment = _utilities.lazy_import('pulumiverse_vra.deployment')
+    fabric = _utilities.lazy_import('pulumiverse_vra.fabric')
+    flavor = _utilities.lazy_import('pulumiverse_vra.flavor')
+    image = _utilities.lazy_import('pulumiverse_vra.image')
+    loadbalancer = _utilities.lazy_import('pulumiverse_vra.loadbalancer')
+    machine = _utilities.lazy_import('pulumiverse_vra.machine')
+    network = _utilities.lazy_import('pulumiverse_vra.network')
+    project = _utilities.lazy_import('pulumiverse_vra.project')
+    region = _utilities.lazy_import('pulumiverse_vra.region')
+    securitygroup = _utilities.lazy_import('pulumiverse_vra.securitygroup')
+    storageprofile = _utilities.lazy_import('pulumiverse_vra.storageprofile')
+    zone = _utilities.lazy_import('pulumiverse_vra.zone')
 
 _utilities.register(
     resource_modules="""
 [
  {
   "pkg": "vra",
-  "mod": "index/blockDevice",
-  "fqn": "pulumiverse_vra",
+  "mod": "blockdevice/blockDevice",
+  "fqn": "pulumiverse_vra.blockdevice",
   "classes": {
-   "vra:index/blockDevice:BlockDevice": "BlockDevice"
+   "vra:blockdevice/blockDevice:BlockDevice": "BlockDevice"
   }
  },
  {
   "pkg": "vra",
-  "mod": "index/blockDeviceSnapshot",
-  "fqn": "pulumiverse_vra",
+  "mod": "blockdevice/snapshot",
+  "fqn": "pulumiverse_vra.blockdevice",
   "classes": {
-   "vra:index/blockDeviceSnapshot:BlockDeviceSnapshot": "BlockDeviceSnapshot"
+   "vra:blockdevice/snapshot:Snapshot": "Snapshot"
   }
  },
  {
   "pkg": "vra",
-  "mod": "index/blueprint",
-  "fqn": "pulumiverse_vra",
+  "mod": "blueprint/blueprint",
+  "fqn": "pulumiverse_vra.blueprint",
   "classes": {
-   "vra:index/blueprint:Blueprint": "Blueprint"
+   "vra:blueprint/blueprint:Blueprint": "Blueprint"
   }
  },
  {
   "pkg": "vra",
-  "mod": "index/blueprintVersion",
-  "fqn": "pulumiverse_vra",
+  "mod": "blueprint/blueprintVersion",
+  "fqn": "pulumiverse_vra.blueprint",
   "classes": {
-   "vra:index/blueprintVersion:BlueprintVersion": "BlueprintVersion"
+   "vra:blueprint/blueprintVersion:BlueprintVersion": "BlueprintVersion"
   }
  },
  {
   "pkg": "vra",
-  "mod": "index/catalogItemEntitlement",
-  "fqn": "pulumiverse_vra",
+  "mod": "catalog/itemEntitlement",
+  "fqn": "pulumiverse_vra.catalog",
   "classes": {
-   "vra:index/catalogItemEntitlement:CatalogItemEntitlement": "CatalogItemEntitlement"
+   "vra:catalog/itemEntitlement:ItemEntitlement": "ItemEntitlement"
   }
  },
  {
   "pkg": "vra",
-  "mod": "index/catalogSourceBlueprint",
-  "fqn": "pulumiverse_vra",
+  "mod": "catalog/sourceBlueprint",
+  "fqn": "pulumiverse_vra.catalog",
   "classes": {
-   "vra:index/catalogSourceBlueprint:CatalogSourceBlueprint": "CatalogSourceBlueprint"
+   "vra:catalog/sourceBlueprint:SourceBlueprint": "SourceBlueprint"
   }
  },
  {
   "pkg": "vra",
-  "mod": "index/catalogSourceEntitlement",
-  "fqn": "pulumiverse_vra",
+  "mod": "catalog/sourceEntitlement",
+  "fqn": "pulumiverse_vra.catalog",
   "classes": {
-   "vra:index/catalogSourceEntitlement:CatalogSourceEntitlement": "CatalogSourceEntitlement"
+   "vra:catalog/sourceEntitlement:SourceEntitlement": "SourceEntitlement"
   }
  },
  {
   "pkg": "vra",
-  "mod": "index/cloudAccountAws",
-  "fqn": "pulumiverse_vra",
+  "mod": "cloudaccount/aws",
+  "fqn": "pulumiverse_vra.cloudaccount",
   "classes": {
-   "vra:index/cloudAccountAws:CloudAccountAws": "CloudAccountAws"
+   "vra:cloudaccount/aws:Aws": "Aws"
   }
  },
  {
   "pkg": "vra",
-  "mod": "index/cloudAccountAzure",
-  "fqn": "pulumiverse_vra",
+  "mod": "cloudaccount/azure",
+  "fqn": "pulumiverse_vra.cloudaccount",
   "classes": {
-   "vra:index/cloudAccountAzure:CloudAccountAzure": "CloudAccountAzure"
+   "vra:cloudaccount/azure:Azure": "Azure"
   }
  },
  {
   "pkg": "vra",
-  "mod": "index/cloudAccountGcp",
-  "fqn": "pulumiverse_vra",
+  "mod": "cloudaccount/gcp",
+  "fqn": "pulumiverse_vra.cloudaccount",
   "classes": {
-   "vra:index/cloudAccountGcp:CloudAccountGcp": "CloudAccountGcp"
+   "vra:cloudaccount/gcp:Gcp": "Gcp"
   }
  },
  {
   "pkg": "vra",
-  "mod": "index/cloudAccountNsxt",
-  "fqn": "pulumiverse_vra",
+  "mod": "cloudaccount/nsxt",
+  "fqn": "pulumiverse_vra.cloudaccount",
   "classes": {
-   "vra:index/cloudAccountNsxt:CloudAccountNsxt": "CloudAccountNsxt"
+   "vra:cloudaccount/nsxt:Nsxt": "Nsxt"
   }
  },
  {
   "pkg": "vra",
-  "mod": "index/cloudAccountNsxv",
-  "fqn": "pulumiverse_vra",
+  "mod": "cloudaccount/nsxv",
+  "fqn": "pulumiverse_vra.cloudaccount",
   "classes": {
-   "vra:index/cloudAccountNsxv:CloudAccountNsxv": "CloudAccountNsxv"
+   "vra:cloudaccount/nsxv:Nsxv": "Nsxv"
   }
  },
  {
   "pkg": "vra",
-  "mod": "index/cloudAccountVmc",
-  "fqn": "pulumiverse_vra",
+  "mod": "cloudaccount/vSphere",
+  "fqn": "pulumiverse_vra.cloudaccount",
   "classes": {
-   "vra:index/cloudAccountVmc:CloudAccountVmc": "CloudAccountVmc"
+   "vra:cloudaccount/vSphere:VSphere": "VSphere"
   }
  },
  {
   "pkg": "vra",
-  "mod": "index/cloudAccountVsphere",
-  "fqn": "pulumiverse_vra",
+  "mod": "cloudaccount/vmc",
+  "fqn": "pulumiverse_vra.cloudaccount",
   "classes": {
-   "vra:index/cloudAccountVsphere:CloudAccountVsphere": "CloudAccountVsphere"
+   "vra:cloudaccount/vmc:Vmc": "Vmc"
   }
  },
  {
   "pkg": "vra",
-  "mod": "index/contentSource",
-  "fqn": "pulumiverse_vra",
+  "mod": "contentsource/contentSource",
+  "fqn": "pulumiverse_vra.contentsource",
   "classes": {
-   "vra:index/contentSource:ContentSource": "ContentSource"
+   "vra:contentsource/contentSource:ContentSource": "ContentSource"
   }
  },
  {
   "pkg": "vra",
-  "mod": "index/deployment",
-  "fqn": "pulumiverse_vra",
+  "mod": "deployment/deployment",
+  "fqn": "pulumiverse_vra.deployment",
   "classes": {
-   "vra:index/deployment:Deployment": "Deployment"
+   "vra:deployment/deployment:Deployment": "Deployment"
   }
  },
  {
   "pkg": "vra",
-  "mod": "index/fabricCompute",
-  "fqn": "pulumiverse_vra",
+  "mod": "fabric/compute",
+  "fqn": "pulumiverse_vra.fabric",
   "classes": {
-   "vra:index/fabricCompute:FabricCompute": "FabricCompute"
+   "vra:fabric/compute:Compute": "Compute"
   }
  },
  {
   "pkg": "vra",
-  "mod": "index/fabricDatastoreVsphere",
-  "fqn": "pulumiverse_vra",
+  "mod": "fabric/datastoreVSphere",
+  "fqn": "pulumiverse_vra.fabric",
   "classes": {
-   "vra:index/fabricDatastoreVsphere:FabricDatastoreVsphere": "FabricDatastoreVsphere"
+   "vra:fabric/datastoreVSphere:DatastoreVSphere": "DatastoreVSphere"
   }
  },
  {
   "pkg": "vra",
-  "mod": "index/fabricNetworkVsphere",
-  "fqn": "pulumiverse_vra",
+  "mod": "fabric/networkVSphere",
+  "fqn": "pulumiverse_vra.fabric",
   "classes": {
-   "vra:index/fabricNetworkVsphere:FabricNetworkVsphere": "FabricNetworkVsphere"
+   "vra:fabric/networkVSphere:NetworkVSphere": "NetworkVSphere"
   }
  },
  {
   "pkg": "vra",
-  "mod": "index/flavorProfile",
-  "fqn": "pulumiverse_vra",
+  "mod": "flavor/profile",
+  "fqn": "pulumiverse_vra.flavor",
   "classes": {
-   "vra:index/flavorProfile:FlavorProfile": "FlavorProfile"
+   "vra:flavor/profile:Profile": "Profile"
   }
  },
  {
   "pkg": "vra",
-  "mod": "index/imageProfile",
-  "fqn": "pulumiverse_vra",
+  "mod": "image/profile",
+  "fqn": "pulumiverse_vra.image",
   "classes": {
-   "vra:index/imageProfile:ImageProfile": "ImageProfile"
+   "vra:image/profile:Profile": "Profile"
   }
  },
  {
   "pkg": "vra",
-  "mod": "index/loadBalancer",
-  "fqn": "pulumiverse_vra",
+  "mod": "loadbalancer/loadBalancer",
+  "fqn": "pulumiverse_vra.loadbalancer",
   "classes": {
-   "vra:index/loadBalancer:LoadBalancer": "LoadBalancer"
+   "vra:loadbalancer/loadBalancer:LoadBalancer": "LoadBalancer"
   }
  },
  {
   "pkg": "vra",
-  "mod": "index/machine",
-  "fqn": "pulumiverse_vra",
+  "mod": "machine/machine",
+  "fqn": "pulumiverse_vra.machine",
   "classes": {
-   "vra:index/machine:Machine": "Machine"
+   "vra:machine/machine:Machine": "Machine"
   }
  },
  {
   "pkg": "vra",
-  "mod": "index/network",
-  "fqn": "pulumiverse_vra",
+  "mod": "network/ipRange",
+  "fqn": "pulumiverse_vra.network",
   "classes": {
-   "vra:index/network:Network": "Network"
+   "vra:network/ipRange:IpRange": "IpRange"
   }
  },
  {
   "pkg": "vra",
-  "mod": "index/networkIpRange",
-  "fqn": "pulumiverse_vra",
+  "mod": "network/network",
+  "fqn": "pulumiverse_vra.network",
   "classes": {
-   "vra:index/networkIpRange:NetworkIpRange": "NetworkIpRange"
+   "vra:network/network:Network": "Network"
   }
  },
  {
   "pkg": "vra",
-  "mod": "index/networkProfile",
-  "fqn": "pulumiverse_vra",
+  "mod": "network/profile",
+  "fqn": "pulumiverse_vra.network",
   "classes": {
-   "vra:index/networkProfile:NetworkProfile": "NetworkProfile"
+   "vra:network/profile:Profile": "Profile"
   }
  },
  {
   "pkg": "vra",
-  "mod": "index/project",
-  "fqn": "pulumiverse_vra",
+  "mod": "project/project",
+  "fqn": "pulumiverse_vra.project",
   "classes": {
-   "vra:index/project:Project": "Project"
+   "vra:project/project:Project": "Project"
   }
  },
  {
   "pkg": "vra",
-  "mod": "index/storageProfile",
-  "fqn": "pulumiverse_vra",
+  "mod": "storageprofile/aws",
+  "fqn": "pulumiverse_vra.storageprofile",
   "classes": {
-   "vra:index/storageProfile:StorageProfile": "StorageProfile"
+   "vra:storageprofile/aws:Aws": "Aws"
   }
  },
  {
   "pkg": "vra",
-  "mod": "index/storageProfileAws",
-  "fqn": "pulumiverse_vra",
+  "mod": "storageprofile/azure",
+  "fqn": "pulumiverse_vra.storageprofile",
   "classes": {
-   "vra:index/storageProfileAws:StorageProfileAws": "StorageProfileAws"
+   "vra:storageprofile/azure:Azure": "Azure"
   }
  },
  {
   "pkg": "vra",
-  "mod": "index/storageProfileAzure",
-  "fqn": "pulumiverse_vra",
+  "mod": "storageprofile/storageProfile",
+  "fqn": "pulumiverse_vra.storageprofile",
   "classes": {
-   "vra:index/storageProfileAzure:StorageProfileAzure": "StorageProfileAzure"
+   "vra:storageprofile/storageProfile:StorageProfile": "StorageProfile"
   }
  },
  {
   "pkg": "vra",
-  "mod": "index/storageProfileVsphere",
-  "fqn": "pulumiverse_vra",
+  "mod": "storageprofile/vSphere",
+  "fqn": "pulumiverse_vra.storageprofile",
   "classes": {
-   "vra:index/storageProfileVsphere:StorageProfileVsphere": "StorageProfileVsphere"
+   "vra:storageprofile/vSphere:VSphere": "VSphere"
   }
  },
  {
   "pkg": "vra",
-  "mod": "index/zone",
-  "fqn": "pulumiverse_vra",
+  "mod": "zone/zone",
+  "fqn": "pulumiverse_vra.zone",
   "classes": {
-   "vra:index/zone:Zone": "Zone"
+   "vra:zone/zone:Zone": "Zone"
   }
  }
 ]

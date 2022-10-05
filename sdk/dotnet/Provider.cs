@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 using Pulumi.Serialization;
 using Pulumi;
 
-namespace pulumiverse.Vra
+namespace Pulumiverse.Vra
 {
     /// <summary>
     /// The provider type for the vra package. By default, resources use package-wide configuration

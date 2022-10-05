@@ -4,7 +4,7 @@
 using System;
 using System.Collections.Immutable;
 
-namespace pulumiverse.Vra
+namespace Pulumiverse.Vra
 {
     public static class Config
     {
