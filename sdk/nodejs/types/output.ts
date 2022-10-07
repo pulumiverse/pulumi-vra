@@ -4,1722 +4,1770 @@
 import * as pulumi from "@pulumi/pulumi";
 import { input as inputs, output as outputs } from "../types";
 
-export interface BlockDeviceConstraint {
-    expression: string;
-    mandatory: boolean;
-}
-
-export interface BlockDeviceLink {
-    href?: string;
-    hrefs?: string[];
-    rel: string;
-}
-
-export interface BlockDeviceSnapshot {
-    /**
-     * Date when entity was created. Date and time format is ISO 8601 and UTC.
-     */
-    createdAt: string;
-    /**
-     * Describes machine within the scope of your organization and is not propagated to the cloud.
-     */
-    description: string;
-    /**
-     * ID of the block device snapshot.
-     */
-    id: string;
-    /**
-     * Indicates whether snapshot on block device is current.
-     */
-    isCurrent: boolean;
-    /**
-     * HATEOAS of the entity
-     */
-    links: outputs.BlockDeviceSnapshotLink[];
-    /**
-     * Human-friendly name used as an identifier in APIs that support this option.
-     */
-    name: string;
-    /**
-     * ID of organization that block device snapshot belongs to.
-     */
-    orgId: string;
-    /**
-     * Email of block device snapshot owner.
-     */
-    owner: string;
-    /**
-     * Date when entity was last updated. Date and time format is ISO 8601 and UTC.
-     */
-    updatedAt: string;
-}
-
-export interface BlockDeviceSnapshotLink {
-    href?: string;
-    hrefs?: string[];
-    rel: string;
-}
-
-export interface BlockDeviceTag {
-    key: string;
-    value: string;
-}
-
-export interface BlueprintValidationMessage {
-    message: string;
-    metadata?: {[key: string]: string};
-    path: string;
-    resourceName: string;
-    type: string;
-}
-
-export interface CatalogItemEntitlementDefinition {
-    /**
-     * Description of the catalog item.
-     */
-    description: string;
-    /**
-     * Icon id of associated catalog item.
-     */
-    iconId: string;
-    /**
-     * Id of the catalog item.
-     */
-    id: string;
-    /**
-     * Name of the catalog item.
-     */
-    name: string;
-    /**
-     * Number of items in the associated catalog source.
-     */
-    numberOfItems: number;
-    /**
-     * Catalog source name.
-     */
-    sourceName: string;
-    /**
-     * Catalog source type.
-     */
-    sourceType: string;
-    /**
-     * Content definition type.
-     */
-    type: string;
-}
-
-export interface CatalogSourceEntitlementDefinition {
-    description: string;
-    iconId: string;
-    id: string;
-    name: string;
-    numberOfItems: number;
-    sourceName: string;
-    sourceType: string;
-    type: string;
-}
-
-export interface CloudAccountAwsLink {
-    href?: string;
-    hrefs?: string[];
-    rel: string;
-}
-
-export interface CloudAccountAwsTag {
-    key: string;
-    value: string;
-}
-
-export interface CloudAccountAzureLink {
-    href?: string;
-    hrefs?: string[];
-    rel: string;
-}
-
-export interface CloudAccountAzureTag {
-    key: string;
-    value: string;
-}
-
-export interface CloudAccountGcpLink {
-    href?: string;
-    hrefs?: string[];
-    rel: string;
-}
-
-export interface CloudAccountGcpTag {
-    key: string;
-    value: string;
-}
-
-export interface CloudAccountNsxtLink {
-    href?: string;
-    hrefs?: string[];
-    rel: string;
-}
-
-export interface CloudAccountNsxtTag {
-    key: string;
-    value: string;
-}
-
-export interface CloudAccountNsxvLink {
-    href?: string;
-    hrefs?: string[];
-    rel: string;
-}
-
-export interface CloudAccountNsxvTag {
-    key: string;
-    value: string;
-}
-
-export interface CloudAccountVmcLink {
-    href?: string;
-    hrefs?: string[];
-    rel: string;
-}
-
-export interface CloudAccountVmcTag {
-    key: string;
-    value: string;
-}
-
-export interface CloudAccountVsphereLink {
-    href?: string;
-    hrefs?: string[];
-    rel: string;
-}
-
-export interface CloudAccountVsphereTag {
-    key: string;
-    value: string;
-}
-
-export interface ContentSourceConfig {
-    /**
-     * Content source branch name.
-     */
-    branch?: string;
-    /**
-     * Content source type. Supported values are `BLUEPRINT`, `IMAGE`, `ABX_SCRIPTS`, `TERRAFORM_CONFIGURATION`.
-     */
-    contentType?: string;
-    /**
-     * Content source integration id as seen in vRA integrations.
-     */
-    integrationId: string;
-    /**
-     * Path to refer to in the content source repository and branch.
-     */
-    path: string;
-    /**
-     * Name of the project.
-     */
-    projectName: string;
-    /**
-     * Content source repository.
-     */
-    repository?: string;
-}
-
-export interface DeploymentExpense {
-    /**
-     * Additional expense incurred for the resource.
-     */
-    additionalExpense: number;
-    /**
-     * Expense sync message code if any.
-     */
-    code: string;
-    /**
-     * Compute expense of the entity.
-     */
-    computeExpense: number;
-    /**
-     * Last expense sync time.
-     */
-    lastUpdateTime: string;
-    /**
-     * Expense sync message if any.
-     */
-    message: string;
-    /**
-     * Network expense of the entity.
-     */
-    networkExpense: number;
-    /**
-     * Storage expense of the entity.
-     */
-    storageExpense: number;
-    /**
-     * Total expense of the entity.
-     */
-    totalExpense: number;
-    /**
-     * Monetary unit.
-     */
-    unit: string;
-}
-
-export interface DeploymentLastRequest {
-    /**
-     * Identifier of the requested action.
-     */
-    actionId: string;
-    /**
-     * Time at which the request was approved.
-     */
-    approvedAt: string;
-    /**
-     * Identifier of the requested blueprint in the form ‘UUID:version’.
-     */
-    blueprintId: string;
-    /**
-     * Indicates whether request can be canceled or not.
-     */
-    cancelable: boolean;
-    /**
-     * The id of the vRA catalog item to request the deployment. Conflicts with `blueprintId` and `blueprintContent`.
-     */
-    catalogItemId: string;
-    /**
-     * Time at which the request completed.
-     */
-    completedAt: string;
-    /**
-     * The number of tasks completed while fulfilling this request.
-     */
-    completedTasks: number;
-    /**
-     * Creation time (e.g. date format ‘2019-07-13T23:16:49.310Z’).
-     */
-    createdAt: string;
-    /**
-     * Longer user-friendly details of the request.
-     */
-    details: string;
-    /**
-     * Indicates whether request is in dismissed state.
-     */
-    dismissed: boolean;
-    /**
-     * Unique identifier of the resource.
-     */
-    id: string;
-    /**
-     * Time at which the request was initialized.
-     */
-    initializedAt: string;
-    /**
-     * Inputs provided by the user. For inputs including those with default values, refer to `inputsIncludingDefaults`.
-     */
-    inputs: {[key: string]: string};
-    /**
-     * A human-friendly name used as an identifier in APIs that support this option.
-     */
-    name: string;
-    /**
-     * Request outputs.
-     */
-    outputs: {[key: string]: string};
-    /**
-     * The user that initiated the request.
-     */
-    requestedBy: string;
-    resourceIds: string[];
-    /**
-     * Deployment status. Supported values are: `CREATE_SUCCESSFUL`, `CREATE_INPROGRESS`, `CREATE_FAILED`, `UPDATE_SUCCESSFUL`, `UPDATE_INPROGRESS`, `UPDATE_FAILED`, `DELETE_SUCCESSFUL`, `DELETE_INPROGRESS`, `DELETE_FAILED`, `ACTION_SUCCESSFUL`, `ACTION_INPROGRESS`, `ACTION_FAILED`.
-     */
-    status: string;
-    totalTasks: number;
-    /**
-     * Last update time (e.g. date format ‘2019-07-13T23:16:49.310Z’).
-     */
-    updatedAt: string;
-}
-
-export interface DeploymentProject {
-    /**
-     * A human-friendly description.
-     */
-    description?: string;
-    /**
-     * Unique identifier of the resource.
-     */
-    id?: string;
-    /**
-     * A human-friendly name used as an identifier in APIs that support this option.
-     */
-    name?: string;
-    /**
-     * Version of the entity, if applicable.
-     */
-    version?: string;
-}
-
-export interface DeploymentResource {
-    /**
-     * Creation time (e.g. date format ‘2019-07-13T23:16:49.310Z’).
-     */
-    createdAt?: string;
-    /**
-     * A list of other resources this resource depends on.
-     */
-    dependsOns?: string[];
-    /**
-     * A human-friendly description.
-     */
-    description?: string;
-    /**
-     * Expense incurred for the deployment.
-     */
-    expenses: outputs.DeploymentResourceExpense[];
-    /**
-     * Unique identifier of the resource.
-     */
-    id: string;
-    /**
-     * A human-friendly name used as an identifier in APIs that support this option.
-     */
-    name: string;
-    /**
-     * List of properties in the encoded JSON string format.
-     */
-    propertiesJson?: string;
-    /**
-     * The current state of the resource. Supported values are `PARTIAL`, `TAINTED`, `OK.`
-     */
-    state?: string;
-    /**
-     * The current sync status. Supported values are `SUCCESS`, `MISSING`, `STALE`.
-     */
-    syncStatus?: string;
-    /**
-     * Type of the resource.
-     */
-    type?: string;
-}
-
-export interface DeploymentResourceExpense {
-    /**
-     * Additional expense incurred for the resource.
-     */
-    additionalExpense: number;
-    /**
-     * Expense sync message code if any.
-     */
-    code: string;
-    /**
-     * Compute expense of the entity.
-     */
-    computeExpense: number;
-    /**
-     * Last expense sync time.
-     */
-    lastUpdateTime: string;
-    /**
-     * Expense sync message if any.
-     */
-    message: string;
-    /**
-     * Network expense of the entity.
-     */
-    networkExpense: number;
-    /**
-     * Storage expense of the entity.
-     */
-    storageExpense: number;
-    /**
-     * Total expense of the entity.
-     */
-    totalExpense: number;
-    /**
-     * Monetary unit.
-     */
-    unit: string;
-}
-
-export interface FabricComputeLink {
-    href?: string;
-    hrefs?: string[];
-    rel: string;
-}
-
-export interface FabricComputeTag {
-    /**
-     * Tag’s key.
-     */
-    key: string;
-    /**
-     * Tag’s value.
-     */
-    value: string;
-}
-
-export interface FabricDatastoreVsphereLink {
-    href?: string;
-    hrefs?: string[];
-    rel: string;
-}
-
-export interface FabricDatastoreVsphereTag {
-    /**
-     * Tag’s key.
-     */
-    key: string;
-    /**
-     * Tag’s value.
-     */
-    value: string;
-}
-
-export interface FabricNetworkVsphereLink {
-    href?: string;
-    hrefs?: string[];
-    rel: string;
-}
-
-export interface FabricNetworkVsphereTag {
-    key: string;
-    value: string;
-}
-
-export interface FlavorProfileFlavorMapping {
-    cpuCount?: number;
-    instanceType?: string;
-    memory?: number;
-    /**
-     * A human-friendly name used as an identifier in APIs that support this option.
-     */
-    name: string;
-}
-
-export interface FlavorProfileLink {
-    href?: string;
-    hrefs?: string[];
-    rel: string;
-}
-
-export interface GetBlockDeviceLink {
-    href?: string;
-    hrefs?: string[];
-    rel: string;
-}
-
-export interface GetBlockDeviceSnapshot {
-    /**
-     * Date when the entity was created. The date is in ISO 6801 and UTC.
-     */
-    createdAt: string;
-    /**
-     * Describes machine within the scope of your organization and is not propagated to the cloud.
-     */
-    description: string;
-    /**
-     * The id of the block device.
-     */
-    id: string;
-    isCurrent: boolean;
-    /**
-     * HATEOAS of the entity.
-     */
-    links: outputs.GetBlockDeviceSnapshotLink[];
-    /**
-     * A human-friendly name used as an identifier in APIs that support this option.
-     */
-    name: string;
-    /**
-     * The id of the organization this entity belongs to.
-     */
-    orgId: string;
-    /**
-     * Email of the user that owns the entity.
-     */
-    owner: string;
-    /**
-     * Date when the entity was last updated. The date is ISO 8601 and UTC.
-     */
-    updatedAt: string;
-}
-
-export interface GetBlockDeviceSnapshotLink {
-    href?: string;
-    hrefs?: string[];
-    rel: string;
-}
-
-export interface GetBlockDeviceSnapshotsSnapshot {
-    /**
-     * Date when the entity was created. The date is in ISO 6801 and UTC.
-     */
-    createdAt: string;
-    /**
-     * A human-friendly description.
-     */
-    description: string;
-    id: string;
-    /**
-     * Indicates whether this snapshot is the current snapshot on the block-device.
-     */
-    isCurrent: boolean;
-    /**
-     * HATEOAS of the entity
-     */
-    links: outputs.GetBlockDeviceSnapshotsSnapshotLink[];
-    /**
-     * A human-friendly name used as an identifier in APIs that support this option.  Only one of 'filter', 'id', 'name' or 'region_id' must be specified.
-     */
-    name: string;
-    /**
-     * The id of the organization this entity belongs to.
-     */
-    orgId: string;
-    /**
-     * Email of the user that owns the entity.
-     */
-    owner: string;
-    updatedAt: string;
-}
-
-export interface GetBlockDeviceSnapshotsSnapshotLink {
-    href?: string;
-    hrefs?: string[];
-    rel: string;
-}
-
-export interface GetBlockDeviceTag {
-    /**
-     * Tag’s key.
-     */
-    key: string;
-    /**
-     * Tag’s value.
-     */
-    value: string;
-}
-
-export interface GetBlueprintValidationMessage {
-    message: string;
-    metadata?: {[key: string]: string};
-    path: string;
-    resourceName: string;
-    type: string;
-}
-
-export interface GetCatalogItemEntitlementDefinition {
-    /**
-     * Description of the catalog item.
-     */
-    description: string;
-    /**
-     * Icon id of associated catalog item.
-     */
-    iconId: string;
-    /**
-     * The id of entitlement. One of `catalogItemId` or `id` must be provided.
-     */
-    id: string;
-    /**
-     * Name of the catalog item.
-     */
-    name: string;
-    /**
-     * Number of items in the associated catalog source.
-     */
-    numberOfItems: number;
-    /**
-     * Catalog source name.
-     */
-    sourceName: string;
-    /**
-     * Catalog source type.
-     */
-    sourceType: string;
-    /**
-     * Content definition type.
-     */
-    type: string;
-}
-
-export interface GetCatalogItemProject {
-    /**
-     * A human-friendly description.
-     */
-    description?: string;
-    /**
-     * The id of catalog item. One of `id`, or `name` must be provided.
-     */
-    id?: string;
-    /**
-     * Name of the catalog item. One of `id`, or `name` must be provided.
-     */
-    name?: string;
-    /**
-     * Version of the entity, if applicable.
-     */
-    version?: string;
-}
-
-export interface GetCatalogItemType {
-    /**
-     * A human-friendly description.
-     */
-    description?: string;
-    /**
-     * The id of catalog item. One of `id`, or `name` must be provided.
-     */
-    id?: string;
-    /**
-     * Name of the catalog item. One of `id`, or `name` must be provided.
-     */
-    name?: string;
-    /**
-     * Version of the entity, if applicable.
-     */
-    version?: string;
-}
-
-export interface GetCatalogItemVersion {
-    /**
-     * Date-time when catalog item version was created at.
-     */
-    createdAt?: string;
-    /**
-     * A human-friendly description.
-     */
-    description?: string;
-    /**
-     * The id of catalog item. One of `id`, or `name` must be provided.
-     */
-    id?: string;
-}
-
-export interface GetCatalogSourceEntitlementDefinition {
-    /**
-     * Description of the catalog source.
-     */
-    description: string;
-    /**
-     * Icon id of associated catalog source.
-     */
-    iconId: string;
-    /**
-     * The id of entitlement. One of `catalogSourceId` or `id` must be provided.
-     */
-    id: string;
-    /**
-     * Name of the catalog source.
-     */
-    name: string;
-    /**
-     * Number of items in the associated catalog source.
-     */
-    numberOfItems: number;
-    /**
-     * Catalog source name.
-     */
-    sourceName: string;
-    /**
-     * Catalog source type.
-     */
-    sourceType: string;
-    /**
-     * Content definition type.
-     */
-    type: string;
-}
-
-export interface GetCloudAccountAwsLink {
-    href?: string;
-    hrefs?: string[];
-    rel: string;
-}
-
-export interface GetCloudAccountAwsTag {
-    /**
-     * Tag’s key.
-     */
-    key: string;
-    /**
-     * Tag’s value.
-     */
-    value: string;
-}
-
-export interface GetCloudAccountAzureLink {
-    href?: string;
-    hrefs?: string[];
-    rel: string;
-}
-
-export interface GetCloudAccountAzureTag {
-    /**
-     * Tag’s key.
-     */
-    key: string;
-    /**
-     * Tag’s value.
-     */
-    value: string;
-}
-
-export interface GetCloudAccountGcpLink {
-    href?: string;
-    hrefs?: string[];
-    rel: string;
-}
-
-export interface GetCloudAccountGcpTag {
-    /**
-     * Tag’s key.
-     */
-    key: string;
-    /**
-     * Tag’s value.
-     */
-    value: string;
-}
-
-export interface GetCloudAccountNsxtLink {
-    href?: string;
-    hrefs?: string[];
-    rel: string;
-}
-
-export interface GetCloudAccountNsxtTag {
-    /**
-     * Tag’s key.
-     */
-    key: string;
-    /**
-     * Tag’s value.
-     */
-    value: string;
-}
-
-export interface GetCloudAccountNsxvLink {
-    href?: string;
-    hrefs?: string[];
-    rel: string;
-}
-
-export interface GetCloudAccountNsxvTag {
-    /**
-     * Tag’s key.
-     */
-    key: string;
-    /**
-     * Tag’s value.
-     */
-    value: string;
-}
-
-export interface GetCloudAccountVmcLink {
-    href?: string;
-    hrefs?: string[];
-    rel: string;
-}
-
-export interface GetCloudAccountVmcTag {
-    /**
-     * Tag’s key.
-     */
-    key: string;
-    /**
-     * Tag’s value.
-     */
-    value: string;
-}
-
-export interface GetCloudAccountVsphereLink {
-    href?: string;
-    hrefs?: string[];
-    rel: string;
-}
-
-export interface GetCloudAccountVsphereTag {
-    /**
-     * Tag’s key.
-     */
-    key: string;
-    /**
-     * Tag’s value.
-     */
-    value: string;
-}
-
-export interface GetDeploymentExpense {
-    /**
-     * Additional expense incurred for the resource.
-     */
-    additionalExpense: number;
-    /**
-     * Expense sync message code if any.
-     */
-    code: string;
-    /**
-     * Compute expense of the entity.
-     */
-    computeExpense: number;
-    /**
-     * Last expense sync time.
-     */
-    lastUpdateTime: string;
-    /**
-     * Expense sync message if any.
-     */
-    message: string;
-    /**
-     * Network expense of the entity.
-     */
-    networkExpense: number;
-    /**
-     * Storage expense of the entity.
-     */
-    storageExpense: number;
-    /**
-     * Total expense of the entity.
-     */
-    totalExpense: number;
-    /**
-     * Monetary unit.
-     */
-    unit: string;
-}
-
-export interface GetDeploymentLastRequest {
-    /**
-     * Identifier of the requested action.
-     */
-    actionId: string;
-    /**
-     * Time at which the request was approved.
-     */
-    approvedAt: string;
-    /**
-     * Identifier of the requested blueprint in the form ‘UUID:version’.
-     */
-    blueprintId: string;
-    /**
-     * Indicates whether request can be canceled or not.
-     */
-    cancelable: boolean;
-    /**
-     * Identifier of the requested catalog item in the form ‘UUID:version’.
-     */
-    catalogItemId: string;
-    /**
-     * Time at which the request completed.
-     */
-    completedAt: string;
-    /**
-     * The number of tasks completed while fulfilling this request.
-     */
-    completedTasks: number;
-    /**
-     * Creation time (e.g. date format ‘2019-07-13T23:16:49.310Z’).
-     */
-    createdAt: string;
-    /**
-     * Longer user-friendly details of the request.
-     */
-    details: string;
-    /**
-     * Indicates whether request is in dismissed state.
-     */
-    dismissed: boolean;
-    /**
-     * The id of the deployment. One of `id` or `name` must be provided.
-     */
-    id: string;
-    /**
-     * Time at which the request was initialized.
-     */
-    initializedAt: string;
-    /**
-     * List of request inputs.
-     */
-    inputs: {[key: string]: string};
-    /**
-     * Name of the deployment. One of `id` or `name` must be provided.
-     */
-    name: string;
-    /**
-     * Request outputs.
-     */
-    outputs: {[key: string]: string};
-    /**
-     * The user that initiated the request.
-     */
-    requestedBy: string;
-    resourceIds: string[];
-    /**
-     * Deployment status. Supported values are: `CREATE_SUCCESSFUL`, `CREATE_INPROGRESS`, `CREATE_FAILED`, `UPDATE_SUCCESSFUL`, `UPDATE_INPROGRESS`, `UPDATE_FAILED`, `DELETE_SUCCESSFUL`, `DELETE_INPROGRESS`, `DELETE_FAILED`, `ACTION_SUCCESSFUL`, `ACTION_INPROGRESS`, `ACTION_FAILED`.
-     */
-    status: string;
-    totalTasks: number;
-    /**
-     * Last update time (e.g. date format ‘2019-07-13T23:16:49.310Z’).
-     */
-    updatedAt: string;
-}
-
-export interface GetDeploymentProject {
-    /**
-     * A description of the resource.
-     */
-    description?: string;
-    /**
-     * The id of the deployment. One of `id` or `name` must be provided.
-     */
-    id?: string;
-    /**
-     * Name of the deployment. One of `id` or `name` must be provided.
-     */
-    name?: string;
-    /**
-     * Version of the entity, if applicable.
-     */
-    version?: string;
-}
-
-export interface GetDeploymentResource {
-    /**
-     * Creation time (e.g. date format ‘2019-07-13T23:16:49.310Z’).
-     */
-    createdAt?: string;
-    /**
-     * A list of other resources this resource depends on.
-     */
-    dependsOns?: string[];
-    /**
-     * A description of the resource.
-     */
-    description?: string;
-    /**
-     * Expense incurred for this resource.
-     */
-    expenses: outputs.GetDeploymentResourceExpense[];
-    /**
-     * The id of the deployment. One of `id` or `name` must be provided.
-     */
-    id: string;
-    /**
-     * Name of the deployment. One of `id` or `name` must be provided.
-     */
-    name: string;
-    /**
-     * List of properties in the encoded JSON string format.
-     */
-    propertiesJson?: string;
-    /**
-     * The current state of the resource. Supported values are `PARTIAL`, `TAINTED`, `OK.`
-     */
-    state?: string;
-    /**
-     * The current sync status. Supported values are `SUCCESS`, `MISSING`, `STALE`.
-     */
-    syncStatus?: string;
-    /**
-     * Type of the resource.
-     */
-    type?: string;
-}
-
-export interface GetDeploymentResourceExpense {
-    /**
-     * Additional expense incurred for the resource.
-     */
-    additionalExpense: number;
-    /**
-     * Expense sync message code if any.
-     */
-    code: string;
-    /**
-     * Compute expense of the entity.
-     */
-    computeExpense: number;
-    /**
-     * Last expense sync time.
-     */
-    lastUpdateTime: string;
-    /**
-     * Expense sync message if any.
-     */
-    message: string;
-    /**
-     * Network expense of the entity.
-     */
-    networkExpense: number;
-    /**
-     * Storage expense of the entity.
-     */
-    storageExpense: number;
-    /**
-     * Total expense of the entity.
-     */
-    totalExpense: number;
-    /**
-     * Monetary unit.
-     */
-    unit: string;
-}
-
-export interface GetFabricComputeLink {
-    href?: string;
-    hrefs?: string[];
-    rel: string;
-}
-
-export interface GetFabricComputeTag {
-    /**
-     * Tag’s key.
-     */
-    key: string;
-    /**
-     * Tag’s value.
-     */
-    value: string;
-}
-
-export interface GetFabricDatastoreVsphereLink {
-    href?: string;
-    hrefs?: string[];
-    rel: string;
-}
-
-export interface GetFabricDatastoreVsphereTag {
-    /**
-     * Tag’s key.
-     */
-    key: string;
-    /**
-     * Tag’s value.
-     */
-    value: string;
-}
-
-export interface GetFabricNetworkLink {
-    href?: string;
-    hrefs?: string[];
-    rel: string;
-}
-
-export interface GetFabricNetworkTag {
-    key: string;
-    value: string;
-}
-
-export interface GetFabricStorageAccountAzureLink {
-    href?: string;
-    hrefs?: string[];
-    rel: string;
-}
-
-export interface GetFabricStoragePolicyVsphereLink {
-    href?: string;
-    hrefs?: string[];
-    rel: string;
-}
-
-export interface GetImageProfileImageMapping {
-    cloudConfig?: string;
-    constraints?: outputs.GetImageProfileImageMappingConstraint[];
-    /**
-     * A human-friendly description.
-     */
-    description: string;
-    externalId: string;
-    /**
-     * The external regionId of the resource.
-     */
-    externalRegionId: string;
-    imageId?: string;
-    imageName?: string;
-    /**
-     * A human-friendly name used as an identifier in APIs that support this option.
-     */
-    name: string;
-    organization: string;
-    osFamily: string;
-    /**
-     * Email of the user that owns the entity.
-     */
-    owner: string;
-    private: boolean;
-}
-
-export interface GetImageProfileImageMappingConstraint {
-    expression: string;
-    mandatory: boolean;
-}
-
-export interface GetMachineLink {
-    href?: string;
-    hrefs?: string[];
-    rel: string;
-}
-
-export interface GetMachineTag {
-    key: string;
-    value: string;
-}
-
-export interface GetNetworkConstraint {
-    expression: string;
-    mandatory: boolean;
-}
-
-export interface GetNetworkDomainLink {
-    href?: string;
-    hrefs?: string[];
-    rel: string;
-}
-
-export interface GetNetworkDomainTag {
-    key: string;
-    value: string;
-}
-
-export interface GetNetworkLink {
-    href?: string;
-    hrefs?: string[];
-    rel: string;
-}
-
-export interface GetNetworkProfileLink {
-    href?: string;
-    hrefs?: string[];
-    rel: string;
-}
-
-export interface GetNetworkProfileTag {
-    key: string;
-    value: string;
-}
-
-export interface GetNetworkTag {
-    key: string;
-    value: string;
-}
-
-export interface GetProjectAdministratorRole {
-    email: string;
-    type?: string;
-}
-
-export interface GetProjectConstraints {
-    extensibilities?: outputs.GetProjectConstraintsExtensibility[];
-    networks?: outputs.GetProjectConstraintsNetwork[];
-    storages?: outputs.GetProjectConstraintsStorage[];
-}
-
-export interface GetProjectConstraintsExtensibility {
-    expression: string;
-    mandatory: boolean;
-}
-
-export interface GetProjectConstraintsNetwork {
-    expression: string;
-    mandatory: boolean;
-}
-
-export interface GetProjectConstraintsStorage {
-    expression: string;
-    mandatory: boolean;
-}
-
-export interface GetProjectMemberRole {
-    email: string;
-    type?: string;
-}
-
-export interface GetProjectViewerRole {
-    email: string;
-    type?: string;
-}
-
-export interface GetProjectZoneAssignment {
-    cpuLimit: number;
-    maxInstances: number;
-    memoryLimitMb: number;
-    priority: number;
-    storageLimitGb: number;
-    zoneId: string;
-}
-
-export interface GetSecurityGroupLink {
-    href?: string;
-    hrefs?: string[];
-    rel: string;
-}
-
-export interface GetSecurityGroupRule {
-    access: string;
-    direction: string;
-    ipRangeCidr: number;
-    /**
-     * Name of the security group.
-     */
-    name?: string;
-    ports: string;
-    protocol: string;
-    service?: string;
-}
-
-export interface GetStorageProfileAwsLink {
-    href?: string;
-    hrefs?: string[];
-    rel: string;
-}
-
-export interface GetStorageProfileAwsTag {
-    key: string;
-    value: string;
-}
-
-export interface GetStorageProfileAzureLink {
-    href?: string;
-    hrefs?: string[];
-    rel: string;
-}
-
-export interface GetStorageProfileAzureTag {
-    key: string;
-    value: string;
-}
-
-export interface GetStorageProfileLink {
-    href?: string;
-    hrefs?: string[];
-    rel: string;
-}
-
-export interface GetStorageProfileTag {
-    key: string;
-    value: string;
-}
-
-export interface GetStorageProfileVsphereLink {
-    href?: string;
-    hrefs?: string[];
-    rel: string;
-}
-
-export interface GetStorageProfileVsphereTag {
-    key: string;
-    value: string;
-}
-
-export interface GetZoneLink {
-    href?: string;
-    hrefs?: string[];
-    rel: string;
-}
-
-export interface GetZoneTag {
-    /**
-     * Tag’s key.
-     */
-    key: string;
-    /**
-     * Tag’s value.
-     */
-    value: string;
-}
-
-export interface GetZoneTagsToMatch {
-    /**
-     * Tag’s key.
-     */
-    key: string;
-    /**
-     * Tag’s value.
-     */
-    value: string;
-}
-
-export interface ImageProfileImageMapping {
-    cloudConfig?: string;
-    constraints?: outputs.ImageProfileImageMappingConstraint[];
-    /**
-     * A human-friendly description.
-     */
-    description: string;
-    externalId: string;
-    /**
-     * The external regionId of the resource.
-     */
-    externalRegionId: string;
-    imageId?: string;
-    imageName?: string;
-    /**
-     * A human-friendly name used as an identifier in APIs that support this option.
-     */
-    name: string;
-    organization: string;
-    osFamily: string;
-    /**
-     * Email of the user that owns the entity.
-     */
-    owner: string;
-    private: boolean;
-}
-
-export interface ImageProfileImageMappingConstraint {
-    expression: string;
-    mandatory: boolean;
-}
-
-export interface LoadBalancerLink {
-    href?: string;
-    hrefs?: string[];
-    rel: string;
-}
-
-export interface LoadBalancerNic {
-    addresses?: string[];
-    /**
-     * Additional custom properties that may be used to extend the machine.
-     */
-    customProperties?: {[key: string]: any};
-    /**
-     * Describes machine within the scope of your organization and is not propagated to the cloud.
-     */
-    description?: string;
-    deviceIndex?: number;
-    /**
-     * A human-friendly name used as an identifier in APIs that support this option.
-     */
-    name?: string;
-    networkId: string;
-    securityGroupIds?: string[];
-}
-
-export interface LoadBalancerRoute {
-    /**
-     * Load balancer health check configuration.
-     */
-    healthCheckConfigurations?: outputs.LoadBalancerRouteHealthCheckConfiguration[];
-    /**
-     * Member port where the traffic is routed to.
-     */
-    memberPort: string;
-    /**
-     * The protocol of the member traffic.
-     */
-    memberProtocol: string;
-    /**
-     * Port which the load balancer is listening to.
-     */
-    port: string;
-    /**
-     * The protocol of the incoming load balancer requests.
-     */
-    protocol: string;
-}
-
-export interface LoadBalancerRouteHealthCheckConfiguration {
-    /**
-     * Number of consecutive successful checks before considering a particular back-end instance as healthy.
-     */
-    healthyThreshold?: number;
-    /**
-     * Interval (in seconds) at which the health checks will be performed.
-     */
-    intervalSeconds?: number;
-    /**
-     * Port which the load balancer is listening to.
-     */
-    port: string;
-    /**
-     * The protocol of the incoming load balancer requests.
-     */
-    protocol: string;
-    /**
-     * Timeout (in seconds) to wait for a response from the back-end instance.
-     */
-    timeoutSeconds?: number;
-    unhealthyThreshold?: number;
-    urlPath?: string;
-}
-
-export interface LoadBalancerTag {
-    /**
-     * Tag’s key.
-     */
-    key: string;
-    /**
-     * Tag’s value.
-     */
-    value: string;
-}
-
-export interface LoadBalancerTarget {
-    machineId: string;
-    networkInterfaceId?: string;
-}
-
-export interface MachineBootConfig {
-    /**
-     * Calid cloud config data in json-escaped yaml syntax.
-     */
-    content?: string;
-}
-
-export interface MachineConstraint {
-    /**
-     * Constraint that is conveyed to the policy engine. An expression of the form "[!]tag-key[:[tag-value]]", used to indicate a constraint match on keys and values of tags.
-     */
-    expression: string;
-    /**
-     * Indicates whether this constraint should be strictly enforced or not.
-     */
-    mandatory: boolean;
-}
-
-export interface MachineDisk {
-    /**
-     * ID of the existing block device.
-     */
-    blockDeviceId: string;
-    /**
-     * Human-friendly description.
-     */
-    description?: string;
-    /**
-     * Human-friendly name used as an identifier in APIs that support this option.
-     */
-    name?: string;
-}
-
-export interface MachineDisksList {
-    /**
-     * ID of the existing block device.
-     */
-    blockDeviceId: string;
-    /**
-     * Human-friendly description.
-     */
-    description?: string;
-    /**
-     * Human-friendly name used as an identifier in APIs that support this option.
-     */
-    name?: string;
-}
-
-export interface MachineImageDiskConstraint {
-    /**
-     * Constraint that is conveyed to the policy engine. An expression of the form "[!]tag-key[:[tag-value]]", used to indicate a constraint match on keys and values of tags.
-     */
-    expression: string;
-    /**
-     * Indicates whether this constraint should be strictly enforced or not.
-     */
-    mandatory: boolean;
-}
-
-export interface MachineLink {
-    href?: string;
-    hrefs?: string[];
-    rel: string;
-}
-
-export interface MachineNic {
-    /**
-     * List of IP addresses allocated or in use by this network interface.
-     * example:[ "10.1.2.190" ]
-     */
-    addresses?: string[];
-    /**
-     * Additional properties that may be used to extend the base type.
-     */
-    customProperties?: {[key: string]: any};
-    /**
-     * Human-friendly description.
-     */
-    description?: string;
-    /**
-     * The device index of this network interface.
-     */
-    deviceIndex?: number;
-    /**
-     * Human-friendly name used as an identifier in APIs that support this option.
-     */
-    name?: string;
-    /**
-     * ID of the network instance that this network interface plugs into.
-     */
-    networkId: string;
-    /**
-     * List of security group ids which this network interface will be assigned to.
-     */
-    securityGroupIds?: string[];
-}
-
-export interface MachineTag {
-    /**
-     * Tag’s key.
-     */
-    key: string;
-    /**
-     * Tag’s value.
-     */
-    value: string;
-}
-
-export interface NetworkConstraint {
-    expression: string;
-    mandatory: boolean;
-}
-
-export interface NetworkIpRangeLink {
-    href?: string;
-    hrefs?: string[];
-    rel: string;
-}
-
-export interface NetworkIpRangeTag {
-    key: string;
-    value: string;
-}
-
-export interface NetworkLink {
-    href?: string;
-    hrefs?: string[];
-    rel: string;
-}
-
-export interface NetworkProfileLink {
-    href?: string;
-    hrefs?: string[];
-    rel: string;
-}
-
-export interface NetworkProfileTag {
-    key: string;
-    value: string;
-}
-
-export interface NetworkTag {
-    key: string;
-    value: string;
-}
-
-export interface ProjectAdministratorRole {
-    email: string;
-    type?: string;
-}
-
-export interface ProjectConstraints {
-    extensibilities?: outputs.ProjectConstraintsExtensibility[];
-    networks?: outputs.ProjectConstraintsNetwork[];
-    storages?: outputs.ProjectConstraintsStorage[];
-}
-
-export interface ProjectConstraintsExtensibility {
-    expression: string;
-    mandatory: boolean;
-}
-
-export interface ProjectConstraintsNetwork {
-    expression: string;
-    mandatory: boolean;
-}
-
-export interface ProjectConstraintsStorage {
-    expression: string;
-    mandatory: boolean;
-}
-
-export interface ProjectMemberRole {
-    email: string;
-    type?: string;
-}
-
-export interface ProjectViewerRole {
-    email: string;
-    type?: string;
-}
-
-export interface ProjectZoneAssignment {
-    cpuLimit?: number;
-    maxInstances?: number;
-    memoryLimitMb?: number;
-    priority?: number;
-    storageLimitGb?: number;
-    zoneId: string;
-}
-
-export interface StorageProfileAwsLink {
-    href?: string;
-    hrefs?: string[];
-    rel: string;
-}
-
-export interface StorageProfileAwsTag {
-    key: string;
-    value: string;
-}
-
-export interface StorageProfileAzureLink {
-    href?: string;
-    hrefs?: string[];
-    rel: string;
-}
-
-export interface StorageProfileAzureTag {
-    key: string;
-    value: string;
-}
-
-export interface StorageProfileLink {
-    href?: string;
-    hrefs?: string[];
-    rel: string;
-}
-
-export interface StorageProfileTag {
-    key: string;
-    value: string;
-}
-
-export interface StorageProfileVsphereLink {
-    href?: string;
-    hrefs?: string[];
-    rel: string;
-}
-
-export interface StorageProfileVsphereTag {
-    key: string;
-    value: string;
-}
-
-export interface ZoneLink {
-    href?: string;
-    hrefs?: string[];
-    rel: string;
-}
-
-export interface ZoneTag {
-    /**
-     * Tag’s key.
-     */
-    key: string;
-    /**
-     * Tag’s value.
-     */
-    value: string;
-}
+export namespace blockdevice {
+    export interface BlockDeviceConstraint {
+        expression: string;
+        mandatory: boolean;
+    }
+
+    export interface BlockDeviceLink {
+        href?: string;
+        hrefs?: string[];
+        rel: string;
+    }
+
+    export interface BlockDeviceSnapshot {
+        /**
+         * Date when entity was created. Date and time format is ISO 8601 and UTC.
+         */
+        createdAt: string;
+        /**
+         * Describes machine within the scope of your organization and is not propagated to the cloud.
+         */
+        description: string;
+        /**
+         * ID of the block device snapshot.
+         */
+        id: string;
+        /**
+         * Indicates whether snapshot on block device is current.
+         */
+        isCurrent: boolean;
+        /**
+         * HATEOAS of the entity
+         */
+        links: outputs.blockdevice.BlockDeviceSnapshotLink[];
+        /**
+         * Human-friendly name used as an identifier in APIs that support this option.
+         */
+        name: string;
+        /**
+         * ID of organization that block device snapshot belongs to.
+         */
+        orgId: string;
+        /**
+         * Email of block device snapshot owner.
+         */
+        owner: string;
+        /**
+         * Date when entity was last updated. Date and time format is ISO 8601 and UTC.
+         */
+        updatedAt: string;
+    }
+
+    export interface BlockDeviceSnapshotLink {
+        href?: string;
+        hrefs?: string[];
+        rel: string;
+    }
+
+    export interface BlockDeviceTag {
+        key: string;
+        value: string;
+    }
+
+    export interface GetBlockDeviceLink {
+        href?: string;
+        hrefs?: string[];
+        rel: string;
+    }
+
+    export interface GetBlockDeviceSnapshot {
+        /**
+         * Date when the entity was created. The date is in ISO 6801 and UTC.
+         */
+        createdAt: string;
+        /**
+         * Describes machine within the scope of your organization and is not propagated to the cloud.
+         */
+        description: string;
+        /**
+         * The id of the block device.
+         */
+        id: string;
+        isCurrent: boolean;
+        /**
+         * HATEOAS of the entity.
+         */
+        links: outputs.blockdevice.GetBlockDeviceSnapshotLink[];
+        /**
+         * A human-friendly name used as an identifier in APIs that support this option.
+         */
+        name: string;
+        /**
+         * The id of the organization this entity belongs to.
+         */
+        orgId: string;
+        /**
+         * Email of the user that owns the entity.
+         */
+        owner: string;
+        /**
+         * Date when the entity was last updated. The date is ISO 8601 and UTC.
+         */
+        updatedAt: string;
+    }
+
+    export interface GetBlockDeviceSnapshotLink {
+        href?: string;
+        hrefs?: string[];
+        rel: string;
+    }
+
+    export interface GetBlockDeviceTag {
+        /**
+         * Tag’s key.
+         */
+        key: string;
+        /**
+         * Tag’s value.
+         */
+        value: string;
+    }
+
+    export interface GetSnapshotsSnapshot {
+        /**
+         * Date when the entity was created. The date is in ISO 6801 and UTC.
+         */
+        createdAt: string;
+        /**
+         * A human-friendly description.
+         */
+        description: string;
+        id: string;
+        /**
+         * Indicates whether this snapshot is the current snapshot on the block-device.
+         */
+        isCurrent: boolean;
+        /**
+         * HATEOAS of the entity
+         */
+        links: outputs.blockdevice.GetSnapshotsSnapshotLink[];
+        /**
+         * A human-friendly name used as an identifier in APIs that support this option.  Only one of 'filter', 'id', 'name' or 'region_id' must be specified.
+         */
+        name: string;
+        /**
+         * The id of the organization this entity belongs to.
+         */
+        orgId: string;
+        /**
+         * Email of the user that owns the entity.
+         */
+        owner: string;
+        updatedAt: string;
+    }
+
+    export interface GetSnapshotsSnapshotLink {
+        href?: string;
+        hrefs?: string[];
+        rel: string;
+    }
+
+    export interface SnapshotLink {
+        href?: string;
+        hrefs?: string[];
+        rel: string;
+    }
+
+}
+
+export namespace blueprint {
+    export interface BlueprintValidationMessage {
+        message: string;
+        metadata?: {[key: string]: string};
+        path: string;
+        resourceName: string;
+        type: string;
+    }
+
+    export interface GetBlueprintValidationMessage {
+        message: string;
+        metadata?: {[key: string]: string};
+        path: string;
+        resourceName: string;
+        type: string;
+    }
+
+}
+
+export namespace catalog {
+    export interface GetItemEntitlementDefinition {
+        /**
+         * Description of the catalog item.
+         */
+        description: string;
+        /**
+         * Icon id of associated catalog item.
+         */
+        iconId: string;
+        /**
+         * The id of entitlement. One of `catalogItemId` or `id` must be provided.
+         */
+        id: string;
+        /**
+         * Name of the catalog item.
+         */
+        name: string;
+        /**
+         * Number of items in the associated catalog source.
+         */
+        numberOfItems: number;
+        /**
+         * Catalog source name.
+         */
+        sourceName: string;
+        /**
+         * Catalog source type.
+         */
+        sourceType: string;
+        /**
+         * Content definition type.
+         */
+        type: string;
+    }
+
+    export interface GetItemProject {
+        /**
+         * A human-friendly description.
+         */
+        description?: string;
+        /**
+         * The id of catalog item. One of `id`, or `name` must be provided.
+         */
+        id?: string;
+        /**
+         * Name of the catalog item. One of `id`, or `name` must be provided.
+         */
+        name?: string;
+        /**
+         * Version of the entity, if applicable.
+         */
+        version?: string;
+    }
+
+    export interface GetItemType {
+        /**
+         * A human-friendly description.
+         */
+        description?: string;
+        /**
+         * The id of catalog item. One of `id`, or `name` must be provided.
+         */
+        id?: string;
+        /**
+         * Name of the catalog item. One of `id`, or `name` must be provided.
+         */
+        name?: string;
+        /**
+         * Version of the entity, if applicable.
+         */
+        version?: string;
+    }
+
+    export interface GetItemVersion {
+        /**
+         * Date-time when catalog item version was created at.
+         */
+        createdAt?: string;
+        /**
+         * A human-friendly description.
+         */
+        description?: string;
+        /**
+         * The id of catalog item. One of `id`, or `name` must be provided.
+         */
+        id?: string;
+    }
+
+    export interface GetSourceEntitlementDefinition {
+        /**
+         * Description of the catalog source.
+         */
+        description: string;
+        /**
+         * Icon id of associated catalog source.
+         */
+        iconId: string;
+        /**
+         * The id of entitlement. One of `catalogSourceId` or `id` must be provided.
+         */
+        id: string;
+        /**
+         * Name of the catalog source.
+         */
+        name: string;
+        /**
+         * Number of items in the associated catalog source.
+         */
+        numberOfItems: number;
+        /**
+         * Catalog source name.
+         */
+        sourceName: string;
+        /**
+         * Catalog source type.
+         */
+        sourceType: string;
+        /**
+         * Content definition type.
+         */
+        type: string;
+    }
+
+    export interface ItemEntitlementDefinition {
+        /**
+         * Description of the catalog item.
+         */
+        description: string;
+        /**
+         * Icon id of associated catalog item.
+         */
+        iconId: string;
+        /**
+         * Id of the catalog item.
+         */
+        id: string;
+        /**
+         * Name of the catalog item.
+         */
+        name: string;
+        /**
+         * Number of items in the associated catalog source.
+         */
+        numberOfItems: number;
+        /**
+         * Catalog source name.
+         */
+        sourceName: string;
+        /**
+         * Catalog source type.
+         */
+        sourceType: string;
+        /**
+         * Content definition type.
+         */
+        type: string;
+    }
+
+    export interface SourceEntitlementDefinition {
+        description: string;
+        iconId: string;
+        id: string;
+        name: string;
+        numberOfItems: number;
+        sourceName: string;
+        sourceType: string;
+        type: string;
+    }
+}
+
+export namespace cloudaccount {
+    export interface AwsLink {
+        href?: string;
+        hrefs?: string[];
+        rel: string;
+    }
+
+    export interface AwsTag {
+        key: string;
+        value: string;
+    }
+
+    export interface AzureLink {
+        href?: string;
+        hrefs?: string[];
+        rel: string;
+    }
+
+    export interface AzureTag {
+        key: string;
+        value: string;
+    }
+
+    export interface GcpLink {
+        href?: string;
+        hrefs?: string[];
+        rel: string;
+    }
+
+    export interface GcpTag {
+        key: string;
+        value: string;
+    }
+
+    export interface GetAwsLink {
+        href?: string;
+        hrefs?: string[];
+        rel: string;
+    }
+
+    export interface GetAwsTag {
+        /**
+         * Tag’s key.
+         */
+        key: string;
+        /**
+         * Tag’s value.
+         */
+        value: string;
+    }
+
+    export interface GetAzureLink {
+        href?: string;
+        hrefs?: string[];
+        rel: string;
+    }
+
+    export interface GetAzureTag {
+        /**
+         * Tag’s key.
+         */
+        key: string;
+        /**
+         * Tag’s value.
+         */
+        value: string;
+    }
+
+    export interface GetGcpLink {
+        href?: string;
+        hrefs?: string[];
+        rel: string;
+    }
+
+    export interface GetGcpTag {
+        /**
+         * Tag’s key.
+         */
+        key: string;
+        /**
+         * Tag’s value.
+         */
+        value: string;
+    }
+
+    export interface GetNsxtLink {
+        href?: string;
+        hrefs?: string[];
+        rel: string;
+    }
+
+    export interface GetNsxtTag {
+        /**
+         * Tag’s key.
+         */
+        key: string;
+        /**
+         * Tag’s value.
+         */
+        value: string;
+    }
+
+    export interface GetNsxvLink {
+        href?: string;
+        hrefs?: string[];
+        rel: string;
+    }
+
+    export interface GetNsxvTag {
+        /**
+         * Tag’s key.
+         */
+        key: string;
+        /**
+         * Tag’s value.
+         */
+        value: string;
+    }
+
+    export interface GetVSphereLink {
+        href?: string;
+        hrefs?: string[];
+        rel: string;
+    }
+
+    export interface GetVSphereTag {
+        /**
+         * Tag’s key.
+         */
+        key: string;
+        /**
+         * Tag’s value.
+         */
+        value: string;
+    }
+
+    export interface GetVmcLink {
+        href?: string;
+        hrefs?: string[];
+        rel: string;
+    }
+
+    export interface GetVmcTag {
+        /**
+         * Tag’s key.
+         */
+        key: string;
+        /**
+         * Tag’s value.
+         */
+        value: string;
+    }
+
+    export interface NsxtLink {
+        href?: string;
+        hrefs?: string[];
+        rel: string;
+    }
+
+    export interface NsxtTag {
+        key: string;
+        value: string;
+    }
+
+    export interface NsxvLink {
+        href?: string;
+        hrefs?: string[];
+        rel: string;
+    }
+
+    export interface NsxvTag {
+        key: string;
+        value: string;
+    }
+
+    export interface VSphereLink {
+        href?: string;
+        hrefs?: string[];
+        rel: string;
+    }
+
+    export interface VSphereTag {
+        key: string;
+        value: string;
+    }
+
+    export interface VmcLink {
+        href?: string;
+        hrefs?: string[];
+        rel: string;
+    }
+
+    export interface VmcTag {
+        key: string;
+        value: string;
+    }
+}
+
+export namespace contentsource {
+    export interface ContentSourceConfig {
+        /**
+         * Content source branch name.
+         */
+        branch?: string;
+        /**
+         * Content source type. Supported values are `BLUEPRINT`, `IMAGE`, `ABX_SCRIPTS`, `TERRAFORM_CONFIGURATION`.
+         */
+        contentType?: string;
+        /**
+         * Content source integration id as seen in vRA integrations.
+         */
+        integrationId: string;
+        /**
+         * Path to refer to in the content source repository and branch.
+         */
+        path: string;
+        /**
+         * Name of the project.
+         */
+        projectName: string;
+        /**
+         * Content source repository.
+         */
+        repository?: string;
+    }
+
+}
+
+export namespace deployment {
+    export interface DeploymentExpense {
+        /**
+         * Additional expense incurred for the resource.
+         */
+        additionalExpense: number;
+        /**
+         * Expense sync message code if any.
+         */
+        code: string;
+        /**
+         * Compute expense of the entity.
+         */
+        computeExpense: number;
+        /**
+         * Last expense sync time.
+         */
+        lastUpdateTime: string;
+        /**
+         * Expense sync message if any.
+         */
+        message: string;
+        /**
+         * Network expense of the entity.
+         */
+        networkExpense: number;
+        /**
+         * Storage expense of the entity.
+         */
+        storageExpense: number;
+        /**
+         * Total expense of the entity.
+         */
+        totalExpense: number;
+        /**
+         * Monetary unit.
+         */
+        unit: string;
+    }
+
+    export interface DeploymentLastRequest {
+        /**
+         * Identifier of the requested action.
+         */
+        actionId: string;
+        /**
+         * Time at which the request was approved.
+         */
+        approvedAt: string;
+        /**
+         * Identifier of the requested blueprint in the form ‘UUID:version’.
+         */
+        blueprintId: string;
+        /**
+         * Indicates whether request can be canceled or not.
+         */
+        cancelable: boolean;
+        /**
+         * The id of the vRA catalog item to request the deployment. Conflicts with `blueprintId` and `blueprintContent`.
+         */
+        catalogItemId: string;
+        /**
+         * Time at which the request completed.
+         */
+        completedAt: string;
+        /**
+         * The number of tasks completed while fulfilling this request.
+         */
+        completedTasks: number;
+        /**
+         * Creation time (e.g. date format ‘2019-07-13T23:16:49.310Z’).
+         */
+        createdAt: string;
+        /**
+         * Longer user-friendly details of the request.
+         */
+        details: string;
+        /**
+         * Indicates whether request is in dismissed state.
+         */
+        dismissed: boolean;
+        /**
+         * Unique identifier of the resource.
+         */
+        id: string;
+        /**
+         * Time at which the request was initialized.
+         */
+        initializedAt: string;
+        /**
+         * Inputs provided by the user. For inputs including those with default values, refer to `inputsIncludingDefaults`.
+         */
+        inputs: {[key: string]: string};
+        /**
+         * A human-friendly name used as an identifier in APIs that support this option.
+         */
+        name: string;
+        /**
+         * Request outputs.
+         */
+        outputs: {[key: string]: string};
+        /**
+         * The user that initiated the request.
+         */
+        requestedBy: string;
+        resourceIds: string[];
+        /**
+         * Deployment status. Supported values are: `CREATE_SUCCESSFUL`, `CREATE_INPROGRESS`, `CREATE_FAILED`, `UPDATE_SUCCESSFUL`, `UPDATE_INPROGRESS`, `UPDATE_FAILED`, `DELETE_SUCCESSFUL`, `DELETE_INPROGRESS`, `DELETE_FAILED`, `ACTION_SUCCESSFUL`, `ACTION_INPROGRESS`, `ACTION_FAILED`.
+         */
+        status: string;
+        totalTasks: number;
+        /**
+         * Last update time (e.g. date format ‘2019-07-13T23:16:49.310Z’).
+         */
+        updatedAt: string;
+    }
+
+    export interface DeploymentProject {
+        /**
+         * A human-friendly description.
+         */
+        description?: string;
+        /**
+         * Unique identifier of the resource.
+         */
+        id?: string;
+        /**
+         * A human-friendly name used as an identifier in APIs that support this option.
+         */
+        name?: string;
+        /**
+         * Version of the entity, if applicable.
+         */
+        version?: string;
+    }
+
+    export interface DeploymentResource {
+        /**
+         * Creation time (e.g. date format ‘2019-07-13T23:16:49.310Z’).
+         */
+        createdAt?: string;
+        /**
+         * A list of other resources this resource depends on.
+         */
+        dependsOns?: string[];
+        /**
+         * A human-friendly description.
+         */
+        description?: string;
+        /**
+         * Expense incurred for the deployment.
+         */
+        expenses: outputs.deployment.DeploymentResourceExpense[];
+        /**
+         * Unique identifier of the resource.
+         */
+        id: string;
+        /**
+         * A human-friendly name used as an identifier in APIs that support this option.
+         */
+        name: string;
+        /**
+         * List of properties in the encoded JSON string format.
+         */
+        propertiesJson?: string;
+        /**
+         * The current state of the resource. Supported values are `PARTIAL`, `TAINTED`, `OK.`
+         */
+        state?: string;
+        /**
+         * The current sync status. Supported values are `SUCCESS`, `MISSING`, `STALE`.
+         */
+        syncStatus?: string;
+        /**
+         * Type of the resource.
+         */
+        type?: string;
+    }
+
+    export interface DeploymentResourceExpense {
+        /**
+         * Additional expense incurred for the resource.
+         */
+        additionalExpense: number;
+        /**
+         * Expense sync message code if any.
+         */
+        code: string;
+        /**
+         * Compute expense of the entity.
+         */
+        computeExpense: number;
+        /**
+         * Last expense sync time.
+         */
+        lastUpdateTime: string;
+        /**
+         * Expense sync message if any.
+         */
+        message: string;
+        /**
+         * Network expense of the entity.
+         */
+        networkExpense: number;
+        /**
+         * Storage expense of the entity.
+         */
+        storageExpense: number;
+        /**
+         * Total expense of the entity.
+         */
+        totalExpense: number;
+        /**
+         * Monetary unit.
+         */
+        unit: string;
+    }
+
+    export interface GetDeploymentExpense {
+        /**
+         * Additional expense incurred for the resource.
+         */
+        additionalExpense: number;
+        /**
+         * Expense sync message code if any.
+         */
+        code: string;
+        /**
+         * Compute expense of the entity.
+         */
+        computeExpense: number;
+        /**
+         * Last expense sync time.
+         */
+        lastUpdateTime: string;
+        /**
+         * Expense sync message if any.
+         */
+        message: string;
+        /**
+         * Network expense of the entity.
+         */
+        networkExpense: number;
+        /**
+         * Storage expense of the entity.
+         */
+        storageExpense: number;
+        /**
+         * Total expense of the entity.
+         */
+        totalExpense: number;
+        /**
+         * Monetary unit.
+         */
+        unit: string;
+    }
+
+    export interface GetDeploymentLastRequest {
+        /**
+         * Identifier of the requested action.
+         */
+        actionId: string;
+        /**
+         * Time at which the request was approved.
+         */
+        approvedAt: string;
+        /**
+         * Identifier of the requested blueprint in the form ‘UUID:version’.
+         */
+        blueprintId: string;
+        /**
+         * Indicates whether request can be canceled or not.
+         */
+        cancelable: boolean;
+        /**
+         * Identifier of the requested catalog item in the form ‘UUID:version’.
+         */
+        catalogItemId: string;
+        /**
+         * Time at which the request completed.
+         */
+        completedAt: string;
+        /**
+         * The number of tasks completed while fulfilling this request.
+         */
+        completedTasks: number;
+        /**
+         * Creation time (e.g. date format ‘2019-07-13T23:16:49.310Z’).
+         */
+        createdAt: string;
+        /**
+         * Longer user-friendly details of the request.
+         */
+        details: string;
+        /**
+         * Indicates whether request is in dismissed state.
+         */
+        dismissed: boolean;
+        /**
+         * The id of the deployment. One of `id` or `name` must be provided.
+         */
+        id: string;
+        /**
+         * Time at which the request was initialized.
+         */
+        initializedAt: string;
+        /**
+         * List of request inputs.
+         */
+        inputs: {[key: string]: string};
+        /**
+         * Name of the deployment. One of `id` or `name` must be provided.
+         */
+        name: string;
+        /**
+         * Request outputs.
+         */
+        outputs: {[key: string]: string};
+        /**
+         * The user that initiated the request.
+         */
+        requestedBy: string;
+        resourceIds: string[];
+        /**
+         * Deployment status. Supported values are: `CREATE_SUCCESSFUL`, `CREATE_INPROGRESS`, `CREATE_FAILED`, `UPDATE_SUCCESSFUL`, `UPDATE_INPROGRESS`, `UPDATE_FAILED`, `DELETE_SUCCESSFUL`, `DELETE_INPROGRESS`, `DELETE_FAILED`, `ACTION_SUCCESSFUL`, `ACTION_INPROGRESS`, `ACTION_FAILED`.
+         */
+        status: string;
+        totalTasks: number;
+        /**
+         * Last update time (e.g. date format ‘2019-07-13T23:16:49.310Z’).
+         */
+        updatedAt: string;
+    }
+
+    export interface GetDeploymentProject {
+        /**
+         * A description of the resource.
+         */
+        description?: string;
+        /**
+         * The id of the deployment. One of `id` or `name` must be provided.
+         */
+        id?: string;
+        /**
+         * Name of the deployment. One of `id` or `name` must be provided.
+         */
+        name?: string;
+        /**
+         * Version of the entity, if applicable.
+         */
+        version?: string;
+    }
+
+    export interface GetDeploymentResource {
+        /**
+         * Creation time (e.g. date format ‘2019-07-13T23:16:49.310Z’).
+         */
+        createdAt?: string;
+        /**
+         * A list of other resources this resource depends on.
+         */
+        dependsOns?: string[];
+        /**
+         * A description of the resource.
+         */
+        description?: string;
+        /**
+         * Expense incurred for this resource.
+         */
+        expenses: outputs.deployment.GetDeploymentResourceExpense[];
+        /**
+         * The id of the deployment. One of `id` or `name` must be provided.
+         */
+        id: string;
+        /**
+         * Name of the deployment. One of `id` or `name` must be provided.
+         */
+        name: string;
+        /**
+         * List of properties in the encoded JSON string format.
+         */
+        propertiesJson?: string;
+        /**
+         * The current state of the resource. Supported values are `PARTIAL`, `TAINTED`, `OK.`
+         */
+        state?: string;
+        /**
+         * The current sync status. Supported values are `SUCCESS`, `MISSING`, `STALE`.
+         */
+        syncStatus?: string;
+        /**
+         * Type of the resource.
+         */
+        type?: string;
+    }
+
+    export interface GetDeploymentResourceExpense {
+        /**
+         * Additional expense incurred for the resource.
+         */
+        additionalExpense: number;
+        /**
+         * Expense sync message code if any.
+         */
+        code: string;
+        /**
+         * Compute expense of the entity.
+         */
+        computeExpense: number;
+        /**
+         * Last expense sync time.
+         */
+        lastUpdateTime: string;
+        /**
+         * Expense sync message if any.
+         */
+        message: string;
+        /**
+         * Network expense of the entity.
+         */
+        networkExpense: number;
+        /**
+         * Storage expense of the entity.
+         */
+        storageExpense: number;
+        /**
+         * Total expense of the entity.
+         */
+        totalExpense: number;
+        /**
+         * Monetary unit.
+         */
+        unit: string;
+    }
+
+}
+
+export namespace fabric {
+    export interface ComputeLink {
+        href?: string;
+        hrefs?: string[];
+        rel: string;
+    }
+
+    export interface ComputeTag {
+        /**
+         * Tag’s key.
+         */
+        key: string;
+        /**
+         * Tag’s value.
+         */
+        value: string;
+    }
+
+    export interface DatastoreVSphereLink {
+        href?: string;
+        hrefs?: string[];
+        rel: string;
+    }
+
+    export interface DatastoreVSphereTag {
+        /**
+         * Tag’s key.
+         */
+        key: string;
+        /**
+         * Tag’s value.
+         */
+        value: string;
+    }
+
+    export interface GetComputeLink {
+        href?: string;
+        hrefs?: string[];
+        rel: string;
+    }
+
+    export interface GetComputeTag {
+        /**
+         * Tag’s key.
+         */
+        key: string;
+        /**
+         * Tag’s value.
+         */
+        value: string;
+    }
+
+    export interface GetDatastoreVSphereLink {
+        href?: string;
+        hrefs?: string[];
+        rel: string;
+    }
+
+    export interface GetDatastoreVSphereTag {
+        /**
+         * Tag’s key.
+         */
+        key: string;
+        /**
+         * Tag’s value.
+         */
+        value: string;
+    }
+
+    export interface GetNetworkLink {
+        href?: string;
+        hrefs?: string[];
+        rel: string;
+    }
+
+    export interface GetNetworkTag {
+        key: string;
+        value: string;
+    }
+
+    export interface GetStorageAccountAzureLink {
+        href?: string;
+        hrefs?: string[];
+        rel: string;
+    }
+
+    export interface GetStoragePolicyVSphereLink {
+        href?: string;
+        hrefs?: string[];
+        rel: string;
+    }
+
+    export interface NetworkVSphereLink {
+        href?: string;
+        hrefs?: string[];
+        rel: string;
+    }
+
+    export interface NetworkVSphereTag {
+        key: string;
+        value: string;
+    }
+
+}
+
+export namespace flavor {
+    export interface ProfileFlavorMapping {
+        cpuCount?: number;
+        instanceType?: string;
+        memory?: number;
+        /**
+         * A human-friendly name used as an identifier in APIs that support this option.
+         */
+        name: string;
+    }
+
+    export interface ProfileLink {
+        href?: string;
+        hrefs?: string[];
+        rel: string;
+    }
+
+}
+
+export namespace image {
+    export interface GetProfileImageMapping {
+        cloudConfig?: string;
+        constraints?: outputs.image.GetProfileImageMappingConstraint[];
+        /**
+         * A human-friendly description.
+         */
+        description: string;
+        externalId: string;
+        /**
+         * The external regionId of the resource.
+         */
+        externalRegionId: string;
+        imageId?: string;
+        imageName?: string;
+        /**
+         * A human-friendly name used as an identifier in APIs that support this option.
+         */
+        name: string;
+        organization: string;
+        osFamily: string;
+        /**
+         * Email of the user that owns the entity.
+         */
+        owner: string;
+        private: boolean;
+    }
+
+    export interface GetProfileImageMappingConstraint {
+        expression: string;
+        mandatory: boolean;
+    }
+
+    export interface ProfileImageMapping {
+        cloudConfig?: string;
+        constraints?: outputs.image.ProfileImageMappingConstraint[];
+        /**
+         * A human-friendly description.
+         */
+        description: string;
+        externalId: string;
+        /**
+         * The external regionId of the resource.
+         */
+        externalRegionId: string;
+        imageId?: string;
+        imageName?: string;
+        /**
+         * A human-friendly name used as an identifier in APIs that support this option.
+         */
+        name: string;
+        organization: string;
+        osFamily: string;
+        /**
+         * Email of the user that owns the entity.
+         */
+        owner: string;
+        private: boolean;
+    }
+
+    export interface ProfileImageMappingConstraint {
+        expression: string;
+        mandatory: boolean;
+    }
+
+}
+
+export namespace loadbalancer {
+    export interface LoadBalancerLink {
+        href?: string;
+        hrefs?: string[];
+        rel: string;
+    }
+
+    export interface LoadBalancerNic {
+        addresses?: string[];
+        /**
+         * Additional custom properties that may be used to extend the machine.
+         */
+        customProperties?: {[key: string]: any};
+        /**
+         * Describes machine within the scope of your organization and is not propagated to the cloud.
+         */
+        description?: string;
+        deviceIndex?: number;
+        /**
+         * A human-friendly name used as an identifier in APIs that support this option.
+         */
+        name?: string;
+        networkId: string;
+        securityGroupIds?: string[];
+    }
+
+    export interface LoadBalancerRoute {
+        /**
+         * Load balancer health check configuration.
+         */
+        healthCheckConfigurations?: outputs.loadbalancer.LoadBalancerRouteHealthCheckConfiguration[];
+        /**
+         * Member port where the traffic is routed to.
+         */
+        memberPort: string;
+        /**
+         * The protocol of the member traffic.
+         */
+        memberProtocol: string;
+        /**
+         * Port which the load balancer is listening to.
+         */
+        port: string;
+        /**
+         * The protocol of the incoming load balancer requests.
+         */
+        protocol: string;
+    }
+
+    export interface LoadBalancerRouteHealthCheckConfiguration {
+        /**
+         * Number of consecutive successful checks before considering a particular back-end instance as healthy.
+         */
+        healthyThreshold?: number;
+        /**
+         * Interval (in seconds) at which the health checks will be performed.
+         */
+        intervalSeconds?: number;
+        /**
+         * Port which the load balancer is listening to.
+         */
+        port: string;
+        /**
+         * The protocol of the incoming load balancer requests.
+         */
+        protocol: string;
+        /**
+         * Timeout (in seconds) to wait for a response from the back-end instance.
+         */
+        timeoutSeconds?: number;
+        unhealthyThreshold?: number;
+        urlPath?: string;
+    }
+
+    export interface LoadBalancerTag {
+        /**
+         * Tag’s key.
+         */
+        key: string;
+        /**
+         * Tag’s value.
+         */
+        value: string;
+    }
+
+    export interface LoadBalancerTarget {
+        machineId: string;
+        networkInterfaceId?: string;
+    }
+
+}
+
+export namespace machine {
+    export interface GetMachineLink {
+        href?: string;
+        hrefs?: string[];
+        rel: string;
+    }
+
+    export interface GetMachineTag {
+        key: string;
+        value: string;
+    }
+
+    export interface MachineBootConfig {
+        /**
+         * Calid cloud config data in json-escaped yaml syntax.
+         */
+        content?: string;
+    }
+
+    export interface MachineConstraint {
+        /**
+         * Constraint that is conveyed to the policy engine. An expression of the form "[!]tag-key[:[tag-value]]", used to indicate a constraint match on keys and values of tags.
+         */
+        expression: string;
+        /**
+         * Indicates whether this constraint should be strictly enforced or not.
+         */
+        mandatory: boolean;
+    }
+
+    export interface MachineDisk {
+        /**
+         * ID of the existing block device.
+         */
+        blockDeviceId: string;
+        /**
+         * Human-friendly description.
+         */
+        description?: string;
+        /**
+         * Human-friendly name used as an identifier in APIs that support this option.
+         */
+        name?: string;
+    }
+
+    export interface MachineDisksList {
+        /**
+         * ID of the existing block device.
+         */
+        blockDeviceId: string;
+        /**
+         * Human-friendly description.
+         */
+        description?: string;
+        /**
+         * Human-friendly name used as an identifier in APIs that support this option.
+         */
+        name?: string;
+    }
+
+    export interface MachineImageDiskConstraint {
+        /**
+         * Constraint that is conveyed to the policy engine. An expression of the form "[!]tag-key[:[tag-value]]", used to indicate a constraint match on keys and values of tags.
+         */
+        expression: string;
+        /**
+         * Indicates whether this constraint should be strictly enforced or not.
+         */
+        mandatory: boolean;
+    }
+
+    export interface MachineLink {
+        href?: string;
+        hrefs?: string[];
+        rel: string;
+    }
+
+    export interface MachineNic {
+        /**
+         * List of IP addresses allocated or in use by this network interface.
+         * example:[ "10.1.2.190" ]
+         */
+        addresses?: string[];
+        /**
+         * Additional properties that may be used to extend the base type.
+         */
+        customProperties?: {[key: string]: any};
+        /**
+         * Human-friendly description.
+         */
+        description?: string;
+        /**
+         * The device index of this network interface.
+         */
+        deviceIndex?: number;
+        /**
+         * Human-friendly name used as an identifier in APIs that support this option.
+         */
+        name?: string;
+        /**
+         * ID of the network instance that this network interface plugs into.
+         */
+        networkId: string;
+        /**
+         * List of security group ids which this network interface will be assigned to.
+         */
+        securityGroupIds?: string[];
+    }
+
+    export interface MachineTag {
+        /**
+         * Tag’s key.
+         */
+        key: string;
+        /**
+         * Tag’s value.
+         */
+        value: string;
+    }
+}
+
+export namespace network {
+    export interface GetDomainLink {
+        href?: string;
+        hrefs?: string[];
+        rel: string;
+    }
+
+    export interface GetDomainTag {
+        key: string;
+        value: string;
+    }
+
+    export interface GetNetworkConstraint {
+        expression: string;
+        mandatory: boolean;
+    }
+
+    export interface GetNetworkLink {
+        href?: string;
+        hrefs?: string[];
+        rel: string;
+    }
+
+    export interface GetNetworkTag {
+        key: string;
+        value: string;
+    }
+
+    export interface GetProfileLink {
+        href?: string;
+        hrefs?: string[];
+        rel: string;
+    }
+
+    export interface GetProfileTag {
+        key: string;
+        value: string;
+    }
+
+    export interface IpRangeLink {
+        href?: string;
+        hrefs?: string[];
+        rel: string;
+    }
+
+    export interface IpRangeTag {
+        key: string;
+        value: string;
+    }
+
+    export interface NetworkConstraint {
+        expression: string;
+        mandatory: boolean;
+    }
+
+    export interface NetworkLink {
+        href?: string;
+        hrefs?: string[];
+        rel: string;
+    }
+
+    export interface NetworkTag {
+        key: string;
+        value: string;
+    }
+
+    export interface ProfileLink {
+        href?: string;
+        hrefs?: string[];
+        rel: string;
+    }
+
+    export interface ProfileTag {
+        key: string;
+        value: string;
+    }
+}
+
+export namespace project {
+    export interface GetProjectAdministratorRole {
+        email: string;
+        type?: string;
+    }
+
+    export interface GetProjectConstraints {
+        extensibilities?: outputs.project.GetProjectConstraintsExtensibility[];
+        networks?: outputs.project.GetProjectConstraintsNetwork[];
+        storages?: outputs.project.GetProjectConstraintsStorage[];
+    }
+
+    export interface GetProjectConstraintsExtensibility {
+        expression: string;
+        mandatory: boolean;
+    }
+
+    export interface GetProjectConstraintsNetwork {
+        expression: string;
+        mandatory: boolean;
+    }
+
+    export interface GetProjectConstraintsStorage {
+        expression: string;
+        mandatory: boolean;
+    }
+
+    export interface GetProjectMemberRole {
+        email: string;
+        type?: string;
+    }
+
+    export interface GetProjectViewerRole {
+        email: string;
+        type?: string;
+    }
+
+    export interface GetProjectZoneAssignment {
+        cpuLimit: number;
+        maxInstances: number;
+        memoryLimitMb: number;
+        priority: number;
+        storageLimitGb: number;
+        zoneId: string;
+    }
+
+    export interface ProjectAdministratorRole {
+        email: string;
+        type?: string;
+    }
+
+    export interface ProjectConstraints {
+        extensibilities?: outputs.project.ProjectConstraintsExtensibility[];
+        networks?: outputs.project.ProjectConstraintsNetwork[];
+        storages?: outputs.project.ProjectConstraintsStorage[];
+    }
+
+    export interface ProjectConstraintsExtensibility {
+        expression: string;
+        mandatory: boolean;
+    }
+
+    export interface ProjectConstraintsNetwork {
+        expression: string;
+        mandatory: boolean;
+    }
+
+    export interface ProjectConstraintsStorage {
+        expression: string;
+        mandatory: boolean;
+    }
+
+    export interface ProjectMemberRole {
+        email: string;
+        type?: string;
+    }
+
+    export interface ProjectViewerRole {
+        email: string;
+        type?: string;
+    }
+
+    export interface ProjectZoneAssignment {
+        cpuLimit?: number;
+        maxInstances?: number;
+        memoryLimitMb?: number;
+        priority?: number;
+        storageLimitGb?: number;
+        zoneId: string;
+    }
+}
+
+export namespace securitygroup {
+    export interface GetSecurityGroupLink {
+        href?: string;
+        hrefs?: string[];
+        rel: string;
+    }
+
+    export interface GetSecurityGroupRule {
+        access: string;
+        direction: string;
+        ipRangeCidr: number;
+        /**
+         * Name of the security group.
+         */
+        name?: string;
+        ports: string;
+        protocol: string;
+        service?: string;
+    }
+
+}
+
+export namespace storageprofile {
+    export interface AwsLink {
+        href?: string;
+        hrefs?: string[];
+        rel: string;
+    }
+
+    export interface AwsTag {
+        key: string;
+        value: string;
+    }
+
+    export interface AzureLink {
+        href?: string;
+        hrefs?: string[];
+        rel: string;
+    }
+
+    export interface AzureTag {
+        key: string;
+        value: string;
+    }
+
+    export interface GetAwsLink {
+        href?: string;
+        hrefs?: string[];
+        rel: string;
+    }
+
+    export interface GetAwsTag {
+        key: string;
+        value: string;
+    }
+
+    export interface GetAzureLink {
+        href?: string;
+        hrefs?: string[];
+        rel: string;
+    }
+
+    export interface GetAzureTag {
+        key: string;
+        value: string;
+    }
+
+    export interface GetStorageProfileLink {
+        href?: string;
+        hrefs?: string[];
+        rel: string;
+    }
+
+    export interface GetStorageProfileTag {
+        key: string;
+        value: string;
+    }
+
+    export interface GetVSphereLink {
+        href?: string;
+        hrefs?: string[];
+        rel: string;
+    }
+
+    export interface GetVSphereTag {
+        key: string;
+        value: string;
+    }
+
+    export interface StorageProfileLink {
+        href?: string;
+        hrefs?: string[];
+        rel: string;
+    }
+
+    export interface StorageProfileTag {
+        key: string;
+        value: string;
+    }
+
+    export interface VSphereLink {
+        href?: string;
+        hrefs?: string[];
+        rel: string;
+    }
+
+    export interface VSphereTag {
+        key: string;
+        value: string;
+    }
+}
+
+export namespace zone {
+    export interface GetZoneLink {
+        href?: string;
+        hrefs?: string[];
+        rel: string;
+    }
+
+    export interface GetZoneTag {
+        /**
+         * Tag’s key.
+         */
+        key: string;
+        /**
+         * Tag’s value.
+         */
+        value: string;
+    }
+
+    export interface GetZoneTagsToMatch {
+        /**
+         * Tag’s key.
+         */
+        key: string;
+        /**
+         * Tag’s value.
+         */
+        value: string;
+    }
+
+    export interface ZoneLink {
+        href?: string;
+        hrefs?: string[];
+        rel: string;
+    }
+
+    export interface ZoneTag {
+        /**
+         * Tag’s key.
+         */
+        key: string;
+        /**
+         * Tag’s value.
+         */
+        value: string;
+    }
+
+    export interface ZoneTagsToMatch {
+        /**
+         * Tag’s key.
+         */
+        key: string;
+        /**
+         * Tag’s value.
+         */
+        value: string;
+    }
 
-export interface ZoneTagsToMatch {
-    /**
-     * Tag’s key.
-     */
-    key: string;
-    /**
-     * Tag’s value.
-     */
-    value: string;
 }

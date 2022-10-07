@@ -2,9 +2,9 @@ PROJECT_NAME := vra Package
 
 SHELL            := /bin/bash
 PACK             := vra
-ORG              := schmidtw
+ORG              := pulumiverse
 PROJECT          := github.com/${ORG}/pulumi-${PACK}
-NODE_MODULE_NAME := @schmidtw/${PACK}
+NODE_MODULE_NAME := @pulumiverse/${PACK}
 TF_NAME          := ${PACK}
 PROVIDER_PATH    := provider
 VERSION_PATH     := ${PROVIDER_PATH}/pkg/version.Version

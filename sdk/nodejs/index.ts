@@ -5,230 +5,52 @@ import * as pulumi from "@pulumi/pulumi";
 import * as utilities from "./utilities";
 
 // Export members:
-export * from "./blockDevice";
-export * from "./blockDeviceSnapshot";
-export * from "./blueprint";
-export * from "./blueprintVersion";
-export * from "./catalogItemEntitlement";
-export * from "./catalogSourceBlueprint";
-export * from "./catalogSourceEntitlement";
-export * from "./cloudAccountAws";
-export * from "./cloudAccountAzure";
-export * from "./cloudAccountGcp";
-export * from "./cloudAccountNsxt";
-export * from "./cloudAccountNsxv";
-export * from "./cloudAccountVmc";
-export * from "./cloudAccountVsphere";
-export * from "./contentSource";
-export * from "./deployment";
-export * from "./fabricCompute";
-export * from "./fabricDatastoreVsphere";
-export * from "./fabricNetworkVsphere";
-export * from "./flavorProfile";
-export * from "./getBlockDevice";
-export * from "./getBlockDeviceSnapshots";
-export * from "./getBlueprint";
-export * from "./getBlueprintVersion";
-export * from "./getCatalogItem";
-export * from "./getCatalogItemEntitlement";
-export * from "./getCatalogSourceBlueprint";
-export * from "./getCatalogSourceEntitlement";
-export * from "./getCloudAccountAws";
-export * from "./getCloudAccountAzure";
-export * from "./getCloudAccountGcp";
-export * from "./getCloudAccountNsxt";
-export * from "./getCloudAccountNsxv";
-export * from "./getCloudAccountVmc";
-export * from "./getCloudAccountVsphere";
-export * from "./getDataCollector";
-export * from "./getDeployment";
-export * from "./getFabricCompute";
-export * from "./getFabricDatastoreVsphere";
-export * from "./getFabricNetwork";
-export * from "./getFabricStorageAccountAzure";
-export * from "./getFabricStoragePolicyVsphere";
-export * from "./getImage";
-export * from "./getImageProfile";
-export * from "./getMachine";
-export * from "./getNetwork";
-export * from "./getNetworkDomain";
-export * from "./getNetworkProfile";
-export * from "./getProject";
-export * from "./getRegion";
-export * from "./getRegionEnumeration";
-export * from "./getRegionEnumerationAws";
-export * from "./getRegionEnumerationAzure";
-export * from "./getRegionEnumerationGcp";
-export * from "./getRegionEnumerationVmc";
-export * from "./getRegionEnumerationVsphere";
-export * from "./getSecurityGroup";
-export * from "./getStorageProfile";
-export * from "./getStorageProfileAws";
-export * from "./getStorageProfileAzure";
-export * from "./getStorageProfileVsphere";
-export * from "./getZone";
-export * from "./imageProfile";
-export * from "./loadBalancer";
-export * from "./machine";
-export * from "./network";
-export * from "./networkIpRange";
-export * from "./networkProfile";
-export * from "./project";
 export * from "./provider";
-export * from "./storageProfile";
-export * from "./storageProfileAws";
-export * from "./storageProfileAzure";
-export * from "./storageProfileVsphere";
-export * from "./zone";
 
 // Export sub-modules:
+import * as blockdevice from "./blockdevice";
+import * as blueprint from "./blueprint";
+import * as catalog from "./catalog";
+import * as cloudaccount from "./cloudaccount";
 import * as config from "./config";
+import * as contentsource from "./contentsource";
+import * as datacollector from "./datacollector";
+import * as deployment from "./deployment";
+import * as fabric from "./fabric";
+import * as flavor from "./flavor";
+import * as image from "./image";
+import * as loadbalancer from "./loadbalancer";
+import * as machine from "./machine";
+import * as network from "./network";
+import * as project from "./project";
+import * as region from "./region";
+import * as securitygroup from "./securitygroup";
+import * as storageprofile from "./storageprofile";
 import * as types from "./types";
+import * as zone from "./zone";
 
 export {
+    blockdevice,
+    blueprint,
+    catalog,
+    cloudaccount,
     config,
+    contentsource,
+    datacollector,
+    deployment,
+    fabric,
+    flavor,
+    image,
+    loadbalancer,
+    machine,
+    network,
+    project,
+    region,
+    securitygroup,
+    storageprofile,
     types,
+    zone,
 };
-
-// Import resources to register:
-import { BlockDevice } from "./blockDevice";
-import { BlockDeviceSnapshot } from "./blockDeviceSnapshot";
-import { Blueprint } from "./blueprint";
-import { BlueprintVersion } from "./blueprintVersion";
-import { CatalogItemEntitlement } from "./catalogItemEntitlement";
-import { CatalogSourceBlueprint } from "./catalogSourceBlueprint";
-import { CatalogSourceEntitlement } from "./catalogSourceEntitlement";
-import { CloudAccountAws } from "./cloudAccountAws";
-import { CloudAccountAzure } from "./cloudAccountAzure";
-import { CloudAccountGcp } from "./cloudAccountGcp";
-import { CloudAccountNsxt } from "./cloudAccountNsxt";
-import { CloudAccountNsxv } from "./cloudAccountNsxv";
-import { CloudAccountVmc } from "./cloudAccountVmc";
-import { CloudAccountVsphere } from "./cloudAccountVsphere";
-import { ContentSource } from "./contentSource";
-import { Deployment } from "./deployment";
-import { FabricCompute } from "./fabricCompute";
-import { FabricDatastoreVsphere } from "./fabricDatastoreVsphere";
-import { FabricNetworkVsphere } from "./fabricNetworkVsphere";
-import { FlavorProfile } from "./flavorProfile";
-import { ImageProfile } from "./imageProfile";
-import { LoadBalancer } from "./loadBalancer";
-import { Machine } from "./machine";
-import { Network } from "./network";
-import { NetworkIpRange } from "./networkIpRange";
-import { NetworkProfile } from "./networkProfile";
-import { Project } from "./project";
-import { StorageProfile } from "./storageProfile";
-import { StorageProfileAws } from "./storageProfileAws";
-import { StorageProfileAzure } from "./storageProfileAzure";
-import { StorageProfileVsphere } from "./storageProfileVsphere";
-import { Zone } from "./zone";
-
-const _module = {
-    version: utilities.getVersion(),
-    construct: (name: string, type: string, urn: string): pulumi.Resource => {
-        switch (type) {
-            case "vra:index/blockDevice:BlockDevice":
-                return new BlockDevice(name, <any>undefined, { urn })
-            case "vra:index/blockDeviceSnapshot:BlockDeviceSnapshot":
-                return new BlockDeviceSnapshot(name, <any>undefined, { urn })
-            case "vra:index/blueprint:Blueprint":
-                return new Blueprint(name, <any>undefined, { urn })
-            case "vra:index/blueprintVersion:BlueprintVersion":
-                return new BlueprintVersion(name, <any>undefined, { urn })
-            case "vra:index/catalogItemEntitlement:CatalogItemEntitlement":
-                return new CatalogItemEntitlement(name, <any>undefined, { urn })
-            case "vra:index/catalogSourceBlueprint:CatalogSourceBlueprint":
-                return new CatalogSourceBlueprint(name, <any>undefined, { urn })
-            case "vra:index/catalogSourceEntitlement:CatalogSourceEntitlement":
-                return new CatalogSourceEntitlement(name, <any>undefined, { urn })
-            case "vra:index/cloudAccountAws:CloudAccountAws":
-                return new CloudAccountAws(name, <any>undefined, { urn })
-            case "vra:index/cloudAccountAzure:CloudAccountAzure":
-                return new CloudAccountAzure(name, <any>undefined, { urn })
-            case "vra:index/cloudAccountGcp:CloudAccountGcp":
-                return new CloudAccountGcp(name, <any>undefined, { urn })
-            case "vra:index/cloudAccountNsxt:CloudAccountNsxt":
-                return new CloudAccountNsxt(name, <any>undefined, { urn })
-            case "vra:index/cloudAccountNsxv:CloudAccountNsxv":
-                return new CloudAccountNsxv(name, <any>undefined, { urn })
-            case "vra:index/cloudAccountVmc:CloudAccountVmc":
-                return new CloudAccountVmc(name, <any>undefined, { urn })
-            case "vra:index/cloudAccountVsphere:CloudAccountVsphere":
-                return new CloudAccountVsphere(name, <any>undefined, { urn })
-            case "vra:index/contentSource:ContentSource":
-                return new ContentSource(name, <any>undefined, { urn })
-            case "vra:index/deployment:Deployment":
-                return new Deployment(name, <any>undefined, { urn })
-            case "vra:index/fabricCompute:FabricCompute":
-                return new FabricCompute(name, <any>undefined, { urn })
-            case "vra:index/fabricDatastoreVsphere:FabricDatastoreVsphere":
-                return new FabricDatastoreVsphere(name, <any>undefined, { urn })
-            case "vra:index/fabricNetworkVsphere:FabricNetworkVsphere":
-                return new FabricNetworkVsphere(name, <any>undefined, { urn })
-            case "vra:index/flavorProfile:FlavorProfile":
-                return new FlavorProfile(name, <any>undefined, { urn })
-            case "vra:index/imageProfile:ImageProfile":
-                return new ImageProfile(name, <any>undefined, { urn })
-            case "vra:index/loadBalancer:LoadBalancer":
-                return new LoadBalancer(name, <any>undefined, { urn })
-            case "vra:index/machine:Machine":
-                return new Machine(name, <any>undefined, { urn })
-            case "vra:index/network:Network":
-                return new Network(name, <any>undefined, { urn })
-            case "vra:index/networkIpRange:NetworkIpRange":
-                return new NetworkIpRange(name, <any>undefined, { urn })
-            case "vra:index/networkProfile:NetworkProfile":
-                return new NetworkProfile(name, <any>undefined, { urn })
-            case "vra:index/project:Project":
-                return new Project(name, <any>undefined, { urn })
-            case "vra:index/storageProfile:StorageProfile":
-                return new StorageProfile(name, <any>undefined, { urn })
-            case "vra:index/storageProfileAws:StorageProfileAws":
-                return new StorageProfileAws(name, <any>undefined, { urn })
-            case "vra:index/storageProfileAzure:StorageProfileAzure":
-                return new StorageProfileAzure(name, <any>undefined, { urn })
-            case "vra:index/storageProfileVsphere:StorageProfileVsphere":
-                return new StorageProfileVsphere(name, <any>undefined, { urn })
-            case "vra:index/zone:Zone":
-                return new Zone(name, <any>undefined, { urn })
-            default:
-                throw new Error(`unknown resource type ${type}`);
-        }
-    },
-};
-pulumi.runtime.registerResourceModule("vra", "index/blockDevice", _module)
-pulumi.runtime.registerResourceModule("vra", "index/blockDeviceSnapshot", _module)
-pulumi.runtime.registerResourceModule("vra", "index/blueprint", _module)
-pulumi.runtime.registerResourceModule("vra", "index/blueprintVersion", _module)
-pulumi.runtime.registerResourceModule("vra", "index/catalogItemEntitlement", _module)
-pulumi.runtime.registerResourceModule("vra", "index/catalogSourceBlueprint", _module)
-pulumi.runtime.registerResourceModule("vra", "index/catalogSourceEntitlement", _module)
-pulumi.runtime.registerResourceModule("vra", "index/cloudAccountAws", _module)
-pulumi.runtime.registerResourceModule("vra", "index/cloudAccountAzure", _module)
-pulumi.runtime.registerResourceModule("vra", "index/cloudAccountGcp", _module)
-pulumi.runtime.registerResourceModule("vra", "index/cloudAccountNsxt", _module)
-pulumi.runtime.registerResourceModule("vra", "index/cloudAccountNsxv", _module)
-pulumi.runtime.registerResourceModule("vra", "index/cloudAccountVmc", _module)
-pulumi.runtime.registerResourceModule("vra", "index/cloudAccountVsphere", _module)
-pulumi.runtime.registerResourceModule("vra", "index/contentSource", _module)
-pulumi.runtime.registerResourceModule("vra", "index/deployment", _module)
-pulumi.runtime.registerResourceModule("vra", "index/fabricCompute", _module)
-pulumi.runtime.registerResourceModule("vra", "index/fabricDatastoreVsphere", _module)
-pulumi.runtime.registerResourceModule("vra", "index/fabricNetworkVsphere", _module)
-pulumi.runtime.registerResourceModule("vra", "index/flavorProfile", _module)
-pulumi.runtime.registerResourceModule("vra", "index/imageProfile", _module)
-pulumi.runtime.registerResourceModule("vra", "index/loadBalancer", _module)
-pulumi.runtime.registerResourceModule("vra", "index/machine", _module)
-pulumi.runtime.registerResourceModule("vra", "index/network", _module)
-pulumi.runtime.registerResourceModule("vra", "index/networkIpRange", _module)
-pulumi.runtime.registerResourceModule("vra", "index/networkProfile", _module)
-pulumi.runtime.registerResourceModule("vra", "index/project", _module)
-pulumi.runtime.registerResourceModule("vra", "index/storageProfile", _module)
-pulumi.runtime.registerResourceModule("vra", "index/storageProfileAws", _module)
-pulumi.runtime.registerResourceModule("vra", "index/storageProfileAzure", _module)
-pulumi.runtime.registerResourceModule("vra", "index/storageProfileVsphere", _module)
-pulumi.runtime.registerResourceModule("vra", "index/zone", _module)
 
 import { Provider } from "./provider";
 

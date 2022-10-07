@@ -1,14 +1,14 @@
 {
-    "name": "@schmidtw/vra",
+    "name": "@pulumiverse/vra",
     "version": "${VERSION}",
-    "description": "A Pulumi package for creating and managing vmware vra cloud resources.",
+    "description": "A Pulumi package for creating and managing VMware VRA cloud resources.",
     "keywords": [
         "pulumi",
         "vra",
         "category/cloud"
     ],
     "homepage": "https://www.pulumi.com",
-    "repository": "https://github.com/schmidtw/pulumi-vra",
+    "repository": "https://github.com/pulumiverse/pulumi-vra",
     "license": "Apache-2.0",
     "scripts": {
         "build": "tsc",
@@ -25,6 +25,6 @@
     "pulumi": {
         "resource": true,
         "name": "vra",
-        "server": "https://github.com/schmidtw/pulumi-vra/releases/download/v${VERSION}"
+        "server": "github://api.github.com/pulumiverse"
     }
 }
