@@ -18,7 +18,7 @@ type BlockDeviceConstraint struct {
 // BlockDeviceConstraintInput is an input type that accepts BlockDeviceConstraintArgs and BlockDeviceConstraintOutput values.
 // You can construct a concrete instance of `BlockDeviceConstraintInput` via:
 //
-//	BlockDeviceConstraintArgs{...}
+//          BlockDeviceConstraintArgs{...}
 type BlockDeviceConstraintInput interface {
 	pulumi.Input
 
@@ -46,7 +46,7 @@ func (i BlockDeviceConstraintArgs) ToBlockDeviceConstraintOutputWithContext(ctx 
 // BlockDeviceConstraintArrayInput is an input type that accepts BlockDeviceConstraintArray and BlockDeviceConstraintArrayOutput values.
 // You can construct a concrete instance of `BlockDeviceConstraintArrayInput` via:
 //
-//	BlockDeviceConstraintArray{ BlockDeviceConstraintArgs{...} }
+//          BlockDeviceConstraintArray{ BlockDeviceConstraintArgs{...} }
 type BlockDeviceConstraintArrayInput interface {
 	pulumi.Input
 
@@ -119,7 +119,7 @@ type BlockDeviceLink struct {
 // BlockDeviceLinkInput is an input type that accepts BlockDeviceLinkArgs and BlockDeviceLinkOutput values.
 // You can construct a concrete instance of `BlockDeviceLinkInput` via:
 //
-//	BlockDeviceLinkArgs{...}
+//          BlockDeviceLinkArgs{...}
 type BlockDeviceLinkInput interface {
 	pulumi.Input
 
@@ -148,7 +148,7 @@ func (i BlockDeviceLinkArgs) ToBlockDeviceLinkOutputWithContext(ctx context.Cont
 // BlockDeviceLinkArrayInput is an input type that accepts BlockDeviceLinkArray and BlockDeviceLinkArrayOutput values.
 // You can construct a concrete instance of `BlockDeviceLinkArrayInput` via:
 //
-//	BlockDeviceLinkArray{ BlockDeviceLinkArgs{...} }
+//          BlockDeviceLinkArray{ BlockDeviceLinkArgs{...} }
 type BlockDeviceLinkArrayInput interface {
 	pulumi.Input
 
@@ -240,7 +240,7 @@ type BlockDeviceSnapshot struct {
 // BlockDeviceSnapshotInput is an input type that accepts BlockDeviceSnapshotArgs and BlockDeviceSnapshotOutput values.
 // You can construct a concrete instance of `BlockDeviceSnapshotInput` via:
 //
-//	BlockDeviceSnapshotArgs{...}
+//          BlockDeviceSnapshotArgs{...}
 type BlockDeviceSnapshotInput interface {
 	pulumi.Input
 
@@ -284,7 +284,7 @@ func (i BlockDeviceSnapshotArgs) ToBlockDeviceSnapshotOutputWithContext(ctx cont
 // BlockDeviceSnapshotArrayInput is an input type that accepts BlockDeviceSnapshotArray and BlockDeviceSnapshotArrayOutput values.
 // You can construct a concrete instance of `BlockDeviceSnapshotArrayInput` via:
 //
-//	BlockDeviceSnapshotArray{ BlockDeviceSnapshotArgs{...} }
+//          BlockDeviceSnapshotArray{ BlockDeviceSnapshotArgs{...} }
 type BlockDeviceSnapshotArrayInput interface {
 	pulumi.Input
 
@@ -394,7 +394,7 @@ type BlockDeviceSnapshotLink struct {
 // BlockDeviceSnapshotLinkInput is an input type that accepts BlockDeviceSnapshotLinkArgs and BlockDeviceSnapshotLinkOutput values.
 // You can construct a concrete instance of `BlockDeviceSnapshotLinkInput` via:
 //
-//	BlockDeviceSnapshotLinkArgs{...}
+//          BlockDeviceSnapshotLinkArgs{...}
 type BlockDeviceSnapshotLinkInput interface {
 	pulumi.Input
 
@@ -423,7 +423,7 @@ func (i BlockDeviceSnapshotLinkArgs) ToBlockDeviceSnapshotLinkOutputWithContext(
 // BlockDeviceSnapshotLinkArrayInput is an input type that accepts BlockDeviceSnapshotLinkArray and BlockDeviceSnapshotLinkArrayOutput values.
 // You can construct a concrete instance of `BlockDeviceSnapshotLinkArrayInput` via:
 //
-//	BlockDeviceSnapshotLinkArray{ BlockDeviceSnapshotLinkArgs{...} }
+//          BlockDeviceSnapshotLinkArray{ BlockDeviceSnapshotLinkArgs{...} }
 type BlockDeviceSnapshotLinkArrayInput interface {
 	pulumi.Input
 
@@ -499,7 +499,7 @@ type BlockDeviceTag struct {
 // BlockDeviceTagInput is an input type that accepts BlockDeviceTagArgs and BlockDeviceTagOutput values.
 // You can construct a concrete instance of `BlockDeviceTagInput` via:
 //
-//	BlockDeviceTagArgs{...}
+//          BlockDeviceTagArgs{...}
 type BlockDeviceTagInput interface {
 	pulumi.Input
 
@@ -527,7 +527,7 @@ func (i BlockDeviceTagArgs) ToBlockDeviceTagOutputWithContext(ctx context.Contex
 // BlockDeviceTagArrayInput is an input type that accepts BlockDeviceTagArray and BlockDeviceTagArrayOutput values.
 // You can construct a concrete instance of `BlockDeviceTagArrayInput` via:
 //
-//	BlockDeviceTagArray{ BlockDeviceTagArgs{...} }
+//          BlockDeviceTagArray{ BlockDeviceTagArgs{...} }
 type BlockDeviceTagArrayInput interface {
 	pulumi.Input
 
@@ -600,7 +600,7 @@ type SnapshotLink struct {
 // SnapshotLinkInput is an input type that accepts SnapshotLinkArgs and SnapshotLinkOutput values.
 // You can construct a concrete instance of `SnapshotLinkInput` via:
 //
-//	SnapshotLinkArgs{...}
+//          SnapshotLinkArgs{...}
 type SnapshotLinkInput interface {
 	pulumi.Input
 
@@ -629,7 +629,7 @@ func (i SnapshotLinkArgs) ToSnapshotLinkOutputWithContext(ctx context.Context) S
 // SnapshotLinkArrayInput is an input type that accepts SnapshotLinkArray and SnapshotLinkArrayOutput values.
 // You can construct a concrete instance of `SnapshotLinkArrayInput` via:
 //
-//	SnapshotLinkArray{ SnapshotLinkArgs{...} }
+//          SnapshotLinkArray{ SnapshotLinkArgs{...} }
 type SnapshotLinkArrayInput interface {
 	pulumi.Input
 
@@ -706,7 +706,7 @@ type GetBlockDeviceLink struct {
 // GetBlockDeviceLinkInput is an input type that accepts GetBlockDeviceLinkArgs and GetBlockDeviceLinkOutput values.
 // You can construct a concrete instance of `GetBlockDeviceLinkInput` via:
 //
-//	GetBlockDeviceLinkArgs{...}
+//          GetBlockDeviceLinkArgs{...}
 type GetBlockDeviceLinkInput interface {
 	pulumi.Input
 
@@ -735,7 +735,7 @@ func (i GetBlockDeviceLinkArgs) ToGetBlockDeviceLinkOutputWithContext(ctx contex
 // GetBlockDeviceLinkArrayInput is an input type that accepts GetBlockDeviceLinkArray and GetBlockDeviceLinkArrayOutput values.
 // You can construct a concrete instance of `GetBlockDeviceLinkArrayInput` via:
 //
-//	GetBlockDeviceLinkArray{ GetBlockDeviceLinkArgs{...} }
+//          GetBlockDeviceLinkArray{ GetBlockDeviceLinkArgs{...} }
 type GetBlockDeviceLinkArrayInput interface {
 	pulumi.Input
 
@@ -826,7 +826,7 @@ type GetBlockDeviceSnapshot struct {
 // GetBlockDeviceSnapshotInput is an input type that accepts GetBlockDeviceSnapshotArgs and GetBlockDeviceSnapshotOutput values.
 // You can construct a concrete instance of `GetBlockDeviceSnapshotInput` via:
 //
-//	GetBlockDeviceSnapshotArgs{...}
+//          GetBlockDeviceSnapshotArgs{...}
 type GetBlockDeviceSnapshotInput interface {
 	pulumi.Input
 
@@ -869,7 +869,7 @@ func (i GetBlockDeviceSnapshotArgs) ToGetBlockDeviceSnapshotOutputWithContext(ct
 // GetBlockDeviceSnapshotArrayInput is an input type that accepts GetBlockDeviceSnapshotArray and GetBlockDeviceSnapshotArrayOutput values.
 // You can construct a concrete instance of `GetBlockDeviceSnapshotArrayInput` via:
 //
-//	GetBlockDeviceSnapshotArray{ GetBlockDeviceSnapshotArgs{...} }
+//          GetBlockDeviceSnapshotArray{ GetBlockDeviceSnapshotArgs{...} }
 type GetBlockDeviceSnapshotArrayInput interface {
 	pulumi.Input
 
@@ -978,7 +978,7 @@ type GetBlockDeviceSnapshotLink struct {
 // GetBlockDeviceSnapshotLinkInput is an input type that accepts GetBlockDeviceSnapshotLinkArgs and GetBlockDeviceSnapshotLinkOutput values.
 // You can construct a concrete instance of `GetBlockDeviceSnapshotLinkInput` via:
 //
-//	GetBlockDeviceSnapshotLinkArgs{...}
+//          GetBlockDeviceSnapshotLinkArgs{...}
 type GetBlockDeviceSnapshotLinkInput interface {
 	pulumi.Input
 
@@ -1007,7 +1007,7 @@ func (i GetBlockDeviceSnapshotLinkArgs) ToGetBlockDeviceSnapshotLinkOutputWithCo
 // GetBlockDeviceSnapshotLinkArrayInput is an input type that accepts GetBlockDeviceSnapshotLinkArray and GetBlockDeviceSnapshotLinkArrayOutput values.
 // You can construct a concrete instance of `GetBlockDeviceSnapshotLinkArrayInput` via:
 //
-//	GetBlockDeviceSnapshotLinkArray{ GetBlockDeviceSnapshotLinkArgs{...} }
+//          GetBlockDeviceSnapshotLinkArray{ GetBlockDeviceSnapshotLinkArgs{...} }
 type GetBlockDeviceSnapshotLinkArrayInput interface {
 	pulumi.Input
 
@@ -1085,7 +1085,7 @@ type GetBlockDeviceTag struct {
 // GetBlockDeviceTagInput is an input type that accepts GetBlockDeviceTagArgs and GetBlockDeviceTagOutput values.
 // You can construct a concrete instance of `GetBlockDeviceTagInput` via:
 //
-//	GetBlockDeviceTagArgs{...}
+//          GetBlockDeviceTagArgs{...}
 type GetBlockDeviceTagInput interface {
 	pulumi.Input
 
@@ -1115,7 +1115,7 @@ func (i GetBlockDeviceTagArgs) ToGetBlockDeviceTagOutputWithContext(ctx context.
 // GetBlockDeviceTagArrayInput is an input type that accepts GetBlockDeviceTagArray and GetBlockDeviceTagArrayOutput values.
 // You can construct a concrete instance of `GetBlockDeviceTagArrayInput` via:
 //
-//	GetBlockDeviceTagArray{ GetBlockDeviceTagArgs{...} }
+//          GetBlockDeviceTagArray{ GetBlockDeviceTagArgs{...} }
 type GetBlockDeviceTagArrayInput interface {
 	pulumi.Input
 
@@ -1203,7 +1203,7 @@ type GetSnapshotsSnapshot struct {
 // GetSnapshotsSnapshotInput is an input type that accepts GetSnapshotsSnapshotArgs and GetSnapshotsSnapshotOutput values.
 // You can construct a concrete instance of `GetSnapshotsSnapshotInput` via:
 //
-//	GetSnapshotsSnapshotArgs{...}
+//          GetSnapshotsSnapshotArgs{...}
 type GetSnapshotsSnapshotInput interface {
 	pulumi.Input
 
@@ -1245,7 +1245,7 @@ func (i GetSnapshotsSnapshotArgs) ToGetSnapshotsSnapshotOutputWithContext(ctx co
 // GetSnapshotsSnapshotArrayInput is an input type that accepts GetSnapshotsSnapshotArray and GetSnapshotsSnapshotArrayOutput values.
 // You can construct a concrete instance of `GetSnapshotsSnapshotArrayInput` via:
 //
-//	GetSnapshotsSnapshotArray{ GetSnapshotsSnapshotArgs{...} }
+//          GetSnapshotsSnapshotArray{ GetSnapshotsSnapshotArgs{...} }
 type GetSnapshotsSnapshotArrayInput interface {
 	pulumi.Input
 
@@ -1353,7 +1353,7 @@ type GetSnapshotsSnapshotLink struct {
 // GetSnapshotsSnapshotLinkInput is an input type that accepts GetSnapshotsSnapshotLinkArgs and GetSnapshotsSnapshotLinkOutput values.
 // You can construct a concrete instance of `GetSnapshotsSnapshotLinkInput` via:
 //
-//	GetSnapshotsSnapshotLinkArgs{...}
+//          GetSnapshotsSnapshotLinkArgs{...}
 type GetSnapshotsSnapshotLinkInput interface {
 	pulumi.Input
 
@@ -1382,7 +1382,7 @@ func (i GetSnapshotsSnapshotLinkArgs) ToGetSnapshotsSnapshotLinkOutputWithContex
 // GetSnapshotsSnapshotLinkArrayInput is an input type that accepts GetSnapshotsSnapshotLinkArray and GetSnapshotsSnapshotLinkArrayOutput values.
 // You can construct a concrete instance of `GetSnapshotsSnapshotLinkArrayInput` via:
 //
-//	GetSnapshotsSnapshotLinkArray{ GetSnapshotsSnapshotLinkArgs{...} }
+//          GetSnapshotsSnapshotLinkArray{ GetSnapshotsSnapshotLinkArgs{...} }
 type GetSnapshotsSnapshotLinkArrayInput interface {
 	pulumi.Input
 

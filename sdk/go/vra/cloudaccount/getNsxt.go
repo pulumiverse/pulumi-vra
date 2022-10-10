@@ -23,25 +23,22 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-vra/sdk/go/vra/cloudaccount"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//	"github.com/pulumiverse/pulumi-vra/sdk/go/vra/cloudaccount"
-//
+// 	"github.com/pulumi/pulumi-vra/sdk/go/vra/cloudaccount"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+// 	"github.com/pulumiverse/pulumi-vra/sdk/go/vra/cloudaccount"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := cloudaccount.LookupNsxt(ctx, &cloudaccount.LookupNsxtArgs{
-//				Id: pulumi.StringRef(_var.Vra_cloud_account_nsxt_id),
-//			}, nil)
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := cloudaccount.LookupNsxt(ctx, &cloudaccount.LookupNsxtArgs{
+// 			Id: pulumi.StringRef(_var.Vra_cloud_account_nsxt_id),
+// 		}, nil)
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // **NSX-T cloud account data source by its name:**
@@ -52,25 +49,22 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-vra/sdk/go/vra/cloudaccount"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//	"github.com/pulumiverse/pulumi-vra/sdk/go/vra/cloudaccount"
-//
+// 	"github.com/pulumi/pulumi-vra/sdk/go/vra/cloudaccount"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+// 	"github.com/pulumiverse/pulumi-vra/sdk/go/vra/cloudaccount"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := cloudaccount.LookupNsxt(ctx, &cloudaccount.LookupNsxtArgs{
-//				Name: pulumi.StringRef(_var.Vra_cloud_account_nsxt_name),
-//			}, nil)
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := cloudaccount.LookupNsxt(ctx, &cloudaccount.LookupNsxtArgs{
+// 			Name: pulumi.StringRef(_var.Vra_cloud_account_nsxt_name),
+// 		}, nil)
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 func LookupNsxt(ctx *pulumi.Context, args *LookupNsxtArgs, opts ...pulumi.InvokeOption) (*LookupNsxtResult, error) {
 	opts = pkgInvokeDefaultOpts(opts)

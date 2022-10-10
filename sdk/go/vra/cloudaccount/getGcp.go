@@ -23,25 +23,22 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-vra/sdk/go/vra/cloudaccount"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//	"github.com/pulumiverse/pulumi-vra/sdk/go/vra/cloudaccount"
-//
+// 	"github.com/pulumi/pulumi-vra/sdk/go/vra/cloudaccount"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+// 	"github.com/pulumiverse/pulumi-vra/sdk/go/vra/cloudaccount"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := cloudaccount.LookupGcp(ctx, &cloudaccount.LookupGcpArgs{
-//				Id: pulumi.StringRef(_var.Vra_cloud_account_gcp_id),
-//			}, nil)
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := cloudaccount.LookupGcp(ctx, &cloudaccount.LookupGcpArgs{
+// 			Id: pulumi.StringRef(_var.Vra_cloud_account_gcp_id),
+// 		}, nil)
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // **GCP cloud account data source by its name:**
@@ -52,25 +49,22 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-vra/sdk/go/vra/cloudaccount"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//	"github.com/pulumiverse/pulumi-vra/sdk/go/vra/cloudaccount"
-//
+// 	"github.com/pulumi/pulumi-vra/sdk/go/vra/cloudaccount"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+// 	"github.com/pulumiverse/pulumi-vra/sdk/go/vra/cloudaccount"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := cloudaccount.LookupGcp(ctx, &cloudaccount.LookupGcpArgs{
-//				Name: pulumi.StringRef(_var.Vra_cloud_account_gcp_name),
-//			}, nil)
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := cloudaccount.LookupGcp(ctx, &cloudaccount.LookupGcpArgs{
+// 			Name: pulumi.StringRef(_var.Vra_cloud_account_gcp_name),
+// 		}, nil)
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 func LookupGcp(ctx *pulumi.Context, args *LookupGcpArgs, opts ...pulumi.InvokeOption) (*LookupGcpResult, error) {
 	opts = pkgInvokeDefaultOpts(opts)

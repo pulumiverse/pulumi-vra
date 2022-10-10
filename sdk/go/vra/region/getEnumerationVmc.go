@@ -20,32 +20,29 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-vra/sdk/go/vra/region"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//	"github.com/pulumiverse/pulumi-vra/sdk/go/vra/region"
-//
+// 	"github.com/pulumi/pulumi-vra/sdk/go/vra/region"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+// 	"github.com/pulumiverse/pulumi-vra/sdk/go/vra/region"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := region.GetEnumerationVmc(ctx, &region.GetEnumerationVmcArgs{
-//				AcceptSelfSignedCert: pulumi.BoolRef(true),
-//				DcId:                 pulumi.StringRef(_var.Vra_data_collector_id),
-//				ApiToken:             _var.Api_token,
-//				SddcName:             _var.Sddc_name,
-//				NsxHostname:          _var.Nsx_hostname,
-//				VcenterHostname:      _var.Vcenter_hostname,
-//				VcenterPassword:      _var.Vcenter_password,
-//				VcenterUsername:      _var.Vcenter_username,
-//			}, nil)
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := region.GetEnumerationVmc(ctx, &region.GetEnumerationVmcArgs{
+// 			AcceptSelfSignedCert: pulumi.BoolRef(true),
+// 			DcId:                 pulumi.StringRef(_var.Vra_data_collector_id),
+// 			ApiToken:             _var.Api_token,
+// 			SddcName:             _var.Sddc_name,
+// 			NsxHostname:          _var.Nsx_hostname,
+// 			VcenterHostname:      _var.Vcenter_hostname,
+// 			VcenterPassword:      _var.Vcenter_password,
+// 			VcenterUsername:      _var.Vcenter_username,
+// 		}, nil)
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // The region enumeration data source for VMC cloud account supports the following arguments:

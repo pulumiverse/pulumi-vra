@@ -21,25 +21,22 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-vra/sdk/go/vra/catalog"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//	"github.com/pulumiverse/pulumi-vra/sdk/go/vra/catalog"
-//
+// 	"github.com/pulumi/pulumi-vra/sdk/go/vra/catalog"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+// 	"github.com/pulumiverse/pulumi-vra/sdk/go/vra/catalog"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := catalog.LookupSourceBlueprint(ctx, &catalog.LookupSourceBlueprintArgs{
-//				Name: pulumi.StringRef(_var.Catalog_source_name),
-//			}, nil)
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := catalog.LookupSourceBlueprint(ctx, &catalog.LookupSourceBlueprintArgs{
+// 			Name: pulumi.StringRef(_var.Catalog_source_name),
+// 		}, nil)
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // This is an example of how to get a vRA cloud template catalog source by its id.
@@ -48,25 +45,22 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-vra/sdk/go/vra/catalog"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//	"github.com/pulumiverse/pulumi-vra/sdk/go/vra/catalog"
-//
+// 	"github.com/pulumi/pulumi-vra/sdk/go/vra/catalog"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+// 	"github.com/pulumiverse/pulumi-vra/sdk/go/vra/catalog"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := catalog.LookupSourceBlueprint(ctx, &catalog.LookupSourceBlueprintArgs{
-//				Id: pulumi.StringRef(_var.Catalog_source_id),
-//			}, nil)
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := catalog.LookupSourceBlueprint(ctx, &catalog.LookupSourceBlueprintArgs{
+// 			Id: pulumi.StringRef(_var.Catalog_source_id),
+// 		}, nil)
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // This is an example of how to get a vRA cloud template catalog source by the project id it is associated with.
@@ -75,25 +69,22 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-vra/sdk/go/vra/catalog"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//	"github.com/pulumiverse/pulumi-vra/sdk/go/vra/catalog"
-//
+// 	"github.com/pulumi/pulumi-vra/sdk/go/vra/catalog"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+// 	"github.com/pulumiverse/pulumi-vra/sdk/go/vra/catalog"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := catalog.LookupSourceBlueprint(ctx, &catalog.LookupSourceBlueprintArgs{
-//				ProjectId: pulumi.StringRef(_var.Project_id),
-//			}, nil)
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := catalog.LookupSourceBlueprint(ctx, &catalog.LookupSourceBlueprintArgs{
+// 			ProjectId: pulumi.StringRef(_var.Project_id),
+// 		}, nil)
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 func LookupSourceBlueprint(ctx *pulumi.Context, args *LookupSourceBlueprintArgs, opts ...pulumi.InvokeOption) (*LookupSourceBlueprintResult, error) {
 	opts = pkgInvokeDefaultOpts(opts)

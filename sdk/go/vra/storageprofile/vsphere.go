@@ -21,37 +21,34 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-vra/sdk/go/vra/storageprofile"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//	"github.com/pulumiverse/pulumi-vra/sdk/go/vra/storageprofile"
-//
+// 	"github.com/pulumi/pulumi-vra/sdk/go/vra/storageprofile"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+// 	"github.com/pulumiverse/pulumi-vra/sdk/go/vra/storageprofile"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := storageprofile.NewVSphere(ctx, "this", &storageprofile.VSphereArgs{
-//				Description:      pulumi.String("vSphere Storage Profile with FCD disk."),
-//				RegionId:         pulumi.Any(data.Vra_region.This.Id),
-//				DefaultItem:      pulumi.Bool(false),
-//				DiskType:         pulumi.String("firstClass"),
-//				ProvisioningType: pulumi.String("thin"),
-//				DatastoreId:      pulumi.Any(data.Vra_fabric_datastore_vsphere.This.Id),
-//				StoragePolicyId:  pulumi.Any(data.Vra_fabric_storage_policy_vsphere.This.Id),
-//				Tags: storageprofile.VSphereTagArray{
-//					&storageprofile.VSphereTagArgs{
-//						Key:   pulumi.String("foo"),
-//						Value: pulumi.String("bar"),
-//					},
-//				},
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := storageprofile.NewVSphere(ctx, "this", &storageprofile.VSphereArgs{
+// 			Description:      pulumi.String("vSphere Storage Profile with FCD disk."),
+// 			RegionId:         pulumi.Any(data.Vra_region.This.Id),
+// 			DefaultItem:      pulumi.Bool(false),
+// 			DiskType:         pulumi.String("firstClass"),
+// 			ProvisioningType: pulumi.String("thin"),
+// 			DatastoreId:      pulumi.Any(data.Vra_fabric_datastore_vsphere.This.Id),
+// 			StoragePolicyId:  pulumi.Any(data.Vra_fabric_storage_policy_vsphere.This.Id),
+// 			Tags: storageprofile.VSphereTagArray{
+// 				&storageprofile.VSphereTagArgs{
+// 					Key:   pulumi.String("foo"),
+// 					Value: pulumi.String("bar"),
+// 				},
+// 			},
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // A storage profile vsphere resource supports the following arguments:
@@ -325,7 +322,7 @@ func (i *VSphere) ToVSphereOutputWithContext(ctx context.Context) VSphereOutput 
 // VSphereArrayInput is an input type that accepts VSphereArray and VSphereArrayOutput values.
 // You can construct a concrete instance of `VSphereArrayInput` via:
 //
-//	VSphereArray{ VSphereArgs{...} }
+//          VSphereArray{ VSphereArgs{...} }
 type VSphereArrayInput interface {
 	pulumi.Input
 
@@ -350,7 +347,7 @@ func (i VSphereArray) ToVSphereArrayOutputWithContext(ctx context.Context) VSphe
 // VSphereMapInput is an input type that accepts VSphereMap and VSphereMapOutput values.
 // You can construct a concrete instance of `VSphereMapInput` via:
 //
-//	VSphereMap{ "key": VSphereArgs{...} }
+//          VSphereMap{ "key": VSphereArgs{...} }
 type VSphereMapInput interface {
 	pulumi.Input
 

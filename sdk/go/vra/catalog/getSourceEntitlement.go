@@ -21,26 +21,23 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-vra/sdk/go/vra/catalog"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//	"github.com/pulumiverse/pulumi-vra/sdk/go/vra/catalog"
-//
+// 	"github.com/pulumi/pulumi-vra/sdk/go/vra/catalog"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+// 	"github.com/pulumiverse/pulumi-vra/sdk/go/vra/catalog"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := catalog.LookupSourceEntitlement(ctx, &catalog.LookupSourceEntitlementArgs{
-//				Id:        pulumi.StringRef(_var.Catalog_source_entitlement_id),
-//				ProjectId: _var.Project_id,
-//			}, nil)
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := catalog.LookupSourceEntitlement(ctx, &catalog.LookupSourceEntitlementArgs{
+// 			Id:        pulumi.StringRef(_var.Catalog_source_entitlement_id),
+// 			ProjectId: _var.Project_id,
+// 		}, nil)
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // This is an example of how to get a vRA catalog source entitlement by its catalog source id:
@@ -49,26 +46,23 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-vra/sdk/go/vra/catalog"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//	"github.com/pulumiverse/pulumi-vra/sdk/go/vra/catalog"
-//
+// 	"github.com/pulumi/pulumi-vra/sdk/go/vra/catalog"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+// 	"github.com/pulumiverse/pulumi-vra/sdk/go/vra/catalog"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := catalog.LookupSourceEntitlement(ctx, &catalog.LookupSourceEntitlementArgs{
-//				CatalogSourceId: pulumi.StringRef(_var.Catalog_source_id),
-//				ProjectId:       _var.Project_id,
-//			}, nil)
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := catalog.LookupSourceEntitlement(ctx, &catalog.LookupSourceEntitlementArgs{
+// 			CatalogSourceId: pulumi.StringRef(_var.Catalog_source_id),
+// 			ProjectId:       _var.Project_id,
+// 		}, nil)
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 func LookupSourceEntitlement(ctx *pulumi.Context, args *LookupSourceEntitlementArgs, opts ...pulumi.InvokeOption) (*LookupSourceEntitlementResult, error) {
 	opts = pkgInvokeDefaultOpts(opts)

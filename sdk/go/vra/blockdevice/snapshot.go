@@ -22,25 +22,22 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//	"github.com/pulumiverse/pulumi-vra/sdk/go/vra/blockdevice"
-//
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+// 	"github.com/pulumiverse/pulumi-vra/sdk/go/vra/blockdevice"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := blockdevice.NewSnapshot(ctx, "snapshot1", &blockdevice.SnapshotArgs{
-//				BlockDeviceId: pulumi.Any(_var.Block_device_id),
-//				Description:   pulumi.String("terraform fcd snapshot"),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := blockdevice.NewSnapshot(ctx, "snapshot1", &blockdevice.SnapshotArgs{
+// 			BlockDeviceId: pulumi.Any(_var.Block_device_id),
+// 			Description:   pulumi.String("terraform fcd snapshot"),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 type Snapshot struct {
 	pulumi.CustomResourceState
@@ -181,7 +178,7 @@ func (i *Snapshot) ToSnapshotOutputWithContext(ctx context.Context) SnapshotOutp
 // SnapshotArrayInput is an input type that accepts SnapshotArray and SnapshotArrayOutput values.
 // You can construct a concrete instance of `SnapshotArrayInput` via:
 //
-//	SnapshotArray{ SnapshotArgs{...} }
+//          SnapshotArray{ SnapshotArgs{...} }
 type SnapshotArrayInput interface {
 	pulumi.Input
 
@@ -206,7 +203,7 @@ func (i SnapshotArray) ToSnapshotArrayOutputWithContext(ctx context.Context) Sna
 // SnapshotMapInput is an input type that accepts SnapshotMap and SnapshotMapOutput values.
 // You can construct a concrete instance of `SnapshotMapInput` via:
 //
-//	SnapshotMap{ "key": SnapshotArgs{...} }
+//          SnapshotMap{ "key": SnapshotArgs{...} }
 type SnapshotMapInput interface {
 	pulumi.Input
 

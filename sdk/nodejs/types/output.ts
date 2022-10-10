@@ -169,7 +169,6 @@ export namespace blockdevice {
         hrefs?: string[];
         rel: string;
     }
-
 }
 
 export namespace blueprint {
@@ -1507,6 +1506,7 @@ export namespace network {
         key: string;
         value: string;
     }
+
 }
 
 export namespace project {
@@ -1599,6 +1599,7 @@ export namespace project {
         storageLimitGb?: number;
         zoneId: string;
     }
+
 }
 
 export namespace securitygroup {

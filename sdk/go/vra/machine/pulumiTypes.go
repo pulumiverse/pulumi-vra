@@ -18,7 +18,7 @@ type MachineBootConfig struct {
 // MachineBootConfigInput is an input type that accepts MachineBootConfigArgs and MachineBootConfigOutput values.
 // You can construct a concrete instance of `MachineBootConfigInput` via:
 //
-//	MachineBootConfigArgs{...}
+//          MachineBootConfigArgs{...}
 type MachineBootConfigInput interface {
 	pulumi.Input
 
@@ -54,11 +54,11 @@ func (i MachineBootConfigArgs) ToMachineBootConfigPtrOutputWithContext(ctx conte
 // MachineBootConfigPtrInput is an input type that accepts MachineBootConfigArgs, MachineBootConfigPtr and MachineBootConfigPtrOutput values.
 // You can construct a concrete instance of `MachineBootConfigPtrInput` via:
 //
-//	        MachineBootConfigArgs{...}
+//          MachineBootConfigArgs{...}
 //
-//	or:
+//  or:
 //
-//	        nil
+//          nil
 type MachineBootConfigPtrInput interface {
 	pulumi.Input
 
@@ -157,7 +157,7 @@ type MachineConstraint struct {
 // MachineConstraintInput is an input type that accepts MachineConstraintArgs and MachineConstraintOutput values.
 // You can construct a concrete instance of `MachineConstraintInput` via:
 //
-//	MachineConstraintArgs{...}
+//          MachineConstraintArgs{...}
 type MachineConstraintInput interface {
 	pulumi.Input
 
@@ -187,7 +187,7 @@ func (i MachineConstraintArgs) ToMachineConstraintOutputWithContext(ctx context.
 // MachineConstraintArrayInput is an input type that accepts MachineConstraintArray and MachineConstraintArrayOutput values.
 // You can construct a concrete instance of `MachineConstraintArrayInput` via:
 //
-//	MachineConstraintArray{ MachineConstraintArgs{...} }
+//          MachineConstraintArray{ MachineConstraintArgs{...} }
 type MachineConstraintArrayInput interface {
 	pulumi.Input
 
@@ -265,7 +265,7 @@ type MachineDisk struct {
 // MachineDiskInput is an input type that accepts MachineDiskArgs and MachineDiskOutput values.
 // You can construct a concrete instance of `MachineDiskInput` via:
 //
-//	MachineDiskArgs{...}
+//          MachineDiskArgs{...}
 type MachineDiskInput interface {
 	pulumi.Input
 
@@ -297,7 +297,7 @@ func (i MachineDiskArgs) ToMachineDiskOutputWithContext(ctx context.Context) Mac
 // MachineDiskArrayInput is an input type that accepts MachineDiskArray and MachineDiskArrayOutput values.
 // You can construct a concrete instance of `MachineDiskArrayInput` via:
 //
-//	MachineDiskArray{ MachineDiskArgs{...} }
+//          MachineDiskArray{ MachineDiskArgs{...} }
 type MachineDiskArrayInput interface {
 	pulumi.Input
 
@@ -380,7 +380,7 @@ type MachineDisksList struct {
 // MachineDisksListInput is an input type that accepts MachineDisksListArgs and MachineDisksListOutput values.
 // You can construct a concrete instance of `MachineDisksListInput` via:
 //
-//	MachineDisksListArgs{...}
+//          MachineDisksListArgs{...}
 type MachineDisksListInput interface {
 	pulumi.Input
 
@@ -412,7 +412,7 @@ func (i MachineDisksListArgs) ToMachineDisksListOutputWithContext(ctx context.Co
 // MachineDisksListArrayInput is an input type that accepts MachineDisksListArray and MachineDisksListArrayOutput values.
 // You can construct a concrete instance of `MachineDisksListArrayInput` via:
 //
-//	MachineDisksListArray{ MachineDisksListArgs{...} }
+//          MachineDisksListArray{ MachineDisksListArgs{...} }
 type MachineDisksListArrayInput interface {
 	pulumi.Input
 
@@ -493,7 +493,7 @@ type MachineImageDiskConstraint struct {
 // MachineImageDiskConstraintInput is an input type that accepts MachineImageDiskConstraintArgs and MachineImageDiskConstraintOutput values.
 // You can construct a concrete instance of `MachineImageDiskConstraintInput` via:
 //
-//	MachineImageDiskConstraintArgs{...}
+//          MachineImageDiskConstraintArgs{...}
 type MachineImageDiskConstraintInput interface {
 	pulumi.Input
 
@@ -523,7 +523,7 @@ func (i MachineImageDiskConstraintArgs) ToMachineImageDiskConstraintOutputWithCo
 // MachineImageDiskConstraintArrayInput is an input type that accepts MachineImageDiskConstraintArray and MachineImageDiskConstraintArrayOutput values.
 // You can construct a concrete instance of `MachineImageDiskConstraintArrayInput` via:
 //
-//	MachineImageDiskConstraintArray{ MachineImageDiskConstraintArgs{...} }
+//          MachineImageDiskConstraintArray{ MachineImageDiskConstraintArgs{...} }
 type MachineImageDiskConstraintArrayInput interface {
 	pulumi.Input
 
@@ -598,7 +598,7 @@ type MachineLink struct {
 // MachineLinkInput is an input type that accepts MachineLinkArgs and MachineLinkOutput values.
 // You can construct a concrete instance of `MachineLinkInput` via:
 //
-//	MachineLinkArgs{...}
+//          MachineLinkArgs{...}
 type MachineLinkInput interface {
 	pulumi.Input
 
@@ -627,7 +627,7 @@ func (i MachineLinkArgs) ToMachineLinkOutputWithContext(ctx context.Context) Mac
 // MachineLinkArrayInput is an input type that accepts MachineLinkArray and MachineLinkArrayOutput values.
 // You can construct a concrete instance of `MachineLinkArrayInput` via:
 //
-//	MachineLinkArray{ MachineLinkArgs{...} }
+//          MachineLinkArray{ MachineLinkArgs{...} }
 type MachineLinkArrayInput interface {
 	pulumi.Input
 
@@ -716,7 +716,7 @@ type MachineNic struct {
 // MachineNicInput is an input type that accepts MachineNicArgs and MachineNicOutput values.
 // You can construct a concrete instance of `MachineNicInput` via:
 //
-//	MachineNicArgs{...}
+//          MachineNicArgs{...}
 type MachineNicInput interface {
 	pulumi.Input
 
@@ -757,7 +757,7 @@ func (i MachineNicArgs) ToMachineNicOutputWithContext(ctx context.Context) Machi
 // MachineNicArrayInput is an input type that accepts MachineNicArray and MachineNicArrayOutput values.
 // You can construct a concrete instance of `MachineNicArrayInput` via:
 //
-//	MachineNicArray{ MachineNicArgs{...} }
+//          MachineNicArray{ MachineNicArgs{...} }
 type MachineNicArrayInput interface {
 	pulumi.Input
 
@@ -859,7 +859,7 @@ type MachineTag struct {
 // MachineTagInput is an input type that accepts MachineTagArgs and MachineTagOutput values.
 // You can construct a concrete instance of `MachineTagInput` via:
 //
-//	MachineTagArgs{...}
+//          MachineTagArgs{...}
 type MachineTagInput interface {
 	pulumi.Input
 
@@ -889,7 +889,7 @@ func (i MachineTagArgs) ToMachineTagOutputWithContext(ctx context.Context) Machi
 // MachineTagArrayInput is an input type that accepts MachineTagArray and MachineTagArrayOutput values.
 // You can construct a concrete instance of `MachineTagArrayInput` via:
 //
-//	MachineTagArray{ MachineTagArgs{...} }
+//          MachineTagArray{ MachineTagArgs{...} }
 type MachineTagArrayInput interface {
 	pulumi.Input
 
@@ -964,7 +964,7 @@ type GetMachineLink struct {
 // GetMachineLinkInput is an input type that accepts GetMachineLinkArgs and GetMachineLinkOutput values.
 // You can construct a concrete instance of `GetMachineLinkInput` via:
 //
-//	GetMachineLinkArgs{...}
+//          GetMachineLinkArgs{...}
 type GetMachineLinkInput interface {
 	pulumi.Input
 
@@ -993,7 +993,7 @@ func (i GetMachineLinkArgs) ToGetMachineLinkOutputWithContext(ctx context.Contex
 // GetMachineLinkArrayInput is an input type that accepts GetMachineLinkArray and GetMachineLinkArrayOutput values.
 // You can construct a concrete instance of `GetMachineLinkArrayInput` via:
 //
-//	GetMachineLinkArray{ GetMachineLinkArgs{...} }
+//          GetMachineLinkArray{ GetMachineLinkArgs{...} }
 type GetMachineLinkArrayInput interface {
 	pulumi.Input
 
@@ -1069,7 +1069,7 @@ type GetMachineTag struct {
 // GetMachineTagInput is an input type that accepts GetMachineTagArgs and GetMachineTagOutput values.
 // You can construct a concrete instance of `GetMachineTagInput` via:
 //
-//	GetMachineTagArgs{...}
+//          GetMachineTagArgs{...}
 type GetMachineTagInput interface {
 	pulumi.Input
 
@@ -1097,7 +1097,7 @@ func (i GetMachineTagArgs) ToGetMachineTagOutputWithContext(ctx context.Context)
 // GetMachineTagArrayInput is an input type that accepts GetMachineTagArray and GetMachineTagArrayOutput values.
 // You can construct a concrete instance of `GetMachineTagArrayInput` via:
 //
-//	GetMachineTagArray{ GetMachineTagArgs{...} }
+//          GetMachineTagArray{ GetMachineTagArgs{...} }
 type GetMachineTagArrayInput interface {
 	pulumi.Input
 

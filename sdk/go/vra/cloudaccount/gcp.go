@@ -22,49 +22,44 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-vra/sdk/go/vra/cloudaccount"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//	"github.com/pulumiverse/pulumi-vra/sdk/go/vra/cloudaccount"
-//
+// 	"github.com/pulumi/pulumi-vra/sdk/go/vra/cloudaccount"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+// 	"github.com/pulumiverse/pulumi-vra/sdk/go/vra/cloudaccount"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := cloudaccount.NewGcp(ctx, "this", &cloudaccount.GcpArgs{
-//				ClientEmail:  pulumi.String("client_email"),
-//				Description:  pulumi.String("terraform test cloud account gcp"),
-//				PrivateKey:   pulumi.String("private_key"),
-//				PrivateKeyId: pulumi.String("private_key_id"),
-//				ProjectId:    pulumi.String("project_id"),
-//				Regions: pulumi.StringArray{
-//					pulumi.String("us-west1"),
-//					pulumi.String("us-west2"),
-//				},
-//				Tags: cloudaccount.GcpTagArray{
-//					&cloudaccount.GcpTagArgs{
-//						Key:   pulumi.String("foo"),
-//						Value: pulumi.String("bar"),
-//					},
-//				},
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := cloudaccount.NewGcp(ctx, "this", &cloudaccount.GcpArgs{
+// 			ClientEmail:  pulumi.String("client_email"),
+// 			Description:  pulumi.String("terraform test cloud account gcp"),
+// 			PrivateKey:   pulumi.String("private_key"),
+// 			PrivateKeyId: pulumi.String("private_key_id"),
+// 			ProjectId:    pulumi.String("project_id"),
+// 			Regions: pulumi.StringArray{
+// 				pulumi.String("us-west1"),
+// 				pulumi.String("us-west2"),
+// 			},
+// 			Tags: cloudaccount.GcpTagArray{
+// 				&cloudaccount.GcpTagArgs{
+// 					Key:   pulumi.String("foo"),
+// 					Value: pulumi.String("bar"),
+// 				},
+// 			},
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
 //
-// # To import the GCP cloud account, use the ID as in the following example
+// To import the GCP cloud account, use the ID as in the following example
 //
 // ```sh
-//
-//	$ pulumi import vra:cloudaccount/gcp:Gcp new_gcp 05956583-6488-4e7d-84c9-92a7b7219a15`
-//
+//  $ pulumi import vra:cloudaccount/gcp:Gcp new_gcp 05956583-6488-4e7d-84c9-92a7b7219a15`
 // ```
 type Gcp struct {
 	pulumi.CustomResourceState
@@ -273,7 +268,7 @@ func (i *Gcp) ToGcpOutputWithContext(ctx context.Context) GcpOutput {
 // GcpArrayInput is an input type that accepts GcpArray and GcpArrayOutput values.
 // You can construct a concrete instance of `GcpArrayInput` via:
 //
-//	GcpArray{ GcpArgs{...} }
+//          GcpArray{ GcpArgs{...} }
 type GcpArrayInput interface {
 	pulumi.Input
 
@@ -298,7 +293,7 @@ func (i GcpArray) ToGcpArrayOutputWithContext(ctx context.Context) GcpArrayOutpu
 // GcpMapInput is an input type that accepts GcpMap and GcpMapOutput values.
 // You can construct a concrete instance of `GcpMapInput` via:
 //
-//	GcpMap{ "key": GcpArgs{...} }
+//          GcpMap{ "key": GcpArgs{...} }
 type GcpMapInput interface {
 	pulumi.Input
 

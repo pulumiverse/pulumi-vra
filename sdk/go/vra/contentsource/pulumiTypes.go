@@ -28,7 +28,7 @@ type ContentSourceConfig struct {
 // ContentSourceConfigInput is an input type that accepts ContentSourceConfigArgs and ContentSourceConfigOutput values.
 // You can construct a concrete instance of `ContentSourceConfigInput` via:
 //
-//	ContentSourceConfigArgs{...}
+//          ContentSourceConfigArgs{...}
 type ContentSourceConfigInput interface {
 	pulumi.Input
 
@@ -74,11 +74,11 @@ func (i ContentSourceConfigArgs) ToContentSourceConfigPtrOutputWithContext(ctx c
 // ContentSourceConfigPtrInput is an input type that accepts ContentSourceConfigArgs, ContentSourceConfigPtr and ContentSourceConfigPtrOutput values.
 // You can construct a concrete instance of `ContentSourceConfigPtrInput` via:
 //
-//	        ContentSourceConfigArgs{...}
+//          ContentSourceConfigArgs{...}
 //
-//	or:
+//  or:
 //
-//	        nil
+//          nil
 type ContentSourceConfigPtrInput interface {
 	pulumi.Input
 

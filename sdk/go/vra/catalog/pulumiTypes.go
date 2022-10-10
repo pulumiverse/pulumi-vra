@@ -32,7 +32,7 @@ type ItemEntitlementDefinition struct {
 // ItemEntitlementDefinitionInput is an input type that accepts ItemEntitlementDefinitionArgs and ItemEntitlementDefinitionOutput values.
 // You can construct a concrete instance of `ItemEntitlementDefinitionInput` via:
 //
-//	ItemEntitlementDefinitionArgs{...}
+//          ItemEntitlementDefinitionArgs{...}
 type ItemEntitlementDefinitionInput interface {
 	pulumi.Input
 
@@ -74,7 +74,7 @@ func (i ItemEntitlementDefinitionArgs) ToItemEntitlementDefinitionOutputWithCont
 // ItemEntitlementDefinitionArrayInput is an input type that accepts ItemEntitlementDefinitionArray and ItemEntitlementDefinitionArrayOutput values.
 // You can construct a concrete instance of `ItemEntitlementDefinitionArrayInput` via:
 //
-//	ItemEntitlementDefinitionArray{ ItemEntitlementDefinitionArgs{...} }
+//          ItemEntitlementDefinitionArray{ ItemEntitlementDefinitionArgs{...} }
 type ItemEntitlementDefinitionArrayInput interface {
 	pulumi.Input
 
@@ -184,7 +184,7 @@ type SourceEntitlementDefinition struct {
 // SourceEntitlementDefinitionInput is an input type that accepts SourceEntitlementDefinitionArgs and SourceEntitlementDefinitionOutput values.
 // You can construct a concrete instance of `SourceEntitlementDefinitionInput` via:
 //
-//	SourceEntitlementDefinitionArgs{...}
+//          SourceEntitlementDefinitionArgs{...}
 type SourceEntitlementDefinitionInput interface {
 	pulumi.Input
 
@@ -218,7 +218,7 @@ func (i SourceEntitlementDefinitionArgs) ToSourceEntitlementDefinitionOutputWith
 // SourceEntitlementDefinitionArrayInput is an input type that accepts SourceEntitlementDefinitionArray and SourceEntitlementDefinitionArrayOutput values.
 // You can construct a concrete instance of `SourceEntitlementDefinitionArrayInput` via:
 //
-//	SourceEntitlementDefinitionArray{ SourceEntitlementDefinitionArgs{...} }
+//          SourceEntitlementDefinitionArray{ SourceEntitlementDefinitionArgs{...} }
 type SourceEntitlementDefinitionArrayInput interface {
 	pulumi.Input
 
@@ -328,7 +328,7 @@ type GetItemEntitlementDefinition struct {
 // GetItemEntitlementDefinitionInput is an input type that accepts GetItemEntitlementDefinitionArgs and GetItemEntitlementDefinitionOutput values.
 // You can construct a concrete instance of `GetItemEntitlementDefinitionInput` via:
 //
-//	GetItemEntitlementDefinitionArgs{...}
+//          GetItemEntitlementDefinitionArgs{...}
 type GetItemEntitlementDefinitionInput interface {
 	pulumi.Input
 
@@ -370,7 +370,7 @@ func (i GetItemEntitlementDefinitionArgs) ToGetItemEntitlementDefinitionOutputWi
 // GetItemEntitlementDefinitionArrayInput is an input type that accepts GetItemEntitlementDefinitionArray and GetItemEntitlementDefinitionArrayOutput values.
 // You can construct a concrete instance of `GetItemEntitlementDefinitionArrayInput` via:
 //
-//	GetItemEntitlementDefinitionArray{ GetItemEntitlementDefinitionArgs{...} }
+//          GetItemEntitlementDefinitionArray{ GetItemEntitlementDefinitionArgs{...} }
 type GetItemEntitlementDefinitionArrayInput interface {
 	pulumi.Input
 
@@ -480,7 +480,7 @@ type GetItemProject struct {
 // GetItemProjectInput is an input type that accepts GetItemProjectArgs and GetItemProjectOutput values.
 // You can construct a concrete instance of `GetItemProjectInput` via:
 //
-//	GetItemProjectArgs{...}
+//          GetItemProjectArgs{...}
 type GetItemProjectInput interface {
 	pulumi.Input
 
@@ -514,7 +514,7 @@ func (i GetItemProjectArgs) ToGetItemProjectOutputWithContext(ctx context.Contex
 // GetItemProjectArrayInput is an input type that accepts GetItemProjectArray and GetItemProjectArrayOutput values.
 // You can construct a concrete instance of `GetItemProjectArrayInput` via:
 //
-//	GetItemProjectArray{ GetItemProjectArgs{...} }
+//          GetItemProjectArray{ GetItemProjectArgs{...} }
 type GetItemProjectArrayInput interface {
 	pulumi.Input
 
@@ -604,7 +604,7 @@ type GetItemType struct {
 // GetItemTypeInput is an input type that accepts GetItemTypeArgs and GetItemTypeOutput values.
 // You can construct a concrete instance of `GetItemTypeInput` via:
 //
-//	GetItemTypeArgs{...}
+//          GetItemTypeArgs{...}
 type GetItemTypeInput interface {
 	pulumi.Input
 
@@ -638,7 +638,7 @@ func (i GetItemTypeArgs) ToGetItemTypeOutputWithContext(ctx context.Context) Get
 // GetItemTypeArrayInput is an input type that accepts GetItemTypeArray and GetItemTypeArrayOutput values.
 // You can construct a concrete instance of `GetItemTypeArrayInput` via:
 //
-//	GetItemTypeArray{ GetItemTypeArgs{...} }
+//          GetItemTypeArray{ GetItemTypeArgs{...} }
 type GetItemTypeArrayInput interface {
 	pulumi.Input
 
@@ -726,7 +726,7 @@ type GetItemVersion struct {
 // GetItemVersionInput is an input type that accepts GetItemVersionArgs and GetItemVersionOutput values.
 // You can construct a concrete instance of `GetItemVersionInput` via:
 //
-//	GetItemVersionArgs{...}
+//          GetItemVersionArgs{...}
 type GetItemVersionInput interface {
 	pulumi.Input
 
@@ -758,7 +758,7 @@ func (i GetItemVersionArgs) ToGetItemVersionOutputWithContext(ctx context.Contex
 // GetItemVersionArrayInput is an input type that accepts GetItemVersionArray and GetItemVersionArrayOutput values.
 // You can construct a concrete instance of `GetItemVersionArrayInput` via:
 //
-//	GetItemVersionArray{ GetItemVersionArgs{...} }
+//          GetItemVersionArray{ GetItemVersionArgs{...} }
 type GetItemVersionArrayInput interface {
 	pulumi.Input
 
@@ -851,7 +851,7 @@ type GetSourceEntitlementDefinition struct {
 // GetSourceEntitlementDefinitionInput is an input type that accepts GetSourceEntitlementDefinitionArgs and GetSourceEntitlementDefinitionOutput values.
 // You can construct a concrete instance of `GetSourceEntitlementDefinitionInput` via:
 //
-//	GetSourceEntitlementDefinitionArgs{...}
+//          GetSourceEntitlementDefinitionArgs{...}
 type GetSourceEntitlementDefinitionInput interface {
 	pulumi.Input
 
@@ -893,7 +893,7 @@ func (i GetSourceEntitlementDefinitionArgs) ToGetSourceEntitlementDefinitionOutp
 // GetSourceEntitlementDefinitionArrayInput is an input type that accepts GetSourceEntitlementDefinitionArray and GetSourceEntitlementDefinitionArrayOutput values.
 // You can construct a concrete instance of `GetSourceEntitlementDefinitionArrayInput` via:
 //
-//	GetSourceEntitlementDefinitionArray{ GetSourceEntitlementDefinitionArgs{...} }
+//          GetSourceEntitlementDefinitionArray{ GetSourceEntitlementDefinitionArgs{...} }
 type GetSourceEntitlementDefinitionArrayInput interface {
 	pulumi.Input
 

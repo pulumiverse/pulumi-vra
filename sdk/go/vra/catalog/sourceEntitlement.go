@@ -20,54 +20,49 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//	"github.com/pulumiverse/pulumi-vra/sdk/go/vra/catalog"
-//
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+// 	"github.com/pulumiverse/pulumi-vra/sdk/go/vra/catalog"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := catalog.NewSourceEntitlement(ctx, "this", &catalog.SourceEntitlementArgs{
-//				CatalogSourceId: pulumi.Any(_var.Catalog_source_blueprint_id),
-//				ProjectId:       pulumi.Any(_var.Project_id),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := catalog.NewSourceEntitlement(ctx, "this", &catalog.SourceEntitlementArgs{
+// 			CatalogSourceId: pulumi.Any(_var.Catalog_source_blueprint_id),
+// 			ProjectId:       pulumi.Any(_var.Project_id),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 // ## Attribute Reference
 //
 // * `definition` - Represents a catalog source that is linked to a project via an entitlement.
 //
-//   - `description` - Description of the catalog source.
+//     * `description` - Description of the catalog source.
 //
-//   - `iconId` - Icon id of associated catalog source.
+//     * `iconId` - Icon id of associated catalog source.
 //
-//   - `id` - Id of the catalog source.
+//     * `id` - Id of the catalog source.
 //
-//   - `name` - Name of the catalog source.
+//     * `name` - Name of the catalog source.
 //
-//   - `numberOfItems` - Number of items in the associated catalog source.
+//     * `numberOfItems` - Number of items in the associated catalog source.
 //
-//   - `sourceName` - Catalog source name.
+//     * `sourceName` - Catalog source name.
 //
-//   - `sourceType` - Catalog source type.
+//     * `sourceType` - Catalog source type.
 //
-//   - `type` - Content definition type.
+//     * `type` - Content definition type.
 //
 // ## Import
 //
 // Catalog source entitlement can be imported using the id, e.g.
 //
 // ```sh
-//
-//	$ pulumi import vra:catalog/sourceEntitlement:SourceEntitlement this 05956583-6488-4e7d-84c9-92a7b7219a15`
-//
+//  $ pulumi import vra:catalog/sourceEntitlement:SourceEntitlement this 05956583-6488-4e7d-84c9-92a7b7219a15`
 // ```
 type SourceEntitlement struct {
 	pulumi.CustomResourceState
@@ -175,7 +170,7 @@ func (i *SourceEntitlement) ToSourceEntitlementOutputWithContext(ctx context.Con
 // SourceEntitlementArrayInput is an input type that accepts SourceEntitlementArray and SourceEntitlementArrayOutput values.
 // You can construct a concrete instance of `SourceEntitlementArrayInput` via:
 //
-//	SourceEntitlementArray{ SourceEntitlementArgs{...} }
+//          SourceEntitlementArray{ SourceEntitlementArgs{...} }
 type SourceEntitlementArrayInput interface {
 	pulumi.Input
 
@@ -200,7 +195,7 @@ func (i SourceEntitlementArray) ToSourceEntitlementArrayOutputWithContext(ctx co
 // SourceEntitlementMapInput is an input type that accepts SourceEntitlementMap and SourceEntitlementMapOutput values.
 // You can construct a concrete instance of `SourceEntitlementMapInput` via:
 //
-//	SourceEntitlementMap{ "key": SourceEntitlementArgs{...} }
+//          SourceEntitlementMap{ "key": SourceEntitlementArgs{...} }
 type SourceEntitlementMapInput interface {
 	pulumi.Input
 

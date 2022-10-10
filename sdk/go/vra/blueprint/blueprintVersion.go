@@ -22,38 +22,33 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//	"github.com/pulumiverse/pulumi-vra/sdk/go/vra/blueprint"
-//
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+// 	"github.com/pulumiverse/pulumi-vra/sdk/go/vra/blueprint"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := blueprint.NewBlueprintVersion(ctx, "this", &blueprint.BlueprintVersionArgs{
-//				BlueprintId: pulumi.Any(_var.Vra_blueprint_id),
-//				ChangeLog:   pulumi.String("First version"),
-//				Description: pulumi.String("Released from vRA terraform provider"),
-//				Release:     pulumi.Bool(true),
-//				Version:     random_integer.Suffix.Result / random_integer.Suffix.Result,
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := blueprint.NewBlueprintVersion(ctx, "this", &blueprint.BlueprintVersionArgs{
+// 			BlueprintId: pulumi.Any(_var.Vra_blueprint_id),
+// 			ChangeLog:   pulumi.String("First version"),
+// 			Description: pulumi.String("Released from vRA terraform provider"),
+// 			Release:     pulumi.Bool(true),
+// 			Version:     random_integer.Suffix.Result / random_integer.Suffix.Result,
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
 //
-// # To import the cloud template (blueprint) version, use the ID as in the following example
+// To import the cloud template (blueprint) version, use the ID as in the following example
 //
 // ```sh
-//
-//	$ pulumi import vra:blueprint/blueprintVersion:BlueprintVersion this 05956583-6488-4e7d-84c9-92a7b7219a15`
-//
+//  $ pulumi import vra:blueprint/blueprintVersion:BlueprintVersion this 05956583-6488-4e7d-84c9-92a7b7219a15`
 // ```
 type BlueprintVersion struct {
 	pulumi.CustomResourceState
@@ -260,7 +255,7 @@ func (i *BlueprintVersion) ToBlueprintVersionOutputWithContext(ctx context.Conte
 // BlueprintVersionArrayInput is an input type that accepts BlueprintVersionArray and BlueprintVersionArrayOutput values.
 // You can construct a concrete instance of `BlueprintVersionArrayInput` via:
 //
-//	BlueprintVersionArray{ BlueprintVersionArgs{...} }
+//          BlueprintVersionArray{ BlueprintVersionArgs{...} }
 type BlueprintVersionArrayInput interface {
 	pulumi.Input
 
@@ -285,7 +280,7 @@ func (i BlueprintVersionArray) ToBlueprintVersionArrayOutputWithContext(ctx cont
 // BlueprintVersionMapInput is an input type that accepts BlueprintVersionMap and BlueprintVersionMapOutput values.
 // You can construct a concrete instance of `BlueprintVersionMapInput` via:
 //
-//	BlueprintVersionMap{ "key": BlueprintVersionArgs{...} }
+//          BlueprintVersionMap{ "key": BlueprintVersionArgs{...} }
 type BlueprintVersionMapInput interface {
 	pulumi.Input
 

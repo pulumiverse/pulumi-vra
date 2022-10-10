@@ -23,40 +23,35 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-vra/sdk/go/vra/fabric"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//	"github.com/pulumiverse/pulumi-vra/sdk/go/vra/fabric"
-//
+// 	"github.com/pulumi/pulumi-vra/sdk/go/vra/fabric"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+// 	"github.com/pulumiverse/pulumi-vra/sdk/go/vra/fabric"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := fabric.NewDatastoreVSphere(ctx, "this", &fabric.DatastoreVSphereArgs{
-//				Tags: fabric.DatastoreVSphereTagArray{
-//					&fabric.DatastoreVSphereTagArgs{
-//						Key:   pulumi.String("foo"),
-//						Value: pulumi.String("bar"),
-//					},
-//				},
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := fabric.NewDatastoreVSphere(ctx, "this", &fabric.DatastoreVSphereArgs{
+// 			Tags: fabric.DatastoreVSphereTagArray{
+// 				&fabric.DatastoreVSphereTagArgs{
+// 					Key:   pulumi.String("foo"),
+// 					Value: pulumi.String("bar"),
+// 				},
+// 			},
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
 //
-// # To import the fabric datastore vSphere resource, use the ID as in the following example
+// To import the fabric datastore vSphere resource, use the ID as in the following example
 //
 // ```sh
-//
-//	$ pulumi import vra:fabric/datastoreVSphere:DatastoreVSphere this 8e0c9a4c-3ab8-48e8-b9d5-0751c871e282
-//
+//  $ pulumi import vra:fabric/datastoreVSphere:DatastoreVSphere this 8e0c9a4c-3ab8-48e8-b9d5-0751c871e282
 // ```
 type DatastoreVSphere struct {
 	pulumi.CustomResourceState
@@ -217,7 +212,7 @@ func (i *DatastoreVSphere) ToDatastoreVSphereOutputWithContext(ctx context.Conte
 // DatastoreVSphereArrayInput is an input type that accepts DatastoreVSphereArray and DatastoreVSphereArrayOutput values.
 // You can construct a concrete instance of `DatastoreVSphereArrayInput` via:
 //
-//	DatastoreVSphereArray{ DatastoreVSphereArgs{...} }
+//          DatastoreVSphereArray{ DatastoreVSphereArgs{...} }
 type DatastoreVSphereArrayInput interface {
 	pulumi.Input
 
@@ -242,7 +237,7 @@ func (i DatastoreVSphereArray) ToDatastoreVSphereArrayOutputWithContext(ctx cont
 // DatastoreVSphereMapInput is an input type that accepts DatastoreVSphereMap and DatastoreVSphereMapOutput values.
 // You can construct a concrete instance of `DatastoreVSphereMapInput` via:
 //
-//	DatastoreVSphereMap{ "key": DatastoreVSphereArgs{...} }
+//          DatastoreVSphereMap{ "key": DatastoreVSphereArgs{...} }
 type DatastoreVSphereMapInput interface {
 	pulumi.Input
 

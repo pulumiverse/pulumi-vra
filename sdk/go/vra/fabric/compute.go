@@ -23,40 +23,35 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-vra/sdk/go/vra/fabric"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//	"github.com/pulumiverse/pulumi-vra/sdk/go/vra/fabric"
-//
+// 	"github.com/pulumi/pulumi-vra/sdk/go/vra/fabric"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+// 	"github.com/pulumiverse/pulumi-vra/sdk/go/vra/fabric"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := fabric.NewCompute(ctx, "this", &fabric.ComputeArgs{
-//				Tags: fabric.ComputeTagArray{
-//					&fabric.ComputeTagArgs{
-//						Key:   pulumi.String("foo"),
-//						Value: pulumi.String("bar"),
-//					},
-//				},
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := fabric.NewCompute(ctx, "this", &fabric.ComputeArgs{
+// 			Tags: fabric.ComputeTagArray{
+// 				&fabric.ComputeTagArgs{
+// 					Key:   pulumi.String("foo"),
+// 					Value: pulumi.String("bar"),
+// 				},
+// 			},
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
 //
-// # To import the fabric compute resource, use the ID as in the following example
+// To import the fabric compute resource, use the ID as in the following example
 //
 // ```sh
-//
-//	$ pulumi import vra:fabric/compute:Compute this 88fdea8b-92ed-4aa9-b6ee-4670412961b0
-//
+//  $ pulumi import vra:fabric/compute:Compute this 88fdea8b-92ed-4aa9-b6ee-4670412961b0
 // ```
 type Compute struct {
 	pulumi.CustomResourceState
@@ -229,7 +224,7 @@ func (i *Compute) ToComputeOutputWithContext(ctx context.Context) ComputeOutput 
 // ComputeArrayInput is an input type that accepts ComputeArray and ComputeArrayOutput values.
 // You can construct a concrete instance of `ComputeArrayInput` via:
 //
-//	ComputeArray{ ComputeArgs{...} }
+//          ComputeArray{ ComputeArgs{...} }
 type ComputeArrayInput interface {
 	pulumi.Input
 
@@ -254,7 +249,7 @@ func (i ComputeArray) ToComputeArrayOutputWithContext(ctx context.Context) Compu
 // ComputeMapInput is an input type that accepts ComputeMap and ComputeMapOutput values.
 // You can construct a concrete instance of `ComputeMapInput` via:
 //
-//	ComputeMap{ "key": ComputeArgs{...} }
+//          ComputeMap{ "key": ComputeArgs{...} }
 type ComputeMapInput interface {
 	pulumi.Input
 

@@ -22,24 +22,21 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//	"github.com/pulumiverse/pulumi-vra/sdk/go/vra/catalog"
-//
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+// 	"github.com/pulumiverse/pulumi-vra/sdk/go/vra/catalog"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := catalog.NewSourceBlueprint(ctx, "this", &catalog.SourceBlueprintArgs{
-//				ProjectId: pulumi.Any(_var.Vra_project_id),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := catalog.NewSourceBlueprint(ctx, "this", &catalog.SourceBlueprintArgs{
+// 			ProjectId: pulumi.Any(_var.Vra_project_id),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 // ## Attribute Reference
 //
@@ -67,12 +64,10 @@ import (
 //
 // ## Import
 //
-// # To import the cloud template catalog source, use the ID as in the following example
+// To import the cloud template catalog source, use the ID as in the following example
 //
 // ```sh
-//
-//	$ pulumi import vra:catalog/sourceBlueprint:SourceBlueprint this 05956583-6488-4e7d-84c9-92a7b7219a15`
-//
+//  $ pulumi import vra:catalog/sourceBlueprint:SourceBlueprint this 05956583-6488-4e7d-84c9-92a7b7219a15`
 // ```
 type SourceBlueprint struct {
 	pulumi.CustomResourceState
@@ -224,7 +219,7 @@ func (i *SourceBlueprint) ToSourceBlueprintOutputWithContext(ctx context.Context
 // SourceBlueprintArrayInput is an input type that accepts SourceBlueprintArray and SourceBlueprintArrayOutput values.
 // You can construct a concrete instance of `SourceBlueprintArrayInput` via:
 //
-//	SourceBlueprintArray{ SourceBlueprintArgs{...} }
+//          SourceBlueprintArray{ SourceBlueprintArgs{...} }
 type SourceBlueprintArrayInput interface {
 	pulumi.Input
 
@@ -249,7 +244,7 @@ func (i SourceBlueprintArray) ToSourceBlueprintArrayOutputWithContext(ctx contex
 // SourceBlueprintMapInput is an input type that accepts SourceBlueprintMap and SourceBlueprintMapOutput values.
 // You can construct a concrete instance of `SourceBlueprintMapInput` via:
 //
-//	SourceBlueprintMap{ "key": SourceBlueprintArgs{...} }
+//          SourceBlueprintMap{ "key": SourceBlueprintArgs{...} }
 type SourceBlueprintMapInput interface {
 	pulumi.Input
 

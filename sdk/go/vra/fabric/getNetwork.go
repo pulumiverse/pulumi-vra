@@ -20,27 +20,24 @@ import (
 // package main
 //
 // import (
+// 	"fmt"
 //
-//	"fmt"
-//
-//	"github.com/pulumi/pulumi-vra/sdk/go/vra/fabric"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//	"github.com/pulumiverse/pulumi-vra/sdk/go/vra/fabric"
-//
+// 	"github.com/pulumi/pulumi-vra/sdk/go/vra/fabric"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+// 	"github.com/pulumiverse/pulumi-vra/sdk/go/vra/fabric"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := fabric.GetNetwork(ctx, &fabric.GetNetworkArgs{
-//				Filter: fmt.Sprintf("name eq '%v' and externalRegionId eq '%v'", _var.Name, _var.External_region_id),
-//			}, nil)
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := fabric.GetNetwork(ctx, &fabric.GetNetworkArgs{
+// 			Filter: fmt.Sprintf("name eq '%v' and externalRegionId eq '%v'", _var.Name, _var.External_region_id),
+// 		}, nil)
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // A fabric network data source supports the following arguments:

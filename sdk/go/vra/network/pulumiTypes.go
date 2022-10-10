@@ -19,7 +19,7 @@ type IpRangeLink struct {
 // IpRangeLinkInput is an input type that accepts IpRangeLinkArgs and IpRangeLinkOutput values.
 // You can construct a concrete instance of `IpRangeLinkInput` via:
 //
-//	IpRangeLinkArgs{...}
+//          IpRangeLinkArgs{...}
 type IpRangeLinkInput interface {
 	pulumi.Input
 
@@ -48,7 +48,7 @@ func (i IpRangeLinkArgs) ToIpRangeLinkOutputWithContext(ctx context.Context) IpR
 // IpRangeLinkArrayInput is an input type that accepts IpRangeLinkArray and IpRangeLinkArrayOutput values.
 // You can construct a concrete instance of `IpRangeLinkArrayInput` via:
 //
-//	IpRangeLinkArray{ IpRangeLinkArgs{...} }
+//          IpRangeLinkArray{ IpRangeLinkArgs{...} }
 type IpRangeLinkArrayInput interface {
 	pulumi.Input
 
@@ -124,7 +124,7 @@ type IpRangeTag struct {
 // IpRangeTagInput is an input type that accepts IpRangeTagArgs and IpRangeTagOutput values.
 // You can construct a concrete instance of `IpRangeTagInput` via:
 //
-//	IpRangeTagArgs{...}
+//          IpRangeTagArgs{...}
 type IpRangeTagInput interface {
 	pulumi.Input
 
@@ -152,7 +152,7 @@ func (i IpRangeTagArgs) ToIpRangeTagOutputWithContext(ctx context.Context) IpRan
 // IpRangeTagArrayInput is an input type that accepts IpRangeTagArray and IpRangeTagArrayOutput values.
 // You can construct a concrete instance of `IpRangeTagArrayInput` via:
 //
-//	IpRangeTagArray{ IpRangeTagArgs{...} }
+//          IpRangeTagArray{ IpRangeTagArgs{...} }
 type IpRangeTagArrayInput interface {
 	pulumi.Input
 
@@ -224,7 +224,7 @@ type NetworkConstraint struct {
 // NetworkConstraintInput is an input type that accepts NetworkConstraintArgs and NetworkConstraintOutput values.
 // You can construct a concrete instance of `NetworkConstraintInput` via:
 //
-//	NetworkConstraintArgs{...}
+//          NetworkConstraintArgs{...}
 type NetworkConstraintInput interface {
 	pulumi.Input
 
@@ -252,7 +252,7 @@ func (i NetworkConstraintArgs) ToNetworkConstraintOutputWithContext(ctx context.
 // NetworkConstraintArrayInput is an input type that accepts NetworkConstraintArray and NetworkConstraintArrayOutput values.
 // You can construct a concrete instance of `NetworkConstraintArrayInput` via:
 //
-//	NetworkConstraintArray{ NetworkConstraintArgs{...} }
+//          NetworkConstraintArray{ NetworkConstraintArgs{...} }
 type NetworkConstraintArrayInput interface {
 	pulumi.Input
 
@@ -325,7 +325,7 @@ type NetworkLink struct {
 // NetworkLinkInput is an input type that accepts NetworkLinkArgs and NetworkLinkOutput values.
 // You can construct a concrete instance of `NetworkLinkInput` via:
 //
-//	NetworkLinkArgs{...}
+//          NetworkLinkArgs{...}
 type NetworkLinkInput interface {
 	pulumi.Input
 
@@ -354,7 +354,7 @@ func (i NetworkLinkArgs) ToNetworkLinkOutputWithContext(ctx context.Context) Net
 // NetworkLinkArrayInput is an input type that accepts NetworkLinkArray and NetworkLinkArrayOutput values.
 // You can construct a concrete instance of `NetworkLinkArrayInput` via:
 //
-//	NetworkLinkArray{ NetworkLinkArgs{...} }
+//          NetworkLinkArray{ NetworkLinkArgs{...} }
 type NetworkLinkArrayInput interface {
 	pulumi.Input
 
@@ -430,7 +430,7 @@ type NetworkTag struct {
 // NetworkTagInput is an input type that accepts NetworkTagArgs and NetworkTagOutput values.
 // You can construct a concrete instance of `NetworkTagInput` via:
 //
-//	NetworkTagArgs{...}
+//          NetworkTagArgs{...}
 type NetworkTagInput interface {
 	pulumi.Input
 
@@ -458,7 +458,7 @@ func (i NetworkTagArgs) ToNetworkTagOutputWithContext(ctx context.Context) Netwo
 // NetworkTagArrayInput is an input type that accepts NetworkTagArray and NetworkTagArrayOutput values.
 // You can construct a concrete instance of `NetworkTagArrayInput` via:
 //
-//	NetworkTagArray{ NetworkTagArgs{...} }
+//          NetworkTagArray{ NetworkTagArgs{...} }
 type NetworkTagArrayInput interface {
 	pulumi.Input
 
@@ -531,7 +531,7 @@ type ProfileLink struct {
 // ProfileLinkInput is an input type that accepts ProfileLinkArgs and ProfileLinkOutput values.
 // You can construct a concrete instance of `ProfileLinkInput` via:
 //
-//	ProfileLinkArgs{...}
+//          ProfileLinkArgs{...}
 type ProfileLinkInput interface {
 	pulumi.Input
 
@@ -560,7 +560,7 @@ func (i ProfileLinkArgs) ToProfileLinkOutputWithContext(ctx context.Context) Pro
 // ProfileLinkArrayInput is an input type that accepts ProfileLinkArray and ProfileLinkArrayOutput values.
 // You can construct a concrete instance of `ProfileLinkArrayInput` via:
 //
-//	ProfileLinkArray{ ProfileLinkArgs{...} }
+//          ProfileLinkArray{ ProfileLinkArgs{...} }
 type ProfileLinkArrayInput interface {
 	pulumi.Input
 
@@ -636,7 +636,7 @@ type ProfileTag struct {
 // ProfileTagInput is an input type that accepts ProfileTagArgs and ProfileTagOutput values.
 // You can construct a concrete instance of `ProfileTagInput` via:
 //
-//	ProfileTagArgs{...}
+//          ProfileTagArgs{...}
 type ProfileTagInput interface {
 	pulumi.Input
 
@@ -664,7 +664,7 @@ func (i ProfileTagArgs) ToProfileTagOutputWithContext(ctx context.Context) Profi
 // ProfileTagArrayInput is an input type that accepts ProfileTagArray and ProfileTagArrayOutput values.
 // You can construct a concrete instance of `ProfileTagArrayInput` via:
 //
-//	ProfileTagArray{ ProfileTagArgs{...} }
+//          ProfileTagArray{ ProfileTagArgs{...} }
 type ProfileTagArrayInput interface {
 	pulumi.Input
 
@@ -737,7 +737,7 @@ type GetDomainLink struct {
 // GetDomainLinkInput is an input type that accepts GetDomainLinkArgs and GetDomainLinkOutput values.
 // You can construct a concrete instance of `GetDomainLinkInput` via:
 //
-//	GetDomainLinkArgs{...}
+//          GetDomainLinkArgs{...}
 type GetDomainLinkInput interface {
 	pulumi.Input
 
@@ -766,7 +766,7 @@ func (i GetDomainLinkArgs) ToGetDomainLinkOutputWithContext(ctx context.Context)
 // GetDomainLinkArrayInput is an input type that accepts GetDomainLinkArray and GetDomainLinkArrayOutput values.
 // You can construct a concrete instance of `GetDomainLinkArrayInput` via:
 //
-//	GetDomainLinkArray{ GetDomainLinkArgs{...} }
+//          GetDomainLinkArray{ GetDomainLinkArgs{...} }
 type GetDomainLinkArrayInput interface {
 	pulumi.Input
 
@@ -842,7 +842,7 @@ type GetDomainTag struct {
 // GetDomainTagInput is an input type that accepts GetDomainTagArgs and GetDomainTagOutput values.
 // You can construct a concrete instance of `GetDomainTagInput` via:
 //
-//	GetDomainTagArgs{...}
+//          GetDomainTagArgs{...}
 type GetDomainTagInput interface {
 	pulumi.Input
 
@@ -870,7 +870,7 @@ func (i GetDomainTagArgs) ToGetDomainTagOutputWithContext(ctx context.Context) G
 // GetDomainTagArrayInput is an input type that accepts GetDomainTagArray and GetDomainTagArrayOutput values.
 // You can construct a concrete instance of `GetDomainTagArrayInput` via:
 //
-//	GetDomainTagArray{ GetDomainTagArgs{...} }
+//          GetDomainTagArray{ GetDomainTagArgs{...} }
 type GetDomainTagArrayInput interface {
 	pulumi.Input
 
@@ -942,7 +942,7 @@ type GetNetworkConstraint struct {
 // GetNetworkConstraintInput is an input type that accepts GetNetworkConstraintArgs and GetNetworkConstraintOutput values.
 // You can construct a concrete instance of `GetNetworkConstraintInput` via:
 //
-//	GetNetworkConstraintArgs{...}
+//          GetNetworkConstraintArgs{...}
 type GetNetworkConstraintInput interface {
 	pulumi.Input
 
@@ -970,7 +970,7 @@ func (i GetNetworkConstraintArgs) ToGetNetworkConstraintOutputWithContext(ctx co
 // GetNetworkConstraintArrayInput is an input type that accepts GetNetworkConstraintArray and GetNetworkConstraintArrayOutput values.
 // You can construct a concrete instance of `GetNetworkConstraintArrayInput` via:
 //
-//	GetNetworkConstraintArray{ GetNetworkConstraintArgs{...} }
+//          GetNetworkConstraintArray{ GetNetworkConstraintArgs{...} }
 type GetNetworkConstraintArrayInput interface {
 	pulumi.Input
 
@@ -1043,7 +1043,7 @@ type GetNetworkLink struct {
 // GetNetworkLinkInput is an input type that accepts GetNetworkLinkArgs and GetNetworkLinkOutput values.
 // You can construct a concrete instance of `GetNetworkLinkInput` via:
 //
-//	GetNetworkLinkArgs{...}
+//          GetNetworkLinkArgs{...}
 type GetNetworkLinkInput interface {
 	pulumi.Input
 
@@ -1072,7 +1072,7 @@ func (i GetNetworkLinkArgs) ToGetNetworkLinkOutputWithContext(ctx context.Contex
 // GetNetworkLinkArrayInput is an input type that accepts GetNetworkLinkArray and GetNetworkLinkArrayOutput values.
 // You can construct a concrete instance of `GetNetworkLinkArrayInput` via:
 //
-//	GetNetworkLinkArray{ GetNetworkLinkArgs{...} }
+//          GetNetworkLinkArray{ GetNetworkLinkArgs{...} }
 type GetNetworkLinkArrayInput interface {
 	pulumi.Input
 
@@ -1148,7 +1148,7 @@ type GetNetworkTag struct {
 // GetNetworkTagInput is an input type that accepts GetNetworkTagArgs and GetNetworkTagOutput values.
 // You can construct a concrete instance of `GetNetworkTagInput` via:
 //
-//	GetNetworkTagArgs{...}
+//          GetNetworkTagArgs{...}
 type GetNetworkTagInput interface {
 	pulumi.Input
 
@@ -1176,7 +1176,7 @@ func (i GetNetworkTagArgs) ToGetNetworkTagOutputWithContext(ctx context.Context)
 // GetNetworkTagArrayInput is an input type that accepts GetNetworkTagArray and GetNetworkTagArrayOutput values.
 // You can construct a concrete instance of `GetNetworkTagArrayInput` via:
 //
-//	GetNetworkTagArray{ GetNetworkTagArgs{...} }
+//          GetNetworkTagArray{ GetNetworkTagArgs{...} }
 type GetNetworkTagArrayInput interface {
 	pulumi.Input
 
@@ -1249,7 +1249,7 @@ type GetProfileLink struct {
 // GetProfileLinkInput is an input type that accepts GetProfileLinkArgs and GetProfileLinkOutput values.
 // You can construct a concrete instance of `GetProfileLinkInput` via:
 //
-//	GetProfileLinkArgs{...}
+//          GetProfileLinkArgs{...}
 type GetProfileLinkInput interface {
 	pulumi.Input
 
@@ -1278,7 +1278,7 @@ func (i GetProfileLinkArgs) ToGetProfileLinkOutputWithContext(ctx context.Contex
 // GetProfileLinkArrayInput is an input type that accepts GetProfileLinkArray and GetProfileLinkArrayOutput values.
 // You can construct a concrete instance of `GetProfileLinkArrayInput` via:
 //
-//	GetProfileLinkArray{ GetProfileLinkArgs{...} }
+//          GetProfileLinkArray{ GetProfileLinkArgs{...} }
 type GetProfileLinkArrayInput interface {
 	pulumi.Input
 
@@ -1354,7 +1354,7 @@ type GetProfileTag struct {
 // GetProfileTagInput is an input type that accepts GetProfileTagArgs and GetProfileTagOutput values.
 // You can construct a concrete instance of `GetProfileTagInput` via:
 //
-//	GetProfileTagArgs{...}
+//          GetProfileTagArgs{...}
 type GetProfileTagInput interface {
 	pulumi.Input
 
@@ -1382,7 +1382,7 @@ func (i GetProfileTagArgs) ToGetProfileTagOutputWithContext(ctx context.Context)
 // GetProfileTagArrayInput is an input type that accepts GetProfileTagArray and GetProfileTagArrayOutput values.
 // You can construct a concrete instance of `GetProfileTagArrayInput` via:
 //
-//	GetProfileTagArray{ GetProfileTagArgs{...} }
+//          GetProfileTagArray{ GetProfileTagArgs{...} }
 type GetProfileTagArrayInput interface {
 	pulumi.Input
 

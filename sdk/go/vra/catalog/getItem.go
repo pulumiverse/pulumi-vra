@@ -21,26 +21,23 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-vra/sdk/go/vra/catalog"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//	"github.com/pulumiverse/pulumi-vra/sdk/go/vra/catalog"
-//
+// 	"github.com/pulumi/pulumi-vra/sdk/go/vra/catalog"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+// 	"github.com/pulumiverse/pulumi-vra/sdk/go/vra/catalog"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := catalog.GetItem(ctx, &catalog.GetItemArgs{
-//				Name:           pulumi.StringRef(_var.Catalog_item_name),
-//				ExpandVersions: pulumi.BoolRef(true),
-//			}, nil)
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := catalog.GetItem(ctx, &catalog.GetItemArgs{
+// 			Name:           pulumi.StringRef(_var.Catalog_item_name),
+// 			ExpandVersions: pulumi.BoolRef(true),
+// 		}, nil)
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // This is an example of how to get a vRA catalog item by its id.
@@ -49,26 +46,23 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-vra/sdk/go/vra/catalog"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//	"github.com/pulumiverse/pulumi-vra/sdk/go/vra/catalog"
-//
+// 	"github.com/pulumi/pulumi-vra/sdk/go/vra/catalog"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+// 	"github.com/pulumiverse/pulumi-vra/sdk/go/vra/catalog"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := catalog.GetItem(ctx, &catalog.GetItemArgs{
-//				Id:             pulumi.StringRef(_var.Catalog_item_id),
-//				ExpandVersions: pulumi.BoolRef(true),
-//			}, nil)
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := catalog.GetItem(ctx, &catalog.GetItemArgs{
+// 			Id:             pulumi.StringRef(_var.Catalog_item_id),
+// 			ExpandVersions: pulumi.BoolRef(true),
+// 		}, nil)
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 func GetItem(ctx *pulumi.Context, args *GetItemArgs, opts ...pulumi.InvokeOption) (*GetItemResult, error) {
 	opts = pkgInvokeDefaultOpts(opts)

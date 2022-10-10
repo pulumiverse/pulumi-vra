@@ -19,7 +19,7 @@ type AwsLink struct {
 // AwsLinkInput is an input type that accepts AwsLinkArgs and AwsLinkOutput values.
 // You can construct a concrete instance of `AwsLinkInput` via:
 //
-//	AwsLinkArgs{...}
+//          AwsLinkArgs{...}
 type AwsLinkInput interface {
 	pulumi.Input
 
@@ -48,7 +48,7 @@ func (i AwsLinkArgs) ToAwsLinkOutputWithContext(ctx context.Context) AwsLinkOutp
 // AwsLinkArrayInput is an input type that accepts AwsLinkArray and AwsLinkArrayOutput values.
 // You can construct a concrete instance of `AwsLinkArrayInput` via:
 //
-//	AwsLinkArray{ AwsLinkArgs{...} }
+//          AwsLinkArray{ AwsLinkArgs{...} }
 type AwsLinkArrayInput interface {
 	pulumi.Input
 
@@ -124,7 +124,7 @@ type AwsTag struct {
 // AwsTagInput is an input type that accepts AwsTagArgs and AwsTagOutput values.
 // You can construct a concrete instance of `AwsTagInput` via:
 //
-//	AwsTagArgs{...}
+//          AwsTagArgs{...}
 type AwsTagInput interface {
 	pulumi.Input
 
@@ -152,7 +152,7 @@ func (i AwsTagArgs) ToAwsTagOutputWithContext(ctx context.Context) AwsTagOutput 
 // AwsTagArrayInput is an input type that accepts AwsTagArray and AwsTagArrayOutput values.
 // You can construct a concrete instance of `AwsTagArrayInput` via:
 //
-//	AwsTagArray{ AwsTagArgs{...} }
+//          AwsTagArray{ AwsTagArgs{...} }
 type AwsTagArrayInput interface {
 	pulumi.Input
 
@@ -225,7 +225,7 @@ type AzureLink struct {
 // AzureLinkInput is an input type that accepts AzureLinkArgs and AzureLinkOutput values.
 // You can construct a concrete instance of `AzureLinkInput` via:
 //
-//	AzureLinkArgs{...}
+//          AzureLinkArgs{...}
 type AzureLinkInput interface {
 	pulumi.Input
 
@@ -254,7 +254,7 @@ func (i AzureLinkArgs) ToAzureLinkOutputWithContext(ctx context.Context) AzureLi
 // AzureLinkArrayInput is an input type that accepts AzureLinkArray and AzureLinkArrayOutput values.
 // You can construct a concrete instance of `AzureLinkArrayInput` via:
 //
-//	AzureLinkArray{ AzureLinkArgs{...} }
+//          AzureLinkArray{ AzureLinkArgs{...} }
 type AzureLinkArrayInput interface {
 	pulumi.Input
 
@@ -330,7 +330,7 @@ type AzureTag struct {
 // AzureTagInput is an input type that accepts AzureTagArgs and AzureTagOutput values.
 // You can construct a concrete instance of `AzureTagInput` via:
 //
-//	AzureTagArgs{...}
+//          AzureTagArgs{...}
 type AzureTagInput interface {
 	pulumi.Input
 
@@ -358,7 +358,7 @@ func (i AzureTagArgs) ToAzureTagOutputWithContext(ctx context.Context) AzureTagO
 // AzureTagArrayInput is an input type that accepts AzureTagArray and AzureTagArrayOutput values.
 // You can construct a concrete instance of `AzureTagArrayInput` via:
 //
-//	AzureTagArray{ AzureTagArgs{...} }
+//          AzureTagArray{ AzureTagArgs{...} }
 type AzureTagArrayInput interface {
 	pulumi.Input
 
@@ -431,7 +431,7 @@ type StorageProfileLink struct {
 // StorageProfileLinkInput is an input type that accepts StorageProfileLinkArgs and StorageProfileLinkOutput values.
 // You can construct a concrete instance of `StorageProfileLinkInput` via:
 //
-//	StorageProfileLinkArgs{...}
+//          StorageProfileLinkArgs{...}
 type StorageProfileLinkInput interface {
 	pulumi.Input
 
@@ -460,7 +460,7 @@ func (i StorageProfileLinkArgs) ToStorageProfileLinkOutputWithContext(ctx contex
 // StorageProfileLinkArrayInput is an input type that accepts StorageProfileLinkArray and StorageProfileLinkArrayOutput values.
 // You can construct a concrete instance of `StorageProfileLinkArrayInput` via:
 //
-//	StorageProfileLinkArray{ StorageProfileLinkArgs{...} }
+//          StorageProfileLinkArray{ StorageProfileLinkArgs{...} }
 type StorageProfileLinkArrayInput interface {
 	pulumi.Input
 
@@ -536,7 +536,7 @@ type StorageProfileTag struct {
 // StorageProfileTagInput is an input type that accepts StorageProfileTagArgs and StorageProfileTagOutput values.
 // You can construct a concrete instance of `StorageProfileTagInput` via:
 //
-//	StorageProfileTagArgs{...}
+//          StorageProfileTagArgs{...}
 type StorageProfileTagInput interface {
 	pulumi.Input
 
@@ -564,7 +564,7 @@ func (i StorageProfileTagArgs) ToStorageProfileTagOutputWithContext(ctx context.
 // StorageProfileTagArrayInput is an input type that accepts StorageProfileTagArray and StorageProfileTagArrayOutput values.
 // You can construct a concrete instance of `StorageProfileTagArrayInput` via:
 //
-//	StorageProfileTagArray{ StorageProfileTagArgs{...} }
+//          StorageProfileTagArray{ StorageProfileTagArgs{...} }
 type StorageProfileTagArrayInput interface {
 	pulumi.Input
 
@@ -637,7 +637,7 @@ type VSphereLink struct {
 // VSphereLinkInput is an input type that accepts VSphereLinkArgs and VSphereLinkOutput values.
 // You can construct a concrete instance of `VSphereLinkInput` via:
 //
-//	VSphereLinkArgs{...}
+//          VSphereLinkArgs{...}
 type VSphereLinkInput interface {
 	pulumi.Input
 
@@ -666,7 +666,7 @@ func (i VSphereLinkArgs) ToVSphereLinkOutputWithContext(ctx context.Context) VSp
 // VSphereLinkArrayInput is an input type that accepts VSphereLinkArray and VSphereLinkArrayOutput values.
 // You can construct a concrete instance of `VSphereLinkArrayInput` via:
 //
-//	VSphereLinkArray{ VSphereLinkArgs{...} }
+//          VSphereLinkArray{ VSphereLinkArgs{...} }
 type VSphereLinkArrayInput interface {
 	pulumi.Input
 
@@ -742,7 +742,7 @@ type VSphereTag struct {
 // VSphereTagInput is an input type that accepts VSphereTagArgs and VSphereTagOutput values.
 // You can construct a concrete instance of `VSphereTagInput` via:
 //
-//	VSphereTagArgs{...}
+//          VSphereTagArgs{...}
 type VSphereTagInput interface {
 	pulumi.Input
 
@@ -770,7 +770,7 @@ func (i VSphereTagArgs) ToVSphereTagOutputWithContext(ctx context.Context) VSphe
 // VSphereTagArrayInput is an input type that accepts VSphereTagArray and VSphereTagArrayOutput values.
 // You can construct a concrete instance of `VSphereTagArrayInput` via:
 //
-//	VSphereTagArray{ VSphereTagArgs{...} }
+//          VSphereTagArray{ VSphereTagArgs{...} }
 type VSphereTagArrayInput interface {
 	pulumi.Input
 
@@ -843,7 +843,7 @@ type GetAwsLink struct {
 // GetAwsLinkInput is an input type that accepts GetAwsLinkArgs and GetAwsLinkOutput values.
 // You can construct a concrete instance of `GetAwsLinkInput` via:
 //
-//	GetAwsLinkArgs{...}
+//          GetAwsLinkArgs{...}
 type GetAwsLinkInput interface {
 	pulumi.Input
 
@@ -872,7 +872,7 @@ func (i GetAwsLinkArgs) ToGetAwsLinkOutputWithContext(ctx context.Context) GetAw
 // GetAwsLinkArrayInput is an input type that accepts GetAwsLinkArray and GetAwsLinkArrayOutput values.
 // You can construct a concrete instance of `GetAwsLinkArrayInput` via:
 //
-//	GetAwsLinkArray{ GetAwsLinkArgs{...} }
+//          GetAwsLinkArray{ GetAwsLinkArgs{...} }
 type GetAwsLinkArrayInput interface {
 	pulumi.Input
 
@@ -948,7 +948,7 @@ type GetAwsTag struct {
 // GetAwsTagInput is an input type that accepts GetAwsTagArgs and GetAwsTagOutput values.
 // You can construct a concrete instance of `GetAwsTagInput` via:
 //
-//	GetAwsTagArgs{...}
+//          GetAwsTagArgs{...}
 type GetAwsTagInput interface {
 	pulumi.Input
 
@@ -976,7 +976,7 @@ func (i GetAwsTagArgs) ToGetAwsTagOutputWithContext(ctx context.Context) GetAwsT
 // GetAwsTagArrayInput is an input type that accepts GetAwsTagArray and GetAwsTagArrayOutput values.
 // You can construct a concrete instance of `GetAwsTagArrayInput` via:
 //
-//	GetAwsTagArray{ GetAwsTagArgs{...} }
+//          GetAwsTagArray{ GetAwsTagArgs{...} }
 type GetAwsTagArrayInput interface {
 	pulumi.Input
 
@@ -1049,7 +1049,7 @@ type GetAzureLink struct {
 // GetAzureLinkInput is an input type that accepts GetAzureLinkArgs and GetAzureLinkOutput values.
 // You can construct a concrete instance of `GetAzureLinkInput` via:
 //
-//	GetAzureLinkArgs{...}
+//          GetAzureLinkArgs{...}
 type GetAzureLinkInput interface {
 	pulumi.Input
 
@@ -1078,7 +1078,7 @@ func (i GetAzureLinkArgs) ToGetAzureLinkOutputWithContext(ctx context.Context) G
 // GetAzureLinkArrayInput is an input type that accepts GetAzureLinkArray and GetAzureLinkArrayOutput values.
 // You can construct a concrete instance of `GetAzureLinkArrayInput` via:
 //
-//	GetAzureLinkArray{ GetAzureLinkArgs{...} }
+//          GetAzureLinkArray{ GetAzureLinkArgs{...} }
 type GetAzureLinkArrayInput interface {
 	pulumi.Input
 
@@ -1154,7 +1154,7 @@ type GetAzureTag struct {
 // GetAzureTagInput is an input type that accepts GetAzureTagArgs and GetAzureTagOutput values.
 // You can construct a concrete instance of `GetAzureTagInput` via:
 //
-//	GetAzureTagArgs{...}
+//          GetAzureTagArgs{...}
 type GetAzureTagInput interface {
 	pulumi.Input
 
@@ -1182,7 +1182,7 @@ func (i GetAzureTagArgs) ToGetAzureTagOutputWithContext(ctx context.Context) Get
 // GetAzureTagArrayInput is an input type that accepts GetAzureTagArray and GetAzureTagArrayOutput values.
 // You can construct a concrete instance of `GetAzureTagArrayInput` via:
 //
-//	GetAzureTagArray{ GetAzureTagArgs{...} }
+//          GetAzureTagArray{ GetAzureTagArgs{...} }
 type GetAzureTagArrayInput interface {
 	pulumi.Input
 
@@ -1255,7 +1255,7 @@ type GetStorageProfileLink struct {
 // GetStorageProfileLinkInput is an input type that accepts GetStorageProfileLinkArgs and GetStorageProfileLinkOutput values.
 // You can construct a concrete instance of `GetStorageProfileLinkInput` via:
 //
-//	GetStorageProfileLinkArgs{...}
+//          GetStorageProfileLinkArgs{...}
 type GetStorageProfileLinkInput interface {
 	pulumi.Input
 
@@ -1284,7 +1284,7 @@ func (i GetStorageProfileLinkArgs) ToGetStorageProfileLinkOutputWithContext(ctx 
 // GetStorageProfileLinkArrayInput is an input type that accepts GetStorageProfileLinkArray and GetStorageProfileLinkArrayOutput values.
 // You can construct a concrete instance of `GetStorageProfileLinkArrayInput` via:
 //
-//	GetStorageProfileLinkArray{ GetStorageProfileLinkArgs{...} }
+//          GetStorageProfileLinkArray{ GetStorageProfileLinkArgs{...} }
 type GetStorageProfileLinkArrayInput interface {
 	pulumi.Input
 
@@ -1360,7 +1360,7 @@ type GetStorageProfileTag struct {
 // GetStorageProfileTagInput is an input type that accepts GetStorageProfileTagArgs and GetStorageProfileTagOutput values.
 // You can construct a concrete instance of `GetStorageProfileTagInput` via:
 //
-//	GetStorageProfileTagArgs{...}
+//          GetStorageProfileTagArgs{...}
 type GetStorageProfileTagInput interface {
 	pulumi.Input
 
@@ -1388,7 +1388,7 @@ func (i GetStorageProfileTagArgs) ToGetStorageProfileTagOutputWithContext(ctx co
 // GetStorageProfileTagArrayInput is an input type that accepts GetStorageProfileTagArray and GetStorageProfileTagArrayOutput values.
 // You can construct a concrete instance of `GetStorageProfileTagArrayInput` via:
 //
-//	GetStorageProfileTagArray{ GetStorageProfileTagArgs{...} }
+//          GetStorageProfileTagArray{ GetStorageProfileTagArgs{...} }
 type GetStorageProfileTagArrayInput interface {
 	pulumi.Input
 
@@ -1461,7 +1461,7 @@ type GetVSphereLink struct {
 // GetVSphereLinkInput is an input type that accepts GetVSphereLinkArgs and GetVSphereLinkOutput values.
 // You can construct a concrete instance of `GetVSphereLinkInput` via:
 //
-//	GetVSphereLinkArgs{...}
+//          GetVSphereLinkArgs{...}
 type GetVSphereLinkInput interface {
 	pulumi.Input
 
@@ -1490,7 +1490,7 @@ func (i GetVSphereLinkArgs) ToGetVSphereLinkOutputWithContext(ctx context.Contex
 // GetVSphereLinkArrayInput is an input type that accepts GetVSphereLinkArray and GetVSphereLinkArrayOutput values.
 // You can construct a concrete instance of `GetVSphereLinkArrayInput` via:
 //
-//	GetVSphereLinkArray{ GetVSphereLinkArgs{...} }
+//          GetVSphereLinkArray{ GetVSphereLinkArgs{...} }
 type GetVSphereLinkArrayInput interface {
 	pulumi.Input
 
@@ -1566,7 +1566,7 @@ type GetVSphereTag struct {
 // GetVSphereTagInput is an input type that accepts GetVSphereTagArgs and GetVSphereTagOutput values.
 // You can construct a concrete instance of `GetVSphereTagInput` via:
 //
-//	GetVSphereTagArgs{...}
+//          GetVSphereTagArgs{...}
 type GetVSphereTagInput interface {
 	pulumi.Input
 
@@ -1594,7 +1594,7 @@ func (i GetVSphereTagArgs) ToGetVSphereTagOutputWithContext(ctx context.Context)
 // GetVSphereTagArrayInput is an input type that accepts GetVSphereTagArray and GetVSphereTagArrayOutput values.
 // You can construct a concrete instance of `GetVSphereTagArrayInput` via:
 //
-//	GetVSphereTagArray{ GetVSphereTagArgs{...} }
+//          GetVSphereTagArray{ GetVSphereTagArgs{...} }
 type GetVSphereTagArrayInput interface {
 	pulumi.Input
 

@@ -17,12 +17,10 @@ import (
 //
 // ## Import
 //
-// # To import the vRA Network IP range, use the ID as in the following example
+// To import the vRA Network IP range, use the ID as in the following example
 //
 // ```sh
-//
-//	$ pulumi import vra:network/ipRange:IpRange new_ip_range 05956583-6488-4e7d-84c9-92a7b7219a15`
-//
+//  $ pulumi import vra:network/ipRange:IpRange new_ip_range 05956583-6488-4e7d-84c9-92a7b7219a15`
 // ```
 type IpRange struct {
 	pulumi.CustomResourceState
@@ -215,7 +213,7 @@ func (i *IpRange) ToIpRangeOutputWithContext(ctx context.Context) IpRangeOutput 
 // IpRangeArrayInput is an input type that accepts IpRangeArray and IpRangeArrayOutput values.
 // You can construct a concrete instance of `IpRangeArrayInput` via:
 //
-//	IpRangeArray{ IpRangeArgs{...} }
+//          IpRangeArray{ IpRangeArgs{...} }
 type IpRangeArrayInput interface {
 	pulumi.Input
 
@@ -240,7 +238,7 @@ func (i IpRangeArray) ToIpRangeArrayOutputWithContext(ctx context.Context) IpRan
 // IpRangeMapInput is an input type that accepts IpRangeMap and IpRangeMapOutput values.
 // You can construct a concrete instance of `IpRangeMapInput` via:
 //
-//	IpRangeMap{ "key": IpRangeArgs{...} }
+//          IpRangeMap{ "key": IpRangeArgs{...} }
 type IpRangeMapInput interface {
 	pulumi.Input
 

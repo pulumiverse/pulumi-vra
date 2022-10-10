@@ -21,52 +21,49 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-vra/sdk/go/vra/storageprofile"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//	"github.com/pulumiverse/pulumi-vra/sdk/go/vra/storageprofile"
-//
+// 	"github.com/pulumi/pulumi-vra/sdk/go/vra/storageprofile"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+// 	"github.com/pulumiverse/pulumi-vra/sdk/go/vra/storageprofile"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := storageprofile.NewAws(ctx, "thisAws", &storageprofile.AwsArgs{
-//				Description:        pulumi.String("AWS Storage Profile with instance store device type."),
-//				RegionId:           pulumi.Any(data.Vra_region.This.Id),
-//				DefaultItem:        pulumi.Bool(false),
-//				SupportsEncryption: pulumi.Bool(false),
-//				DeviceType:         pulumi.String("ebs"),
-//				VolumeType:         pulumi.String("io1"),
-//				Iops:               pulumi.String("1000"),
-//				Tags: storageprofile.AwsTagArray{
-//					&storageprofile.AwsTagArgs{
-//						Key:   pulumi.String("foo"),
-//						Value: pulumi.String("bar"),
-//					},
-//				},
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			_, err = storageprofile.NewAws(ctx, "thisStorageprofile/awsAws", &storageprofile.AwsArgs{
-//				Description: pulumi.String("AWS Storage Profile with instance store device type."),
-//				RegionId:    pulumi.Any(data.Vra_region.This.Id),
-//				DefaultItem: pulumi.Bool(false),
-//				DeviceType:  pulumi.String("instance-store"),
-//				Tags: storageprofile.AwsTagArray{
-//					&storageprofile.AwsTagArgs{
-//						Key:   pulumi.String("foo"),
-//						Value: pulumi.String("bar"),
-//					},
-//				},
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := storageprofile.NewAws(ctx, "thisAws", &storageprofile.AwsArgs{
+// 			Description:        pulumi.String("AWS Storage Profile with instance store device type."),
+// 			RegionId:           pulumi.Any(data.Vra_region.This.Id),
+// 			DefaultItem:        pulumi.Bool(false),
+// 			SupportsEncryption: pulumi.Bool(false),
+// 			DeviceType:         pulumi.String("ebs"),
+// 			VolumeType:         pulumi.String("io1"),
+// 			Iops:               pulumi.String("1000"),
+// 			Tags: storageprofile.AwsTagArray{
+// 				&storageprofile.AwsTagArgs{
+// 					Key:   pulumi.String("foo"),
+// 					Value: pulumi.String("bar"),
+// 				},
+// 			},
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		_, err = storageprofile.NewAws(ctx, "thisStorageprofile/awsAws", &storageprofile.AwsArgs{
+// 			Description: pulumi.String("AWS Storage Profile with instance store device type."),
+// 			RegionId:    pulumi.Any(data.Vra_region.This.Id),
+// 			DefaultItem: pulumi.Bool(false),
+// 			DeviceType:  pulumi.String("instance-store"),
+// 			Tags: storageprofile.AwsTagArray{
+// 				&storageprofile.AwsTagArgs{
+// 					Key:   pulumi.String("foo"),
+// 					Value: pulumi.String("bar"),
+// 				},
+// 			},
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // A storage profile aws resource supports the following arguments:
@@ -284,7 +281,7 @@ func (i *Aws) ToAwsOutputWithContext(ctx context.Context) AwsOutput {
 // AwsArrayInput is an input type that accepts AwsArray and AwsArrayOutput values.
 // You can construct a concrete instance of `AwsArrayInput` via:
 //
-//	AwsArray{ AwsArgs{...} }
+//          AwsArray{ AwsArgs{...} }
 type AwsArrayInput interface {
 	pulumi.Input
 
@@ -309,7 +306,7 @@ func (i AwsArray) ToAwsArrayOutputWithContext(ctx context.Context) AwsArrayOutpu
 // AwsMapInput is an input type that accepts AwsMap and AwsMapOutput values.
 // You can construct a concrete instance of `AwsMapInput` via:
 //
-//	AwsMap{ "key": AwsArgs{...} }
+//          AwsMap{ "key": AwsArgs{...} }
 type AwsMapInput interface {
 	pulumi.Input
 
