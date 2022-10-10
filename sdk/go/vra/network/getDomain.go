@@ -20,27 +20,24 @@ import (
 // package main
 //
 // import (
+// 	"fmt"
 //
-//	"fmt"
-//
-//	"github.com/pulumi/pulumi-vra/sdk/go/vra/network"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//	"github.com/pulumiverse/pulumi-vra/sdk/go/vra/network"
-//
+// 	"github.com/pulumi/pulumi-vra/sdk/go/vra/network"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+// 	"github.com/pulumiverse/pulumi-vra/sdk/go/vra/network"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := network.GetDomain(ctx, &network.GetDomainArgs{
-//				Filter: fmt.Sprintf("name eq '%v'", _var.Name),
-//			}, nil)
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := network.GetDomain(ctx, &network.GetDomainArgs{
+// 			Filter: fmt.Sprintf("name eq '%v'", _var.Name),
+// 		}, nil)
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // A network domain object supports the following arguments:

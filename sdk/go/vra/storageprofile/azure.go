@@ -21,54 +21,51 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-vra/sdk/go/vra/storageprofile"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//	"github.com/pulumiverse/pulumi-vra/sdk/go/vra/storageprofile"
-//
+// 	"github.com/pulumi/pulumi-vra/sdk/go/vra/storageprofile"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+// 	"github.com/pulumiverse/pulumi-vra/sdk/go/vra/storageprofile"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := storageprofile.NewAzure(ctx, "thisAzure", &storageprofile.AzureArgs{
-//				Description:        pulumi.String("Azure Storage Profile with managed disks."),
-//				RegionId:           pulumi.Any(data.Vra_region.This.Id),
-//				DefaultItem:        pulumi.Bool(false),
-//				SupportsEncryption: pulumi.Bool(false),
-//				DataDiskCaching:    pulumi.String("None"),
-//				DiskType:           pulumi.String("Standard_LRS"),
-//				OsDiskCaching:      pulumi.String("None"),
-//				Tags: storageprofile.AzureTagArray{
-//					&storageprofile.AzureTagArgs{
-//						Key:   pulumi.String("foo"),
-//						Value: pulumi.String("bar"),
-//					},
-//				},
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			_, err = storageprofile.NewAzure(ctx, "thisStorageprofile/azureAzure", &storageprofile.AzureArgs{
-//				Description:        pulumi.String("Azure Storage Profile with unmanaged disks."),
-//				RegionId:           pulumi.Any(data.Vra_region.This.Id),
-//				DefaultItem:        pulumi.Bool(false),
-//				SupportsEncryption: pulumi.Bool(false),
-//				DataDiskCaching:    pulumi.String("None"),
-//				OsDiskCaching:      pulumi.String("None"),
-//				Tags: storageprofile.AzureTagArray{
-//					&storageprofile.AzureTagArgs{
-//						Key:   pulumi.String("foo"),
-//						Value: pulumi.String("bar"),
-//					},
-//				},
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := storageprofile.NewAzure(ctx, "thisAzure", &storageprofile.AzureArgs{
+// 			Description:        pulumi.String("Azure Storage Profile with managed disks."),
+// 			RegionId:           pulumi.Any(data.Vra_region.This.Id),
+// 			DefaultItem:        pulumi.Bool(false),
+// 			SupportsEncryption: pulumi.Bool(false),
+// 			DataDiskCaching:    pulumi.String("None"),
+// 			DiskType:           pulumi.String("Standard_LRS"),
+// 			OsDiskCaching:      pulumi.String("None"),
+// 			Tags: storageprofile.AzureTagArray{
+// 				&storageprofile.AzureTagArgs{
+// 					Key:   pulumi.String("foo"),
+// 					Value: pulumi.String("bar"),
+// 				},
+// 			},
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		_, err = storageprofile.NewAzure(ctx, "thisStorageprofile/azureAzure", &storageprofile.AzureArgs{
+// 			Description:        pulumi.String("Azure Storage Profile with unmanaged disks."),
+// 			RegionId:           pulumi.Any(data.Vra_region.This.Id),
+// 			DefaultItem:        pulumi.Bool(false),
+// 			SupportsEncryption: pulumi.Bool(false),
+// 			DataDiskCaching:    pulumi.String("None"),
+// 			OsDiskCaching:      pulumi.String("None"),
+// 			Tags: storageprofile.AzureTagArray{
+// 				&storageprofile.AzureTagArgs{
+// 					Key:   pulumi.String("foo"),
+// 					Value: pulumi.String("bar"),
+// 				},
+// 			},
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // A storage profile azure resource supports the following arguments:
@@ -296,7 +293,7 @@ func (i *Azure) ToAzureOutputWithContext(ctx context.Context) AzureOutput {
 // AzureArrayInput is an input type that accepts AzureArray and AzureArrayOutput values.
 // You can construct a concrete instance of `AzureArrayInput` via:
 //
-//	AzureArray{ AzureArgs{...} }
+//          AzureArray{ AzureArgs{...} }
 type AzureArrayInput interface {
 	pulumi.Input
 
@@ -321,7 +318,7 @@ func (i AzureArray) ToAzureArrayOutputWithContext(ctx context.Context) AzureArra
 // AzureMapInput is an input type that accepts AzureMap and AzureMapOutput values.
 // You can construct a concrete instance of `AzureMapInput` via:
 //
-//	AzureMap{ "key": AzureArgs{...} }
+//          AzureMap{ "key": AzureArgs{...} }
 type AzureMapInput interface {
 	pulumi.Input
 

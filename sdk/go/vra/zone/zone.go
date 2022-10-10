@@ -20,36 +20,33 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-vra/sdk/go/vra/zone"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//	"github.com/pulumiverse/pulumi-vra/sdk/go/vra/zone"
-//
+// 	"github.com/pulumi/pulumi-vra/sdk/go/vra/zone"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+// 	"github.com/pulumiverse/pulumi-vra/sdk/go/vra/zone"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := zone.NewZone(ctx, "this", &zone.ZoneArgs{
-//				Description: pulumi.String("my terraform test cloud zone"),
-//				RegionId:    pulumi.Any(data.Vra_region.This.Id),
-//				Tags: zone.ZoneTagArray{
-//					&zone.ZoneTagArgs{
-//						Key:   pulumi.String("my-tf-key"),
-//						Value: pulumi.String("my-tf-value"),
-//					},
-//					&zone.ZoneTagArgs{
-//						Key:   pulumi.String("tf-foo"),
-//						Value: pulumi.String("tf-bar"),
-//					},
-//				},
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := zone.NewZone(ctx, "this", &zone.ZoneArgs{
+// 			Description: pulumi.String("my terraform test cloud zone"),
+// 			RegionId:    pulumi.Any(data.Vra_region.This.Id),
+// 			Tags: zone.ZoneTagArray{
+// 				&zone.ZoneTagArgs{
+// 					Key:   pulumi.String("my-tf-key"),
+// 					Value: pulumi.String("my-tf-value"),
+// 				},
+// 				&zone.ZoneTagArgs{
+// 					Key:   pulumi.String("tf-foo"),
+// 					Value: pulumi.String("tf-bar"),
+// 				},
+// 			},
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // A zone resource supports the following arguments:
@@ -265,7 +262,7 @@ func (i *Zone) ToZoneOutputWithContext(ctx context.Context) ZoneOutput {
 // ZoneArrayInput is an input type that accepts ZoneArray and ZoneArrayOutput values.
 // You can construct a concrete instance of `ZoneArrayInput` via:
 //
-//	ZoneArray{ ZoneArgs{...} }
+//          ZoneArray{ ZoneArgs{...} }
 type ZoneArrayInput interface {
 	pulumi.Input
 
@@ -290,7 +287,7 @@ func (i ZoneArray) ToZoneArrayOutputWithContext(ctx context.Context) ZoneArrayOu
 // ZoneMapInput is an input type that accepts ZoneMap and ZoneMapOutput values.
 // You can construct a concrete instance of `ZoneMapInput` via:
 //
-//	ZoneMap{ "key": ZoneArgs{...} }
+//          ZoneMap{ "key": ZoneArgs{...} }
 type ZoneMapInput interface {
 	pulumi.Input
 

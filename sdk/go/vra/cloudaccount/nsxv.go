@@ -22,46 +22,41 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-vra/sdk/go/vra/cloudaccount"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//	"github.com/pulumiverse/pulumi-vra/sdk/go/vra/cloudaccount"
-//
+// 	"github.com/pulumi/pulumi-vra/sdk/go/vra/cloudaccount"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+// 	"github.com/pulumiverse/pulumi-vra/sdk/go/vra/cloudaccount"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := cloudaccount.NewNsxv(ctx, "this", &cloudaccount.NsxvArgs{
-//				Description:          pulumi.String("foobar"),
-//				Username:             pulumi.Any(_var.Username),
-//				Password:             pulumi.Any(_var.Password),
-//				Hostname:             pulumi.Any(_var.Hostname),
-//				DcId:                 pulumi.Any(_var.Vra_data_collector_id),
-//				AcceptSelfSignedCert: pulumi.Bool(true),
-//				Tags: cloudaccount.NsxvTagArray{
-//					&cloudaccount.NsxvTagArgs{
-//						Key:   pulumi.String("foo"),
-//						Value: pulumi.String("bar"),
-//					},
-//				},
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := cloudaccount.NewNsxv(ctx, "this", &cloudaccount.NsxvArgs{
+// 			Description:          pulumi.String("foobar"),
+// 			Username:             pulumi.Any(_var.Username),
+// 			Password:             pulumi.Any(_var.Password),
+// 			Hostname:             pulumi.Any(_var.Hostname),
+// 			DcId:                 pulumi.Any(_var.Vra_data_collector_id),
+// 			AcceptSelfSignedCert: pulumi.Bool(true),
+// 			Tags: cloudaccount.NsxvTagArray{
+// 				&cloudaccount.NsxvTagArgs{
+// 					Key:   pulumi.String("foo"),
+// 					Value: pulumi.String("bar"),
+// 				},
+// 			},
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
 //
-// # To import the NSX-V cloud account, use the ID as in the following example
+// To import the NSX-V cloud account, use the ID as in the following example
 //
 // ```sh
-//
-//	$ pulumi import vra:cloudaccount/nsxv:Nsxv new_gcp 05956583-6488-4e7d-84c9-92a7b7219a15`
-//
+//  $ pulumi import vra:cloudaccount/nsxv:Nsxv new_gcp 05956583-6488-4e7d-84c9-92a7b7219a15`
 // ```
 type Nsxv struct {
 	pulumi.CustomResourceState
@@ -270,7 +265,7 @@ func (i *Nsxv) ToNsxvOutputWithContext(ctx context.Context) NsxvOutput {
 // NsxvArrayInput is an input type that accepts NsxvArray and NsxvArrayOutput values.
 // You can construct a concrete instance of `NsxvArrayInput` via:
 //
-//	NsxvArray{ NsxvArgs{...} }
+//          NsxvArray{ NsxvArgs{...} }
 type NsxvArrayInput interface {
 	pulumi.Input
 
@@ -295,7 +290,7 @@ func (i NsxvArray) ToNsxvArrayOutputWithContext(ctx context.Context) NsxvArrayOu
 // NsxvMapInput is an input type that accepts NsxvMap and NsxvMapOutput values.
 // You can construct a concrete instance of `NsxvMapInput` via:
 //
-//	NsxvMap{ "key": NsxvArgs{...} }
+//          NsxvMap{ "key": NsxvArgs{...} }
 type NsxvMapInput interface {
 	pulumi.Input
 

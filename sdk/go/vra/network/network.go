@@ -20,37 +20,34 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-vra/sdk/go/vra/network"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//	"github.com/pulumiverse/pulumi-vra/sdk/go/vra/network"
-//
+// 	"github.com/pulumi/pulumi-vra/sdk/go/vra/network"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+// 	"github.com/pulumiverse/pulumi-vra/sdk/go/vra/network"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := network.NewNetwork(ctx, "myNetwork", &network.NetworkArgs{
-//				Constraints: network.NetworkConstraintArray{
-//					&network.NetworkConstraintArgs{
-//						Expression: pulumi.String("pci"),
-//						Mandatory:  pulumi.Bool(true),
-//					},
-//				},
-//				OutboundAccess: pulumi.Bool(false),
-//				Tags: network.NetworkTagArray{
-//					&network.NetworkTagArgs{
-//						Key:   pulumi.String("foo"),
-//						Value: pulumi.String("bar"),
-//					},
-//				},
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := network.NewNetwork(ctx, "myNetwork", &network.NetworkArgs{
+// 			Constraints: network.NetworkConstraintArray{
+// 				&network.NetworkConstraintArgs{
+// 					Expression: pulumi.String("pci"),
+// 					Mandatory:  pulumi.Bool(true),
+// 				},
+// 			},
+// 			OutboundAccess: pulumi.Bool(false),
+// 			Tags: network.NetworkTagArray{
+// 				&network.NetworkTagArgs{
+// 					Key:   pulumi.String("foo"),
+// 					Value: pulumi.String("bar"),
+// 				},
+// 			},
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 // A network resource supports the following resource:
 type Network struct {
@@ -263,7 +260,7 @@ func (i *Network) ToNetworkOutputWithContext(ctx context.Context) NetworkOutput 
 // NetworkArrayInput is an input type that accepts NetworkArray and NetworkArrayOutput values.
 // You can construct a concrete instance of `NetworkArrayInput` via:
 //
-//	NetworkArray{ NetworkArgs{...} }
+//          NetworkArray{ NetworkArgs{...} }
 type NetworkArrayInput interface {
 	pulumi.Input
 
@@ -288,7 +285,7 @@ func (i NetworkArray) ToNetworkArrayOutputWithContext(ctx context.Context) Netwo
 // NetworkMapInput is an input type that accepts NetworkMap and NetworkMapOutput values.
 // You can construct a concrete instance of `NetworkMapInput` via:
 //
-//	NetworkMap{ "key": NetworkArgs{...} }
+//          NetworkMap{ "key": NetworkArgs{...} }
 type NetworkMapInput interface {
 	pulumi.Input
 

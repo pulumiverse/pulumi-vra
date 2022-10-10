@@ -32,7 +32,7 @@ type ProfileImageMapping struct {
 // ProfileImageMappingInput is an input type that accepts ProfileImageMappingArgs and ProfileImageMappingOutput values.
 // You can construct a concrete instance of `ProfileImageMappingInput` via:
 //
-//	ProfileImageMappingArgs{...}
+//          ProfileImageMappingArgs{...}
 type ProfileImageMappingInput interface {
 	pulumi.Input
 
@@ -74,7 +74,7 @@ func (i ProfileImageMappingArgs) ToProfileImageMappingOutputWithContext(ctx cont
 // ProfileImageMappingArrayInput is an input type that accepts ProfileImageMappingArray and ProfileImageMappingArrayOutput values.
 // You can construct a concrete instance of `ProfileImageMappingArrayInput` via:
 //
-//	ProfileImageMappingArray{ ProfileImageMappingArgs{...} }
+//          ProfileImageMappingArray{ ProfileImageMappingArgs{...} }
 type ProfileImageMappingArrayInput interface {
 	pulumi.Input
 
@@ -190,7 +190,7 @@ type ProfileImageMappingConstraint struct {
 // ProfileImageMappingConstraintInput is an input type that accepts ProfileImageMappingConstraintArgs and ProfileImageMappingConstraintOutput values.
 // You can construct a concrete instance of `ProfileImageMappingConstraintInput` via:
 //
-//	ProfileImageMappingConstraintArgs{...}
+//          ProfileImageMappingConstraintArgs{...}
 type ProfileImageMappingConstraintInput interface {
 	pulumi.Input
 
@@ -218,7 +218,7 @@ func (i ProfileImageMappingConstraintArgs) ToProfileImageMappingConstraintOutput
 // ProfileImageMappingConstraintArrayInput is an input type that accepts ProfileImageMappingConstraintArray and ProfileImageMappingConstraintArrayOutput values.
 // You can construct a concrete instance of `ProfileImageMappingConstraintArrayInput` via:
 //
-//	ProfileImageMappingConstraintArray{ ProfileImageMappingConstraintArgs{...} }
+//          ProfileImageMappingConstraintArray{ ProfileImageMappingConstraintArgs{...} }
 type ProfileImageMappingConstraintArrayInput interface {
 	pulumi.Input
 
@@ -304,7 +304,7 @@ type GetProfileImageMapping struct {
 // GetProfileImageMappingInput is an input type that accepts GetProfileImageMappingArgs and GetProfileImageMappingOutput values.
 // You can construct a concrete instance of `GetProfileImageMappingInput` via:
 //
-//	GetProfileImageMappingArgs{...}
+//          GetProfileImageMappingArgs{...}
 type GetProfileImageMappingInput interface {
 	pulumi.Input
 
@@ -346,7 +346,7 @@ func (i GetProfileImageMappingArgs) ToGetProfileImageMappingOutputWithContext(ct
 // GetProfileImageMappingArrayInput is an input type that accepts GetProfileImageMappingArray and GetProfileImageMappingArrayOutput values.
 // You can construct a concrete instance of `GetProfileImageMappingArrayInput` via:
 //
-//	GetProfileImageMappingArray{ GetProfileImageMappingArgs{...} }
+//          GetProfileImageMappingArray{ GetProfileImageMappingArgs{...} }
 type GetProfileImageMappingArrayInput interface {
 	pulumi.Input
 
@@ -462,7 +462,7 @@ type GetProfileImageMappingConstraint struct {
 // GetProfileImageMappingConstraintInput is an input type that accepts GetProfileImageMappingConstraintArgs and GetProfileImageMappingConstraintOutput values.
 // You can construct a concrete instance of `GetProfileImageMappingConstraintInput` via:
 //
-//	GetProfileImageMappingConstraintArgs{...}
+//          GetProfileImageMappingConstraintArgs{...}
 type GetProfileImageMappingConstraintInput interface {
 	pulumi.Input
 
@@ -490,7 +490,7 @@ func (i GetProfileImageMappingConstraintArgs) ToGetProfileImageMappingConstraint
 // GetProfileImageMappingConstraintArrayInput is an input type that accepts GetProfileImageMappingConstraintArray and GetProfileImageMappingConstraintArrayOutput values.
 // You can construct a concrete instance of `GetProfileImageMappingConstraintArrayInput` via:
 //
-//	GetProfileImageMappingConstraintArray{ GetProfileImageMappingConstraintArgs{...} }
+//          GetProfileImageMappingConstraintArray{ GetProfileImageMappingConstraintArgs{...} }
 type GetProfileImageMappingConstraintArrayInput interface {
 	pulumi.Input
 

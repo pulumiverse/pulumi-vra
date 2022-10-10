@@ -20,25 +20,22 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//	"github.com/pulumiverse/pulumi-vra/sdk/go/vra/catalog"
-//
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+// 	"github.com/pulumiverse/pulumi-vra/sdk/go/vra/catalog"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := catalog.NewItemEntitlement(ctx, "this", &catalog.ItemEntitlementArgs{
-//				CatalogItemId: pulumi.Any(_var.Catalog_item_id),
-//				ProjectId:     pulumi.Any(_var.Project_id),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := catalog.NewItemEntitlement(ctx, "this", &catalog.ItemEntitlementArgs{
+// 			CatalogItemId: pulumi.Any(_var.Catalog_item_id),
+// 			ProjectId:     pulumi.Any(_var.Project_id),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -46,9 +43,7 @@ import (
 // Catalog item entitlement can be imported using the id, e.g.
 //
 // ```sh
-//
-//	$ pulumi import vra:catalog/itemEntitlement:ItemEntitlement this 05956583-6488-4e7d-84c9-92a7b7219a15`
-//
+//  $ pulumi import vra:catalog/itemEntitlement:ItemEntitlement this 05956583-6488-4e7d-84c9-92a7b7219a15`
 // ```
 type ItemEntitlement struct {
 	pulumi.CustomResourceState
@@ -159,7 +154,7 @@ func (i *ItemEntitlement) ToItemEntitlementOutputWithContext(ctx context.Context
 // ItemEntitlementArrayInput is an input type that accepts ItemEntitlementArray and ItemEntitlementArrayOutput values.
 // You can construct a concrete instance of `ItemEntitlementArrayInput` via:
 //
-//	ItemEntitlementArray{ ItemEntitlementArgs{...} }
+//          ItemEntitlementArray{ ItemEntitlementArgs{...} }
 type ItemEntitlementArrayInput interface {
 	pulumi.Input
 
@@ -184,7 +179,7 @@ func (i ItemEntitlementArray) ToItemEntitlementArrayOutputWithContext(ctx contex
 // ItemEntitlementMapInput is an input type that accepts ItemEntitlementMap and ItemEntitlementMapOutput values.
 // You can construct a concrete instance of `ItemEntitlementMapInput` via:
 //
-//	ItemEntitlementMap{ "key": ItemEntitlementArgs{...} }
+//          ItemEntitlementMap{ "key": ItemEntitlementArgs{...} }
 type ItemEntitlementMapInput interface {
 	pulumi.Input
 

@@ -21,36 +21,33 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-vra/sdk/go/vra/flavor"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//	"github.com/pulumiverse/pulumi-vra/sdk/go/vra/flavor"
-//
+// 	"github.com/pulumi/pulumi-vra/sdk/go/vra/flavor"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+// 	"github.com/pulumiverse/pulumi-vra/sdk/go/vra/flavor"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := flavor.NewProfile(ctx, "my-flavor-profile", &flavor.ProfileArgs{
-//				Description: pulumi.String("my flavor"),
-//				FlavorMappings: flavor.ProfileFlavorMappingArray{
-//					&flavor.ProfileFlavorMappingArgs{
-//						InstanceType: pulumi.String("t2.small"),
-//						Name:         pulumi.String("small"),
-//					},
-//					&flavor.ProfileFlavorMappingArgs{
-//						InstanceType: pulumi.String("t2.medium"),
-//						Name:         pulumi.String("medium"),
-//					},
-//				},
-//				RegionId: pulumi.Any(data.Vra_region.Us - east - 1 - region.Id),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := flavor.NewProfile(ctx, "my-flavor-profile", &flavor.ProfileArgs{
+// 			Description: pulumi.String("my flavor"),
+// 			FlavorMappings: flavor.ProfileFlavorMappingArray{
+// 				&flavor.ProfileFlavorMappingArgs{
+// 					InstanceType: pulumi.String("t2.small"),
+// 					Name:         pulumi.String("small"),
+// 				},
+// 				&flavor.ProfileFlavorMappingArgs{
+// 					InstanceType: pulumi.String("t2.medium"),
+// 					Name:         pulumi.String("medium"),
+// 				},
+// 			},
+// 			RegionId: pulumi.Any(data.Vra_region.Us - east - 1 - region.Id),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // An flavor profile resource supports the following arguments:
@@ -216,7 +213,7 @@ func (i *Profile) ToProfileOutputWithContext(ctx context.Context) ProfileOutput 
 // ProfileArrayInput is an input type that accepts ProfileArray and ProfileArrayOutput values.
 // You can construct a concrete instance of `ProfileArrayInput` via:
 //
-//	ProfileArray{ ProfileArgs{...} }
+//          ProfileArray{ ProfileArgs{...} }
 type ProfileArrayInput interface {
 	pulumi.Input
 
@@ -241,7 +238,7 @@ func (i ProfileArray) ToProfileArrayOutputWithContext(ctx context.Context) Profi
 // ProfileMapInput is an input type that accepts ProfileMap and ProfileMapOutput values.
 // You can construct a concrete instance of `ProfileMapInput` via:
 //
-//	ProfileMap{ "key": ProfileArgs{...} }
+//          ProfileMap{ "key": ProfileArgs{...} }
 type ProfileMapInput interface {
 	pulumi.Input
 

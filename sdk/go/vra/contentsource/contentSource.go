@@ -20,36 +20,33 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-vra/sdk/go/vra/contentsource"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//	"github.com/pulumiverse/pulumi-vra/sdk/go/vra/contentsource"
-//
+// 	"github.com/pulumi/pulumi-vra/sdk/go/vra/contentsource"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+// 	"github.com/pulumiverse/pulumi-vra/sdk/go/vra/contentsource"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := contentsource.NewContentSource(ctx, "this", &contentsource.ContentSourceArgs{
-//				ProjectId:   pulumi.Any(_var.Project_id),
-//				TypeId:      pulumi.String("com.gitlab"),
-//				Description: pulumi.String("Some content Source"),
-//				SyncEnabled: pulumi.Bool(false),
-//				Config: &contentsource.ContentSourceConfigArgs{
-//					Path:          pulumi.String("blueprint01"),
-//					Branch:        pulumi.String("master"),
-//					Repository:    pulumi.String("vracontent/vra8_content_source_test"),
-//					ContentType:   pulumi.String("BLUEPRINT"),
-//					ProjectName:   pulumi.Any(_var.Project_name),
-//					IntegrationId: pulumi.Any(_var.Integration_id),
-//				},
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := contentsource.NewContentSource(ctx, "this", &contentsource.ContentSourceArgs{
+// 			ProjectId:   pulumi.Any(_var.Project_id),
+// 			TypeId:      pulumi.String("com.gitlab"),
+// 			Description: pulumi.String("Some content Source"),
+// 			SyncEnabled: pulumi.Bool(false),
+// 			Config: &contentsource.ContentSourceConfigArgs{
+// 				Path:          pulumi.String("blueprint01"),
+// 				Branch:        pulumi.String("master"),
+// 				Repository:    pulumi.String("vracontent/vra8_content_source_test"),
+// 				ContentType:   pulumi.String("BLUEPRINT"),
+// 				ProjectName:   pulumi.Any(_var.Project_name),
+// 				IntegrationId: pulumi.Any(_var.Integration_id),
+// 			},
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -57,9 +54,7 @@ import (
 // Content source can be imported using the id, e.g.
 //
 // ```sh
-//
-//	$ pulumi import vra:contentsource/contentSource:ContentSource this 05956583-6488-4e7d-84c9-92a7b7219a15`
-//
+//  $ pulumi import vra:contentsource/contentSource:ContentSource this 05956583-6488-4e7d-84c9-92a7b7219a15`
 // ```
 type ContentSource struct {
 	pulumi.CustomResourceState
@@ -240,7 +235,7 @@ func (i *ContentSource) ToContentSourceOutputWithContext(ctx context.Context) Co
 // ContentSourceArrayInput is an input type that accepts ContentSourceArray and ContentSourceArrayOutput values.
 // You can construct a concrete instance of `ContentSourceArrayInput` via:
 //
-//	ContentSourceArray{ ContentSourceArgs{...} }
+//          ContentSourceArray{ ContentSourceArgs{...} }
 type ContentSourceArrayInput interface {
 	pulumi.Input
 
@@ -265,7 +260,7 @@ func (i ContentSourceArray) ToContentSourceArrayOutputWithContext(ctx context.Co
 // ContentSourceMapInput is an input type that accepts ContentSourceMap and ContentSourceMapOutput values.
 // You can construct a concrete instance of `ContentSourceMapInput` via:
 //
-//	ContentSourceMap{ "key": ContentSourceArgs{...} }
+//          ContentSourceMap{ "key": ContentSourceArgs{...} }
 type ContentSourceMapInput interface {
 	pulumi.Input
 

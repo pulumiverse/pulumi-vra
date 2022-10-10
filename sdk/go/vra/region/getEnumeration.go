@@ -22,29 +22,26 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-vra/sdk/go/vra/region"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//	"github.com/pulumiverse/pulumi-vra/sdk/go/vra/region"
-//
+// 	"github.com/pulumi/pulumi-vra/sdk/go/vra/region"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+// 	"github.com/pulumiverse/pulumi-vra/sdk/go/vra/region"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := region.GetEnumerationVSphere(ctx, &region.GetEnumerationVSphereArgs{
-//				AcceptSelfSignedCert: pulumi.BoolRef(false),
-//				Dcid:                 pulumi.StringRef(_var.Vra_data_collector_id),
-//				Hostname:             _var.Hostname,
-//				Password:             _var.Password,
-//				Username:             _var.Username,
-//			}, nil)
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := region.GetEnumerationVSphere(ctx, &region.GetEnumerationVSphereArgs{
+// 			AcceptSelfSignedCert: pulumi.BoolRef(false),
+// 			Dcid:                 pulumi.StringRef(_var.Vra_data_collector_id),
+// 			Hostname:             _var.Hostname,
+// 			Password:             _var.Password,
+// 			Username:             _var.Username,
+// 		}, nil)
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // The region enumeration data source supports the following arguments:

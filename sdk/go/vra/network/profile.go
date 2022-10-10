@@ -21,37 +21,34 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-vra/sdk/go/vra/network"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//	"github.com/pulumiverse/pulumi-vra/sdk/go/vra/network"
-//
+// 	"github.com/pulumi/pulumi-vra/sdk/go/vra/network"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+// 	"github.com/pulumiverse/pulumi-vra/sdk/go/vra/network"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := network.NewProfile(ctx, "simple", &network.ProfileArgs{
-//				Description: pulumi.String("Simple Network Profile with no isolation."),
-//				RegionId:    pulumi.Any(data.Vra_region.This.Id),
-//				FabricNetworkIds: pulumi.StringArray{
-//					pulumi.Any(data.Vra_fabric_network.Subnet_1.Id),
-//					pulumi.Any(data.Vra_fabric_network.Subnet_2.Id),
-//				},
-//				IsolationType: pulumi.String("NONE"),
-//				Tags: network.ProfileTagArray{
-//					&network.ProfileTagArgs{
-//						Key:   pulumi.String("foo"),
-//						Value: pulumi.String("bar"),
-//					},
-//				},
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := network.NewProfile(ctx, "simple", &network.ProfileArgs{
+// 			Description: pulumi.String("Simple Network Profile with no isolation."),
+// 			RegionId:    pulumi.Any(data.Vra_region.This.Id),
+// 			FabricNetworkIds: pulumi.StringArray{
+// 				pulumi.Any(data.Vra_fabric_network.Subnet_1.Id),
+// 				pulumi.Any(data.Vra_fabric_network.Subnet_2.Id),
+// 			},
+// 			IsolationType: pulumi.String("NONE"),
+// 			Tags: network.ProfileTagArray{
+// 				&network.ProfileTagArgs{
+// 					Key:   pulumi.String("foo"),
+// 					Value: pulumi.String("bar"),
+// 				},
+// 			},
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // A network profile resource supports the following arguments:
@@ -318,7 +315,7 @@ func (i *Profile) ToProfileOutputWithContext(ctx context.Context) ProfileOutput 
 // ProfileArrayInput is an input type that accepts ProfileArray and ProfileArrayOutput values.
 // You can construct a concrete instance of `ProfileArrayInput` via:
 //
-//	ProfileArray{ ProfileArgs{...} }
+//          ProfileArray{ ProfileArgs{...} }
 type ProfileArrayInput interface {
 	pulumi.Input
 
@@ -343,7 +340,7 @@ func (i ProfileArray) ToProfileArrayOutputWithContext(ctx context.Context) Profi
 // ProfileMapInput is an input type that accepts ProfileMap and ProfileMapOutput values.
 // You can construct a concrete instance of `ProfileMapInput` via:
 //
-//	ProfileMap{ "key": ProfileArgs{...} }
+//          ProfileMap{ "key": ProfileArgs{...} }
 type ProfileMapInput interface {
 	pulumi.Input
 

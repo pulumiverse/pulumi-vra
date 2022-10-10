@@ -20,27 +20,24 @@ import (
 // package main
 //
 // import (
+// 	"fmt"
 //
-//	"fmt"
-//
-//	"github.com/pulumi/pulumi-vra/sdk/go/vra/securitygroup"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//	"github.com/pulumiverse/pulumi-vra/sdk/go/vra/securitygroup"
-//
+// 	"github.com/pulumi/pulumi-vra/sdk/go/vra/securitygroup"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+// 	"github.com/pulumiverse/pulumi-vra/sdk/go/vra/securitygroup"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := securitygroup.GetSecurityGroup(ctx, &securitygroup.GetSecurityGroupArgs{
-//				Filter: fmt.Sprintf("name eq '%v'", _var.Name),
-//			}, nil)
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := securitygroup.GetSecurityGroup(ctx, &securitygroup.GetSecurityGroupArgs{
+// 			Filter: fmt.Sprintf("name eq '%v'", _var.Name),
+// 		}, nil)
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // A Security group supports the following arguments:

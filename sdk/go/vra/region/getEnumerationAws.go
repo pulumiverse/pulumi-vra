@@ -20,26 +20,23 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-vra/sdk/go/vra/region"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//	"github.com/pulumiverse/pulumi-vra/sdk/go/vra/region"
-//
+// 	"github.com/pulumi/pulumi-vra/sdk/go/vra/region"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+// 	"github.com/pulumiverse/pulumi-vra/sdk/go/vra/region"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := region.GetEnumerationAws(ctx, &region.GetEnumerationAwsArgs{
-//				AccessKey: _var.Access_key,
-//				SecretKey: _var.Secret_key,
-//			}, nil)
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := region.GetEnumerationAws(ctx, &region.GetEnumerationAwsArgs{
+// 			AccessKey: _var.Access_key,
+// 			SecretKey: _var.Secret_key,
+// 		}, nil)
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // The region enumeration data source for AWS cloud account supports the following arguments:

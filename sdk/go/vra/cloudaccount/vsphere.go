@@ -22,50 +22,45 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-vra/sdk/go/vra/cloudaccount"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//	"github.com/pulumiverse/pulumi-vra/sdk/go/vra/cloudaccount"
-//
+// 	"github.com/pulumi/pulumi-vra/sdk/go/vra/cloudaccount"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+// 	"github.com/pulumiverse/pulumi-vra/sdk/go/vra/cloudaccount"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := cloudaccount.NewVSphere(ctx, "this", &cloudaccount.VSphereArgs{
-//				Description: pulumi.String("foobar"),
-//				Username:    pulumi.Any(_var.Username),
-//				Password:    pulumi.Any(_var.Password),
-//				Hostname:    pulumi.Any(_var.Hostname),
-//				Dcid:        pulumi.Any(_var.Vra_data_collector_id),
-//				Regions:     pulumi.Any(_var.Regions),
-//				AssociatedCloudAccountIds: pulumi.StringArray{
-//					pulumi.Any(_var.Vra_cloud_account_nsxt_id),
-//				},
-//				AcceptSelfSignedCert: pulumi.Bool(true),
-//				Tags: cloudaccount.VSphereTagArray{
-//					&cloudaccount.VSphereTagArgs{
-//						Key:   pulumi.String("foo"),
-//						Value: pulumi.String("bar"),
-//					},
-//				},
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := cloudaccount.NewVSphere(ctx, "this", &cloudaccount.VSphereArgs{
+// 			Description: pulumi.String("foobar"),
+// 			Username:    pulumi.Any(_var.Username),
+// 			Password:    pulumi.Any(_var.Password),
+// 			Hostname:    pulumi.Any(_var.Hostname),
+// 			Dcid:        pulumi.Any(_var.Vra_data_collector_id),
+// 			Regions:     pulumi.Any(_var.Regions),
+// 			AssociatedCloudAccountIds: pulumi.StringArray{
+// 				pulumi.Any(_var.Vra_cloud_account_nsxt_id),
+// 			},
+// 			AcceptSelfSignedCert: pulumi.Bool(true),
+// 			Tags: cloudaccount.VSphereTagArray{
+// 				&cloudaccount.VSphereTagArgs{
+// 					Key:   pulumi.String("foo"),
+// 					Value: pulumi.String("bar"),
+// 				},
+// 			},
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
 //
-// # To import the vSphere cloud account, use the ID as in the following example
+// To import the vSphere cloud account, use the ID as in the following example
 //
 // ```sh
-//
-//	$ pulumi import vra:cloudaccount/vSphere:VSphere new_vsphere 05956583-6488-4e7d-84c9-92a7b7219a15`
-//
+//  $ pulumi import vra:cloudaccount/vSphere:VSphere new_vsphere 05956583-6488-4e7d-84c9-92a7b7219a15`
 // ```
 type VSphere struct {
 	pulumi.CustomResourceState
@@ -291,7 +286,7 @@ func (i *VSphere) ToVSphereOutputWithContext(ctx context.Context) VSphereOutput 
 // VSphereArrayInput is an input type that accepts VSphereArray and VSphereArrayOutput values.
 // You can construct a concrete instance of `VSphereArrayInput` via:
 //
-//	VSphereArray{ VSphereArgs{...} }
+//          VSphereArray{ VSphereArgs{...} }
 type VSphereArrayInput interface {
 	pulumi.Input
 
@@ -316,7 +311,7 @@ func (i VSphereArray) ToVSphereArrayOutputWithContext(ctx context.Context) VSphe
 // VSphereMapInput is an input type that accepts VSphereMap and VSphereMapOutput values.
 // You can construct a concrete instance of `VSphereMapInput` via:
 //
-//	VSphereMap{ "key": VSphereArgs{...} }
+//          VSphereMap{ "key": VSphereArgs{...} }
 type VSphereMapInput interface {
 	pulumi.Input
 

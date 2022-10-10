@@ -20,25 +20,22 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-vra/sdk/go/vra/project"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//	"github.com/pulumiverse/pulumi-vra/sdk/go/vra/project"
-//
+// 	"github.com/pulumi/pulumi-vra/sdk/go/vra/project"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+// 	"github.com/pulumiverse/pulumi-vra/sdk/go/vra/project"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := project.LookupProject(ctx, &project.LookupProjectArgs{
-//				Id: pulumi.StringRef(vra_project.My - project.Id),
-//			}, nil)
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := project.LookupProject(ctx, &project.LookupProjectArgs{
+// 			Id: pulumi.StringRef(vra_project.My - project.Id),
+// 		}, nil)
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // **Project data source filter by name:**
@@ -47,25 +44,22 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-vra/sdk/go/vra/project"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//	"github.com/pulumiverse/pulumi-vra/sdk/go/vra/project"
-//
+// 	"github.com/pulumi/pulumi-vra/sdk/go/vra/project"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+// 	"github.com/pulumiverse/pulumi-vra/sdk/go/vra/project"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := project.LookupProject(ctx, &project.LookupProjectArgs{
-//				Name: pulumi.StringRef(vra_project.My - project.Name),
-//			}, nil)
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := project.LookupProject(ctx, &project.LookupProjectArgs{
+// 			Name: pulumi.StringRef(vra_project.My - project.Name),
+// 		}, nil)
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // A project data source supports the following arguments:

@@ -22,58 +22,55 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-vra/sdk/go/vra/loadbalancer"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//	"github.com/pulumiverse/pulumi-vra/sdk/go/vra/loadbalancer"
-//
+// 	"github.com/pulumi/pulumi-vra/sdk/go/vra/loadbalancer"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+// 	"github.com/pulumiverse/pulumi-vra/sdk/go/vra/loadbalancer"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := loadbalancer.NewLoadBalancer(ctx, "this", &loadbalancer.LoadBalancerArgs{
-//				ProjectId:   pulumi.Any(vra_project.My - project.Id),
-//				Description: pulumi.String("My Load Balancer"),
-//				CustomProperties: pulumi.AnyMap{
-//					"edgeClusterRouterStateLink":  pulumi.Any("/resources/routers/<uuid>"),
-//					"tier0LogicalRouterStateLink": pulumi.Any("/resources/routers/<uuid>"),
-//				},
-//				Targets: loadbalancer.LoadBalancerTargetArray{
-//					&loadbalancer.LoadBalancerTargetArgs{
-//						MachineId: pulumi.Any(vra_machine.My_machine.Id),
-//					},
-//				},
-//				Nics: loadbalancer.LoadBalancerNicArray{
-//					&loadbalancer.LoadBalancerNicArgs{
-//						NetworkId: pulumi.Any(data.Vra_network.My - network.Id),
-//					},
-//				},
-//				Routes: loadbalancer.LoadBalancerRouteArray{
-//					&loadbalancer.LoadBalancerRouteArgs{
-//						Protocol:       pulumi.String("TCP"),
-//						Port:           pulumi.String("80"),
-//						MemberProtocol: pulumi.String("TCP"),
-//						MemberPort:     pulumi.String("80"),
-//						HealthCheckConfigurations: loadbalancer.LoadBalancerRouteHealthCheckConfigurationArray{
-//							&loadbalancer.LoadBalancerRouteHealthCheckConfigurationArgs{
-//								Protocol:           pulumi.String("TCP"),
-//								Port:               pulumi.String("80"),
-//								IntervalSeconds:    pulumi.Int(30),
-//								TimeoutSeconds:     pulumi.Int(10),
-//								UnhealthyThreshold: pulumi.Int(2),
-//								HealthyThreshold:   pulumi.Int(10),
-//							},
-//						},
-//					},
-//				},
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := loadbalancer.NewLoadBalancer(ctx, "this", &loadbalancer.LoadBalancerArgs{
+// 			ProjectId:   pulumi.Any(vra_project.My - project.Id),
+// 			Description: pulumi.String("My Load Balancer"),
+// 			CustomProperties: pulumi.AnyMap{
+// 				"edgeClusterRouterStateLink":  pulumi.Any("/resources/routers/<uuid>"),
+// 				"tier0LogicalRouterStateLink": pulumi.Any("/resources/routers/<uuid>"),
+// 			},
+// 			Targets: loadbalancer.LoadBalancerTargetArray{
+// 				&loadbalancer.LoadBalancerTargetArgs{
+// 					MachineId: pulumi.Any(vra_machine.My_machine.Id),
+// 				},
+// 			},
+// 			Nics: loadbalancer.LoadBalancerNicArray{
+// 				&loadbalancer.LoadBalancerNicArgs{
+// 					NetworkId: pulumi.Any(data.Vra_network.My - network.Id),
+// 				},
+// 			},
+// 			Routes: loadbalancer.LoadBalancerRouteArray{
+// 				&loadbalancer.LoadBalancerRouteArgs{
+// 					Protocol:       pulumi.String("TCP"),
+// 					Port:           pulumi.String("80"),
+// 					MemberProtocol: pulumi.String("TCP"),
+// 					MemberPort:     pulumi.String("80"),
+// 					HealthCheckConfigurations: loadbalancer.LoadBalancerRouteHealthCheckConfigurationArray{
+// 						&loadbalancer.LoadBalancerRouteHealthCheckConfigurationArgs{
+// 							Protocol:           pulumi.String("TCP"),
+// 							Port:               pulumi.String("80"),
+// 							IntervalSeconds:    pulumi.Int(30),
+// 							TimeoutSeconds:     pulumi.Int(10),
+// 							UnhealthyThreshold: pulumi.Int(2),
+// 							HealthyThreshold:   pulumi.Int(10),
+// 						},
+// 					},
+// 				},
+// 			},
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // A block device resource supports the following arguments:
@@ -322,7 +319,7 @@ func (i *LoadBalancer) ToLoadBalancerOutputWithContext(ctx context.Context) Load
 // LoadBalancerArrayInput is an input type that accepts LoadBalancerArray and LoadBalancerArrayOutput values.
 // You can construct a concrete instance of `LoadBalancerArrayInput` via:
 //
-//	LoadBalancerArray{ LoadBalancerArgs{...} }
+//          LoadBalancerArray{ LoadBalancerArgs{...} }
 type LoadBalancerArrayInput interface {
 	pulumi.Input
 
@@ -347,7 +344,7 @@ func (i LoadBalancerArray) ToLoadBalancerArrayOutputWithContext(ctx context.Cont
 // LoadBalancerMapInput is an input type that accepts LoadBalancerMap and LoadBalancerMapOutput values.
 // You can construct a concrete instance of `LoadBalancerMapInput` via:
 //
-//	LoadBalancerMap{ "key": LoadBalancerArgs{...} }
+//          LoadBalancerMap{ "key": LoadBalancerArgs{...} }
 type LoadBalancerMapInput interface {
 	pulumi.Input
 

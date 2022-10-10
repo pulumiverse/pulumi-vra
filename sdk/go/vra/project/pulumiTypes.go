@@ -18,7 +18,7 @@ type ProjectAdministratorRole struct {
 // ProjectAdministratorRoleInput is an input type that accepts ProjectAdministratorRoleArgs and ProjectAdministratorRoleOutput values.
 // You can construct a concrete instance of `ProjectAdministratorRoleInput` via:
 //
-//	ProjectAdministratorRoleArgs{...}
+//          ProjectAdministratorRoleArgs{...}
 type ProjectAdministratorRoleInput interface {
 	pulumi.Input
 
@@ -46,7 +46,7 @@ func (i ProjectAdministratorRoleArgs) ToProjectAdministratorRoleOutputWithContex
 // ProjectAdministratorRoleArrayInput is an input type that accepts ProjectAdministratorRoleArray and ProjectAdministratorRoleArrayOutput values.
 // You can construct a concrete instance of `ProjectAdministratorRoleArrayInput` via:
 //
-//	ProjectAdministratorRoleArray{ ProjectAdministratorRoleArgs{...} }
+//          ProjectAdministratorRoleArray{ ProjectAdministratorRoleArgs{...} }
 type ProjectAdministratorRoleArrayInput interface {
 	pulumi.Input
 
@@ -119,7 +119,7 @@ type ProjectConstraints struct {
 // ProjectConstraintsInput is an input type that accepts ProjectConstraintsArgs and ProjectConstraintsOutput values.
 // You can construct a concrete instance of `ProjectConstraintsInput` via:
 //
-//	ProjectConstraintsArgs{...}
+//          ProjectConstraintsArgs{...}
 type ProjectConstraintsInput interface {
 	pulumi.Input
 
@@ -156,11 +156,11 @@ func (i ProjectConstraintsArgs) ToProjectConstraintsPtrOutputWithContext(ctx con
 // ProjectConstraintsPtrInput is an input type that accepts ProjectConstraintsArgs, ProjectConstraintsPtr and ProjectConstraintsPtrOutput values.
 // You can construct a concrete instance of `ProjectConstraintsPtrInput` via:
 //
-//	        ProjectConstraintsArgs{...}
+//          ProjectConstraintsArgs{...}
 //
-//	or:
+//  or:
 //
-//	        nil
+//          nil
 type ProjectConstraintsPtrInput interface {
 	pulumi.Input
 
@@ -281,7 +281,7 @@ type ProjectConstraintsExtensibility struct {
 // ProjectConstraintsExtensibilityInput is an input type that accepts ProjectConstraintsExtensibilityArgs and ProjectConstraintsExtensibilityOutput values.
 // You can construct a concrete instance of `ProjectConstraintsExtensibilityInput` via:
 //
-//	ProjectConstraintsExtensibilityArgs{...}
+//          ProjectConstraintsExtensibilityArgs{...}
 type ProjectConstraintsExtensibilityInput interface {
 	pulumi.Input
 
@@ -309,7 +309,7 @@ func (i ProjectConstraintsExtensibilityArgs) ToProjectConstraintsExtensibilityOu
 // ProjectConstraintsExtensibilityArrayInput is an input type that accepts ProjectConstraintsExtensibilityArray and ProjectConstraintsExtensibilityArrayOutput values.
 // You can construct a concrete instance of `ProjectConstraintsExtensibilityArrayInput` via:
 //
-//	ProjectConstraintsExtensibilityArray{ ProjectConstraintsExtensibilityArgs{...} }
+//          ProjectConstraintsExtensibilityArray{ ProjectConstraintsExtensibilityArgs{...} }
 type ProjectConstraintsExtensibilityArrayInput interface {
 	pulumi.Input
 
@@ -381,7 +381,7 @@ type ProjectConstraintsNetwork struct {
 // ProjectConstraintsNetworkInput is an input type that accepts ProjectConstraintsNetworkArgs and ProjectConstraintsNetworkOutput values.
 // You can construct a concrete instance of `ProjectConstraintsNetworkInput` via:
 //
-//	ProjectConstraintsNetworkArgs{...}
+//          ProjectConstraintsNetworkArgs{...}
 type ProjectConstraintsNetworkInput interface {
 	pulumi.Input
 
@@ -409,7 +409,7 @@ func (i ProjectConstraintsNetworkArgs) ToProjectConstraintsNetworkOutputWithCont
 // ProjectConstraintsNetworkArrayInput is an input type that accepts ProjectConstraintsNetworkArray and ProjectConstraintsNetworkArrayOutput values.
 // You can construct a concrete instance of `ProjectConstraintsNetworkArrayInput` via:
 //
-//	ProjectConstraintsNetworkArray{ ProjectConstraintsNetworkArgs{...} }
+//          ProjectConstraintsNetworkArray{ ProjectConstraintsNetworkArgs{...} }
 type ProjectConstraintsNetworkArrayInput interface {
 	pulumi.Input
 
@@ -481,7 +481,7 @@ type ProjectConstraintsStorage struct {
 // ProjectConstraintsStorageInput is an input type that accepts ProjectConstraintsStorageArgs and ProjectConstraintsStorageOutput values.
 // You can construct a concrete instance of `ProjectConstraintsStorageInput` via:
 //
-//	ProjectConstraintsStorageArgs{...}
+//          ProjectConstraintsStorageArgs{...}
 type ProjectConstraintsStorageInput interface {
 	pulumi.Input
 
@@ -509,7 +509,7 @@ func (i ProjectConstraintsStorageArgs) ToProjectConstraintsStorageOutputWithCont
 // ProjectConstraintsStorageArrayInput is an input type that accepts ProjectConstraintsStorageArray and ProjectConstraintsStorageArrayOutput values.
 // You can construct a concrete instance of `ProjectConstraintsStorageArrayInput` via:
 //
-//	ProjectConstraintsStorageArray{ ProjectConstraintsStorageArgs{...} }
+//          ProjectConstraintsStorageArray{ ProjectConstraintsStorageArgs{...} }
 type ProjectConstraintsStorageArrayInput interface {
 	pulumi.Input
 
@@ -581,7 +581,7 @@ type ProjectMemberRole struct {
 // ProjectMemberRoleInput is an input type that accepts ProjectMemberRoleArgs and ProjectMemberRoleOutput values.
 // You can construct a concrete instance of `ProjectMemberRoleInput` via:
 //
-//	ProjectMemberRoleArgs{...}
+//          ProjectMemberRoleArgs{...}
 type ProjectMemberRoleInput interface {
 	pulumi.Input
 
@@ -609,7 +609,7 @@ func (i ProjectMemberRoleArgs) ToProjectMemberRoleOutputWithContext(ctx context.
 // ProjectMemberRoleArrayInput is an input type that accepts ProjectMemberRoleArray and ProjectMemberRoleArrayOutput values.
 // You can construct a concrete instance of `ProjectMemberRoleArrayInput` via:
 //
-//	ProjectMemberRoleArray{ ProjectMemberRoleArgs{...} }
+//          ProjectMemberRoleArray{ ProjectMemberRoleArgs{...} }
 type ProjectMemberRoleArrayInput interface {
 	pulumi.Input
 
@@ -681,7 +681,7 @@ type ProjectViewerRole struct {
 // ProjectViewerRoleInput is an input type that accepts ProjectViewerRoleArgs and ProjectViewerRoleOutput values.
 // You can construct a concrete instance of `ProjectViewerRoleInput` via:
 //
-//	ProjectViewerRoleArgs{...}
+//          ProjectViewerRoleArgs{...}
 type ProjectViewerRoleInput interface {
 	pulumi.Input
 
@@ -709,7 +709,7 @@ func (i ProjectViewerRoleArgs) ToProjectViewerRoleOutputWithContext(ctx context.
 // ProjectViewerRoleArrayInput is an input type that accepts ProjectViewerRoleArray and ProjectViewerRoleArrayOutput values.
 // You can construct a concrete instance of `ProjectViewerRoleArrayInput` via:
 //
-//	ProjectViewerRoleArray{ ProjectViewerRoleArgs{...} }
+//          ProjectViewerRoleArray{ ProjectViewerRoleArgs{...} }
 type ProjectViewerRoleArrayInput interface {
 	pulumi.Input
 
@@ -785,7 +785,7 @@ type ProjectZoneAssignment struct {
 // ProjectZoneAssignmentInput is an input type that accepts ProjectZoneAssignmentArgs and ProjectZoneAssignmentOutput values.
 // You can construct a concrete instance of `ProjectZoneAssignmentInput` via:
 //
-//	ProjectZoneAssignmentArgs{...}
+//          ProjectZoneAssignmentArgs{...}
 type ProjectZoneAssignmentInput interface {
 	pulumi.Input
 
@@ -817,7 +817,7 @@ func (i ProjectZoneAssignmentArgs) ToProjectZoneAssignmentOutputWithContext(ctx 
 // ProjectZoneAssignmentArrayInput is an input type that accepts ProjectZoneAssignmentArray and ProjectZoneAssignmentArrayOutput values.
 // You can construct a concrete instance of `ProjectZoneAssignmentArrayInput` via:
 //
-//	ProjectZoneAssignmentArray{ ProjectZoneAssignmentArgs{...} }
+//          ProjectZoneAssignmentArray{ ProjectZoneAssignmentArgs{...} }
 type ProjectZoneAssignmentArrayInput interface {
 	pulumi.Input
 
@@ -905,7 +905,7 @@ type GetProjectAdministratorRole struct {
 // GetProjectAdministratorRoleInput is an input type that accepts GetProjectAdministratorRoleArgs and GetProjectAdministratorRoleOutput values.
 // You can construct a concrete instance of `GetProjectAdministratorRoleInput` via:
 //
-//	GetProjectAdministratorRoleArgs{...}
+//          GetProjectAdministratorRoleArgs{...}
 type GetProjectAdministratorRoleInput interface {
 	pulumi.Input
 
@@ -933,7 +933,7 @@ func (i GetProjectAdministratorRoleArgs) ToGetProjectAdministratorRoleOutputWith
 // GetProjectAdministratorRoleArrayInput is an input type that accepts GetProjectAdministratorRoleArray and GetProjectAdministratorRoleArrayOutput values.
 // You can construct a concrete instance of `GetProjectAdministratorRoleArrayInput` via:
 //
-//	GetProjectAdministratorRoleArray{ GetProjectAdministratorRoleArgs{...} }
+//          GetProjectAdministratorRoleArray{ GetProjectAdministratorRoleArgs{...} }
 type GetProjectAdministratorRoleArrayInput interface {
 	pulumi.Input
 
@@ -1006,7 +1006,7 @@ type GetProjectConstraints struct {
 // GetProjectConstraintsInput is an input type that accepts GetProjectConstraintsArgs and GetProjectConstraintsOutput values.
 // You can construct a concrete instance of `GetProjectConstraintsInput` via:
 //
-//	GetProjectConstraintsArgs{...}
+//          GetProjectConstraintsArgs{...}
 type GetProjectConstraintsInput interface {
 	pulumi.Input
 
@@ -1043,11 +1043,11 @@ func (i GetProjectConstraintsArgs) ToGetProjectConstraintsPtrOutputWithContext(c
 // GetProjectConstraintsPtrInput is an input type that accepts GetProjectConstraintsArgs, GetProjectConstraintsPtr and GetProjectConstraintsPtrOutput values.
 // You can construct a concrete instance of `GetProjectConstraintsPtrInput` via:
 //
-//	        GetProjectConstraintsArgs{...}
+//          GetProjectConstraintsArgs{...}
 //
-//	or:
+//  or:
 //
-//	        nil
+//          nil
 type GetProjectConstraintsPtrInput interface {
 	pulumi.Input
 
@@ -1168,7 +1168,7 @@ type GetProjectConstraintsExtensibility struct {
 // GetProjectConstraintsExtensibilityInput is an input type that accepts GetProjectConstraintsExtensibilityArgs and GetProjectConstraintsExtensibilityOutput values.
 // You can construct a concrete instance of `GetProjectConstraintsExtensibilityInput` via:
 //
-//	GetProjectConstraintsExtensibilityArgs{...}
+//          GetProjectConstraintsExtensibilityArgs{...}
 type GetProjectConstraintsExtensibilityInput interface {
 	pulumi.Input
 
@@ -1196,7 +1196,7 @@ func (i GetProjectConstraintsExtensibilityArgs) ToGetProjectConstraintsExtensibi
 // GetProjectConstraintsExtensibilityArrayInput is an input type that accepts GetProjectConstraintsExtensibilityArray and GetProjectConstraintsExtensibilityArrayOutput values.
 // You can construct a concrete instance of `GetProjectConstraintsExtensibilityArrayInput` via:
 //
-//	GetProjectConstraintsExtensibilityArray{ GetProjectConstraintsExtensibilityArgs{...} }
+//          GetProjectConstraintsExtensibilityArray{ GetProjectConstraintsExtensibilityArgs{...} }
 type GetProjectConstraintsExtensibilityArrayInput interface {
 	pulumi.Input
 
@@ -1268,7 +1268,7 @@ type GetProjectConstraintsNetwork struct {
 // GetProjectConstraintsNetworkInput is an input type that accepts GetProjectConstraintsNetworkArgs and GetProjectConstraintsNetworkOutput values.
 // You can construct a concrete instance of `GetProjectConstraintsNetworkInput` via:
 //
-//	GetProjectConstraintsNetworkArgs{...}
+//          GetProjectConstraintsNetworkArgs{...}
 type GetProjectConstraintsNetworkInput interface {
 	pulumi.Input
 
@@ -1296,7 +1296,7 @@ func (i GetProjectConstraintsNetworkArgs) ToGetProjectConstraintsNetworkOutputWi
 // GetProjectConstraintsNetworkArrayInput is an input type that accepts GetProjectConstraintsNetworkArray and GetProjectConstraintsNetworkArrayOutput values.
 // You can construct a concrete instance of `GetProjectConstraintsNetworkArrayInput` via:
 //
-//	GetProjectConstraintsNetworkArray{ GetProjectConstraintsNetworkArgs{...} }
+//          GetProjectConstraintsNetworkArray{ GetProjectConstraintsNetworkArgs{...} }
 type GetProjectConstraintsNetworkArrayInput interface {
 	pulumi.Input
 
@@ -1368,7 +1368,7 @@ type GetProjectConstraintsStorage struct {
 // GetProjectConstraintsStorageInput is an input type that accepts GetProjectConstraintsStorageArgs and GetProjectConstraintsStorageOutput values.
 // You can construct a concrete instance of `GetProjectConstraintsStorageInput` via:
 //
-//	GetProjectConstraintsStorageArgs{...}
+//          GetProjectConstraintsStorageArgs{...}
 type GetProjectConstraintsStorageInput interface {
 	pulumi.Input
 
@@ -1396,7 +1396,7 @@ func (i GetProjectConstraintsStorageArgs) ToGetProjectConstraintsStorageOutputWi
 // GetProjectConstraintsStorageArrayInput is an input type that accepts GetProjectConstraintsStorageArray and GetProjectConstraintsStorageArrayOutput values.
 // You can construct a concrete instance of `GetProjectConstraintsStorageArrayInput` via:
 //
-//	GetProjectConstraintsStorageArray{ GetProjectConstraintsStorageArgs{...} }
+//          GetProjectConstraintsStorageArray{ GetProjectConstraintsStorageArgs{...} }
 type GetProjectConstraintsStorageArrayInput interface {
 	pulumi.Input
 
@@ -1468,7 +1468,7 @@ type GetProjectMemberRole struct {
 // GetProjectMemberRoleInput is an input type that accepts GetProjectMemberRoleArgs and GetProjectMemberRoleOutput values.
 // You can construct a concrete instance of `GetProjectMemberRoleInput` via:
 //
-//	GetProjectMemberRoleArgs{...}
+//          GetProjectMemberRoleArgs{...}
 type GetProjectMemberRoleInput interface {
 	pulumi.Input
 
@@ -1496,7 +1496,7 @@ func (i GetProjectMemberRoleArgs) ToGetProjectMemberRoleOutputWithContext(ctx co
 // GetProjectMemberRoleArrayInput is an input type that accepts GetProjectMemberRoleArray and GetProjectMemberRoleArrayOutput values.
 // You can construct a concrete instance of `GetProjectMemberRoleArrayInput` via:
 //
-//	GetProjectMemberRoleArray{ GetProjectMemberRoleArgs{...} }
+//          GetProjectMemberRoleArray{ GetProjectMemberRoleArgs{...} }
 type GetProjectMemberRoleArrayInput interface {
 	pulumi.Input
 
@@ -1568,7 +1568,7 @@ type GetProjectViewerRole struct {
 // GetProjectViewerRoleInput is an input type that accepts GetProjectViewerRoleArgs and GetProjectViewerRoleOutput values.
 // You can construct a concrete instance of `GetProjectViewerRoleInput` via:
 //
-//	GetProjectViewerRoleArgs{...}
+//          GetProjectViewerRoleArgs{...}
 type GetProjectViewerRoleInput interface {
 	pulumi.Input
 
@@ -1596,7 +1596,7 @@ func (i GetProjectViewerRoleArgs) ToGetProjectViewerRoleOutputWithContext(ctx co
 // GetProjectViewerRoleArrayInput is an input type that accepts GetProjectViewerRoleArray and GetProjectViewerRoleArrayOutput values.
 // You can construct a concrete instance of `GetProjectViewerRoleArrayInput` via:
 //
-//	GetProjectViewerRoleArray{ GetProjectViewerRoleArgs{...} }
+//          GetProjectViewerRoleArray{ GetProjectViewerRoleArgs{...} }
 type GetProjectViewerRoleArrayInput interface {
 	pulumi.Input
 
@@ -1672,7 +1672,7 @@ type GetProjectZoneAssignment struct {
 // GetProjectZoneAssignmentInput is an input type that accepts GetProjectZoneAssignmentArgs and GetProjectZoneAssignmentOutput values.
 // You can construct a concrete instance of `GetProjectZoneAssignmentInput` via:
 //
-//	GetProjectZoneAssignmentArgs{...}
+//          GetProjectZoneAssignmentArgs{...}
 type GetProjectZoneAssignmentInput interface {
 	pulumi.Input
 
@@ -1704,7 +1704,7 @@ func (i GetProjectZoneAssignmentArgs) ToGetProjectZoneAssignmentOutputWithContex
 // GetProjectZoneAssignmentArrayInput is an input type that accepts GetProjectZoneAssignmentArray and GetProjectZoneAssignmentArrayOutput values.
 // You can construct a concrete instance of `GetProjectZoneAssignmentArrayInput` via:
 //
-//	GetProjectZoneAssignmentArray{ GetProjectZoneAssignmentArgs{...} }
+//          GetProjectZoneAssignmentArray{ GetProjectZoneAssignmentArgs{...} }
 type GetProjectZoneAssignmentArrayInput interface {
 	pulumi.Input
 

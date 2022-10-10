@@ -20,28 +20,25 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-vra/sdk/go/vra/region"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//	"github.com/pulumiverse/pulumi-vra/sdk/go/vra/region"
-//
+// 	"github.com/pulumi/pulumi-vra/sdk/go/vra/region"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+// 	"github.com/pulumiverse/pulumi-vra/sdk/go/vra/region"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := region.GetEnumerationAzure(ctx, &region.GetEnumerationAzureArgs{
-//				ApplicationId:  _var.Application_id,
-//				ApplicationKey: _var.Application_key,
-//				SubscriptionId: _var.Subscription_id,
-//				TenantId:       _var.Tenant_id,
-//			}, nil)
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := region.GetEnumerationAzure(ctx, &region.GetEnumerationAzureArgs{
+// 			ApplicationId:  _var.Application_id,
+// 			ApplicationKey: _var.Application_key,
+// 			SubscriptionId: _var.Subscription_id,
+// 			TenantId:       _var.Tenant_id,
+// 		}, nil)
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // The region enumeration data source for Azure cloud account supports the following arguments:

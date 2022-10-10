@@ -20,28 +20,25 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-vra/sdk/go/vra/region"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//	"github.com/pulumiverse/pulumi-vra/sdk/go/vra/region"
-//
+// 	"github.com/pulumi/pulumi-vra/sdk/go/vra/region"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+// 	"github.com/pulumiverse/pulumi-vra/sdk/go/vra/region"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := region.GetEnumerationGcp(ctx, &region.GetEnumerationGcpArgs{
-//				ClientEmail:  _var.Client_email,
-//				PrivateKeyId: _var.Private_key_id,
-//				PrivateKey:   _var.Private_key,
-//				ProjectId:    _var.Project_id,
-//			}, nil)
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := region.GetEnumerationGcp(ctx, &region.GetEnumerationGcpArgs{
+// 			ClientEmail:  _var.Client_email,
+// 			PrivateKeyId: _var.Private_key_id,
+// 			PrivateKey:   _var.Private_key,
+// 			ProjectId:    _var.Project_id,
+// 		}, nil)
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // The region enumeration data source for GCP cloud account supports the following arguments:

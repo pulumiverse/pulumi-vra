@@ -21,82 +21,79 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-vra/sdk/go/vra/storageprofile"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//	"github.com/pulumiverse/pulumi-vra/sdk/go/vra/storageprofile"
-//
+// 	"github.com/pulumi/pulumi-vra/sdk/go/vra/storageprofile"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+// 	"github.com/pulumiverse/pulumi-vra/sdk/go/vra/storageprofile"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := storageprofile.NewStorageProfile(ctx, "thisStorageProfile", &storageprofile.StorageProfileArgs{
-//				Description: pulumi.String("vSphere Storage Profile with standard independent non-persistent disk."),
-//				RegionId:    pulumi.Any(data.Vra_region.This.Id),
-//				DefaultItem: pulumi.Bool(false),
-//				DiskProperties: pulumi.AnyMap{
-//					"independent":      pulumi.Any("true"),
-//					"persistent":       pulumi.Any("false"),
-//					"limitIops":        pulumi.Any("2000"),
-//					"provisioningType": pulumi.Any("eagerZeroedThick"),
-//					"sharesLevel":      pulumi.Any("custom"),
-//					"shares":           pulumi.Any("1500"),
-//				},
-//				DiskTargetProperties: pulumi.AnyMap{
-//					"datastoreId":     pulumi.Any(data.Vra_fabric_datastore_vsphere.This.Id),
-//					"storagePolicyId": pulumi.Any(data.Vra_fabric_storage_policy_vsphere.This.Id),
-//				},
-//				Tags: storageprofile.StorageProfileTagArray{
-//					&storageprofile.StorageProfileTagArgs{
-//						Key:   pulumi.String("foo"),
-//						Value: pulumi.String("bar"),
-//					},
-//				},
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			_, err = storageprofile.NewStorageProfile(ctx, "thisStorageprofile/storageProfileStorageProfile", &storageprofile.StorageProfileArgs{
-//				Description: pulumi.String("AWS Storage Profile with instance store device type."),
-//				RegionId:    pulumi.Any(data.Vra_region.This.Id),
-//				DefaultItem: pulumi.Bool(false),
-//				DiskProperties: pulumi.AnyMap{
-//					"deviceType": pulumi.Any("instance-store"),
-//				},
-//				Tags: storageprofile.StorageProfileTagArray{
-//					&storageprofile.StorageProfileTagArgs{
-//						Key:   pulumi.String("foo"),
-//						Value: pulumi.String("bar"),
-//					},
-//				},
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			_, err = storageprofile.NewStorageProfile(ctx, "thisVraStorageprofile/storageProfileStorageProfile", &storageprofile.StorageProfileArgs{
-//				Description:        pulumi.String("Azure Storage Profile with managed disks."),
-//				RegionId:           pulumi.Any(data.Vra_region.This.Id),
-//				DefaultItem:        pulumi.Bool(false),
-//				SupportsEncryption: pulumi.Bool(false),
-//				DiskProperties: pulumi.AnyMap{
-//					"azureDataDiskCaching": pulumi.Any("None"),
-//					"azureManagedDiskType": pulumi.Any("Standard_LRS"),
-//					"azureOsDiskCaching":   pulumi.Any("None"),
-//				},
-//				Tags: storageprofile.StorageProfileTagArray{
-//					&storageprofile.StorageProfileTagArgs{
-//						Key:   pulumi.String("foo"),
-//						Value: pulumi.String("bar"),
-//					},
-//				},
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := storageprofile.NewStorageProfile(ctx, "thisStorageProfile", &storageprofile.StorageProfileArgs{
+// 			Description: pulumi.String("vSphere Storage Profile with standard independent non-persistent disk."),
+// 			RegionId:    pulumi.Any(data.Vra_region.This.Id),
+// 			DefaultItem: pulumi.Bool(false),
+// 			DiskProperties: pulumi.AnyMap{
+// 				"independent":      pulumi.Any("true"),
+// 				"persistent":       pulumi.Any("false"),
+// 				"limitIops":        pulumi.Any("2000"),
+// 				"provisioningType": pulumi.Any("eagerZeroedThick"),
+// 				"sharesLevel":      pulumi.Any("custom"),
+// 				"shares":           pulumi.Any("1500"),
+// 			},
+// 			DiskTargetProperties: pulumi.AnyMap{
+// 				"datastoreId":     pulumi.Any(data.Vra_fabric_datastore_vsphere.This.Id),
+// 				"storagePolicyId": pulumi.Any(data.Vra_fabric_storage_policy_vsphere.This.Id),
+// 			},
+// 			Tags: storageprofile.StorageProfileTagArray{
+// 				&storageprofile.StorageProfileTagArgs{
+// 					Key:   pulumi.String("foo"),
+// 					Value: pulumi.String("bar"),
+// 				},
+// 			},
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		_, err = storageprofile.NewStorageProfile(ctx, "thisStorageprofile/storageProfileStorageProfile", &storageprofile.StorageProfileArgs{
+// 			Description: pulumi.String("AWS Storage Profile with instance store device type."),
+// 			RegionId:    pulumi.Any(data.Vra_region.This.Id),
+// 			DefaultItem: pulumi.Bool(false),
+// 			DiskProperties: pulumi.AnyMap{
+// 				"deviceType": pulumi.Any("instance-store"),
+// 			},
+// 			Tags: storageprofile.StorageProfileTagArray{
+// 				&storageprofile.StorageProfileTagArgs{
+// 					Key:   pulumi.String("foo"),
+// 					Value: pulumi.String("bar"),
+// 				},
+// 			},
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		_, err = storageprofile.NewStorageProfile(ctx, "thisVraStorageprofile/storageProfileStorageProfile", &storageprofile.StorageProfileArgs{
+// 			Description:        pulumi.String("Azure Storage Profile with managed disks."),
+// 			RegionId:           pulumi.Any(data.Vra_region.This.Id),
+// 			DefaultItem:        pulumi.Bool(false),
+// 			SupportsEncryption: pulumi.Bool(false),
+// 			DiskProperties: pulumi.AnyMap{
+// 				"azureDataDiskCaching": pulumi.Any("None"),
+// 				"azureManagedDiskType": pulumi.Any("Standard_LRS"),
+// 				"azureOsDiskCaching":   pulumi.Any("None"),
+// 			},
+// 			Tags: storageprofile.StorageProfileTagArray{
+// 				&storageprofile.StorageProfileTagArgs{
+// 					Key:   pulumi.String("foo"),
+// 					Value: pulumi.String("bar"),
+// 				},
+// 			},
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // A storage profile resource supports the following arguments:
@@ -310,7 +307,7 @@ func (i *StorageProfile) ToStorageProfileOutputWithContext(ctx context.Context) 
 // StorageProfileArrayInput is an input type that accepts StorageProfileArray and StorageProfileArrayOutput values.
 // You can construct a concrete instance of `StorageProfileArrayInput` via:
 //
-//	StorageProfileArray{ StorageProfileArgs{...} }
+//          StorageProfileArray{ StorageProfileArgs{...} }
 type StorageProfileArrayInput interface {
 	pulumi.Input
 
@@ -335,7 +332,7 @@ func (i StorageProfileArray) ToStorageProfileArrayOutputWithContext(ctx context.
 // StorageProfileMapInput is an input type that accepts StorageProfileMap and StorageProfileMapOutput values.
 // You can construct a concrete instance of `StorageProfileMapInput` via:
 //
-//	StorageProfileMap{ "key": StorageProfileArgs{...} }
+//          StorageProfileMap{ "key": StorageProfileArgs{...} }
 type StorageProfileMapInput interface {
 	pulumi.Input
 

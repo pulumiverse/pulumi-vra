@@ -21,58 +21,47 @@ import (
 // package main
 //
 // import (
+// 	"fmt"
 //
-//	"fmt"
-//
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//	"github.com/pulumiverse/pulumi-vra/sdk/go/vra/blueprint"
-//
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+// 	"github.com/pulumiverse/pulumi-vra/sdk/go/vra/blueprint"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := blueprint.NewBlueprint(ctx, "this", &blueprint.BlueprintArgs{
-//				Description: pulumi.String("Created by vRA terraform provider"),
-//				ProjectId:   pulumi.Any(vra_project.This.Id),
-//				Content: pulumi.String(fmt.Sprintf(`formatVersion: 1
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := blueprint.NewBlueprint(ctx, "this", &blueprint.BlueprintArgs{
+// 			Description: pulumi.String("Created by vRA terraform provider"),
+// 			ProjectId:   pulumi.Any(vra_project.This.Id),
+// 			Content: pulumi.String(fmt.Sprintf(`formatVersion: 1
 // inputs:
-//
-//	image:
-//	  type: string
-//	  description: "Image"
-//	flavor:
-//	  type: string
-//	  description: "Flavor"
-//
+//   image:
+//     type: string
+//     description: "Image"
+//   flavor:
+//     type: string
+//     description: "Flavor"
 // resources:
-//
-//	Machine:
-//	  type: Cloud.Machine
-//	  properties:
-//	    image: %v
-//	    flavor: %v
-//
+//   Machine:
+//     type: Cloud.Machine
+//     properties:
+//       image: %v
+//       flavor: %v
 // `, input.Image, input.Flavor)),
-//
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
 //
-// # To import the cloud template, use the ID as in the following example
+// To import the cloud template, use the ID as in the following example
 //
 // ```sh
-//
-//	$ pulumi import vra:blueprint/blueprint:Blueprint this 05956583-6488-4e7d-84c9-92a7b7219a15`
-//
+//  $ pulumi import vra:blueprint/blueprint:Blueprint this 05956583-6488-4e7d-84c9-92a7b7219a15`
 // ```
 type Blueprint struct {
 	pulumi.CustomResourceState
@@ -315,7 +304,7 @@ func (i *Blueprint) ToBlueprintOutputWithContext(ctx context.Context) BlueprintO
 // BlueprintArrayInput is an input type that accepts BlueprintArray and BlueprintArrayOutput values.
 // You can construct a concrete instance of `BlueprintArrayInput` via:
 //
-//	BlueprintArray{ BlueprintArgs{...} }
+//          BlueprintArray{ BlueprintArgs{...} }
 type BlueprintArrayInput interface {
 	pulumi.Input
 
@@ -340,7 +329,7 @@ func (i BlueprintArray) ToBlueprintArrayOutputWithContext(ctx context.Context) B
 // BlueprintMapInput is an input type that accepts BlueprintMap and BlueprintMapOutput values.
 // You can construct a concrete instance of `BlueprintMapInput` via:
 //
-//	BlueprintMap{ "key": BlueprintArgs{...} }
+//          BlueprintMap{ "key": BlueprintArgs{...} }
 type BlueprintMapInput interface {
 	pulumi.Input
 

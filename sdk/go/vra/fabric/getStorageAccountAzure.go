@@ -20,25 +20,22 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-vra/sdk/go/vra/fabric"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//	"github.com/pulumiverse/pulumi-vra/sdk/go/vra/fabric"
-//
+// 	"github.com/pulumi/pulumi-vra/sdk/go/vra/fabric"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+// 	"github.com/pulumiverse/pulumi-vra/sdk/go/vra/fabric"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := fabric.GetStorageAccountAzure(ctx, &fabric.GetStorageAccountAzureArgs{
-//				Id: pulumi.StringRef(_var.Fabric_storage_account_azure_id),
-//			}, nil)
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := fabric.GetStorageAccountAzure(ctx, &fabric.GetStorageAccountAzureArgs{
+// 			Id: pulumi.StringRef(_var.Fabric_storage_account_azure_id),
+// 		}, nil)
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // **Fabric Azure storage by filter query:**
@@ -47,27 +44,24 @@ import (
 // package main
 //
 // import (
+// 	"fmt"
 //
-//	"fmt"
-//
-//	"github.com/pulumi/pulumi-vra/sdk/go/vra/fabric"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//	"github.com/pulumiverse/pulumi-vra/sdk/go/vra/fabric"
-//
+// 	"github.com/pulumi/pulumi-vra/sdk/go/vra/fabric"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+// 	"github.com/pulumiverse/pulumi-vra/sdk/go/vra/fabric"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := fabric.GetStorageAccountAzure(ctx, &fabric.GetStorageAccountAzureArgs{
-//				Filter: pulumi.StringRef(fmt.Sprintf("name eq '%v'", _var.Name)),
-//			}, nil)
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := fabric.GetStorageAccountAzure(ctx, &fabric.GetStorageAccountAzureArgs{
+// 			Filter: pulumi.StringRef(fmt.Sprintf("name eq '%v'", _var.Name)),
+// 		}, nil)
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // A fabric Azure storage account supports the following arguments:

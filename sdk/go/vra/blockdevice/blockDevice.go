@@ -22,26 +22,23 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//	"github.com/pulumiverse/pulumi-vra/sdk/go/vra/blockdevice"
-//
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+// 	"github.com/pulumiverse/pulumi-vra/sdk/go/vra/blockdevice"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := blockdevice.NewBlockDevice(ctx, "disk1", &blockdevice.BlockDeviceArgs{
-//				CapacityInGb: pulumi.Int(10),
-//				ProjectId:    pulumi.Any(_var.Project_id),
-//				Persistent:   pulumi.Bool(true),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := blockdevice.NewBlockDevice(ctx, "disk1", &blockdevice.BlockDeviceArgs{
+// 			CapacityInGb: pulumi.Int(10),
+// 			ProjectId:    pulumi.Any(_var.Project_id),
+// 			Persistent:   pulumi.Bool(true),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 type BlockDevice struct {
 	pulumi.CustomResourceState
@@ -331,7 +328,7 @@ func (i *BlockDevice) ToBlockDeviceOutputWithContext(ctx context.Context) BlockD
 // BlockDeviceArrayInput is an input type that accepts BlockDeviceArray and BlockDeviceArrayOutput values.
 // You can construct a concrete instance of `BlockDeviceArrayInput` via:
 //
-//	BlockDeviceArray{ BlockDeviceArgs{...} }
+//          BlockDeviceArray{ BlockDeviceArgs{...} }
 type BlockDeviceArrayInput interface {
 	pulumi.Input
 
@@ -356,7 +353,7 @@ func (i BlockDeviceArray) ToBlockDeviceArrayOutputWithContext(ctx context.Contex
 // BlockDeviceMapInput is an input type that accepts BlockDeviceMap and BlockDeviceMapOutput values.
 // You can construct a concrete instance of `BlockDeviceMapInput` via:
 //
-//	BlockDeviceMap{ "key": BlockDeviceArgs{...} }
+//          BlockDeviceMap{ "key": BlockDeviceArgs{...} }
 type BlockDeviceMapInput interface {
 	pulumi.Input
 
