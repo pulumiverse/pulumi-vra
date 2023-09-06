@@ -12,9 +12,6 @@ jobs:
     with:
       provider: vra
       goversion: 1.18
-      dotnetversion: 6.0.120
-      nodeversion: 16.x
-      pythonversion: 3.11
   build:
     needs: prerequisites
     uses: pulumiverse/infra/.github/workflows/provider-build-sdk.yaml@actions-workflows-v0.0.4
