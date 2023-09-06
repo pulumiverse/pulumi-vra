@@ -11,8 +11,10 @@ jobs:
     uses: pulumiverse/infra/.github/workflows/provider-prerequisites.yaml@actions-workflows-v0.0.4
     with:
       provider: vra
+      go-version: 1.18
   build:
     needs: prerequisites
     uses: pulumiverse/infra/.github/workflows/provider-build-sdk.yaml@actions-workflows-v0.0.4
     with:
       provider: vra
+      go-version: 1.18
