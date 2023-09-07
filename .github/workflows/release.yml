@@ -116,11 +116,11 @@ jobs:
         goversion:
           - 1.20.x
         language:
-          - nodejs
-          - python
-          - dotnet
+          # - nodejs
+          # - python
+          # - dotnet
           - go
         nodeversion:
-          - 14.x
+          - 16.x
         pythonversion:
           - "3.9"
