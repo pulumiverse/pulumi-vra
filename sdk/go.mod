@@ -1,6 +1,6 @@
 module github.com/pulumiverse/pulumi-vra/sdk
 
-go 1.18
+go 1.20
 
 require (
 	github.com/blang/semver v3.5.1+incompatible
