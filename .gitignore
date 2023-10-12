@@ -21,3 +21,7 @@ provider/**/schema-embed.json
 **/version.txt
 **/nuget
 **/dist
+
+__debug_bin
+.vscode/*
+.dev/*
