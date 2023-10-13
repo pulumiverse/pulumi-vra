@@ -21,7 +21,7 @@ type ProfileFlavorMapping struct {
 // ProfileFlavorMappingInput is an input type that accepts ProfileFlavorMappingArgs and ProfileFlavorMappingOutput values.
 // You can construct a concrete instance of `ProfileFlavorMappingInput` via:
 //
-//          ProfileFlavorMappingArgs{...}
+//	ProfileFlavorMappingArgs{...}
 type ProfileFlavorMappingInput interface {
 	pulumi.Input
 
@@ -52,7 +52,7 @@ func (i ProfileFlavorMappingArgs) ToProfileFlavorMappingOutputWithContext(ctx co
 // ProfileFlavorMappingArrayInput is an input type that accepts ProfileFlavorMappingArray and ProfileFlavorMappingArrayOutput values.
 // You can construct a concrete instance of `ProfileFlavorMappingArrayInput` via:
 //
-//          ProfileFlavorMappingArray{ ProfileFlavorMappingArgs{...} }
+//	ProfileFlavorMappingArray{ ProfileFlavorMappingArgs{...} }
 type ProfileFlavorMappingArrayInput interface {
 	pulumi.Input
 
@@ -134,7 +134,7 @@ type ProfileLink struct {
 // ProfileLinkInput is an input type that accepts ProfileLinkArgs and ProfileLinkOutput values.
 // You can construct a concrete instance of `ProfileLinkInput` via:
 //
-//          ProfileLinkArgs{...}
+//	ProfileLinkArgs{...}
 type ProfileLinkInput interface {
 	pulumi.Input
 
@@ -163,7 +163,7 @@ func (i ProfileLinkArgs) ToProfileLinkOutputWithContext(ctx context.Context) Pro
 // ProfileLinkArrayInput is an input type that accepts ProfileLinkArray and ProfileLinkArrayOutput values.
 // You can construct a concrete instance of `ProfileLinkArrayInput` via:
 //
-//          ProfileLinkArray{ ProfileLinkArgs{...} }
+//	ProfileLinkArray{ ProfileLinkArgs{...} }
 type ProfileLinkArrayInput interface {
 	pulumi.Input
 

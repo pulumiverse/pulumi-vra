@@ -19,23 +19,26 @@ import (
 // package main
 //
 // import (
-// 	"github.com/pulumi/pulumi-vra/sdk/go/vra/blueprint"
-// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-// 	"github.com/pulumiverse/pulumi-vra/sdk/go/vra/blueprint"
+//
+//	"github.com/pulumi/pulumi-vra/sdk/go/vra/blueprint"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//	"github.com/pulumiverse/pulumi-vra/sdk/go/vra/blueprint"
+//
 // )
 //
-// func main() {
-// 	pulumi.Run(func(ctx *pulumi.Context) error {
-// 		_, err := blueprint.GetVersion(ctx, &blueprint.GetVersionArgs{
-// 			BlueprintId: _var.Blueprint_id,
-// 			Id:          _var.Blueprint_version_id,
-// 		}, nil)
-// 		if err != nil {
-// 			return err
-// 		}
-// 		return nil
-// 	})
-// }
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			_, err := blueprint.GetVersion(ctx, &blueprint.GetVersionArgs{
+//				BlueprintId: _var.Blueprint_id,
+//				Id:          _var.Blueprint_version_id,
+//			}, nil)
+//			if err != nil {
+//				return err
+//			}
+//			return nil
+//		})
+//	}
+//
 // ```
 func GetVersion(ctx *pulumi.Context, args *GetVersionArgs, opts ...pulumi.InvokeOption) (*GetVersionResult, error) {
 	opts = pkgInvokeDefaultOpts(opts)

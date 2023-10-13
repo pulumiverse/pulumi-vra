@@ -20,24 +20,27 @@ import (
 // package main
 //
 // import (
-// 	"fmt"
 //
-// 	"github.com/pulumi/pulumi-vra/sdk/go/vra/network"
-// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-// 	"github.com/pulumiverse/pulumi-vra/sdk/go/vra/network"
+//	"fmt"
+//
+//	"github.com/pulumi/pulumi-vra/sdk/go/vra/network"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//	"github.com/pulumiverse/pulumi-vra/sdk/go/vra/network"
+//
 // )
 //
-// func main() {
-// 	pulumi.Run(func(ctx *pulumi.Context) error {
-// 		_, err := network.LookupProfile(ctx, &network.LookupProfileArgs{
-// 			Filter: pulumi.StringRef(fmt.Sprintf("name eq '%v'", vra_network_profile.This.Name)),
-// 		}, nil)
-// 		if err != nil {
-// 			return err
-// 		}
-// 		return nil
-// 	})
-// }
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			_, err := network.LookupProfile(ctx, &network.LookupProfileArgs{
+//				Filter: pulumi.StringRef(fmt.Sprintf("name eq '%v'", vra_network_profile.This.Name)),
+//			}, nil)
+//			if err != nil {
+//				return err
+//			}
+//			return nil
+//		})
+//	}
+//
 // ```
 //
 // **Vra network profile data source filter by region id:**
@@ -46,24 +49,27 @@ import (
 // package main
 //
 // import (
-// 	"fmt"
 //
-// 	"github.com/pulumi/pulumi-vra/sdk/go/vra/network"
-// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-// 	"github.com/pulumiverse/pulumi-vra/sdk/go/vra/network"
+//	"fmt"
+//
+//	"github.com/pulumi/pulumi-vra/sdk/go/vra/network"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//	"github.com/pulumiverse/pulumi-vra/sdk/go/vra/network"
+//
 // )
 //
-// func main() {
-// 	pulumi.Run(func(ctx *pulumi.Context) error {
-// 		_, err := network.LookupProfile(ctx, &network.LookupProfileArgs{
-// 			Filter: pulumi.StringRef(fmt.Sprintf("regionId eq '%v'", data.Vra_region.This.Id)),
-// 		}, nil)
-// 		if err != nil {
-// 			return err
-// 		}
-// 		return nil
-// 	})
-// }
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			_, err := network.LookupProfile(ctx, &network.LookupProfileArgs{
+//				Filter: pulumi.StringRef(fmt.Sprintf("regionId eq '%v'", data.Vra_region.This.Id)),
+//			}, nil)
+//			if err != nil {
+//				return err
+//			}
+//			return nil
+//		})
+//	}
+//
 // ```
 //
 // A network profile data source supports the following arguments:

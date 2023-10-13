@@ -22,38 +22,43 @@ import (
 // package main
 //
 // import (
-// 	"github.com/pulumi/pulumi-vra/sdk/go/vra/fabric"
-// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-// 	"github.com/pulumiverse/pulumi-vra/sdk/go/vra/fabric"
+//
+//	"github.com/pulumi/pulumi-vra/sdk/go/vra/fabric"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//	"github.com/pulumiverse/pulumi-vra/sdk/go/vra/fabric"
+//
 // )
 //
-// func main() {
-// 	pulumi.Run(func(ctx *pulumi.Context) error {
-// 		_, err := fabric.NewNetworkVSphere(ctx, "simple", &fabric.NetworkVSphereArgs{
-// 			Cidr:           pulumi.Any(_var.Cidr),
-// 			DefaultGateway: pulumi.Any(_var.Gateway),
-// 			Domain:         pulumi.Any(_var.Domain),
-// 			Tags: fabric.NetworkVSphereTagArray{
-// 				&fabric.NetworkVSphereTagArgs{
-// 					Key:   pulumi.String("foo"),
-// 					Value: pulumi.String("bar"),
-// 				},
-// 			},
-// 		})
-// 		if err != nil {
-// 			return err
-// 		}
-// 		return nil
-// 	})
-// }
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			_, err := fabric.NewNetworkVSphere(ctx, "simple", &fabric.NetworkVSphereArgs{
+//				Cidr:           pulumi.Any(_var.Cidr),
+//				DefaultGateway: pulumi.Any(_var.Gateway),
+//				Domain:         pulumi.Any(_var.Domain),
+//				Tags: fabric.NetworkVSphereTagArray{
+//					&fabric.NetworkVSphereTagArgs{
+//						Key:   pulumi.String("foo"),
+//						Value: pulumi.String("bar"),
+//					},
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			return nil
+//		})
+//	}
+//
 // ```
 //
 // ## Import
 //
-// To import the vSphere fabric network resource, use the ID as in the following example
+// # To import the vSphere fabric network resource, use the ID as in the following example
 //
 // ```sh
-//  $ pulumi import vra:fabric/networkVSphere:NetworkVSphere new_fabric_network_vsphere 05956583-6488-4e7d-84c9-92a7b7219a15`
+//
+//	$ pulumi import vra:fabric/networkVSphere:NetworkVSphere new_fabric_network_vsphere 05956583-6488-4e7d-84c9-92a7b7219a15`
+//
 // ```
 type NetworkVSphere struct {
 	pulumi.CustomResourceState
@@ -291,7 +296,7 @@ func (i *NetworkVSphere) ToNetworkVSphereOutputWithContext(ctx context.Context) 
 // NetworkVSphereArrayInput is an input type that accepts NetworkVSphereArray and NetworkVSphereArrayOutput values.
 // You can construct a concrete instance of `NetworkVSphereArrayInput` via:
 //
-//          NetworkVSphereArray{ NetworkVSphereArgs{...} }
+//	NetworkVSphereArray{ NetworkVSphereArgs{...} }
 type NetworkVSphereArrayInput interface {
 	pulumi.Input
 
@@ -316,7 +321,7 @@ func (i NetworkVSphereArray) ToNetworkVSphereArrayOutputWithContext(ctx context.
 // NetworkVSphereMapInput is an input type that accepts NetworkVSphereMap and NetworkVSphereMapOutput values.
 // You can construct a concrete instance of `NetworkVSphereMapInput` via:
 //
-//          NetworkVSphereMap{ "key": NetworkVSphereArgs{...} }
+//	NetworkVSphereMap{ "key": NetworkVSphereArgs{...} }
 type NetworkVSphereMapInput interface {
 	pulumi.Input
 

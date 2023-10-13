@@ -19,7 +19,7 @@ type LoadBalancerLink struct {
 // LoadBalancerLinkInput is an input type that accepts LoadBalancerLinkArgs and LoadBalancerLinkOutput values.
 // You can construct a concrete instance of `LoadBalancerLinkInput` via:
 //
-//          LoadBalancerLinkArgs{...}
+//	LoadBalancerLinkArgs{...}
 type LoadBalancerLinkInput interface {
 	pulumi.Input
 
@@ -48,7 +48,7 @@ func (i LoadBalancerLinkArgs) ToLoadBalancerLinkOutputWithContext(ctx context.Co
 // LoadBalancerLinkArrayInput is an input type that accepts LoadBalancerLinkArray and LoadBalancerLinkArrayOutput values.
 // You can construct a concrete instance of `LoadBalancerLinkArrayInput` via:
 //
-//          LoadBalancerLinkArray{ LoadBalancerLinkArgs{...} }
+//	LoadBalancerLinkArray{ LoadBalancerLinkArgs{...} }
 type LoadBalancerLinkArrayInput interface {
 	pulumi.Input
 
@@ -132,7 +132,7 @@ type LoadBalancerNic struct {
 // LoadBalancerNicInput is an input type that accepts LoadBalancerNicArgs and LoadBalancerNicOutput values.
 // You can construct a concrete instance of `LoadBalancerNicInput` via:
 //
-//          LoadBalancerNicArgs{...}
+//	LoadBalancerNicArgs{...}
 type LoadBalancerNicInput interface {
 	pulumi.Input
 
@@ -168,7 +168,7 @@ func (i LoadBalancerNicArgs) ToLoadBalancerNicOutputWithContext(ctx context.Cont
 // LoadBalancerNicArrayInput is an input type that accepts LoadBalancerNicArray and LoadBalancerNicArrayOutput values.
 // You can construct a concrete instance of `LoadBalancerNicArrayInput` via:
 //
-//          LoadBalancerNicArray{ LoadBalancerNicArgs{...} }
+//	LoadBalancerNicArray{ LoadBalancerNicArgs{...} }
 type LoadBalancerNicArrayInput interface {
 	pulumi.Input
 
@@ -271,7 +271,7 @@ type LoadBalancerRoute struct {
 // LoadBalancerRouteInput is an input type that accepts LoadBalancerRouteArgs and LoadBalancerRouteOutput values.
 // You can construct a concrete instance of `LoadBalancerRouteInput` via:
 //
-//          LoadBalancerRouteArgs{...}
+//	LoadBalancerRouteArgs{...}
 type LoadBalancerRouteInput interface {
 	pulumi.Input
 
@@ -307,7 +307,7 @@ func (i LoadBalancerRouteArgs) ToLoadBalancerRouteOutputWithContext(ctx context.
 // LoadBalancerRouteArrayInput is an input type that accepts LoadBalancerRouteArray and LoadBalancerRouteArrayOutput values.
 // You can construct a concrete instance of `LoadBalancerRouteArrayInput` via:
 //
-//          LoadBalancerRouteArray{ LoadBalancerRouteArgs{...} }
+//	LoadBalancerRouteArray{ LoadBalancerRouteArgs{...} }
 type LoadBalancerRouteArrayInput interface {
 	pulumi.Input
 
@@ -408,7 +408,7 @@ type LoadBalancerRouteHealthCheckConfiguration struct {
 // LoadBalancerRouteHealthCheckConfigurationInput is an input type that accepts LoadBalancerRouteHealthCheckConfigurationArgs and LoadBalancerRouteHealthCheckConfigurationOutput values.
 // You can construct a concrete instance of `LoadBalancerRouteHealthCheckConfigurationInput` via:
 //
-//          LoadBalancerRouteHealthCheckConfigurationArgs{...}
+//	LoadBalancerRouteHealthCheckConfigurationArgs{...}
 type LoadBalancerRouteHealthCheckConfigurationInput interface {
 	pulumi.Input
 
@@ -446,7 +446,7 @@ func (i LoadBalancerRouteHealthCheckConfigurationArgs) ToLoadBalancerRouteHealth
 // LoadBalancerRouteHealthCheckConfigurationArrayInput is an input type that accepts LoadBalancerRouteHealthCheckConfigurationArray and LoadBalancerRouteHealthCheckConfigurationArrayOutput values.
 // You can construct a concrete instance of `LoadBalancerRouteHealthCheckConfigurationArrayInput` via:
 //
-//          LoadBalancerRouteHealthCheckConfigurationArray{ LoadBalancerRouteHealthCheckConfigurationArgs{...} }
+//	LoadBalancerRouteHealthCheckConfigurationArray{ LoadBalancerRouteHealthCheckConfigurationArgs{...} }
 type LoadBalancerRouteHealthCheckConfigurationArrayInput interface {
 	pulumi.Input
 
@@ -545,7 +545,7 @@ type LoadBalancerTag struct {
 // LoadBalancerTagInput is an input type that accepts LoadBalancerTagArgs and LoadBalancerTagOutput values.
 // You can construct a concrete instance of `LoadBalancerTagInput` via:
 //
-//          LoadBalancerTagArgs{...}
+//	LoadBalancerTagArgs{...}
 type LoadBalancerTagInput interface {
 	pulumi.Input
 
@@ -575,7 +575,7 @@ func (i LoadBalancerTagArgs) ToLoadBalancerTagOutputWithContext(ctx context.Cont
 // LoadBalancerTagArrayInput is an input type that accepts LoadBalancerTagArray and LoadBalancerTagArrayOutput values.
 // You can construct a concrete instance of `LoadBalancerTagArrayInput` via:
 //
-//          LoadBalancerTagArray{ LoadBalancerTagArgs{...} }
+//	LoadBalancerTagArray{ LoadBalancerTagArgs{...} }
 type LoadBalancerTagArrayInput interface {
 	pulumi.Input
 
@@ -649,7 +649,7 @@ type LoadBalancerTarget struct {
 // LoadBalancerTargetInput is an input type that accepts LoadBalancerTargetArgs and LoadBalancerTargetOutput values.
 // You can construct a concrete instance of `LoadBalancerTargetInput` via:
 //
-//          LoadBalancerTargetArgs{...}
+//	LoadBalancerTargetArgs{...}
 type LoadBalancerTargetInput interface {
 	pulumi.Input
 
@@ -677,7 +677,7 @@ func (i LoadBalancerTargetArgs) ToLoadBalancerTargetOutputWithContext(ctx contex
 // LoadBalancerTargetArrayInput is an input type that accepts LoadBalancerTargetArray and LoadBalancerTargetArrayOutput values.
 // You can construct a concrete instance of `LoadBalancerTargetArrayInput` via:
 //
-//          LoadBalancerTargetArray{ LoadBalancerTargetArgs{...} }
+//	LoadBalancerTargetArray{ LoadBalancerTargetArgs{...} }
 type LoadBalancerTargetArrayInput interface {
 	pulumi.Input
 

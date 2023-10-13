@@ -19,7 +19,7 @@ type GetSecurityGroupLink struct {
 // GetSecurityGroupLinkInput is an input type that accepts GetSecurityGroupLinkArgs and GetSecurityGroupLinkOutput values.
 // You can construct a concrete instance of `GetSecurityGroupLinkInput` via:
 //
-//          GetSecurityGroupLinkArgs{...}
+//	GetSecurityGroupLinkArgs{...}
 type GetSecurityGroupLinkInput interface {
 	pulumi.Input
 
@@ -48,7 +48,7 @@ func (i GetSecurityGroupLinkArgs) ToGetSecurityGroupLinkOutputWithContext(ctx co
 // GetSecurityGroupLinkArrayInput is an input type that accepts GetSecurityGroupLinkArray and GetSecurityGroupLinkArrayOutput values.
 // You can construct a concrete instance of `GetSecurityGroupLinkArrayInput` via:
 //
-//          GetSecurityGroupLinkArray{ GetSecurityGroupLinkArgs{...} }
+//	GetSecurityGroupLinkArray{ GetSecurityGroupLinkArgs{...} }
 type GetSecurityGroupLinkArrayInput interface {
 	pulumi.Input
 
@@ -130,7 +130,7 @@ type GetSecurityGroupRule struct {
 // GetSecurityGroupRuleInput is an input type that accepts GetSecurityGroupRuleArgs and GetSecurityGroupRuleOutput values.
 // You can construct a concrete instance of `GetSecurityGroupRuleInput` via:
 //
-//          GetSecurityGroupRuleArgs{...}
+//	GetSecurityGroupRuleArgs{...}
 type GetSecurityGroupRuleInput interface {
 	pulumi.Input
 
@@ -164,7 +164,7 @@ func (i GetSecurityGroupRuleArgs) ToGetSecurityGroupRuleOutputWithContext(ctx co
 // GetSecurityGroupRuleArrayInput is an input type that accepts GetSecurityGroupRuleArray and GetSecurityGroupRuleArrayOutput values.
 // You can construct a concrete instance of `GetSecurityGroupRuleArrayInput` via:
 //
-//          GetSecurityGroupRuleArray{ GetSecurityGroupRuleArgs{...} }
+//	GetSecurityGroupRuleArray{ GetSecurityGroupRuleArgs{...} }
 type GetSecurityGroupRuleArrayInput interface {
 	pulumi.Input
 

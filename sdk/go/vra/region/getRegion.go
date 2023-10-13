@@ -18,22 +18,25 @@ import (
 // package main
 //
 // import (
-// 	"github.com/pulumi/pulumi-vra/sdk/go/vra/region"
-// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-// 	"github.com/pulumiverse/pulumi-vra/sdk/go/vra/region"
+//
+//	"github.com/pulumi/pulumi-vra/sdk/go/vra/region"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//	"github.com/pulumiverse/pulumi-vra/sdk/go/vra/region"
+//
 // )
 //
-// func main() {
-// 	pulumi.Run(func(ctx *pulumi.Context) error {
-// 		_, err := region.GetRegion(ctx, &region.GetRegionArgs{
-// 			Id: pulumi.StringRef(_var.Vra_region_id),
-// 		}, nil)
-// 		if err != nil {
-// 			return err
-// 		}
-// 		return nil
-// 	})
-// }
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			_, err := region.GetRegion(ctx, &region.GetRegionArgs{
+//				Id: pulumi.StringRef(_var.Vra_region_id),
+//			}, nil)
+//			if err != nil {
+//				return err
+//			}
+//			return nil
+//		})
+//	}
+//
 // ```
 //
 // **Region data source by filter:**
@@ -42,24 +45,27 @@ import (
 // package main
 //
 // import (
-// 	"fmt"
 //
-// 	"github.com/pulumi/pulumi-vra/sdk/go/vra/region"
-// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-// 	"github.com/pulumiverse/pulumi-vra/sdk/go/vra/region"
+//	"fmt"
+//
+//	"github.com/pulumi/pulumi-vra/sdk/go/vra/region"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//	"github.com/pulumiverse/pulumi-vra/sdk/go/vra/region"
+//
 // )
 //
-// func main() {
-// 	pulumi.Run(func(ctx *pulumi.Context) error {
-// 		_, err := region.GetRegion(ctx, &region.GetRegionArgs{
-// 			Filter: pulumi.StringRef(fmt.Sprintf("name eq '%v'", _var.Vra_region_name)),
-// 		}, nil)
-// 		if err != nil {
-// 			return err
-// 		}
-// 		return nil
-// 	})
-// }
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			_, err := region.GetRegion(ctx, &region.GetRegionArgs{
+//				Filter: pulumi.StringRef(fmt.Sprintf("name eq '%v'", _var.Vra_region_name)),
+//			}, nil)
+//			if err != nil {
+//				return err
+//			}
+//			return nil
+//		})
+//	}
+//
 // ```
 //
 // **Region data source by cloud account id and region:**
@@ -68,23 +74,26 @@ import (
 // package main
 //
 // import (
-// 	"github.com/pulumi/pulumi-vra/sdk/go/vra/region"
-// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-// 	"github.com/pulumiverse/pulumi-vra/sdk/go/vra/region"
+//
+//	"github.com/pulumi/pulumi-vra/sdk/go/vra/region"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//	"github.com/pulumiverse/pulumi-vra/sdk/go/vra/region"
+//
 // )
 //
-// func main() {
-// 	pulumi.Run(func(ctx *pulumi.Context) error {
-// 		_, err := region.GetRegion(ctx, &region.GetRegionArgs{
-// 			CloudAccountId: pulumi.StringRef(_var.Vra_cloud_account_id),
-// 			Region:         pulumi.StringRef(_var.Vra_region_external_id),
-// 		}, nil)
-// 		if err != nil {
-// 			return err
-// 		}
-// 		return nil
-// 	})
-// }
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			_, err := region.GetRegion(ctx, &region.GetRegionArgs{
+//				CloudAccountId: pulumi.StringRef(_var.Vra_cloud_account_id),
+//				Region:         pulumi.StringRef(_var.Vra_region_external_id),
+//			}, nil)
+//			if err != nil {
+//				return err
+//			}
+//			return nil
+//		})
+//	}
+//
 // ```
 func GetRegion(ctx *pulumi.Context, args *GetRegionArgs, opts ...pulumi.InvokeOption) (*GetRegionResult, error) {
 	opts = pkgInvokeDefaultOpts(opts)

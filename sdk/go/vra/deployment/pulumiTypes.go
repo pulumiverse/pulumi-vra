@@ -34,7 +34,7 @@ type DeploymentExpense struct {
 // DeploymentExpenseInput is an input type that accepts DeploymentExpenseArgs and DeploymentExpenseOutput values.
 // You can construct a concrete instance of `DeploymentExpenseInput` via:
 //
-//          DeploymentExpenseArgs{...}
+//	DeploymentExpenseArgs{...}
 type DeploymentExpenseInput interface {
 	pulumi.Input
 
@@ -78,7 +78,7 @@ func (i DeploymentExpenseArgs) ToDeploymentExpenseOutputWithContext(ctx context.
 // DeploymentExpenseArrayInput is an input type that accepts DeploymentExpenseArray and DeploymentExpenseArrayOutput values.
 // You can construct a concrete instance of `DeploymentExpenseArrayInput` via:
 //
-//          DeploymentExpenseArray{ DeploymentExpenseArgs{...} }
+//	DeploymentExpenseArray{ DeploymentExpenseArgs{...} }
 type DeploymentExpenseArrayInput interface {
 	pulumi.Input
 
@@ -223,7 +223,7 @@ type DeploymentLastRequest struct {
 // DeploymentLastRequestInput is an input type that accepts DeploymentLastRequestArgs and DeploymentLastRequestOutput values.
 // You can construct a concrete instance of `DeploymentLastRequestInput` via:
 //
-//          DeploymentLastRequestArgs{...}
+//	DeploymentLastRequestArgs{...}
 type DeploymentLastRequestInput interface {
 	pulumi.Input
 
@@ -287,7 +287,7 @@ func (i DeploymentLastRequestArgs) ToDeploymentLastRequestOutputWithContext(ctx 
 // DeploymentLastRequestArrayInput is an input type that accepts DeploymentLastRequestArray and DeploymentLastRequestArrayOutput values.
 // You can construct a concrete instance of `DeploymentLastRequestArrayInput` via:
 //
-//          DeploymentLastRequestArray{ DeploymentLastRequestArgs{...} }
+//	DeploymentLastRequestArray{ DeploymentLastRequestArgs{...} }
 type DeploymentLastRequestArrayInput interface {
 	pulumi.Input
 
@@ -455,7 +455,7 @@ type DeploymentProject struct {
 // DeploymentProjectInput is an input type that accepts DeploymentProjectArgs and DeploymentProjectOutput values.
 // You can construct a concrete instance of `DeploymentProjectInput` via:
 //
-//          DeploymentProjectArgs{...}
+//	DeploymentProjectArgs{...}
 type DeploymentProjectInput interface {
 	pulumi.Input
 
@@ -489,7 +489,7 @@ func (i DeploymentProjectArgs) ToDeploymentProjectOutputWithContext(ctx context.
 // DeploymentProjectArrayInput is an input type that accepts DeploymentProjectArray and DeploymentProjectArrayOutput values.
 // You can construct a concrete instance of `DeploymentProjectArrayInput` via:
 //
-//          DeploymentProjectArray{ DeploymentProjectArgs{...} }
+//	DeploymentProjectArray{ DeploymentProjectArgs{...} }
 type DeploymentProjectArrayInput interface {
 	pulumi.Input
 
@@ -591,7 +591,7 @@ type DeploymentResource struct {
 // DeploymentResourceInput is an input type that accepts DeploymentResourceArgs and DeploymentResourceOutput values.
 // You can construct a concrete instance of `DeploymentResourceInput` via:
 //
-//          DeploymentResourceArgs{...}
+//	DeploymentResourceArgs{...}
 type DeploymentResourceInput interface {
 	pulumi.Input
 
@@ -637,7 +637,7 @@ func (i DeploymentResourceArgs) ToDeploymentResourceOutputWithContext(ctx contex
 // DeploymentResourceArrayInput is an input type that accepts DeploymentResourceArray and DeploymentResourceArrayOutput values.
 // You can construct a concrete instance of `DeploymentResourceArrayInput` via:
 //
-//          DeploymentResourceArray{ DeploymentResourceArgs{...} }
+//	DeploymentResourceArray{ DeploymentResourceArgs{...} }
 type DeploymentResourceArrayInput interface {
 	pulumi.Input
 
@@ -767,7 +767,7 @@ type DeploymentResourceExpense struct {
 // DeploymentResourceExpenseInput is an input type that accepts DeploymentResourceExpenseArgs and DeploymentResourceExpenseOutput values.
 // You can construct a concrete instance of `DeploymentResourceExpenseInput` via:
 //
-//          DeploymentResourceExpenseArgs{...}
+//	DeploymentResourceExpenseArgs{...}
 type DeploymentResourceExpenseInput interface {
 	pulumi.Input
 
@@ -811,7 +811,7 @@ func (i DeploymentResourceExpenseArgs) ToDeploymentResourceExpenseOutputWithCont
 // DeploymentResourceExpenseArrayInput is an input type that accepts DeploymentResourceExpenseArray and DeploymentResourceExpenseArrayOutput values.
 // You can construct a concrete instance of `DeploymentResourceExpenseArrayInput` via:
 //
-//          DeploymentResourceExpenseArray{ DeploymentResourceExpenseArgs{...} }
+//	DeploymentResourceExpenseArray{ DeploymentResourceExpenseArgs{...} }
 type DeploymentResourceExpenseArrayInput interface {
 	pulumi.Input
 
@@ -936,7 +936,7 @@ type GetDeploymentExpense struct {
 // GetDeploymentExpenseInput is an input type that accepts GetDeploymentExpenseArgs and GetDeploymentExpenseOutput values.
 // You can construct a concrete instance of `GetDeploymentExpenseInput` via:
 //
-//          GetDeploymentExpenseArgs{...}
+//	GetDeploymentExpenseArgs{...}
 type GetDeploymentExpenseInput interface {
 	pulumi.Input
 
@@ -980,7 +980,7 @@ func (i GetDeploymentExpenseArgs) ToGetDeploymentExpenseOutputWithContext(ctx co
 // GetDeploymentExpenseArrayInput is an input type that accepts GetDeploymentExpenseArray and GetDeploymentExpenseArrayOutput values.
 // You can construct a concrete instance of `GetDeploymentExpenseArrayInput` via:
 //
-//          GetDeploymentExpenseArray{ GetDeploymentExpenseArgs{...} }
+//	GetDeploymentExpenseArray{ GetDeploymentExpenseArgs{...} }
 type GetDeploymentExpenseArrayInput interface {
 	pulumi.Input
 
@@ -1125,7 +1125,7 @@ type GetDeploymentLastRequest struct {
 // GetDeploymentLastRequestInput is an input type that accepts GetDeploymentLastRequestArgs and GetDeploymentLastRequestOutput values.
 // You can construct a concrete instance of `GetDeploymentLastRequestInput` via:
 //
-//          GetDeploymentLastRequestArgs{...}
+//	GetDeploymentLastRequestArgs{...}
 type GetDeploymentLastRequestInput interface {
 	pulumi.Input
 
@@ -1189,7 +1189,7 @@ func (i GetDeploymentLastRequestArgs) ToGetDeploymentLastRequestOutputWithContex
 // GetDeploymentLastRequestArrayInput is an input type that accepts GetDeploymentLastRequestArray and GetDeploymentLastRequestArrayOutput values.
 // You can construct a concrete instance of `GetDeploymentLastRequestArrayInput` via:
 //
-//          GetDeploymentLastRequestArray{ GetDeploymentLastRequestArgs{...} }
+//	GetDeploymentLastRequestArray{ GetDeploymentLastRequestArgs{...} }
 type GetDeploymentLastRequestArrayInput interface {
 	pulumi.Input
 
@@ -1357,7 +1357,7 @@ type GetDeploymentProject struct {
 // GetDeploymentProjectInput is an input type that accepts GetDeploymentProjectArgs and GetDeploymentProjectOutput values.
 // You can construct a concrete instance of `GetDeploymentProjectInput` via:
 //
-//          GetDeploymentProjectArgs{...}
+//	GetDeploymentProjectArgs{...}
 type GetDeploymentProjectInput interface {
 	pulumi.Input
 
@@ -1391,7 +1391,7 @@ func (i GetDeploymentProjectArgs) ToGetDeploymentProjectOutputWithContext(ctx co
 // GetDeploymentProjectArrayInput is an input type that accepts GetDeploymentProjectArray and GetDeploymentProjectArrayOutput values.
 // You can construct a concrete instance of `GetDeploymentProjectArrayInput` via:
 //
-//          GetDeploymentProjectArray{ GetDeploymentProjectArgs{...} }
+//	GetDeploymentProjectArray{ GetDeploymentProjectArgs{...} }
 type GetDeploymentProjectArrayInput interface {
 	pulumi.Input
 
@@ -1493,7 +1493,7 @@ type GetDeploymentResource struct {
 // GetDeploymentResourceInput is an input type that accepts GetDeploymentResourceArgs and GetDeploymentResourceOutput values.
 // You can construct a concrete instance of `GetDeploymentResourceInput` via:
 //
-//          GetDeploymentResourceArgs{...}
+//	GetDeploymentResourceArgs{...}
 type GetDeploymentResourceInput interface {
 	pulumi.Input
 
@@ -1539,7 +1539,7 @@ func (i GetDeploymentResourceArgs) ToGetDeploymentResourceOutputWithContext(ctx 
 // GetDeploymentResourceArrayInput is an input type that accepts GetDeploymentResourceArray and GetDeploymentResourceArrayOutput values.
 // You can construct a concrete instance of `GetDeploymentResourceArrayInput` via:
 //
-//          GetDeploymentResourceArray{ GetDeploymentResourceArgs{...} }
+//	GetDeploymentResourceArray{ GetDeploymentResourceArgs{...} }
 type GetDeploymentResourceArrayInput interface {
 	pulumi.Input
 
@@ -1669,7 +1669,7 @@ type GetDeploymentResourceExpense struct {
 // GetDeploymentResourceExpenseInput is an input type that accepts GetDeploymentResourceExpenseArgs and GetDeploymentResourceExpenseOutput values.
 // You can construct a concrete instance of `GetDeploymentResourceExpenseInput` via:
 //
-//          GetDeploymentResourceExpenseArgs{...}
+//	GetDeploymentResourceExpenseArgs{...}
 type GetDeploymentResourceExpenseInput interface {
 	pulumi.Input
 
@@ -1713,7 +1713,7 @@ func (i GetDeploymentResourceExpenseArgs) ToGetDeploymentResourceExpenseOutputWi
 // GetDeploymentResourceExpenseArrayInput is an input type that accepts GetDeploymentResourceExpenseArray and GetDeploymentResourceExpenseArrayOutput values.
 // You can construct a concrete instance of `GetDeploymentResourceExpenseArrayInput` via:
 //
-//          GetDeploymentResourceExpenseArray{ GetDeploymentResourceExpenseArgs{...} }
+//	GetDeploymentResourceExpenseArray{ GetDeploymentResourceExpenseArgs{...} }
 type GetDeploymentResourceExpenseArrayInput interface {
 	pulumi.Input
 

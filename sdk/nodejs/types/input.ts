@@ -93,7 +93,6 @@ export namespace blockdevice {
         hrefs?: pulumi.Input<pulumi.Input<string>[]>;
         rel: pulumi.Input<string>;
     }
-
 }
 
 export namespace blueprint {
@@ -190,17 +189,6 @@ export namespace cloudaccount {
         value: pulumi.Input<string>;
     }
 
-    export interface GetAwsTagArgs {
-        /**
-         * Tag’s key.
-         */
-        key: pulumi.Input<string>;
-        /**
-         * Tag’s value.
-         */
-        value: pulumi.Input<string>;
-    }
-
     export interface GetAwsTag {
         /**
          * Tag’s key.
@@ -212,15 +200,15 @@ export namespace cloudaccount {
         value: string;
     }
 
-    export interface GetAzureTag {
+    export interface GetAwsTagArgs {
         /**
          * Tag’s key.
          */
-        key: string;
+        key: pulumi.Input<string>;
         /**
          * Tag’s value.
          */
-        value: string;
+        value: pulumi.Input<string>;
     }
 
     export interface GetAzureTagArgs {
@@ -234,15 +222,15 @@ export namespace cloudaccount {
         value: pulumi.Input<string>;
     }
 
-    export interface GetGcpTagArgs {
+    export interface GetAzureTag {
         /**
          * Tag’s key.
          */
-        key: pulumi.Input<string>;
+        key: string;
         /**
          * Tag’s value.
          */
-        value: pulumi.Input<string>;
+        value: string;
     }
 
     export interface GetGcpTag {
@@ -256,7 +244,7 @@ export namespace cloudaccount {
         value: string;
     }
 
-    export interface GetNsxtTagArgs {
+    export interface GetGcpTagArgs {
         /**
          * Tag’s key.
          */
@@ -278,7 +266,7 @@ export namespace cloudaccount {
         value: string;
     }
 
-    export interface GetNsxvTagArgs {
+    export interface GetNsxtTagArgs {
         /**
          * Tag’s key.
          */
@@ -298,6 +286,17 @@ export namespace cloudaccount {
          * Tag’s value.
          */
         value: string;
+    }
+
+    export interface GetNsxvTagArgs {
+        /**
+         * Tag’s key.
+         */
+        key: pulumi.Input<string>;
+        /**
+         * Tag’s value.
+         */
+        value: pulumi.Input<string>;
     }
 
     export interface GetVSphereTag {
@@ -387,6 +386,7 @@ export namespace cloudaccount {
         key: pulumi.Input<string>;
         value: pulumi.Input<string>;
     }
+
 }
 
 export namespace contentsource {
@@ -673,17 +673,6 @@ export namespace fabric {
         value: pulumi.Input<string>;
     }
 
-    export interface GetComputeTagArgs {
-        /**
-         * Tag’s key.
-         */
-        key: pulumi.Input<string>;
-        /**
-         * Tag’s value.
-         */
-        value: pulumi.Input<string>;
-    }
-
     export interface GetComputeTag {
         /**
          * Tag’s key.
@@ -695,15 +684,15 @@ export namespace fabric {
         value: string;
     }
 
-    export interface GetDatastoreVSphereTag {
+    export interface GetComputeTagArgs {
         /**
          * Tag’s key.
          */
-        key: string;
+        key: pulumi.Input<string>;
         /**
          * Tag’s value.
          */
-        value: string;
+        value: pulumi.Input<string>;
     }
 
     export interface GetDatastoreVSphereTagArgs {
@@ -715,6 +704,17 @@ export namespace fabric {
          * Tag’s value.
          */
         value: pulumi.Input<string>;
+    }
+
+    export interface GetDatastoreVSphereTag {
+        /**
+         * Tag’s key.
+         */
+        key: string;
+        /**
+         * Tag’s value.
+         */
+        value: string;
     }
 
     export interface GetNetworkTag {
@@ -947,14 +947,14 @@ export namespace loadbalancer {
 }
 
 export namespace machine {
-    export interface GetMachineTagArgs {
-        key: pulumi.Input<string>;
-        value: pulumi.Input<string>;
-    }
-
     export interface GetMachineTag {
         key: string;
         value: string;
+    }
+
+    export interface GetMachineTagArgs {
+        key: pulumi.Input<string>;
+        value: pulumi.Input<string>;
     }
 
     export interface MachineBootConfig {
@@ -1098,14 +1098,14 @@ export namespace network {
         value: string;
     }
 
-    export interface GetProfileTag {
-        key: string;
-        value: string;
-    }
-
     export interface GetProfileTagArgs {
         key: pulumi.Input<string>;
         value: pulumi.Input<string>;
+    }
+
+    export interface GetProfileTag {
+        key: string;
+        value: string;
     }
 
     export interface IpRangeLink {
@@ -1145,6 +1145,7 @@ export namespace network {
         key: pulumi.Input<string>;
         value: pulumi.Input<string>;
     }
+
 }
 
 export namespace project {
@@ -1158,21 +1159,16 @@ export namespace project {
         type?: pulumi.Input<string>;
     }
 
-    export interface GetProjectConstraints {
-        extensibilities?: inputs.project.GetProjectConstraintsExtensibility[];
-        networks?: inputs.project.GetProjectConstraintsNetwork[];
-        storages?: inputs.project.GetProjectConstraintsStorage[];
-    }
-
     export interface GetProjectConstraintsArgs {
         extensibilities?: pulumi.Input<pulumi.Input<inputs.project.GetProjectConstraintsExtensibilityArgs>[]>;
         networks?: pulumi.Input<pulumi.Input<inputs.project.GetProjectConstraintsNetworkArgs>[]>;
         storages?: pulumi.Input<pulumi.Input<inputs.project.GetProjectConstraintsStorageArgs>[]>;
     }
 
-    export interface GetProjectConstraintsExtensibility {
-        expression: string;
-        mandatory: boolean;
+    export interface GetProjectConstraints {
+        extensibilities?: inputs.project.GetProjectConstraintsExtensibility[];
+        networks?: inputs.project.GetProjectConstraintsNetwork[];
+        storages?: inputs.project.GetProjectConstraintsStorage[];
     }
 
     export interface GetProjectConstraintsExtensibilityArgs {
@@ -1180,7 +1176,7 @@ export namespace project {
         mandatory: pulumi.Input<boolean>;
     }
 
-    export interface GetProjectConstraintsNetwork {
+    export interface GetProjectConstraintsExtensibility {
         expression: string;
         mandatory: boolean;
     }
@@ -1190,9 +1186,9 @@ export namespace project {
         mandatory: pulumi.Input<boolean>;
     }
 
-    export interface GetProjectConstraintsStorageArgs {
-        expression: pulumi.Input<string>;
-        mandatory: pulumi.Input<boolean>;
+    export interface GetProjectConstraintsNetwork {
+        expression: string;
+        mandatory: boolean;
     }
 
     export interface GetProjectConstraintsStorage {
@@ -1200,9 +1196,9 @@ export namespace project {
         mandatory: boolean;
     }
 
-    export interface GetProjectMemberRole {
-        email: string;
-        type?: string;
+    export interface GetProjectConstraintsStorageArgs {
+        expression: pulumi.Input<string>;
+        mandatory: pulumi.Input<boolean>;
     }
 
     export interface GetProjectMemberRoleArgs {
@@ -1210,7 +1206,7 @@ export namespace project {
         type?: pulumi.Input<string>;
     }
 
-    export interface GetProjectViewerRole {
+    export interface GetProjectMemberRole {
         email: string;
         type?: string;
     }
@@ -1220,13 +1216,9 @@ export namespace project {
         type?: pulumi.Input<string>;
     }
 
-    export interface GetProjectZoneAssignment {
-        cpuLimit?: number;
-        maxInstances?: number;
-        memoryLimitMb?: number;
-        priority?: number;
-        storageLimitGb?: number;
-        zoneId?: string;
+    export interface GetProjectViewerRole {
+        email: string;
+        type?: string;
     }
 
     export interface GetProjectZoneAssignmentArgs {
@@ -1236,6 +1228,15 @@ export namespace project {
         priority?: pulumi.Input<number>;
         storageLimitGb?: pulumi.Input<number>;
         zoneId?: pulumi.Input<string>;
+    }
+
+    export interface GetProjectZoneAssignment {
+        cpuLimit?: number;
+        maxInstances?: number;
+        memoryLimitMb?: number;
+        priority?: number;
+        storageLimitGb?: number;
+        zoneId?: string;
     }
 
     export interface ProjectAdministratorRole {
@@ -1282,6 +1283,7 @@ export namespace project {
         storageLimitGb?: pulumi.Input<number>;
         zoneId: pulumi.Input<string>;
     }
+
 }
 
 export namespace securitygroup {
@@ -1365,14 +1367,14 @@ export namespace storageprofile {
         value: string;
     }
 
-    export interface GetVSphereTag {
-        key: string;
-        value: string;
-    }
-
     export interface GetVSphereTagArgs {
         key: pulumi.Input<string>;
         value: pulumi.Input<string>;
+    }
+
+    export interface GetVSphereTag {
+        key: string;
+        value: string;
     }
 
     export interface StorageProfileLink {
