@@ -2,6 +2,15 @@
 
 The VRA Resource Provider lets you manage [VRA](https://www.vmware.com/products/vrealize-automation.html) resources.
 
+## override vra configuration cache
+
+The following configurations are overridable via env vars:
+
+- access_token (access token for API operations) with env var VMWARE_VRA_ACCESS_TOKEN
+- refresh_token (refresh token for API operations) with env var VMWARE_VRA_REFRESH_TOKEN
+- url (base url for API operations) with env var VMWARE_VRA_URL 
+- reauthorizeTimeout (timeout for how often to reauthorize the access token) with env var VMWARE_VRA_REAUTHORIZE_TIMEOUT
+
 ## Installing
 
 This package is available for several languages/platforms:
