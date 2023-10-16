@@ -24,45 +24,50 @@ import (
 // package main
 //
 // import (
-// 	"github.com/pulumi/pulumi-vra/sdk/go/vra/cloudaccount"
-// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-// 	"github.com/pulumiverse/pulumi-vra/sdk/go/vra/cloudaccount"
+//
+//	"github.com/pulumi/pulumi-vra/sdk/go/vra/cloudaccount"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//	"github.com/pulumiverse/pulumi-vra/sdk/go/vra/cloudaccount"
+//
 // )
 //
-// func main() {
-// 	pulumi.Run(func(ctx *pulumi.Context) error {
-// 		_, err := cloudaccount.NewVmc(ctx, "this", &cloudaccount.VmcArgs{
-// 			Description:          pulumi.String("tf test vmc cloud account"),
-// 			ApiToken:             pulumi.Any(_var.Api_token),
-// 			SddcName:             pulumi.Any(_var.Sddc_name),
-// 			VcenterHostname:      pulumi.Any(_var.Vcenter_hostname),
-// 			VcenterPassword:      pulumi.Any(_var.Vcenter_password),
-// 			VcenterUsername:      pulumi.Any(_var.Vcenter_username),
-// 			NsxHostname:          pulumi.Any(_var.Nsx_hostname),
-// 			DcId:                 pulumi.Any(_var.Data_collector_id),
-// 			Regions:              pulumi.Any(_var.Regions),
-// 			AcceptSelfSignedCert: pulumi.Bool(true),
-// 			Tags: cloudaccount.VmcTagArray{
-// 				&cloudaccount.VmcTagArgs{
-// 					Key:   pulumi.String("foo"),
-// 					Value: pulumi.String("bar"),
-// 				},
-// 			},
-// 		})
-// 		if err != nil {
-// 			return err
-// 		}
-// 		return nil
-// 	})
-// }
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			_, err := cloudaccount.NewVmc(ctx, "this", &cloudaccount.VmcArgs{
+//				Description:          pulumi.String("tf test vmc cloud account"),
+//				ApiToken:             pulumi.Any(_var.Api_token),
+//				SddcName:             pulumi.Any(_var.Sddc_name),
+//				VcenterHostname:      pulumi.Any(_var.Vcenter_hostname),
+//				VcenterPassword:      pulumi.Any(_var.Vcenter_password),
+//				VcenterUsername:      pulumi.Any(_var.Vcenter_username),
+//				NsxHostname:          pulumi.Any(_var.Nsx_hostname),
+//				DcId:                 pulumi.Any(_var.Data_collector_id),
+//				Regions:              pulumi.Any(_var.Regions),
+//				AcceptSelfSignedCert: pulumi.Bool(true),
+//				Tags: cloudaccount.VmcTagArray{
+//					&cloudaccount.VmcTagArgs{
+//						Key:   pulumi.String("foo"),
+//						Value: pulumi.String("bar"),
+//					},
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			return nil
+//		})
+//	}
+//
 // ```
 //
 // ## Import
 //
-// To import the VMC cloud account, use the ID as in the following example
+// # To import the VMC cloud account, use the ID as in the following example
 //
 // ```sh
-//  $ pulumi import vra:cloudaccount/vmc:Vmc new_vmc 05956583-6488-4e7d-84c9-92a7b7219a15`
+//
+//	$ pulumi import vra:cloudaccount/vmc:Vmc new_vmc 05956583-6488-4e7d-84c9-92a7b7219a15`
+//
 // ```
 type Vmc struct {
 	pulumi.CustomResourceState
@@ -317,7 +322,7 @@ func (i *Vmc) ToVmcOutputWithContext(ctx context.Context) VmcOutput {
 // VmcArrayInput is an input type that accepts VmcArray and VmcArrayOutput values.
 // You can construct a concrete instance of `VmcArrayInput` via:
 //
-//          VmcArray{ VmcArgs{...} }
+//	VmcArray{ VmcArgs{...} }
 type VmcArrayInput interface {
 	pulumi.Input
 
@@ -342,7 +347,7 @@ func (i VmcArray) ToVmcArrayOutputWithContext(ctx context.Context) VmcArrayOutpu
 // VmcMapInput is an input type that accepts VmcMap and VmcMapOutput values.
 // You can construct a concrete instance of `VmcMapInput` via:
 //
-//          VmcMap{ "key": VmcArgs{...} }
+//	VmcMap{ "key": VmcArgs{...} }
 type VmcMapInput interface {
 	pulumi.Input
 

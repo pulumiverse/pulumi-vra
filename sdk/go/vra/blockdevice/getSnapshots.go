@@ -14,7 +14,9 @@ import (
 //
 // page_title: "VMware vRealize Automation: blockdevice.getSnapshots"
 // description: |-
-//   Provides a data lookup for vra_block_device_snapshots.
+//
+//	Provides a data lookup for vra_block_device_snapshots.
+//
 // ---
 //
 // # Data Source: blockdevice.getSnapshots

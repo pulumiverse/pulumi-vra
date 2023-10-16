@@ -22,36 +22,41 @@ import (
 // package main
 //
 // import (
-// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-// 	"github.com/pulumiverse/pulumi-vra/sdk/go/vra/cloudaccount"
+//
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//	"github.com/pulumiverse/pulumi-vra/sdk/go/vra/cloudaccount"
+//
 // )
 //
-// func main() {
-// 	pulumi.Run(func(ctx *pulumi.Context) error {
-// 		_, err := cloudaccount.NewAzure(ctx, "this", &cloudaccount.AzureArgs{
-// 			ApplicationId:  pulumi.String("sample-application-id"),
-// 			ApplicationKey: pulumi.String("sample-application=key"),
-// 			Description:    pulumi.String("test cloud account"),
-// 			Regions: pulumi.StringArray{
-// 				pulumi.String("centralus"),
-// 			},
-// 			SubscriptionId: pulumi.String("sample-subscription-id"),
-// 			TenantId:       pulumi.String("sample-tenant-id"),
-// 		})
-// 		if err != nil {
-// 			return err
-// 		}
-// 		return nil
-// 	})
-// }
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			_, err := cloudaccount.NewAzure(ctx, "this", &cloudaccount.AzureArgs{
+//				ApplicationId:  pulumi.String("sample-application-id"),
+//				ApplicationKey: pulumi.String("sample-application=key"),
+//				Description:    pulumi.String("test cloud account"),
+//				Regions: pulumi.StringArray{
+//					pulumi.String("centralus"),
+//				},
+//				SubscriptionId: pulumi.String("sample-subscription-id"),
+//				TenantId:       pulumi.String("sample-tenant-id"),
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			return nil
+//		})
+//	}
+//
 // ```
 //
 // ## Import
 //
-// To import the Azure cloud account, use the ID as in the following example
+// # To import the Azure cloud account, use the ID as in the following example
 //
 // ```sh
-//  $ pulumi import vra:cloudaccount/azure:Azure new_azure 05956583-6488-4e7d-84c9-92a7b7219a15`
+//
+//	$ pulumi import vra:cloudaccount/azure:Azure new_azure 05956583-6488-4e7d-84c9-92a7b7219a15`
+//
 // ```
 type Azure struct {
 	pulumi.CustomResourceState
@@ -260,7 +265,7 @@ func (i *Azure) ToAzureOutputWithContext(ctx context.Context) AzureOutput {
 // AzureArrayInput is an input type that accepts AzureArray and AzureArrayOutput values.
 // You can construct a concrete instance of `AzureArrayInput` via:
 //
-//          AzureArray{ AzureArgs{...} }
+//	AzureArray{ AzureArgs{...} }
 type AzureArrayInput interface {
 	pulumi.Input
 
@@ -285,7 +290,7 @@ func (i AzureArray) ToAzureArrayOutputWithContext(ctx context.Context) AzureArra
 // AzureMapInput is an input type that accepts AzureMap and AzureMapOutput values.
 // You can construct a concrete instance of `AzureMapInput` via:
 //
-//          AzureMap{ "key": AzureArgs{...} }
+//	AzureMap{ "key": AzureArgs{...} }
 type AzureMapInput interface {
 	pulumi.Input
 
