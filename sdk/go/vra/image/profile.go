@@ -21,44 +21,47 @@ import (
 // package main
 //
 // import (
-// 	"github.com/pulumi/pulumi-vra/sdk/go/vra/image"
-// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-// 	"github.com/pulumiverse/pulumi-vra/sdk/go/vra/image"
+//
+//	"github.com/pulumi/pulumi-vra/sdk/go/vra/image"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//	"github.com/pulumiverse/pulumi-vra/sdk/go/vra/image"
+//
 // )
 //
-// func main() {
-// 	pulumi.Run(func(ctx *pulumi.Context) error {
-// 		_, err := image.NewProfile(ctx, "this", &image.ProfileArgs{
-// 			Description: pulumi.String("test image profile"),
-// 			RegionId:    pulumi.Any(data.Vra_region.This.Id),
-// 			ImageMappings: image.ProfileImageMappingArray{
-// 				&image.ProfileImageMappingArgs{
-// 					Name:    pulumi.String("centos"),
-// 					ImageId: pulumi.Any(data.Vra_image.Centos.Id),
-// 					Constraints: image.ProfileImageMappingConstraintArray{
-// 						&image.ProfileImageMappingConstraintArgs{
-// 							Mandatory:  pulumi.Bool(true),
-// 							Expression: pulumi.String("!env:Test"),
-// 						},
-// 						&image.ProfileImageMappingConstraintArgs{
-// 							Mandatory:  pulumi.Bool(false),
-// 							Expression: pulumi.String("foo:bar"),
-// 						},
-// 					},
-// 				},
-// 				&image.ProfileImageMappingArgs{
-// 					Name:        pulumi.String("photon"),
-// 					ImageId:     pulumi.Any(data.Vra_image.Photon.Id),
-// 					CloudConfig: pulumi.String("runcmd echo 'Hello'"),
-// 				},
-// 			},
-// 		})
-// 		if err != nil {
-// 			return err
-// 		}
-// 		return nil
-// 	})
-// }
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			_, err := image.NewProfile(ctx, "this", &image.ProfileArgs{
+//				Description: pulumi.String("test image profile"),
+//				RegionId:    pulumi.Any(data.Vra_region.This.Id),
+//				ImageMappings: image.ProfileImageMappingArray{
+//					&image.ProfileImageMappingArgs{
+//						Name:    pulumi.String("centos"),
+//						ImageId: pulumi.Any(data.Vra_image.Centos.Id),
+//						Constraints: image.ProfileImageMappingConstraintArray{
+//							&image.ProfileImageMappingConstraintArgs{
+//								Mandatory:  pulumi.Bool(true),
+//								Expression: pulumi.String("!env:Test"),
+//							},
+//							&image.ProfileImageMappingConstraintArgs{
+//								Mandatory:  pulumi.Bool(false),
+//								Expression: pulumi.String("foo:bar"),
+//							},
+//						},
+//					},
+//					&image.ProfileImageMappingArgs{
+//						Name:        pulumi.String("photon"),
+//						ImageId:     pulumi.Any(data.Vra_image.Photon.Id),
+//						CloudConfig: pulumi.String("runcmd echo 'Hello'"),
+//					},
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			return nil
+//		})
+//	}
+//
 // ```
 //
 // An image profile resource supports the following arguments:
@@ -206,7 +209,7 @@ func (i *Profile) ToProfileOutputWithContext(ctx context.Context) ProfileOutput 
 // ProfileArrayInput is an input type that accepts ProfileArray and ProfileArrayOutput values.
 // You can construct a concrete instance of `ProfileArrayInput` via:
 //
-//          ProfileArray{ ProfileArgs{...} }
+//	ProfileArray{ ProfileArgs{...} }
 type ProfileArrayInput interface {
 	pulumi.Input
 
@@ -231,7 +234,7 @@ func (i ProfileArray) ToProfileArrayOutputWithContext(ctx context.Context) Profi
 // ProfileMapInput is an input type that accepts ProfileMap and ProfileMapOutput values.
 // You can construct a concrete instance of `ProfileMapInput` via:
 //
-//          ProfileMap{ "key": ProfileArgs{...} }
+//	ProfileMap{ "key": ProfileArgs{...} }
 type ProfileMapInput interface {
 	pulumi.Input
 

@@ -20,7 +20,9 @@ import (
 // Deployment can be imported using the id, e.g.
 //
 // ```sh
-//  $ pulumi import vra:deployment/deployment:Deployment this 05956583-6488-4e7d-84c9-92a7b7219a15`
+//
+//	$ pulumi import vra:deployment/deployment:Deployment this 05956583-6488-4e7d-84c9-92a7b7219a15`
+//
 // ```
 type Deployment struct {
 	pulumi.CustomResourceState
@@ -308,7 +310,7 @@ func (i *Deployment) ToDeploymentOutputWithContext(ctx context.Context) Deployme
 // DeploymentArrayInput is an input type that accepts DeploymentArray and DeploymentArrayOutput values.
 // You can construct a concrete instance of `DeploymentArrayInput` via:
 //
-//          DeploymentArray{ DeploymentArgs{...} }
+//	DeploymentArray{ DeploymentArgs{...} }
 type DeploymentArrayInput interface {
 	pulumi.Input
 
@@ -333,7 +335,7 @@ func (i DeploymentArray) ToDeploymentArrayOutputWithContext(ctx context.Context)
 // DeploymentMapInput is an input type that accepts DeploymentMap and DeploymentMapOutput values.
 // You can construct a concrete instance of `DeploymentMapInput` via:
 //
-//          DeploymentMap{ "key": DeploymentArgs{...} }
+//	DeploymentMap{ "key": DeploymentArgs{...} }
 type DeploymentMapInput interface {
 	pulumi.Input
 

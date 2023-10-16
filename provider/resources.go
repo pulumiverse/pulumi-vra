@@ -1,5 +1,7 @@
 // Copyright 2016-2018, Pulumi Corporation.
 //
+// Copyright 2016-2018, Pulumi Corporation.
+//
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
 // You may obtain a copy of the License at
@@ -16,11 +18,14 @@ package vra
 
 import (
 	"fmt"
+	"os"
 	"path/filepath"
 
+	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/schema"
 	"github.com/pulumi/pulumi-terraform-bridge/v3/pkg/tfbridge"
-	shimv2 "github.com/pulumi/pulumi-terraform-bridge/v3/pkg/tfshim/sdk-v2"
 	"github.com/pulumiverse/pulumi-vra/provider/pkg/version"
+
+	shimv2 "github.com/pulumi/pulumi-terraform-bridge/v3/pkg/tfshim/sdk-v2"
 	"github.com/vmware/terraform-provider-vra/vra"
 )
 
@@ -34,7 +39,37 @@ const (
 // Provider returns additional overlaid schema and metadata associated with the provider..
 func Provider() tfbridge.ProviderInfo {
 	// Instantiate the Terraform provider
-	p := shimv2.NewProvider(vra.Provider())
+	vraP := vra.Provider()
+	cf := vraP.ConfigureFunc
+	vraP.ConfigureFunc = func(d *schema.ResourceData) (interface{}, error) {
+		// override vra configuration cache, cache includes
+		// - access_token (access token for API operations) with env var VMWARE_VRA_ACCESS_TOKEN
+		// - refresh_token (refresh token for API operations) with env var VMWARE_VRA_REFRESH_TOKEN
+		// - url (base url for API operations) with env var VMWARE_VRA_URL
+		// - reauthorizeTimeout (timeout for how often to reauthorize the access token) with env var VMWARE_VRA_REAUTHORIZE_TIMEOUT
+		envAccessToken := os.Getenv("VMWARE_VRA_ACCESS_TOKEN")
+		if len(envAccessToken) != 0 {
+			d.Set("access_token", envAccessToken)
+		}
+
+		envRefreshToken := os.Getenv("VMWARE_VRA_REFRESH_TOKEN")
+		if len(envRefreshToken) != 0 {
+			d.Set("refresh_token", envRefreshToken)
+		}
+
+		envURL := os.Getenv("VMWARE_VRA_URL")
+		if len(envURL) != 0 {
+			d.Set("url", envURL)
+		}
+
+		envReauthorizeTimeout := os.Getenv("VMWARE_VRA_REAUTHORIZE_TIMEOUT")
+		if len(envReauthorizeTimeout) != 0 {
+			d.Set("reauthorize_timeout", envReauthorizeTimeout)
+		}
+
+		return cf(d)
+	}
+	p := shimv2.NewProvider(vraP)
 
 	// Create a Pulumi provider mapping
 	prov := tfbridge.ProviderInfo{

@@ -22,66 +22,71 @@ import (
 // package main
 //
 // import (
-// 	"fmt"
 //
-// 	"github.com/pulumi/pulumi-vra/sdk/go/vra/machine"
-// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-// 	"github.com/pulumiverse/pulumi-vra/sdk/go/vra/machine"
+//	"fmt"
+//
+//	"github.com/pulumi/pulumi-vra/sdk/go/vra/machine"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//	"github.com/pulumiverse/pulumi-vra/sdk/go/vra/machine"
+//
 // )
 //
-// func main() {
-// 	pulumi.Run(func(ctx *pulumi.Context) error {
-// 		_, err := machine.NewMachine(ctx, "this", &machine.MachineArgs{
-// 			Description: pulumi.String("terrafrom test machine"),
-// 			ProjectId:   pulumi.Any(data.Vra_project.This.Id),
-// 			Image:       pulumi.String("ubuntu2"),
-// 			Flavor:      pulumi.String("medium"),
-// 			BootConfig: &machine.MachineBootConfigArgs{
-// 				Content: pulumi.String(fmt.Sprintf(`#cloud-config
-//   users:
-//   - default
-//   - name: myuser
-//     sudo: ['ALL=(ALL) NOPASSWD:ALL']
-//     groups: [wheel, sudo, admin]
-//     shell: '/bin/bash'
-//     ssh-authorized-keys: |
-//       ssh-rsa your-ssh-rsa:
-//     - sudo sed -e 's/.*PasswordAuthentication yes.*/PasswordAuthentication no/' -i /etc/ssh/sshd_config
-//     - sudo service sshd restart
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			_, err := machine.NewMachine(ctx, "this", &machine.MachineArgs{
+//				Description: pulumi.String("terrafrom test machine"),
+//				ProjectId:   pulumi.Any(data.Vra_project.This.Id),
+//				Image:       pulumi.String("ubuntu2"),
+//				Flavor:      pulumi.String("medium"),
+//				BootConfig: &machine.MachineBootConfigArgs{
+//					Content: pulumi.String(fmt.Sprintf(`#cloud-config
+//	  users:
+//	  - default
+//	  - name: myuser
+//	    sudo: ['ALL=(ALL) NOPASSWD:ALL']
+//	    groups: [wheel, sudo, admin]
+//	    shell: '/bin/bash'
+//	    ssh-authorized-keys: |
+//	      ssh-rsa your-ssh-rsa:
+//	    - sudo sed -e 's/.*PasswordAuthentication yes.*/PasswordAuthentication no/' -i /etc/ssh/sshd_config
+//	    - sudo service sshd restart
+//
 // `)),
-// 			},
-// 			Nics: machine.MachineNicArray{
-// 				&machine.MachineNicArgs{
-// 					NetworkId: pulumi.Any(data.Vra_network.This.Id),
-// 				},
-// 			},
-// 			Constraints: machine.MachineConstraintArray{
-// 				&machine.MachineConstraintArgs{
-// 					Mandatory:  pulumi.Bool(true),
-// 					Expression: pulumi.String("AWS"),
-// 				},
-// 			},
-// 			Tags: machine.MachineTagArray{
-// 				&machine.MachineTagArgs{
-// 					Key:   pulumi.String("foo"),
-// 					Value: pulumi.String("bar"),
-// 				},
-// 			},
-// 			Disks: machine.MachineDiskArray{
-// 				&machine.MachineDiskArgs{
-// 					BlockDeviceId: pulumi.Any(vra_block_device.Disk1.Id),
-// 				},
-// 				&machine.MachineDiskArgs{
-// 					BlockDeviceId: pulumi.Any(vra_block_device.Disk2.Id),
-// 				},
-// 			},
-// 		})
-// 		if err != nil {
-// 			return err
-// 		}
-// 		return nil
-// 	})
-// }
+//
+//				},
+//				Nics: machine.MachineNicArray{
+//					&machine.MachineNicArgs{
+//						NetworkId: pulumi.Any(data.Vra_network.This.Id),
+//					},
+//				},
+//				Constraints: machine.MachineConstraintArray{
+//					&machine.MachineConstraintArgs{
+//						Mandatory:  pulumi.Bool(true),
+//						Expression: pulumi.String("AWS"),
+//					},
+//				},
+//				Tags: machine.MachineTagArray{
+//					&machine.MachineTagArgs{
+//						Key:   pulumi.String("foo"),
+//						Value: pulumi.String("bar"),
+//					},
+//				},
+//				Disks: machine.MachineDiskArray{
+//					&machine.MachineDiskArgs{
+//						BlockDeviceId: pulumi.Any(vra_block_device.Disk1.Id),
+//					},
+//					&machine.MachineDiskArgs{
+//						BlockDeviceId: pulumi.Any(vra_block_device.Disk2.Id),
+//					},
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			return nil
+//		})
+//	}
+//
 // ```
 // A machine resource supports the following resource:
 type Machine struct {
@@ -375,7 +380,7 @@ func (i *Machine) ToMachineOutputWithContext(ctx context.Context) MachineOutput 
 // MachineArrayInput is an input type that accepts MachineArray and MachineArrayOutput values.
 // You can construct a concrete instance of `MachineArrayInput` via:
 //
-//          MachineArray{ MachineArgs{...} }
+//	MachineArray{ MachineArgs{...} }
 type MachineArrayInput interface {
 	pulumi.Input
 
@@ -400,7 +405,7 @@ func (i MachineArray) ToMachineArrayOutputWithContext(ctx context.Context) Machi
 // MachineMapInput is an input type that accepts MachineMap and MachineMapOutput values.
 // You can construct a concrete instance of `MachineMapInput` via:
 //
-//          MachineMap{ "key": MachineArgs{...} }
+//	MachineMap{ "key": MachineArgs{...} }
 type MachineMapInput interface {
 	pulumi.Input
 

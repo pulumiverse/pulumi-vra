@@ -20,22 +20,25 @@ import (
 // package main
 //
 // import (
-// 	"github.com/pulumi/pulumi-vra/sdk/go/vra/fabric"
-// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-// 	"github.com/pulumiverse/pulumi-vra/sdk/go/vra/fabric"
+//
+//	"github.com/pulumi/pulumi-vra/sdk/go/vra/fabric"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//	"github.com/pulumiverse/pulumi-vra/sdk/go/vra/fabric"
+//
 // )
 //
-// func main() {
-// 	pulumi.Run(func(ctx *pulumi.Context) error {
-// 		_, err := fabric.LookupDatastoreVSphere(ctx, &fabric.LookupDatastoreVSphereArgs{
-// 			Id: pulumi.StringRef(_var.Fabric_datastore_vsphere_id),
-// 		}, nil)
-// 		if err != nil {
-// 			return err
-// 		}
-// 		return nil
-// 	})
-// }
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			_, err := fabric.LookupDatastoreVSphere(ctx, &fabric.LookupDatastoreVSphereArgs{
+//				Id: pulumi.StringRef(_var.Fabric_datastore_vsphere_id),
+//			}, nil)
+//			if err != nil {
+//				return err
+//			}
+//			return nil
+//		})
+//	}
+//
 // ```
 //
 // **vSphere fabric datastore data source by filter query:**
@@ -44,24 +47,27 @@ import (
 // package main
 //
 // import (
-// 	"fmt"
 //
-// 	"github.com/pulumi/pulumi-vra/sdk/go/vra/fabric"
-// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-// 	"github.com/pulumiverse/pulumi-vra/sdk/go/vra/fabric"
+//	"fmt"
+//
+//	"github.com/pulumi/pulumi-vra/sdk/go/vra/fabric"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//	"github.com/pulumiverse/pulumi-vra/sdk/go/vra/fabric"
+//
 // )
 //
-// func main() {
-// 	pulumi.Run(func(ctx *pulumi.Context) error {
-// 		_, err := fabric.LookupDatastoreVSphere(ctx, &fabric.LookupDatastoreVSphereArgs{
-// 			Filter: pulumi.StringRef(fmt.Sprintf("name eq '%v'", _var.Datastore_name)),
-// 		}, nil)
-// 		if err != nil {
-// 			return err
-// 		}
-// 		return nil
-// 	})
-// }
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			_, err := fabric.LookupDatastoreVSphere(ctx, &fabric.LookupDatastoreVSphereArgs{
+//				Filter: pulumi.StringRef(fmt.Sprintf("name eq '%v'", _var.Datastore_name)),
+//			}, nil)
+//			if err != nil {
+//				return err
+//			}
+//			return nil
+//		})
+//	}
+//
 // ```
 //
 // A vSphere fabric datastore data source supports the following arguments:

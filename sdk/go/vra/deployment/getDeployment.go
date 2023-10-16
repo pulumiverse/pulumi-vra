@@ -21,22 +21,25 @@ import (
 // package main
 //
 // import (
-// 	"github.com/pulumi/pulumi-vra/sdk/go/vra/deployment"
-// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-// 	"github.com/pulumiverse/pulumi-vra/sdk/go/vra/deployment"
+//
+//	"github.com/pulumi/pulumi-vra/sdk/go/vra/deployment"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//	"github.com/pulumiverse/pulumi-vra/sdk/go/vra/deployment"
+//
 // )
 //
-// func main() {
-// 	pulumi.Run(func(ctx *pulumi.Context) error {
-// 		_, err := deployment.LookupDeployment(ctx, &deployment.LookupDeploymentArgs{
-// 			Name: pulumi.StringRef(_var.Deployment_name),
-// 		}, nil)
-// 		if err != nil {
-// 			return err
-// 		}
-// 		return nil
-// 	})
-// }
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			_, err := deployment.LookupDeployment(ctx, &deployment.LookupDeploymentArgs{
+//				Name: pulumi.StringRef(_var.Deployment_name),
+//			}, nil)
+//			if err != nil {
+//				return err
+//			}
+//			return nil
+//		})
+//	}
+//
 // ```
 //
 // This is an example of how to get a vRA cloud template by its id.
@@ -45,22 +48,25 @@ import (
 // package main
 //
 // import (
-// 	"github.com/pulumi/pulumi-vra/sdk/go/vra/deployment"
-// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-// 	"github.com/pulumiverse/pulumi-vra/sdk/go/vra/deployment"
+//
+//	"github.com/pulumi/pulumi-vra/sdk/go/vra/deployment"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//	"github.com/pulumiverse/pulumi-vra/sdk/go/vra/deployment"
+//
 // )
 //
-// func main() {
-// 	pulumi.Run(func(ctx *pulumi.Context) error {
-// 		_, err := deployment.LookupDeployment(ctx, &deployment.LookupDeploymentArgs{
-// 			Id: pulumi.StringRef(_var.Deployment_id),
-// 		}, nil)
-// 		if err != nil {
-// 			return err
-// 		}
-// 		return nil
-// 	})
-// }
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			_, err := deployment.LookupDeployment(ctx, &deployment.LookupDeploymentArgs{
+//				Id: pulumi.StringRef(_var.Deployment_id),
+//			}, nil)
+//			if err != nil {
+//				return err
+//			}
+//			return nil
+//		})
+//	}
+//
 // ```
 func LookupDeployment(ctx *pulumi.Context, args *LookupDeploymentArgs, opts ...pulumi.InvokeOption) (*LookupDeploymentResult, error) {
 	opts = pkgInvokeDefaultOpts(opts)

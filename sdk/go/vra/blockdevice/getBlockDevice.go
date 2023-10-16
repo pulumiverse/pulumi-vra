@@ -14,7 +14,9 @@ import (
 //
 // page_title: "VMware vRealize Automation: blockdevice.BlockDevice"
 // description: |-
-//   Provides a data lookup for vra_block_device.
+//
+//	Provides a data lookup for vra_block_device.
+//
 // ---
 //
 // # Data Source: blockdevice.BlockDevice
@@ -32,22 +34,25 @@ import (
 // package main
 //
 // import (
-// 	"github.com/pulumi/pulumi-vra/sdk/go/vra/blockdevice"
-// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-// 	"github.com/pulumiverse/pulumi-vra/sdk/go/vra/blockdevice"
+//
+//	"github.com/pulumi/pulumi-vra/sdk/go/vra/blockdevice"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//	"github.com/pulumiverse/pulumi-vra/sdk/go/vra/blockdevice"
+//
 // )
 //
-// func main() {
-// 	pulumi.Run(func(ctx *pulumi.Context) error {
-// 		_, err := blockdevice.LookupBlockDevice(ctx, &blockdevice.LookupBlockDeviceArgs{
-// 			Id: pulumi.StringRef(_var.Block_device_id),
-// 		}, nil)
-// 		if err != nil {
-// 			return err
-// 		}
-// 		return nil
-// 	})
-// }
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			_, err := blockdevice.LookupBlockDevice(ctx, &blockdevice.LookupBlockDeviceArgs{
+//				Id: pulumi.StringRef(_var.Block_device_id),
+//			}, nil)
+//			if err != nil {
+//				return err
+//			}
+//			return nil
+//		})
+//	}
+//
 // ```
 //
 // **Block device data source filter by name:**
@@ -58,24 +63,27 @@ import (
 // package main
 //
 // import (
-// 	"fmt"
 //
-// 	"github.com/pulumi/pulumi-vra/sdk/go/vra/blockdevice"
-// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-// 	"github.com/pulumiverse/pulumi-vra/sdk/go/vra/blockdevice"
+//	"fmt"
+//
+//	"github.com/pulumi/pulumi-vra/sdk/go/vra/blockdevice"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//	"github.com/pulumiverse/pulumi-vra/sdk/go/vra/blockdevice"
+//
 // )
 //
-// func main() {
-// 	pulumi.Run(func(ctx *pulumi.Context) error {
-// 		_, err := blockdevice.LookupBlockDevice(ctx, &blockdevice.LookupBlockDeviceArgs{
-// 			Filter: pulumi.StringRef(fmt.Sprintf("name eq '%v'", _var.Block_device_name)),
-// 		}, nil)
-// 		if err != nil {
-// 			return err
-// 		}
-// 		return nil
-// 	})
-// }
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			_, err := blockdevice.LookupBlockDevice(ctx, &blockdevice.LookupBlockDeviceArgs{
+//				Filter: pulumi.StringRef(fmt.Sprintf("name eq '%v'", _var.Block_device_name)),
+//			}, nil)
+//			if err != nil {
+//				return err
+//			}
+//			return nil
+//		})
+//	}
+//
 // ```
 func LookupBlockDevice(ctx *pulumi.Context, args *LookupBlockDeviceArgs, opts ...pulumi.InvokeOption) (*LookupBlockDeviceResult, error) {
 	opts = pkgInvokeDefaultOpts(opts)

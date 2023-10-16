@@ -19,7 +19,7 @@ type ZoneLink struct {
 // ZoneLinkInput is an input type that accepts ZoneLinkArgs and ZoneLinkOutput values.
 // You can construct a concrete instance of `ZoneLinkInput` via:
 //
-//          ZoneLinkArgs{...}
+//	ZoneLinkArgs{...}
 type ZoneLinkInput interface {
 	pulumi.Input
 
@@ -48,7 +48,7 @@ func (i ZoneLinkArgs) ToZoneLinkOutputWithContext(ctx context.Context) ZoneLinkO
 // ZoneLinkArrayInput is an input type that accepts ZoneLinkArray and ZoneLinkArrayOutput values.
 // You can construct a concrete instance of `ZoneLinkArrayInput` via:
 //
-//          ZoneLinkArray{ ZoneLinkArgs{...} }
+//	ZoneLinkArray{ ZoneLinkArgs{...} }
 type ZoneLinkArrayInput interface {
 	pulumi.Input
 
@@ -126,7 +126,7 @@ type ZoneTag struct {
 // ZoneTagInput is an input type that accepts ZoneTagArgs and ZoneTagOutput values.
 // You can construct a concrete instance of `ZoneTagInput` via:
 //
-//          ZoneTagArgs{...}
+//	ZoneTagArgs{...}
 type ZoneTagInput interface {
 	pulumi.Input
 
@@ -156,7 +156,7 @@ func (i ZoneTagArgs) ToZoneTagOutputWithContext(ctx context.Context) ZoneTagOutp
 // ZoneTagArrayInput is an input type that accepts ZoneTagArray and ZoneTagArrayOutput values.
 // You can construct a concrete instance of `ZoneTagArrayInput` via:
 //
-//          ZoneTagArray{ ZoneTagArgs{...} }
+//	ZoneTagArray{ ZoneTagArgs{...} }
 type ZoneTagArrayInput interface {
 	pulumi.Input
 
@@ -232,7 +232,7 @@ type ZoneTagsToMatch struct {
 // ZoneTagsToMatchInput is an input type that accepts ZoneTagsToMatchArgs and ZoneTagsToMatchOutput values.
 // You can construct a concrete instance of `ZoneTagsToMatchInput` via:
 //
-//          ZoneTagsToMatchArgs{...}
+//	ZoneTagsToMatchArgs{...}
 type ZoneTagsToMatchInput interface {
 	pulumi.Input
 
@@ -262,7 +262,7 @@ func (i ZoneTagsToMatchArgs) ToZoneTagsToMatchOutputWithContext(ctx context.Cont
 // ZoneTagsToMatchArrayInput is an input type that accepts ZoneTagsToMatchArray and ZoneTagsToMatchArrayOutput values.
 // You can construct a concrete instance of `ZoneTagsToMatchArrayInput` via:
 //
-//          ZoneTagsToMatchArray{ ZoneTagsToMatchArgs{...} }
+//	ZoneTagsToMatchArray{ ZoneTagsToMatchArgs{...} }
 type ZoneTagsToMatchArrayInput interface {
 	pulumi.Input
 
@@ -337,7 +337,7 @@ type GetZoneLink struct {
 // GetZoneLinkInput is an input type that accepts GetZoneLinkArgs and GetZoneLinkOutput values.
 // You can construct a concrete instance of `GetZoneLinkInput` via:
 //
-//          GetZoneLinkArgs{...}
+//	GetZoneLinkArgs{...}
 type GetZoneLinkInput interface {
 	pulumi.Input
 
@@ -366,7 +366,7 @@ func (i GetZoneLinkArgs) ToGetZoneLinkOutputWithContext(ctx context.Context) Get
 // GetZoneLinkArrayInput is an input type that accepts GetZoneLinkArray and GetZoneLinkArrayOutput values.
 // You can construct a concrete instance of `GetZoneLinkArrayInput` via:
 //
-//          GetZoneLinkArray{ GetZoneLinkArgs{...} }
+//	GetZoneLinkArray{ GetZoneLinkArgs{...} }
 type GetZoneLinkArrayInput interface {
 	pulumi.Input
 
@@ -444,7 +444,7 @@ type GetZoneTag struct {
 // GetZoneTagInput is an input type that accepts GetZoneTagArgs and GetZoneTagOutput values.
 // You can construct a concrete instance of `GetZoneTagInput` via:
 //
-//          GetZoneTagArgs{...}
+//	GetZoneTagArgs{...}
 type GetZoneTagInput interface {
 	pulumi.Input
 
@@ -474,7 +474,7 @@ func (i GetZoneTagArgs) ToGetZoneTagOutputWithContext(ctx context.Context) GetZo
 // GetZoneTagArrayInput is an input type that accepts GetZoneTagArray and GetZoneTagArrayOutput values.
 // You can construct a concrete instance of `GetZoneTagArrayInput` via:
 //
-//          GetZoneTagArray{ GetZoneTagArgs{...} }
+//	GetZoneTagArray{ GetZoneTagArgs{...} }
 type GetZoneTagArrayInput interface {
 	pulumi.Input
 
@@ -550,7 +550,7 @@ type GetZoneTagsToMatch struct {
 // GetZoneTagsToMatchInput is an input type that accepts GetZoneTagsToMatchArgs and GetZoneTagsToMatchOutput values.
 // You can construct a concrete instance of `GetZoneTagsToMatchInput` via:
 //
-//          GetZoneTagsToMatchArgs{...}
+//	GetZoneTagsToMatchArgs{...}
 type GetZoneTagsToMatchInput interface {
 	pulumi.Input
 
@@ -580,7 +580,7 @@ func (i GetZoneTagsToMatchArgs) ToGetZoneTagsToMatchOutputWithContext(ctx contex
 // GetZoneTagsToMatchArrayInput is an input type that accepts GetZoneTagsToMatchArray and GetZoneTagsToMatchArrayOutput values.
 // You can construct a concrete instance of `GetZoneTagsToMatchArrayInput` via:
 //
-//          GetZoneTagsToMatchArray{ GetZoneTagsToMatchArgs{...} }
+//	GetZoneTagsToMatchArray{ GetZoneTagsToMatchArgs{...} }
 type GetZoneTagsToMatchArrayInput interface {
 	pulumi.Input
 

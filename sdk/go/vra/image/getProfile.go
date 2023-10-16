@@ -20,22 +20,25 @@ import (
 // package main
 //
 // import (
-// 	"github.com/pulumi/pulumi-vra/sdk/go/vra/image"
-// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-// 	"github.com/pulumiverse/pulumi-vra/sdk/go/vra/image"
+//
+//	"github.com/pulumi/pulumi-vra/sdk/go/vra/image"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//	"github.com/pulumiverse/pulumi-vra/sdk/go/vra/image"
+//
 // )
 //
-// func main() {
-// 	pulumi.Run(func(ctx *pulumi.Context) error {
-// 		_, err := image.LookupProfile(ctx, &image.LookupProfileArgs{
-// 			Filter: pulumi.StringRef("name eq 'foobar'"),
-// 		}, nil)
-// 		if err != nil {
-// 			return err
-// 		}
-// 		return nil
-// 	})
-// }
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			_, err := image.LookupProfile(ctx, &image.LookupProfileArgs{
+//				Filter: pulumi.StringRef("name eq 'foobar'"),
+//			}, nil)
+//			if err != nil {
+//				return err
+//			}
+//			return nil
+//		})
+//	}
+//
 // ```
 //
 // **Vra image profile data source filter by region id:**
@@ -44,22 +47,25 @@ import (
 // package main
 //
 // import (
-// 	"github.com/pulumi/pulumi-vra/sdk/go/vra/image"
-// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-// 	"github.com/pulumiverse/pulumi-vra/sdk/go/vra/image"
+//
+//	"github.com/pulumi/pulumi-vra/sdk/go/vra/image"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//	"github.com/pulumiverse/pulumi-vra/sdk/go/vra/image"
+//
 // )
 //
-// func main() {
-// 	pulumi.Run(func(ctx *pulumi.Context) error {
-// 		_, err := image.LookupProfile(ctx, &image.LookupProfileArgs{
-// 			RegionId: pulumi.StringRef(vra_image_profile.This.Region_id),
-// 		}, nil)
-// 		if err != nil {
-// 			return err
-// 		}
-// 		return nil
-// 	})
-// }
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			_, err := image.LookupProfile(ctx, &image.LookupProfileArgs{
+//				RegionId: pulumi.StringRef(vra_image_profile.This.Region_id),
+//			}, nil)
+//			if err != nil {
+//				return err
+//			}
+//			return nil
+//		})
+//	}
+//
 // ```
 //
 // An image profile data source supports the following arguments:

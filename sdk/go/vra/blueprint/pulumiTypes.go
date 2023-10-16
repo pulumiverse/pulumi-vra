@@ -21,7 +21,7 @@ type BlueprintValidationMessage struct {
 // BlueprintValidationMessageInput is an input type that accepts BlueprintValidationMessageArgs and BlueprintValidationMessageOutput values.
 // You can construct a concrete instance of `BlueprintValidationMessageInput` via:
 //
-//          BlueprintValidationMessageArgs{...}
+//	BlueprintValidationMessageArgs{...}
 type BlueprintValidationMessageInput interface {
 	pulumi.Input
 
@@ -52,7 +52,7 @@ func (i BlueprintValidationMessageArgs) ToBlueprintValidationMessageOutputWithCo
 // BlueprintValidationMessageArrayInput is an input type that accepts BlueprintValidationMessageArray and BlueprintValidationMessageArrayOutput values.
 // You can construct a concrete instance of `BlueprintValidationMessageArrayInput` via:
 //
-//          BlueprintValidationMessageArray{ BlueprintValidationMessageArgs{...} }
+//	BlueprintValidationMessageArray{ BlueprintValidationMessageArgs{...} }
 type BlueprintValidationMessageArrayInput interface {
 	pulumi.Input
 
@@ -139,7 +139,7 @@ type GetBlueprintValidationMessage struct {
 // GetBlueprintValidationMessageInput is an input type that accepts GetBlueprintValidationMessageArgs and GetBlueprintValidationMessageOutput values.
 // You can construct a concrete instance of `GetBlueprintValidationMessageInput` via:
 //
-//          GetBlueprintValidationMessageArgs{...}
+//	GetBlueprintValidationMessageArgs{...}
 type GetBlueprintValidationMessageInput interface {
 	pulumi.Input
 
@@ -170,7 +170,7 @@ func (i GetBlueprintValidationMessageArgs) ToGetBlueprintValidationMessageOutput
 // GetBlueprintValidationMessageArrayInput is an input type that accepts GetBlueprintValidationMessageArray and GetBlueprintValidationMessageArrayOutput values.
 // You can construct a concrete instance of `GetBlueprintValidationMessageArrayInput` via:
 //
-//          GetBlueprintValidationMessageArray{ GetBlueprintValidationMessageArgs{...} }
+//	GetBlueprintValidationMessageArray{ GetBlueprintValidationMessageArgs{...} }
 type GetBlueprintValidationMessageArrayInput interface {
 	pulumi.Input
 

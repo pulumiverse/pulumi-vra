@@ -14,7 +14,9 @@ import (
 //
 // page_title: "VMware vRealize Automation: machine.Machine"
 // description: |-
-//   Provides a data lookup for vra_machine.
+//
+//	Provides a data lookup for vra_machine.
+//
 // ---
 //
 // # Data Source: machine.Machine
@@ -27,22 +29,25 @@ import (
 // package main
 //
 // import (
-// 	"github.com/pulumi/pulumi-vra/sdk/go/vra/machine"
-// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-// 	"github.com/pulumiverse/pulumi-vra/sdk/go/vra/machine"
+//
+//	"github.com/pulumi/pulumi-vra/sdk/go/vra/machine"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//	"github.com/pulumiverse/pulumi-vra/sdk/go/vra/machine"
+//
 // )
 //
-// func main() {
-// 	pulumi.Run(func(ctx *pulumi.Context) error {
-// 		_, err := machine.LookupMachine(ctx, &machine.LookupMachineArgs{
-// 			Id: pulumi.StringRef(_var.My_machine_id),
-// 		}, nil)
-// 		if err != nil {
-// 			return err
-// 		}
-// 		return nil
-// 	})
-// }
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			_, err := machine.LookupMachine(ctx, &machine.LookupMachineArgs{
+//				Id: pulumi.StringRef(_var.My_machine_id),
+//			}, nil)
+//			if err != nil {
+//				return err
+//			}
+//			return nil
+//		})
+//	}
+//
 // ```
 //
 // **Machine data source filter by name:**
@@ -50,24 +55,27 @@ import (
 // package main
 //
 // import (
-// 	"fmt"
 //
-// 	"github.com/pulumi/pulumi-vra/sdk/go/vra/machine"
-// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-// 	"github.com/pulumiverse/pulumi-vra/sdk/go/vra/machine"
+//	"fmt"
+//
+//	"github.com/pulumi/pulumi-vra/sdk/go/vra/machine"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//	"github.com/pulumiverse/pulumi-vra/sdk/go/vra/machine"
+//
 // )
 //
-// func main() {
-// 	pulumi.Run(func(ctx *pulumi.Context) error {
-// 		_, err := machine.LookupMachine(ctx, &machine.LookupMachineArgs{
-// 			Filter: pulumi.StringRef(fmt.Sprintf("name eq '%v'", _var.Machine_name)),
-// 		}, nil)
-// 		if err != nil {
-// 			return err
-// 		}
-// 		return nil
-// 	})
-// }
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			_, err := machine.LookupMachine(ctx, &machine.LookupMachineArgs{
+//				Filter: pulumi.StringRef(fmt.Sprintf("name eq '%v'", _var.Machine_name)),
+//			}, nil)
+//			if err != nil {
+//				return err
+//			}
+//			return nil
+//		})
+//	}
+//
 // ```
 func LookupMachine(ctx *pulumi.Context, args *LookupMachineArgs, opts ...pulumi.InvokeOption) (*LookupMachineResult, error) {
 	opts = pkgInvokeDefaultOpts(opts)

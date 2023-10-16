@@ -23,22 +23,25 @@ import (
 // package main
 //
 // import (
-// 	"github.com/pulumi/pulumi-vra/sdk/go/vra/cloudaccount"
-// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-// 	"github.com/pulumiverse/pulumi-vra/sdk/go/vra/cloudaccount"
+//
+//	"github.com/pulumi/pulumi-vra/sdk/go/vra/cloudaccount"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//	"github.com/pulumiverse/pulumi-vra/sdk/go/vra/cloudaccount"
+//
 // )
 //
-// func main() {
-// 	pulumi.Run(func(ctx *pulumi.Context) error {
-// 		_, err := cloudaccount.LookupVmc(ctx, &cloudaccount.LookupVmcArgs{
-// 			Id: pulumi.StringRef(_var.Vra_cloud_account_vmc_id),
-// 		}, nil)
-// 		if err != nil {
-// 			return err
-// 		}
-// 		return nil
-// 	})
-// }
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			_, err := cloudaccount.LookupVmc(ctx, &cloudaccount.LookupVmcArgs{
+//				Id: pulumi.StringRef(_var.Vra_cloud_account_vmc_id),
+//			}, nil)
+//			if err != nil {
+//				return err
+//			}
+//			return nil
+//		})
+//	}
+//
 // ```
 //
 // **vmc cloud account data source by its name:**
@@ -49,22 +52,25 @@ import (
 // package main
 //
 // import (
-// 	"github.com/pulumi/pulumi-vra/sdk/go/vra/cloudaccount"
-// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-// 	"github.com/pulumiverse/pulumi-vra/sdk/go/vra/cloudaccount"
+//
+//	"github.com/pulumi/pulumi-vra/sdk/go/vra/cloudaccount"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//	"github.com/pulumiverse/pulumi-vra/sdk/go/vra/cloudaccount"
+//
 // )
 //
-// func main() {
-// 	pulumi.Run(func(ctx *pulumi.Context) error {
-// 		_, err := cloudaccount.LookupVmc(ctx, &cloudaccount.LookupVmcArgs{
-// 			Name: pulumi.StringRef(_var.Vra_cloud_account_vmc_name),
-// 		}, nil)
-// 		if err != nil {
-// 			return err
-// 		}
-// 		return nil
-// 	})
-// }
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			_, err := cloudaccount.LookupVmc(ctx, &cloudaccount.LookupVmcArgs{
+//				Name: pulumi.StringRef(_var.Vra_cloud_account_vmc_name),
+//			}, nil)
+//			if err != nil {
+//				return err
+//			}
+//			return nil
+//		})
+//	}
+//
 // ```
 func LookupVmc(ctx *pulumi.Context, args *LookupVmcArgs, opts ...pulumi.InvokeOption) (*LookupVmcResult, error) {
 	opts = pkgInvokeDefaultOpts(opts)

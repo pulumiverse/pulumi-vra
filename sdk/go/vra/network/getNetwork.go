@@ -14,7 +14,9 @@ import (
 //
 // page_title: "VMware vRealize Automation: network.Network"
 // description: |-
-//   Provides a data lookup for vra_network.
+//
+//	Provides a data lookup for vra_network.
+//
 // ---
 //
 // # Data Source: network.Network
@@ -27,22 +29,25 @@ import (
 // package main
 //
 // import (
-// 	"github.com/pulumi/pulumi-vra/sdk/go/vra/network"
-// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-// 	"github.com/pulumiverse/pulumi-vra/sdk/go/vra/network"
+//
+//	"github.com/pulumi/pulumi-vra/sdk/go/vra/network"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//	"github.com/pulumiverse/pulumi-vra/sdk/go/vra/network"
+//
 // )
 //
-// func main() {
-// 	pulumi.Run(func(ctx *pulumi.Context) error {
-// 		_, err := network.LookupNetwork(ctx, &network.LookupNetworkArgs{
-// 			Name: pulumi.StringRef(_var.Network_name),
-// 		}, nil)
-// 		if err != nil {
-// 			return err
-// 		}
-// 		return nil
-// 	})
-// }
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			_, err := network.LookupNetwork(ctx, &network.LookupNetworkArgs{
+//				Name: pulumi.StringRef(_var.Network_name),
+//			}, nil)
+//			if err != nil {
+//				return err
+//			}
+//			return nil
+//		})
+//	}
+//
 // ```
 func LookupNetwork(ctx *pulumi.Context, args *LookupNetworkArgs, opts ...pulumi.InvokeOption) (*LookupNetworkResult, error) {
 	opts = pkgInvokeDefaultOpts(opts)

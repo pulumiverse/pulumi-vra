@@ -21,22 +21,25 @@ import (
 // package main
 //
 // import (
-// 	"github.com/pulumi/pulumi-vra/sdk/go/vra/blueprint"
-// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-// 	"github.com/pulumiverse/pulumi-vra/sdk/go/vra/blueprint"
+//
+//	"github.com/pulumi/pulumi-vra/sdk/go/vra/blueprint"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//	"github.com/pulumiverse/pulumi-vra/sdk/go/vra/blueprint"
+//
 // )
 //
-// func main() {
-// 	pulumi.Run(func(ctx *pulumi.Context) error {
-// 		_, err := blueprint.LookupBlueprint(ctx, &blueprint.LookupBlueprintArgs{
-// 			Name: pulumi.StringRef(vra_blueprint.This.Name),
-// 		}, nil)
-// 		if err != nil {
-// 			return err
-// 		}
-// 		return nil
-// 	})
-// }
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			_, err := blueprint.LookupBlueprint(ctx, &blueprint.LookupBlueprintArgs{
+//				Name: pulumi.StringRef(vra_blueprint.This.Name),
+//			}, nil)
+//			if err != nil {
+//				return err
+//			}
+//			return nil
+//		})
+//	}
+//
 // ```
 //
 // This is an example of how to get a vRA cloud template by its id.
@@ -45,22 +48,25 @@ import (
 // package main
 //
 // import (
-// 	"github.com/pulumi/pulumi-vra/sdk/go/vra/blueprint"
-// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-// 	"github.com/pulumiverse/pulumi-vra/sdk/go/vra/blueprint"
+//
+//	"github.com/pulumi/pulumi-vra/sdk/go/vra/blueprint"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//	"github.com/pulumiverse/pulumi-vra/sdk/go/vra/blueprint"
+//
 // )
 //
-// func main() {
-// 	pulumi.Run(func(ctx *pulumi.Context) error {
-// 		_, err := blueprint.LookupBlueprint(ctx, &blueprint.LookupBlueprintArgs{
-// 			Id: pulumi.StringRef(vra_blueprint.This.Id),
-// 		}, nil)
-// 		if err != nil {
-// 			return err
-// 		}
-// 		return nil
-// 	})
-// }
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			_, err := blueprint.LookupBlueprint(ctx, &blueprint.LookupBlueprintArgs{
+//				Id: pulumi.StringRef(vra_blueprint.This.Id),
+//			}, nil)
+//			if err != nil {
+//				return err
+//			}
+//			return nil
+//		})
+//	}
+//
 // ```
 func LookupBlueprint(ctx *pulumi.Context, args *LookupBlueprintArgs, opts ...pulumi.InvokeOption) (*LookupBlueprintResult, error) {
 	opts = pkgInvokeDefaultOpts(opts)

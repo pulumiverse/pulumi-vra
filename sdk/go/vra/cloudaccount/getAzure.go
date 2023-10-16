@@ -23,22 +23,25 @@ import (
 // package main
 //
 // import (
-// 	"github.com/pulumi/pulumi-vra/sdk/go/vra/cloudaccount"
-// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-// 	"github.com/pulumiverse/pulumi-vra/sdk/go/vra/cloudaccount"
+//
+//	"github.com/pulumi/pulumi-vra/sdk/go/vra/cloudaccount"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//	"github.com/pulumiverse/pulumi-vra/sdk/go/vra/cloudaccount"
+//
 // )
 //
-// func main() {
-// 	pulumi.Run(func(ctx *pulumi.Context) error {
-// 		_, err := cloudaccount.LookupAzure(ctx, &cloudaccount.LookupAzureArgs{
-// 			Id: pulumi.StringRef(_var.Vra_cloud_account_azure_id),
-// 		}, nil)
-// 		if err != nil {
-// 			return err
-// 		}
-// 		return nil
-// 	})
-// }
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			_, err := cloudaccount.LookupAzure(ctx, &cloudaccount.LookupAzureArgs{
+//				Id: pulumi.StringRef(_var.Vra_cloud_account_azure_id),
+//			}, nil)
+//			if err != nil {
+//				return err
+//			}
+//			return nil
+//		})
+//	}
+//
 // ```
 //
 // **Azure cloud account data source by its name:**
@@ -49,22 +52,25 @@ import (
 // package main
 //
 // import (
-// 	"github.com/pulumi/pulumi-vra/sdk/go/vra/cloudaccount"
-// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-// 	"github.com/pulumiverse/pulumi-vra/sdk/go/vra/cloudaccount"
+//
+//	"github.com/pulumi/pulumi-vra/sdk/go/vra/cloudaccount"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//	"github.com/pulumiverse/pulumi-vra/sdk/go/vra/cloudaccount"
+//
 // )
 //
-// func main() {
-// 	pulumi.Run(func(ctx *pulumi.Context) error {
-// 		_, err := cloudaccount.LookupAzure(ctx, &cloudaccount.LookupAzureArgs{
-// 			Name: pulumi.StringRef(_var.Vra_cloud_account_azure_name),
-// 		}, nil)
-// 		if err != nil {
-// 			return err
-// 		}
-// 		return nil
-// 	})
-// }
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			_, err := cloudaccount.LookupAzure(ctx, &cloudaccount.LookupAzureArgs{
+//				Name: pulumi.StringRef(_var.Vra_cloud_account_azure_name),
+//			}, nil)
+//			if err != nil {
+//				return err
+//			}
+//			return nil
+//		})
+//	}
+//
 // ```
 func LookupAzure(ctx *pulumi.Context, args *LookupAzureArgs, opts ...pulumi.InvokeOption) (*LookupAzureResult, error) {
 	opts = pkgInvokeDefaultOpts(opts)

@@ -20,64 +20,67 @@ import (
 // package main
 //
 // import (
-// 	"fmt"
 //
-// 	"github.com/pulumi/pulumi-vra/sdk/go/vra/cloudaccount"
-// 	"github.com/pulumi/pulumi-vra/sdk/go/vra/image"
-// 	"github.com/pulumi/pulumi-vra/sdk/go/vra/region"
-// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-// 	"github.com/pulumiverse/pulumi-vra/sdk/go/vra/cloudaccount"
-// 	"github.com/pulumiverse/pulumi-vra/sdk/go/vra/image"
-// 	"github.com/pulumiverse/pulumi-vra/sdk/go/vra/region"
+//	"fmt"
+//
+//	"github.com/pulumi/pulumi-vra/sdk/go/vra/cloudaccount"
+//	"github.com/pulumi/pulumi-vra/sdk/go/vra/image"
+//	"github.com/pulumi/pulumi-vra/sdk/go/vra/region"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//	"github.com/pulumiverse/pulumi-vra/sdk/go/vra/cloudaccount"
+//	"github.com/pulumiverse/pulumi-vra/sdk/go/vra/image"
+//	"github.com/pulumiverse/pulumi-vra/sdk/go/vra/region"
+//
 // )
 //
-// func main() {
-// 	pulumi.Run(func(ctx *pulumi.Context) error {
-// 		thisVSphere, err := cloudaccount.LookupVSphere(ctx, &cloudaccount.LookupVSphereArgs{
-// 			Name: pulumi.StringRef(_var.Cloud_account),
-// 		}, nil)
-// 		if err != nil {
-// 			return err
-// 		}
-// 		thisRegion, err := region.GetRegion(ctx, &region.GetRegionArgs{
-// 			CloudAccountId: pulumi.StringRef(thisVSphere.Id),
-// 			Region:         pulumi.StringRef(_var.Region),
-// 		}, nil)
-// 		if err != nil {
-// 			return err
-// 		}
-// 		image0, err := image.GetImage(ctx, &image.GetImageArgs{
-// 			Filter: fmt.Sprintf("name eq '%v' and cloudAccountId eq '%v' and externalRegionId eq '%v'", _var.Image_name_0, thisVSphere.Id, _var.Region),
-// 		}, nil)
-// 		if err != nil {
-// 			return err
-// 		}
-// 		image1, err := image.GetImage(ctx, &image.GetImageArgs{
-// 			Filter: fmt.Sprintf("name eq '%v' and cloudAccountId eq '%v' and externalRegionId eq '%v'", _var.Image_name_1, thisVSphere.Id, _var.Region),
-// 		}, nil)
-// 		if err != nil {
-// 			return err
-// 		}
-// 		_, err = image.NewProfile(ctx, "thisProfile", &image.ProfileArgs{
-// 			Description: pulumi.Any(_var.Image_profile_description),
-// 			RegionId:    pulumi.String(thisRegion.Id),
-// 			ImageMappings: image.ProfileImageMappingArray{
-// 				&image.ProfileImageMappingArgs{
-// 					Name:    pulumi.Any(_var.Image_name_0),
-// 					ImageId: pulumi.String(image0.Id),
-// 				},
-// 				&image.ProfileImageMappingArgs{
-// 					Name:    pulumi.Any(_var.Image_name_1),
-// 					ImageId: pulumi.String(image1.Id),
-// 				},
-// 			},
-// 		})
-// 		if err != nil {
-// 			return err
-// 		}
-// 		return nil
-// 	})
-// }
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			thisVSphere, err := cloudaccount.LookupVSphere(ctx, &cloudaccount.LookupVSphereArgs{
+//				Name: pulumi.StringRef(_var.Cloud_account),
+//			}, nil)
+//			if err != nil {
+//				return err
+//			}
+//			thisRegion, err := region.GetRegion(ctx, &region.GetRegionArgs{
+//				CloudAccountId: pulumi.StringRef(thisVSphere.Id),
+//				Region:         pulumi.StringRef(_var.Region),
+//			}, nil)
+//			if err != nil {
+//				return err
+//			}
+//			image0, err := image.GetImage(ctx, &image.GetImageArgs{
+//				Filter: fmt.Sprintf("name eq '%v' and cloudAccountId eq '%v' and externalRegionId eq '%v'", _var.Image_name_0, thisVSphere.Id, _var.Region),
+//			}, nil)
+//			if err != nil {
+//				return err
+//			}
+//			image1, err := image.GetImage(ctx, &image.GetImageArgs{
+//				Filter: fmt.Sprintf("name eq '%v' and cloudAccountId eq '%v' and externalRegionId eq '%v'", _var.Image_name_1, thisVSphere.Id, _var.Region),
+//			}, nil)
+//			if err != nil {
+//				return err
+//			}
+//			_, err = image.NewProfile(ctx, "thisProfile", &image.ProfileArgs{
+//				Description: pulumi.Any(_var.Image_profile_description),
+//				RegionId:    pulumi.String(thisRegion.Id),
+//				ImageMappings: image.ProfileImageMappingArray{
+//					&image.ProfileImageMappingArgs{
+//						Name:    pulumi.Any(_var.Image_name_0),
+//						ImageId: pulumi.String(image0.Id),
+//					},
+//					&image.ProfileImageMappingArgs{
+//						Name:    pulumi.Any(_var.Image_name_1),
+//						ImageId: pulumi.String(image1.Id),
+//					},
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			return nil
+//		})
+//	}
+//
 // ```
 func GetImage(ctx *pulumi.Context, args *GetImageArgs, opts ...pulumi.InvokeOption) (*GetImageResult, error) {
 	opts = pkgInvokeDefaultOpts(opts)

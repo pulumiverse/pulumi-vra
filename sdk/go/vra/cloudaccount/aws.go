@@ -22,42 +22,47 @@ import (
 // package main
 //
 // import (
-// 	"github.com/pulumi/pulumi-vra/sdk/go/vra/cloudaccount"
-// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-// 	"github.com/pulumiverse/pulumi-vra/sdk/go/vra/cloudaccount"
+//
+//	"github.com/pulumi/pulumi-vra/sdk/go/vra/cloudaccount"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//	"github.com/pulumiverse/pulumi-vra/sdk/go/vra/cloudaccount"
+//
 // )
 //
-// func main() {
-// 	pulumi.Run(func(ctx *pulumi.Context) error {
-// 		_, err := cloudaccount.NewAws(ctx, "this", &cloudaccount.AwsArgs{
-// 			Description: pulumi.String("terraform test cloud account aws"),
-// 			AccessKey:   pulumi.Any(_var.Access_key),
-// 			SecretKey:   pulumi.Any(_var.Secret_key),
-// 			Regions: pulumi.StringArray{
-// 				pulumi.String("us-east-1"),
-// 				pulumi.String("us-west-1"),
-// 			},
-// 			Tags: cloudaccount.AwsTagArray{
-// 				&cloudaccount.AwsTagArgs{
-// 					Key:   pulumi.String("foo"),
-// 					Value: pulumi.String("bar"),
-// 				},
-// 			},
-// 		})
-// 		if err != nil {
-// 			return err
-// 		}
-// 		return nil
-// 	})
-// }
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			_, err := cloudaccount.NewAws(ctx, "this", &cloudaccount.AwsArgs{
+//				Description: pulumi.String("terraform test cloud account aws"),
+//				AccessKey:   pulumi.Any(_var.Access_key),
+//				SecretKey:   pulumi.Any(_var.Secret_key),
+//				Regions: pulumi.StringArray{
+//					pulumi.String("us-east-1"),
+//					pulumi.String("us-west-1"),
+//				},
+//				Tags: cloudaccount.AwsTagArray{
+//					&cloudaccount.AwsTagArgs{
+//						Key:   pulumi.String("foo"),
+//						Value: pulumi.String("bar"),
+//					},
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			return nil
+//		})
+//	}
+//
 // ```
 //
 // ## Import
 //
-// To import the AWS cloud account, use the ID as in the following example
+// # To import the AWS cloud account, use the ID as in the following example
 //
 // ```sh
-//  $ pulumi import vra:cloudaccount/aws:Aws new_aws 05956583-6488-4e7d-84c9-92a7b7219a15`
+//
+//	$ pulumi import vra:cloudaccount/aws:Aws new_aws 05956583-6488-4e7d-84c9-92a7b7219a15`
+//
 // ```
 type Aws struct {
 	pulumi.CustomResourceState
@@ -240,7 +245,7 @@ func (i *Aws) ToAwsOutputWithContext(ctx context.Context) AwsOutput {
 // AwsArrayInput is an input type that accepts AwsArray and AwsArrayOutput values.
 // You can construct a concrete instance of `AwsArrayInput` via:
 //
-//          AwsArray{ AwsArgs{...} }
+//	AwsArray{ AwsArgs{...} }
 type AwsArrayInput interface {
 	pulumi.Input
 
@@ -265,7 +270,7 @@ func (i AwsArray) ToAwsArrayOutputWithContext(ctx context.Context) AwsArrayOutpu
 // AwsMapInput is an input type that accepts AwsMap and AwsMapOutput values.
 // You can construct a concrete instance of `AwsMapInput` via:
 //
-//          AwsMap{ "key": AwsArgs{...} }
+//	AwsMap{ "key": AwsArgs{...} }
 type AwsMapInput interface {
 	pulumi.Input
 

@@ -20,22 +20,25 @@ import (
 // package main
 //
 // import (
-// 	"github.com/pulumi/pulumi-vra/sdk/go/vra/storageprofile"
-// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-// 	"github.com/pulumiverse/pulumi-vra/sdk/go/vra/storageprofile"
+//
+//	"github.com/pulumi/pulumi-vra/sdk/go/vra/storageprofile"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//	"github.com/pulumiverse/pulumi-vra/sdk/go/vra/storageprofile"
+//
 // )
 //
-// func main() {
-// 	pulumi.Run(func(ctx *pulumi.Context) error {
-// 		_, err := storageprofile.LookupAws(ctx, &storageprofile.LookupAwsArgs{
-// 			Id: pulumi.StringRef(vra_storage_profile_aws.This.Id),
-// 		}, nil)
-// 		if err != nil {
-// 			return err
-// 		}
-// 		return nil
-// 	})
-// }
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			_, err := storageprofile.LookupAws(ctx, &storageprofile.LookupAwsArgs{
+//				Id: pulumi.StringRef(vra_storage_profile_aws.This.Id),
+//			}, nil)
+//			if err != nil {
+//				return err
+//			}
+//			return nil
+//		})
+//	}
+//
 // ```
 //
 // **Vra storage profile data source filter by external region id:**
@@ -44,22 +47,25 @@ import (
 // package main
 //
 // import (
-// 	"github.com/pulumi/pulumi-vra/sdk/go/vra/storageprofile"
-// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-// 	"github.com/pulumiverse/pulumi-vra/sdk/go/vra/storageprofile"
+//
+//	"github.com/pulumi/pulumi-vra/sdk/go/vra/storageprofile"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//	"github.com/pulumiverse/pulumi-vra/sdk/go/vra/storageprofile"
+//
 // )
 //
-// func main() {
-// 	pulumi.Run(func(ctx *pulumi.Context) error {
-// 		_, err := storageprofile.LookupAws(ctx, &storageprofile.LookupAwsArgs{
-// 			Filter: pulumi.StringRef("externalRegionId eq 'foobar'"),
-// 		}, nil)
-// 		if err != nil {
-// 			return err
-// 		}
-// 		return nil
-// 	})
-// }
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			_, err := storageprofile.LookupAws(ctx, &storageprofile.LookupAwsArgs{
+//				Filter: pulumi.StringRef("externalRegionId eq 'foobar'"),
+//			}, nil)
+//			if err != nil {
+//				return err
+//			}
+//			return nil
+//		})
+//	}
+//
 // ```
 //
 // A storage profile aws data source supports the following arguments:
