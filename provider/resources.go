@@ -43,26 +43,26 @@ func Provider() tfbridge.ProviderInfo {
 	cf := vraP.ConfigureFunc
 	vraP.ConfigureFunc = func(d *schema.ResourceData) (interface{}, error) {
 		// override vra configuration cache, cache includes
-		// - access_token (access token for API operations) with env var VMWARE_VRA_ACCESS_TOKEN
-		// - refresh_token (refresh token for API operations) with env var VMWARE_VRA_REFRESH_TOKEN
-		// - url (base url for API operations) with env var VMWARE_VRA_URL
-		// - reauthorizeTimeout (timeout for how often to reauthorize the access token) with env var VMWARE_VRA_REAUTHORIZE_TIMEOUT
-		envAccessToken := os.Getenv("VMWARE_VRA_ACCESS_TOKEN")
+		// - access_token (access token for API operations) with env var VRA_ACCESS_TOKEN
+		// - refresh_token (refresh token for API operations) with env var VRA_REFRESH_TOKEN
+		// - url (base url for API operations) with env var VRA_URL
+		// - reauthorizeTimeout (timeout for how often to reauthorize the access token) with env var VRA7_REAUTHORIZE_TIMEOUT
+		envAccessToken := os.Getenv("VRA_ACCESS_TOKEN")
 		if len(envAccessToken) != 0 {
 			d.Set("access_token", envAccessToken)
 		}
 
-		envRefreshToken := os.Getenv("VMWARE_VRA_REFRESH_TOKEN")
+		envRefreshToken := os.Getenv("VRA_REFRESH_TOKEN")
 		if len(envRefreshToken) != 0 {
 			d.Set("refresh_token", envRefreshToken)
 		}
 
-		envURL := os.Getenv("VMWARE_VRA_URL")
+		envURL := os.Getenv("VRA_URL")
 		if len(envURL) != 0 {
 			d.Set("url", envURL)
 		}
 
-		envReauthorizeTimeout := os.Getenv("VMWARE_VRA_REAUTHORIZE_TIMEOUT")
+		envReauthorizeTimeout := os.Getenv("VRA7_REAUTHORIZE_TIMEOUT")
 		if len(envReauthorizeTimeout) != 0 {
 			d.Set("reauthorize_timeout", envReauthorizeTimeout)
 		}

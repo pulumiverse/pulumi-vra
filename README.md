@@ -6,10 +6,10 @@ The VRA Resource Provider lets you manage [VRA](https://www.vmware.com/products/
 
 The following configurations are overridable via env vars:
 
-- access_token (access token for API operations) with env var VMWARE_VRA_ACCESS_TOKEN
-- refresh_token (refresh token for API operations) with env var VMWARE_VRA_REFRESH_TOKEN
-- url (base url for API operations) with env var VMWARE_VRA_URL
-- reauthorizeTimeout (timeout for how often to reauthorize the access token) with env var VMWARE_VRA_REAUTHORIZE_TIMEOUT
+- access_token (access token for API operations) with env var VRA_ACCESS_TOKEN
+- refresh_token (refresh token for API operations) with env var VRA_REFRESH_TOKEN
+- url (base url for API operations) with env var VRA_URL
+- reauthorizeTimeout (timeout for how often to reauthorize the access token) with env var VRA7_REAUTHORIZE_TIMEOUT
 
 ## Installing
 
