@@ -132,6 +132,11 @@ func Provider() tfbridge.ProviderInfo {
 					EnvVars: []string{"VRA_REAUTHORIZE_TIMEOUT", "VRA7_REAUTHORIZE_TIMEOUT"},
 				},
 			},
+			"api_timeout": {
+				Default: &tfbridge.DefaultInfo{
+					EnvVars: []string{"VRA_API_TIMEOUT"},
+				},
+			},
 		},
 		Resources: map[string]*tfbridge.ResourceInfo{
 			"vra_block_device":               {Tok: tfbridge.MakeResource(mainPkg, "blockdevice", "BlockDevice")},
