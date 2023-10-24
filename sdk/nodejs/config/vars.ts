@@ -13,7 +13,7 @@ const __config = new pulumi.Config("vra");
 export declare const accessToken: string | undefined;
 Object.defineProperty(exports, "accessToken", {
     get() {
-        return __config.get("accessToken");
+        return __config.get("accessToken") ?? utilities.getEnv("VRA_ACCESS_TOKEN");
     },
     enumerable: true,
 });
@@ -24,7 +24,7 @@ Object.defineProperty(exports, "accessToken", {
 export declare const insecure: boolean | undefined;
 Object.defineProperty(exports, "insecure", {
     get() {
-        return __config.getObject<boolean>("insecure");
+        return __config.getObject<boolean>("insecure") ?? utilities.getEnvBoolean("VRA_INSECURE", "VRA7_INSECURE");
     },
     enumerable: true,
 });
@@ -46,7 +46,7 @@ Object.defineProperty(exports, "reauthorizeTimeout", {
 export declare const refreshToken: string | undefined;
 Object.defineProperty(exports, "refreshToken", {
     get() {
-        return __config.get("refreshToken");
+        return __config.get("refreshToken") ?? utilities.getEnv("VRA_REFRESH_TOKEN");
     },
     enumerable: true,
 });
@@ -57,7 +57,7 @@ Object.defineProperty(exports, "refreshToken", {
 export declare const url: string | undefined;
 Object.defineProperty(exports, "url", {
     get() {
-        return __config.get("url");
+        return __config.get("url") ?? utilities.getEnv("VRA_URL");
     },
     enumerable: true,
 });

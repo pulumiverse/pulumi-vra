@@ -14,40 +14,37 @@ __all__ = ['ProviderArgs', 'Provider']
 @pulumi.input_type
 class ProviderArgs:
     def __init__(__self__, *,
-                 url: pulumi.Input[str],
                  access_token: Optional[pulumi.Input[str]] = None,
                  insecure: Optional[pulumi.Input[bool]] = None,
                  reauthorize_timeout: Optional[pulumi.Input[str]] = None,
-                 refresh_token: Optional[pulumi.Input[str]] = None):
+                 refresh_token: Optional[pulumi.Input[str]] = None,
+                 url: Optional[pulumi.Input[str]] = None):
         """
         The set of arguments for constructing a Provider resource.
-        :param pulumi.Input[str] url: The base url for API operations.
         :param pulumi.Input[str] access_token: The access token for API operations.
         :param pulumi.Input[bool] insecure: Specify whether to validate TLS certificates.
         :param pulumi.Input[str] reauthorize_timeout: Specify timeout for how often to reauthorize the access token
         :param pulumi.Input[str] refresh_token: The refresh token for API operations.
+        :param pulumi.Input[str] url: The base url for API operations.
         """
-        pulumi.set(__self__, "url", url)
+        if access_token is None:
+            access_token = _utilities.get_env('VRA_ACCESS_TOKEN')
         if access_token is not None:
             pulumi.set(__self__, "access_token", access_token)
+        if insecure is None:
+            insecure = _utilities.get_env_bool('VRA_INSECURE', 'VRA7_INSECURE')
         if insecure is not None:
             pulumi.set(__self__, "insecure", insecure)
         if reauthorize_timeout is not None:
             pulumi.set(__self__, "reauthorize_timeout", reauthorize_timeout)
+        if refresh_token is None:
+            refresh_token = _utilities.get_env('VRA_REFRESH_TOKEN')
         if refresh_token is not None:
             pulumi.set(__self__, "refresh_token", refresh_token)
-
-    @property
-    @pulumi.getter
-    def url(self) -> pulumi.Input[str]:
-        """
-        The base url for API operations.
-        """
-        return pulumi.get(self, "url")
-
-    @url.setter
-    def url(self, value: pulumi.Input[str]):
-        pulumi.set(self, "url", value)
+        if url is None:
+            url = _utilities.get_env('VRA_URL')
+        if url is not None:
+            pulumi.set(__self__, "url", url)
 
     @property
     @pulumi.getter(name="accessToken")
@@ -97,6 +94,18 @@ class ProviderArgs:
     def refresh_token(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "refresh_token", value)
 
+    @property
+    @pulumi.getter
+    def url(self) -> Optional[pulumi.Input[str]]:
+        """
+        The base url for API operations.
+        """
+        return pulumi.get(self, "url")
+
+    @url.setter
+    def url(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "url", value)
+
 
 class Provider(pulumi.ProviderResource):
     @overload
@@ -127,7 +136,7 @@ class Provider(pulumi.ProviderResource):
     @overload
     def __init__(__self__,
                  resource_name: str,
-                 args: ProviderArgs,
+                 args: Optional[ProviderArgs] = None,
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
         The provider type for the vra package. By default, resources use package-wide configuration
@@ -164,13 +173,21 @@ class Provider(pulumi.ProviderResource):
                 raise TypeError('__props__ is only valid when passed in combination with a valid opts.id to get an existing resource')
             __props__ = ProviderArgs.__new__(ProviderArgs)
 
-            __props__.__dict__["access_token"] = access_token
+            if access_token is None:
+                access_token = _utilities.get_env('VRA_ACCESS_TOKEN')
+            __props__.__dict__["access_token"] = None if access_token is None else pulumi.Output.secret(access_token)
+            if insecure is None:
+                insecure = _utilities.get_env_bool('VRA_INSECURE', 'VRA7_INSECURE')
             __props__.__dict__["insecure"] = pulumi.Output.from_input(insecure).apply(pulumi.runtime.to_json) if insecure is not None else None
             __props__.__dict__["reauthorize_timeout"] = reauthorize_timeout
-            __props__.__dict__["refresh_token"] = refresh_token
-            if url is None and not opts.urn:
-                raise TypeError("Missing required property 'url'")
+            if refresh_token is None:
+                refresh_token = _utilities.get_env('VRA_REFRESH_TOKEN')
+            __props__.__dict__["refresh_token"] = None if refresh_token is None else pulumi.Output.secret(refresh_token)
+            if url is None:
+                url = _utilities.get_env('VRA_URL')
             __props__.__dict__["url"] = url
+        secret_opts = pulumi.ResourceOptions(additional_secret_outputs=["accessToken", "refreshToken"])
+        opts = pulumi.ResourceOptions.merge(opts, secret_opts)
         super(Provider, __self__).__init__(
             'vra',
             resource_name,
@@ -203,7 +220,7 @@ class Provider(pulumi.ProviderResource):
 
     @property
     @pulumi.getter
-    def url(self) -> pulumi.Output[str]:
+    def url(self) -> pulumi.Output[Optional[str]]:
         """
         The base url for API operations.
         """

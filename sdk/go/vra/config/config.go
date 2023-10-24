@@ -10,12 +10,20 @@ import (
 
 // The access token for API operations.
 func GetAccessToken(ctx *pulumi.Context) string {
-	return config.Get(ctx, "vra:accessToken")
+	v, err := config.Try(ctx, "vra:accessToken")
+	if err == nil {
+		return v
+	}
+	return getEnvOrDefault("", nil, "VRA_ACCESS_TOKEN").(string)
 }
 
 // Specify whether to validate TLS certificates.
 func GetInsecure(ctx *pulumi.Context) bool {
-	return config.GetBool(ctx, "vra:insecure")
+	v, err := config.TryBool(ctx, "vra:insecure")
+	if err == nil {
+		return v
+	}
+	return getEnvOrDefault(false, parseEnvBool, "VRA_INSECURE", "VRA7_INSECURE").(bool)
 }
 
 // Specify timeout for how often to reauthorize the access token
@@ -25,10 +33,18 @@ func GetReauthorizeTimeout(ctx *pulumi.Context) string {
 
 // The refresh token for API operations.
 func GetRefreshToken(ctx *pulumi.Context) string {
-	return config.Get(ctx, "vra:refreshToken")
+	v, err := config.Try(ctx, "vra:refreshToken")
+	if err == nil {
+		return v
+	}
+	return getEnvOrDefault("", nil, "VRA_REFRESH_TOKEN").(string)
 }
 
 // The base url for API operations.
 func GetUrl(ctx *pulumi.Context) string {
-	return config.Get(ctx, "vra:url")
+	v, err := config.Try(ctx, "vra:url")
+	if err == nil {
+		return v
+	}
+	return getEnvOrDefault("", nil, "VRA_URL").(string)
 }

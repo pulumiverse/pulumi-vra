@@ -104,50 +104,39 @@ func Provider() tfbridge.ProviderInfo {
 		// The GitHub Org for the provider - defaults to `terraform-providers`. Note that this
 		// should match the TF provider module's require directive, not any replace directives.
 		GitHubOrg: "vmware",
-		Config:    map[string]*tfbridge.SchemaInfo{
-			/*
-				// TODO - I can't figure out how to make this generate as an optional
-				// secret.
-				"access_token": {
-					//Secret:         tfbridge.True(),
-					MarkAsOptional: tfbridge.True(),
-					Default: &tfbridge.DefaultInfo{
-						EnvVars: []string{"VRA_ACCESS_TOKEN"},
-					},
+		Config: map[string]*tfbridge.SchemaInfo{
+			"access_token": {
+				Secret: tfbridge.True(),
+				Default: &tfbridge.DefaultInfo{
+					EnvVars: []string{"VRA_ACCESS_TOKEN"},
 				},
-				"url": {
-					Default: &tfbridge.DefaultInfo{
-						EnvVars: []string{"VRA_URL"},
-					},
+			},
+			"url": {
+				Default: &tfbridge.DefaultInfo{
+					EnvVars: []string{"VRA_URL"},
 				},
-				"refresh_token": {
-					//Secret:         tfbridge.True(),
-					MarkAsOptional: tfbridge.True(),
-					Default: &tfbridge.DefaultInfo{
-						EnvVars: []string{"VRA_REFRESH_TOKEN"},
-					},
+			},
+			"refresh_token": {
+				Secret: tfbridge.True(),
+				Default: &tfbridge.DefaultInfo{
+					EnvVars: []string{"VRA_REFRESH_TOKEN"},
 				},
-				"insecure": {
-					MarkAsOptional: tfbridge.True(),
-					Default: &tfbridge.DefaultInfo{
-						EnvVars: []string{"VRA_INSECURE", "VRA7_INSECURE"},
-					},
+			},
+			"insecure": {
+				Default: &tfbridge.DefaultInfo{
+					EnvVars: []string{"VRA_INSECURE", "VRA7_INSECURE"},
 				},
-				"reauthorizeTimeout": {
-					MarkAsOptional: tfbridge.True(),
-					Default: &tfbridge.DefaultInfo{
-						EnvVars: []string{"VRA_REAUTHORIZE_TIMEOUT", "VRA7_REAUTHORIZE_TIMEOUT"},
-					},
+			},
+			"reauthorizeTimeout": {
+				Default: &tfbridge.DefaultInfo{
+					EnvVars: []string{"VRA_REAUTHORIZE_TIMEOUT", "VRA7_REAUTHORIZE_TIMEOUT"},
 				},
-			*/
-			// Add any required configuration here, or remove the example below if
-			// no additional points are required.
-			// "region": {
-			// 	Type: tfbridge.MakeType("region", "Region"),
-			// 	Default: &tfbridge.DefaultInfo{
-			// 		EnvVars: []string{"AWS_REGION", "AWS_DEFAULT_REGION"},
-			// 	},
-			// },
+			},
+			"api_timeout": {
+				Default: &tfbridge.DefaultInfo{
+					EnvVars: []string{"VRA_API_TIMEOUT"},
+				},
+			},
 		},
 		Resources: map[string]*tfbridge.ResourceInfo{
 			"vra_block_device":               {Tok: tfbridge.MakeResource(mainPkg, "blockdevice", "BlockDevice")},

@@ -40,7 +40,7 @@ export class Provider extends pulumi.ProviderResource {
     /**
      * The base url for API operations.
      */
-    public readonly url!: pulumi.Output<string>;
+    public readonly url!: pulumi.Output<string | undefined>;
 
     /**
      * Create a Provider resource with the given unique name, arguments, and options.
@@ -49,20 +49,19 @@ export class Provider extends pulumi.ProviderResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param opts A bag of options that control this resource's behavior.
      */
-    constructor(name: string, args: ProviderArgs, opts?: pulumi.ResourceOptions) {
+    constructor(name: string, args?: ProviderArgs, opts?: pulumi.ResourceOptions) {
         let resourceInputs: pulumi.Inputs = {};
         opts = opts || {};
         {
-            if ((!args || args.url === undefined) && !opts.urn) {
-                throw new Error("Missing required property 'url'");
-            }
-            resourceInputs["accessToken"] = args ? args.accessToken : undefined;
-            resourceInputs["insecure"] = pulumi.output(args ? args.insecure : undefined).apply(JSON.stringify);
+            resourceInputs["accessToken"] = (args?.accessToken ? pulumi.secret(args.accessToken) : undefined) ?? utilities.getEnv("VRA_ACCESS_TOKEN");
+            resourceInputs["insecure"] = pulumi.output((args ? args.insecure : undefined) ?? utilities.getEnvBoolean("VRA_INSECURE", "VRA7_INSECURE")).apply(JSON.stringify);
             resourceInputs["reauthorizeTimeout"] = args ? args.reauthorizeTimeout : undefined;
-            resourceInputs["refreshToken"] = args ? args.refreshToken : undefined;
-            resourceInputs["url"] = args ? args.url : undefined;
+            resourceInputs["refreshToken"] = (args?.refreshToken ? pulumi.secret(args.refreshToken) : undefined) ?? utilities.getEnv("VRA_REFRESH_TOKEN");
+            resourceInputs["url"] = (args ? args.url : undefined) ?? utilities.getEnv("VRA_URL");
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
+        const secretOpts = { additionalSecretOutputs: ["accessToken", "refreshToken"] };
+        opts = pulumi.mergeOptions(opts, secretOpts);
         super(Provider.__pulumiType, name, resourceInputs, opts);
     }
 }
@@ -90,5 +89,5 @@ export interface ProviderArgs {
     /**
      * The base url for API operations.
      */
-    url: pulumi.Input<string>;
+    url?: pulumi.Input<string>;
 }
