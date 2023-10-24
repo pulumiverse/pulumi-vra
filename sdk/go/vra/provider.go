@@ -7,7 +7,6 @@ import (
 	"context"
 	"reflect"
 
-	"github.com/pkg/errors"
 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
@@ -25,19 +24,39 @@ type Provider struct {
 	// The refresh token for API operations.
 	RefreshToken pulumi.StringPtrOutput `pulumi:"refreshToken"`
 	// The base url for API operations.
-	Url pulumi.StringOutput `pulumi:"url"`
+	Url pulumi.StringPtrOutput `pulumi:"url"`
 }
 
 // NewProvider registers a new resource with the given unique name, arguments, and options.
 func NewProvider(ctx *pulumi.Context,
 	name string, args *ProviderArgs, opts ...pulumi.ResourceOption) (*Provider, error) {
 	if args == nil {
-		return nil, errors.New("missing one or more required arguments")
+		args = &ProviderArgs{}
 	}
 
-	if args.Url == nil {
-		return nil, errors.New("invalid value for required argument 'Url'")
+	if isZero(args.AccessToken) {
+		args.AccessToken = pulumi.StringPtr(getEnvOrDefault("", nil, "VRA_ACCESS_TOKEN").(string))
 	}
+	if isZero(args.Insecure) {
+		args.Insecure = pulumi.BoolPtr(getEnvOrDefault(false, parseEnvBool, "VRA_INSECURE", "VRA7_INSECURE").(bool))
+	}
+	if isZero(args.RefreshToken) {
+		args.RefreshToken = pulumi.StringPtr(getEnvOrDefault("", nil, "VRA_REFRESH_TOKEN").(string))
+	}
+	if isZero(args.Url) {
+		args.Url = pulumi.StringPtr(getEnvOrDefault("", nil, "VRA_URL").(string))
+	}
+	if args.AccessToken != nil {
+		args.AccessToken = pulumi.ToSecret(args.AccessToken).(pulumi.StringPtrOutput)
+	}
+	if args.RefreshToken != nil {
+		args.RefreshToken = pulumi.ToSecret(args.RefreshToken).(pulumi.StringPtrOutput)
+	}
+	secrets := pulumi.AdditionalSecretOutputs([]string{
+		"accessToken",
+		"refreshToken",
+	})
+	opts = append(opts, secrets)
 	opts = pkgResourceDefaultOpts(opts)
 	var resource Provider
 	err := ctx.RegisterResource("pulumi:providers:vra", name, args, &resource, opts...)
@@ -57,7 +76,7 @@ type providerArgs struct {
 	// The refresh token for API operations.
 	RefreshToken *string `pulumi:"refreshToken"`
 	// The base url for API operations.
-	Url string `pulumi:"url"`
+	Url *string `pulumi:"url"`
 }
 
 // The set of arguments for constructing a Provider resource.
@@ -71,7 +90,7 @@ type ProviderArgs struct {
 	// The refresh token for API operations.
 	RefreshToken pulumi.StringPtrInput
 	// The base url for API operations.
-	Url pulumi.StringInput
+	Url pulumi.StringPtrInput
 }
 
 func (ProviderArgs) ElementType() reflect.Type {
@@ -127,8 +146,8 @@ func (o ProviderOutput) RefreshToken() pulumi.StringPtrOutput {
 }
 
 // The base url for API operations.
-func (o ProviderOutput) Url() pulumi.StringOutput {
-	return o.ApplyT(func(v *Provider) pulumi.StringOutput { return v.Url }).(pulumi.StringOutput)
+func (o ProviderOutput) Url() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v *Provider) pulumi.StringPtrOutput { return v.Url }).(pulumi.StringPtrOutput)
 }
 
 func init() {

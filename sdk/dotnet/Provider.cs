@@ -41,7 +41,7 @@ namespace Pulumiverse.Vra
         /// The base url for API operations.
         /// </summary>
         [Output("url")]
-        public Output<string> Url { get; private set; } = null!;
+        public Output<string?> Url { get; private set; } = null!;
 
 
         /// <summary>
@@ -51,7 +51,7 @@ namespace Pulumiverse.Vra
         /// <param name="name">The unique name of the resource</param>
         /// <param name="args">The arguments used to populate this resource's properties</param>
         /// <param name="options">A bag of options that control this resource's behavior</param>
-        public Provider(string name, ProviderArgs args, CustomResourceOptions? options = null)
+        public Provider(string name, ProviderArgs? args = null, CustomResourceOptions? options = null)
             : base("vra", name, args ?? new ProviderArgs(), MakeResourceOptions(options, ""))
         {
         }
@@ -62,6 +62,11 @@ namespace Pulumiverse.Vra
             {
                 Version = Utilities.Version,
                 PluginDownloadURL = "github://api.github.com/pulumiverse",
+                AdditionalSecretOutputs =
+                {
+                    "accessToken",
+                    "refreshToken",
+                },
             };
             var merged = CustomResourceOptions.Merge(defaultOptions, options);
             // Override the ID if one was specified for consistency with other language SDKs.
@@ -72,11 +77,21 @@ namespace Pulumiverse.Vra
 
     public sealed class ProviderArgs : global::Pulumi.ResourceArgs
     {
+        [Input("accessToken")]
+        private Input<string>? _accessToken;
+
         /// <summary>
         /// The access token for API operations.
         /// </summary>
-        [Input("accessToken")]
-        public Input<string>? AccessToken { get; set; }
+        public Input<string>? AccessToken
+        {
+            get => _accessToken;
+            set
+            {
+                var emptySecret = Output.CreateSecret(0);
+                _accessToken = Output.Tuple<Input<string>?, int>(value, emptySecret).Apply(t => t.Item1);
+            }
+        }
 
         /// <summary>
         /// Specify whether to validate TLS certificates.
@@ -90,20 +105,34 @@ namespace Pulumiverse.Vra
         [Input("reauthorizeTimeout")]
         public Input<string>? ReauthorizeTimeout { get; set; }
 
+        [Input("refreshToken")]
+        private Input<string>? _refreshToken;
+
         /// <summary>
         /// The refresh token for API operations.
         /// </summary>
-        [Input("refreshToken")]
-        public Input<string>? RefreshToken { get; set; }
+        public Input<string>? RefreshToken
+        {
+            get => _refreshToken;
+            set
+            {
+                var emptySecret = Output.CreateSecret(0);
+                _refreshToken = Output.Tuple<Input<string>?, int>(value, emptySecret).Apply(t => t.Item1);
+            }
+        }
 
         /// <summary>
         /// The base url for API operations.
         /// </summary>
-        [Input("url", required: true)]
-        public Input<string> Url { get; set; } = null!;
+        [Input("url")]
+        public Input<string>? Url { get; set; }
 
         public ProviderArgs()
         {
+            AccessToken = Utilities.GetEnv("VRA_ACCESS_TOKEN");
+            Insecure = Utilities.GetEnvBoolean("VRA_INSECURE", "VRA7_INSECURE");
+            RefreshToken = Utilities.GetEnv("VRA_REFRESH_TOKEN");
+            Url = Utilities.GetEnv("VRA_URL");
         }
         public static new ProviderArgs Empty => new ProviderArgs();
     }

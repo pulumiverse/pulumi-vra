@@ -58,11 +58,23 @@
         "variables": {
             "accessToken": {
                 "type": "string",
-                "description": "The access token for API operations.\n"
+                "description": "The access token for API operations.\n",
+                "defaultInfo": {
+                    "environment": [
+                        "VRA_ACCESS_TOKEN"
+                    ]
+                },
+                "secret": true
             },
             "insecure": {
                 "type": "boolean",
-                "description": "Specify whether to validate TLS certificates.\n"
+                "description": "Specify whether to validate TLS certificates.\n",
+                "defaultInfo": {
+                    "environment": [
+                        "VRA_INSECURE",
+                        "VRA7_INSECURE"
+                    ]
+                }
             },
             "reauthorizeTimeout": {
                 "type": "string",
@@ -70,11 +82,22 @@
             },
             "refreshToken": {
                 "type": "string",
-                "description": "The refresh token for API operations.\n"
+                "description": "The refresh token for API operations.\n",
+                "defaultInfo": {
+                    "environment": [
+                        "VRA_REFRESH_TOKEN"
+                    ]
+                },
+                "secret": true
             },
             "url": {
                 "type": "string",
-                "description": "The base url for API operations.\n"
+                "description": "The base url for API operations.\n",
+                "defaultInfo": {
+                    "environment": [
+                        "VRA_URL"
+                    ]
+                }
             }
         },
         "defaults": [
@@ -6577,7 +6600,8 @@
         "properties": {
             "accessToken": {
                 "type": "string",
-                "description": "The access token for API operations.\n"
+                "description": "The access token for API operations.\n",
+                "secret": true
             },
             "insecure": {
                 "type": "boolean",
@@ -6589,24 +6613,34 @@
             },
             "refreshToken": {
                 "type": "string",
-                "description": "The refresh token for API operations.\n"
+                "description": "The refresh token for API operations.\n",
+                "secret": true
             },
             "url": {
                 "type": "string",
                 "description": "The base url for API operations.\n"
             }
         },
-        "required": [
-            "url"
-        ],
         "inputProperties": {
             "accessToken": {
                 "type": "string",
-                "description": "The access token for API operations.\n"
+                "description": "The access token for API operations.\n",
+                "defaultInfo": {
+                    "environment": [
+                        "VRA_ACCESS_TOKEN"
+                    ]
+                },
+                "secret": true
             },
             "insecure": {
                 "type": "boolean",
-                "description": "Specify whether to validate TLS certificates.\n"
+                "description": "Specify whether to validate TLS certificates.\n",
+                "defaultInfo": {
+                    "environment": [
+                        "VRA_INSECURE",
+                        "VRA7_INSECURE"
+                    ]
+                }
             },
             "reauthorizeTimeout": {
                 "type": "string",
@@ -6614,16 +6648,24 @@
             },
             "refreshToken": {
                 "type": "string",
-                "description": "The refresh token for API operations.\n"
+                "description": "The refresh token for API operations.\n",
+                "defaultInfo": {
+                    "environment": [
+                        "VRA_REFRESH_TOKEN"
+                    ]
+                },
+                "secret": true
             },
             "url": {
                 "type": "string",
-                "description": "The base url for API operations.\n"
+                "description": "The base url for API operations.\n",
+                "defaultInfo": {
+                    "environment": [
+                        "VRA_URL"
+                    ]
+                }
             }
-        },
-        "requiredInputs": [
-            "url"
-        ]
+        }
     },
     "resources": {
         "vra:blockdevice/blockDevice:BlockDevice": {

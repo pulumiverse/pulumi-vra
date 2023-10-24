@@ -20,14 +20,14 @@ class _ExportableConfig(types.ModuleType):
         """
         The access token for API operations.
         """
-        return __config__.get('accessToken')
+        return __config__.get('accessToken') or _utilities.get_env('VRA_ACCESS_TOKEN')
 
     @property
     def insecure(self) -> Optional[bool]:
         """
         Specify whether to validate TLS certificates.
         """
-        return __config__.get_bool('insecure')
+        return __config__.get_bool('insecure') or _utilities.get_env_bool('VRA_INSECURE', 'VRA7_INSECURE')
 
     @property
     def reauthorize_timeout(self) -> Optional[str]:
@@ -41,12 +41,12 @@ class _ExportableConfig(types.ModuleType):
         """
         The refresh token for API operations.
         """
-        return __config__.get('refreshToken')
+        return __config__.get('refreshToken') or _utilities.get_env('VRA_REFRESH_TOKEN')
 
     @property
     def url(self) -> Optional[str]:
         """
         The base url for API operations.
         """
-        return __config__.get('url')
+        return __config__.get('url') or _utilities.get_env('VRA_URL')
 

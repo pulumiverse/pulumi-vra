@@ -32,7 +32,7 @@ namespace Pulumiverse.Vra
 
         private static readonly Pulumi.Config __config = new Pulumi.Config("vra");
 
-        private static readonly __Value<string?> _accessToken = new __Value<string?>(() => __config.Get("accessToken"));
+        private static readonly __Value<string?> _accessToken = new __Value<string?>(() => __config.Get("accessToken") ?? Utilities.GetEnv("VRA_ACCESS_TOKEN"));
         /// <summary>
         /// The access token for API operations.
         /// </summary>
@@ -42,7 +42,7 @@ namespace Pulumiverse.Vra
             set => _accessToken.Set(value);
         }
 
-        private static readonly __Value<bool?> _insecure = new __Value<bool?>(() => __config.GetBoolean("insecure"));
+        private static readonly __Value<bool?> _insecure = new __Value<bool?>(() => __config.GetBoolean("insecure") ?? Utilities.GetEnvBoolean("VRA_INSECURE", "VRA7_INSECURE"));
         /// <summary>
         /// Specify whether to validate TLS certificates.
         /// </summary>
@@ -62,7 +62,7 @@ namespace Pulumiverse.Vra
             set => _reauthorizeTimeout.Set(value);
         }
 
-        private static readonly __Value<string?> _refreshToken = new __Value<string?>(() => __config.Get("refreshToken"));
+        private static readonly __Value<string?> _refreshToken = new __Value<string?>(() => __config.Get("refreshToken") ?? Utilities.GetEnv("VRA_REFRESH_TOKEN"));
         /// <summary>
         /// The refresh token for API operations.
         /// </summary>
@@ -72,7 +72,7 @@ namespace Pulumiverse.Vra
             set => _refreshToken.Set(value);
         }
 
-        private static readonly __Value<string?> _url = new __Value<string?>(() => __config.Get("url"));
+        private static readonly __Value<string?> _url = new __Value<string?>(() => __config.Get("url") ?? Utilities.GetEnv("VRA_URL"));
         /// <summary>
         /// The base url for API operations.
         /// </summary>
