@@ -15,7 +15,8 @@ The Pulumi VRA provider is available as a package in all Pulumi languages:
 
 ## Setup
 
-To provision resources with the Pulumi VRA provider, you need to provide the `key` and `secret` (optional `timeout`). 
+To provision resources with the Pulumi VRA provider, you need to provide the `url` and
+generally the `access_token`.
 
 ## Configuration Options
 
